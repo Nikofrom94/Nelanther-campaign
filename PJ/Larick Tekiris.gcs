@@ -1,0 +1,2874 @@
+{
+	"type": "character",
+	"version": 1,
+	"id": "8a7a3f7e-0dd5-43c2-bf51-c49226eae3a0",
+	"settings": {
+		"version": 1,
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"base_will_on_10": false,
+		"base_per_on_10": false,
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"use_know_your_own_strength": false,
+		"use_reduced_swing": false,
+		"use_thrust_equals_swing_minus_2": false,
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"extra_space_around_encumbrance": false,
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		]
+	},
+	"created_date": "Jun 15, 2021, 6:40 PM",
+	"modified_date": "Jun 20, 2021, 9:40 AM",
+	"profile": {
+		"player_name": "Riko",
+		"name": "Larick Tekiris",
+		"title": "Alchimiste Gnome en exil",
+		"age": "100",
+		"birthday": "Oct 23",
+		"eyes": "Marron",
+		"hair": "Chauve",
+		"skin": "Marron",
+		"handedness": "Droite",
+		"height": "3' 10\"",
+		"weight": "70 lb",
+		"gender": "Male",
+		"body_type": "humanoid",
+		"tech_level": "4"
+	},
+	"total_points": 150,
+	"ST": 10,
+	"DX": 10,
+	"IQ": 13,
+	"HT": 11,
+	"advantages": [
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "17713a1d-1cdc-4f8a-914b-1d11cb00d582",
+			"name": "Attaques Naturelles",
+			"physical": true,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Morsure",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "DX"
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Coup de poing",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "DX"
+						},
+						{
+							"type": "Skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "Skill",
+							"name": "Karate"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Coup de pied",
+					"reach": "C,1",
+					"parry": "No",
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B271"
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "7ee7c0e4-ac1d-43c0-9a55-a2af39616713",
+			"name": "Appearance",
+			"physical": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "c113a106-9023-4b5b-9903-6289e5d91dab",
+					"disabled": true,
+					"name": "Attractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "2dadd7fe-7e59-43b4-b020-eb86b4beb6e2",
+					"disabled": true,
+					"name": "Average",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "a00e4f04-5a59-4e75-9624-bf9f7fc765a6",
+					"disabled": true,
+					"name": "Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "8d169be3-95d4-402b-96e9-26b29752807e",
+					"disabled": true,
+					"name": "Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "1ccec017-76c1-4709-a17d-bddd2e48484c",
+					"disabled": true,
+					"name": "Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "14cbeb6a-07ff-4796-a89c-66bd8a465e25",
+					"disabled": true,
+					"name": "Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "986c2027-14da-429b-822d-bfdc9f46e1aa",
+					"disabled": true,
+					"name": "Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "87948b4f-e2fe-418a-94e1-de2c948dcbf1",
+					"disabled": true,
+					"name": "Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "5828039a-5c8e-4bbe-9622-c2e9a1834fc9",
+					"disabled": true,
+					"name": "Hideous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "84893819-685b-41fd-91df-ba12553bf5d0",
+					"disabled": true,
+					"name": "Horrific",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -24,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -6,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "c6c465b5-42de-4758-800d-97ad7eeea80c",
+					"disabled": true,
+					"name": "Impressive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "71cff9b8-50f3-4235-9cad-5e0434e08a9d",
+					"disabled": true,
+					"name": "Monstrous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "fe09f086-8dc2-4669-91fc-269051672191",
+					"disabled": true,
+					"name": "Off-the-Shelf Looks",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "Halves the usual reaction bonus - adjust manually"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "e9e3347a-2bca-41c9-b38a-2fc4508eb617",
+					"disabled": true,
+					"name": "Transcendent",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 8,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "c3c06540-d863-4b9e-ae08-906c8109fc84",
+					"disabled": true,
+					"name": "Transcendent (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "5af342a9-7df3-435f-8b5e-51660fe8f838",
+					"disabled": true,
+					"name": "Transcendent (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "122d4cc4-9d89-4941-8118-c8de17a36972",
+					"name": "Ugly",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -8,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -2,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "6d26c2a8-a97c-48de-9f38-63667dc8f59d",
+					"disabled": true,
+					"name": "Unattractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "44005cca-878a-42d8-92ba-3b9beeec4153",
+					"disabled": true,
+					"name": "Universal",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": 25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "14404bb1-a06b-4e84-ae34-a3abf67a8582",
+					"disabled": true,
+					"name": "Very Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "5b38a922-e5e9-4734-b828-69be31e94c84",
+					"disabled": true,
+					"name": "Very Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "321aeee8-6880-4495-9f43-acdb3866306f",
+					"disabled": true,
+					"name": "Very Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "73400452-8d29-43e8-90ce-8aab207e772c",
+					"disabled": true,
+					"name": "Very Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "17372ddb-7073-463b-a5d0-ab8ca42e574a",
+					"disabled": true,
+					"name": "Very Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "a243cfcd-f514-4f2d-9ff3-098615171eb2",
+					"disabled": true,
+					"name": "Very Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				}
+			],
+			"reference": "B21",
+			"notes": "défiguré par une explosion",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "404264b0-a649-4082-9cb1-7c7e8c46a684",
+			"name": "Banni de Lantan",
+			"social": true,
+			"base_points": -5,
+			"reference": "B155",
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -3,
+					"situation": "de la part de tous les habitants de Lantan"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "751f39dd-5a0d-44ad-a3ca-a2f1bddeb5de",
+			"name": "One Hand",
+			"physical": true,
+			"base_points": -15,
+			"reference": "B147",
+			"notes": "You cannot use two-handed weapons, wield two weapons at once (or a weapon and a shield), or perform any task that requires two arms. You get -4 on tasks that are possible with one arm but that are usually executed with two.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage_container",
+			"version": 1,
+			"id": "0876ff32-40c0-4f82-bc08-b95bbff83018",
+			"name": "Alchimiste",
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "92cd7fd1-f2d5-46e3-9ff2-cbf8e9bfa85f",
+					"name": "Magery",
+					"mental": true,
+					"supernatural": true,
+					"levels": "3",
+					"base_points": 5,
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "f6da6212-fd05-4e4f-b206-7fe0679932f0",
+							"disabled": true,
+							"name": "Dance",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "802b4428-116a-4a73-b9e3-1cec981cf972",
+							"disabled": true,
+							"name": "Dark-Aspected",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "6f2eaffb-ce4c-4c0b-92b8-9ad2e02ae7e4",
+							"disabled": true,
+							"name": "Day-Aspected",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "a67b3787-54ee-4127-8a78-54b271fe7b09",
+							"disabled": true,
+							"name": "Musical",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "5e1e5db0-5b3a-4d6a-83fc-17862d20c1af",
+							"disabled": true,
+							"name": "Night-Aspected",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "f6639987-af41-4cb6-875f-2b51ae149229",
+							"disabled": true,
+							"name": "One College",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only",
+							"notes": "@College@"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "f02f0974-1bc6-4b28-8ed2-bf50af5a16fb",
+							"disabled": true,
+							"name": "Solitary",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "ee2df6ef-965f-45c7-81e9-e2eff3f9ca2b",
+							"disabled": true,
+							"name": "Song",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "B66",
+					"features": [
+						{
+							"type": "spell_bonus",
+							"amount": 1,
+							"per_level": true,
+							"match": "all_colleges"
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "thaumatology"
+							}
+						}
+					],
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"version": 1,
+			"id": "2a106655-5874-46fe-bcbd-3d3573518dc4",
+			"container_type": "race",
+			"name": "Gnome",
+			"reference": "F107",
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "344fbfdc-e71e-4451-a4ed-ae211970cb58",
+					"name": "Language: Commun",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "190b59de-8fba-4338-9022-f70807c8c71d",
+							"disabled": true,
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "54f01859-d441-4778-a1db-cbee71369a21",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "65729913-76c0-42d9-b9f4-bdc2c939cd1d",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "cba626d3-e68f-4533-830b-f88fe642d1ff",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "47b465d3-bb75-4020-9a4c-37362429cda0",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d17b34a6-5746-423b-a2a3-7b05c821f9c7",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "5a672bb3-85cc-49c9-b3aa-a1ffc8458bc1",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "a78886f5-eb38-4061-94df-6425ea52f7a2",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "daaf6dee-724e-42ae-bb63-e2e634f0c132",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "66a44552-d586-41c1-a4f8-dd86b49e2462",
+					"name": "Language: Gnome",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "927839c0-6f89-4754-9be3-7e424b010c75",
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "339f5ad8-9459-4764-92ff-6cb9ed3eb2ae",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "c7141219-4af2-4256-81c8-d916cf18dd20",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "8a0c6541-dfce-4996-adf7-23ee9f3ceda0",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "63001f5f-fa81-4fd7-ba01-5a42c5403ed3",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "6353a94c-7929-4275-8a26-d1d06b84977a",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "9ce5b803-6846-45b4-a6a5-c575d9e40b15",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d5908cdf-80cb-4e76-a14a-130be86a368c",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "65445810-c497-4f96-933c-1c7fa8b3aea7",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "cb2b36a0-6d34-4715-8389-6e536204fa17",
+					"name": "Language: Lantan",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "e4c13105-27d3-4eb3-986c-9456ed95d5f0",
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "1878c282-52f7-447f-bc59-bb08d22db431",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d31b961d-311f-4b28-9715-a3f70e508d9d",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "ea109234-b047-4aa8-a87a-974172ac96b3",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "6b0859a5-95ce-47cb-aa70-074be5ef99e0",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "105b8933-a829-4109-a04a-fb5f52bd494b",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "7052731e-38b9-4704-976c-8b9d4a5e8a62",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "62a3f881-88c4-429c-a809-a623a65c85bf",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d986c2f3-1c11-409d-bf60-c322e16979f0",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "637fee7d-975e-4de1-ba42-6550aa991096",
+					"name": "Alcohol Tolerance",
+					"physical": true,
+					"base_points": 1,
+					"reference": "B100",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "6d288f90-9b21-4944-9ce8-40ed99bfc0d2",
+					"name": "Lifting ST",
+					"physical": true,
+					"exotic": true,
+					"levels": "2",
+					"points_per_level": 3,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "ba988400-e551-4fd9-97e4-22bd3095abda",
+							"disabled": true,
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "03802b16-1c96-47d1-a37e-4f68eb94f9c0",
+							"disabled": true,
+							"name": "Size",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d017b020-3707-4c95-8c13-bf4898a4dafe",
+							"disabled": true,
+							"name": "Super-Effort",
+							"reference": "P58",
+							"cost_type": "percentage",
+							"cost": 400,
+							"affects": "total"
+						}
+					],
+					"reference": "B65",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "st",
+							"limitation": "lifting_only"
+						}
+					],
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "0d7fecbb-4f82-4797-bd19-10d313176f47",
+					"name": "Night Vision",
+					"physical": true,
+					"levels": "5",
+					"points_per_level": 1,
+					"reference": "B71",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "31b29a90-ee54-40c9-8027-522122e65b26",
+					"name": "Resistant",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "2311b7cd-12e1-49d5-89a7-5ae1e5cd5e1b",
+							"disabled": true,
+							"name": "@Very Common: Metabolic Hazards, etc.@",
+							"reference": "B80",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "963c5503-da86-4ced-82a9-b3c5f9643026",
+							"disabled": true,
+							"name": "@Common: Poison, Sickness, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "1a8cbd2e-7503-42c9-9fb8-63dc09ad094e",
+							"name": "Poison",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "dc030f2f-f7c0-4aa7-a43c-f65c81f6c6e3",
+							"disabled": true,
+							"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "ef4d9618-10ea-4e05-bc9c-fe4853790733",
+							"disabled": true,
+							"name": "Immunity",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "9a66f650-1bb0-4744-b056-d6852b6bd69e",
+							"disabled": true,
+							"name": "+8 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "d490b27c-ad5b-4830-8307-c76d42b6739a",
+							"name": "+3 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B81",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "f552d87a-4b86-4381-98af-ad0d5ed3b688",
+					"name": "Curious",
+					"mental": true,
+					"base_points": -5,
+					"cr": 12,
+					"reference": "B129",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "54ff9478-c78e-413e-addb-2e1d92bea33c",
+					"name": "Decreased Basic Move",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": -5,
+					"reference": "B17",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": -1,
+							"per_level": true,
+							"attribute": "move"
+						}
+					],
+					"categories": [
+						"Attribute",
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "6ca0b297-f5fa-4587-bdb5-9b531aa9b8ab",
+					"name": "Extra Fatigue Points",
+					"physical": true,
+					"levels": "3",
+					"points_per_level": 3,
+					"reference": "B16",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "fp"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "b62bcd1d-6d59-4386-8e38-d2609b0693c6",
+					"name": "Talent (Artificer)",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "42c737be-be8b-4e64-bc5f-14b2ad6a0972",
+							"name": "Reaction Bonus",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Any employer"
+						}
+					],
+					"reference": "B90",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "armoury"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Carpentry"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electrician"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electronics Repair"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Engineer"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Machinist"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Masonry"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mechanic"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Smith"
+							}
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "fe4fd3d5-5b3b-42bf-ba4a-6fd080e9c3cb",
+					"name": "Extended Lifespan",
+					"physical": true,
+					"exotic": true,
+					"levels": "1",
+					"points_per_level": 2,
+					"reference": "B53",
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "c326df92-db1e-4350-954f-11a2aca8afd7",
+			"name": "alchimie",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "271e19b1-cde6-4d50-b1b4-72aaa8fa2037",
+					"name": "Alchemy",
+					"reference": "B174",
+					"tech_level": "4",
+					"difficulty": "IQ/VH",
+					"points": 8,
+					"categories": [
+						"Natural Science",
+						"Occult/Magical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "2a8627db-5488-4b1a-b79c-49ea6c9c73ba",
+					"name": "Explosives",
+					"reference": "B194",
+					"specialization": "Fireworks",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Chemistry",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Explosives",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "9aa6fa12-885f-4fea-a7a8-1107a69af21f",
+					"name": "Mechanic",
+					"reference": "B107",
+					"specialization": "Clockwork",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Clockwork",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "be1e0e25-09fa-4d90-b8ff-8d07ffbcc469",
+					"name": "Smith",
+					"reference": "B221",
+					"specialization": "Iron",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Smith",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Craft"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "6f85688b-181c-4f56-85c5-23ba1017fa54",
+			"name": "Artisanat",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "b8ab9c50-3b28-45f0-924e-86ad564ae085",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Mousqets",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Missile Weapons",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "90da9b1a-c8fb-46d2-95b5-07df4f157cd6",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Melee Weapons",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Melee Weapons",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "fb18ebe8-7502-49b1-9860-a4a2eb521179",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Missile Weapons",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Missile Weapons",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "041f0670-9982-4fd8-8ff5-3ebfa5161712",
+					"name": "Carpentry",
+					"reference": "B183",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Craft"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "7861763c-372a-4613-a26f-2cad0eb5e2b8",
+			"name": "Piraterie",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "ac672fff-6f2b-4fd3-b91a-34b6ea6adf50",
+					"name": "Gambling",
+					"reference": "B197",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mathematics",
+							"specialization": "Statistics",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Criminal/Street",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "fe266fee-ef9f-4fae-80ec-855f2c1d70db",
+					"name": "Guns",
+					"reference": "B198",
+					"specialization": "Musket",
+					"tech_level": "4",
+					"difficulty": "DX/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -4,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "8ff0768d-c351-4ff7-bf64-8be505d9cae6",
+					"name": "Knife",
+					"reference": "B208",
+					"difficulty": "DX/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -4,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"modifier_per_die": -1
+							},
+							"usage": "knife",
+							"parry": "0",
+							"block": "0",
+							"defaults": [
+								{
+									"type": "Skill",
+									"name": "knife"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cut",
+								"st": "sw",
+								"modifier_per_die": -3
+							},
+							"usage": "knife",
+							"parry": "0",
+							"block": "0",
+							"defaults": [
+								{
+									"type": "Skill",
+									"name": "knife"
+								}
+							]
+						}
+					],
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "DX",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "4c438248-0fc6-45c8-b2e6-c7620b044942",
+					"name": "Seamanship",
+					"reference": "B185",
+					"tech_level": "4",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				}
+			]
+		}
+	],
+	"spells": [
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "bcf21b45-a786-463c-8478-3cdd53ac64dc",
+			"name": "Illusion",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "edee58bd-6888-493c-b088-67d259263590",
+					"name": "Sound",
+					"reference": "M171",
+					"difficulty": "IQ/H",
+					"college": "Sound",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "Varies",
+					"maintenance_cost": "1/ min",
+					"casting_time": "1 sec",
+					"duration": "Varies",
+					"categories": [
+						"Sound"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "de9005b9-2903-41e1-bb82-4907f60c1ce6",
+					"name": "Simple Illusion",
+					"reference": "M95",
+					"difficulty": "IQ/H",
+					"college": "Illusion & Creation",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "starts_with",
+									"qualifier": "blind"
+								}
+							},
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"which": "iq",
+								"qualifier": {
+									"compare": "at_least",
+									"qualifier": 11
+								}
+							}
+						]
+					},
+					"categories": [
+						"Illusion & Creation"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "6536cd37-c13d-48ad-93bc-a0b75ded57e7",
+					"name": "Complex Illusion",
+					"reference": "M96",
+					"difficulty": "IQ/H",
+					"college": "Illusion & Creation",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "sound"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "simple illusion"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Illusion & Creation"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "b5293971-191d-4297-8922-9cf43b547e06",
+					"name": "Perfect Illusion",
+					"reference": "M96",
+					"difficulty": "IQ/H",
+					"college": "Illusion & Creation",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "3",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "complex illusion"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (illusion & creation)"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									}
+								]
+							}
+						]
+					},
+					"categories": [
+						"Illusion & Creation"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "66415247-bbcd-468b-8c5d-c3c34ef6612a",
+					"name": "Control Illusion",
+					"reference": "M97",
+					"difficulty": "IQ/H",
+					"college": "Illusion & Creation",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Subject spell",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "2 sec",
+					"duration": "Permanent",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "perfect illusion"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Illusion & Creation"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "aaa37ab4-2612-4271-82dc-fccd603765a2",
+					"name": "Dispel Illusion",
+					"reference": "M97",
+					"difficulty": "IQ/H",
+					"college": "Illusion & Creation",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Subject spell",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "control illusion"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Illusion & Creation"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "2008ea8f-115b-46ad-bfbe-99e426387f28",
+			"name": "Enchantement",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "9055e41b-f47d-4d76-b106-ccbcf9187c62",
+					"name": "Enchant",
+					"reference": "M56",
+					"difficulty": "IQ/VH",
+					"college": "Enchantment",
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "Varies",
+					"duration": "Permanent",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college_count",
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 10
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (enchantment)"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									}
+								]
+							}
+						]
+					},
+					"categories": [
+						"Enchantment"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "7eddefd5-bd26-4ffd-bce5-a8b6aad78acc",
+					"name": "Powerstone",
+					"reference": "M69",
+					"difficulty": "IQ/H",
+					"college": "Enchantment",
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "20",
+					"maintenance_cost": "-",
+					"casting_time": "Varies",
+					"duration": "Permanent",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Enchantment"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "33a2e49f-00ef-479a-ad69-d1e992ade53f",
+			"name": "Feu",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "6872b173-8440-4b41-8008-ade82b6c8681",
+					"name": "Ignite Fire",
+					"reference": "M72",
+					"difficulty": "IQ/H",
+					"college": "Fire",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-4",
+					"maintenance_cost": "Same",
+					"casting_time": "1 sec",
+					"duration": "1 sec",
+					"categories": [
+						"Fire"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "ebfbd76b-295d-4d8f-b074-ca64468a38af",
+					"name": "Create Fire",
+					"reference": "M72",
+					"difficulty": "IQ/H",
+					"college": "Fire",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "burn",
+								"base": "1d-1"
+							},
+							"usage": "Area",
+							"reach": "Special",
+							"parry": "No"
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "ignite fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Fire"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "8cd2d27f-17f5-400c-aa66-544d130ef13e",
+			"name": "Air",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "dc4e8180-bfd0-4c03-9e25-a85b785bed41",
+					"name": "Purify Air",
+					"reference": "M23",
+					"difficulty": "IQ/H",
+					"college": "Air",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "4cbd6864-6eb2-4999-95dc-488254517c53",
+					"name": "Create Air",
+					"reference": "M23",
+					"difficulty": "IQ/H",
+					"college": "Air",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "5 sec",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "c04553f9-cfaa-4197-878b-129f9192e7d8",
+					"name": "Shape Air",
+					"reference": "M24",
+					"difficulty": "IQ/H",
+					"college": "Air",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-10",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "55b49a3f-3a43-44c4-a88a-2ee469e87dff",
+					"name": "Destroy Air",
+					"reference": "M24",
+					"difficulty": "IQ/H",
+					"college": "Air",
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "2d49fc4e-3103-49c5-a28b-5ccaadc6c43e",
+					"name": "Predict Weather",
+					"reference": "M193",
+					"difficulty": "IQ/H",
+					"college": "Air or Weather",
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "5 sec",
+					"duration": "Instant",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 4
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air",
+						"Weather"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "4330e2d1-ef49-4a51-ac72-ff8ca8d5ec4f",
+			"name": "Terre",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "4586cc52-4c87-4635-89e0-d964b839f4cc",
+					"name": "Seek Earth",
+					"reference": "M50",
+					"difficulty": "IQ/H",
+					"college": "Earth",
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "3",
+					"maintenance_cost": "-",
+					"casting_time": "10 sec",
+					"duration": "Instant",
+					"categories": [
+						"Earth"
+					]
+				},
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "bf192981-c36f-4ae3-9e3e-3095c34d8c48",
+					"name": "Shape Earth",
+					"reference": "M50",
+					"difficulty": "IQ/H",
+					"college": "Earth",
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1 per 25 cu yard",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Earth"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "acf0b9ba-f112-4693-ac0c-ff624374d3d0",
+			"name": "Création & dissolution",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "66e68a75-6009-4902-993b-62ad014669e7",
+					"name": "Find Weakness",
+					"reference": "M116",
+					"difficulty": "IQ/H",
+					"college": "Making & Breaking",
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "2 sec",
+					"duration": "Instant",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Making & Breaking"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "ac9ecbce-9514-4a36-8d46-f050109290f3",
+			"name": "Eau",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "b89e8fb1-3872-49bc-95da-cea6e9a4fbd5",
+					"name": "Seek Water",
+					"reference": "M184",
+					"difficulty": "IQ/H",
+					"college": "Water",
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"categories": [
+						"Water"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"version": 1,
+			"id": "064635d3-01e3-4d7d-a574-b46b6be72568",
+			"name": "enchantement armes",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"version": 1,
+					"id": "d0ece5ab-08ba-4569-aea4-87c179ef2128",
+					"name": "Accuracy",
+					"reference": "M65",
+					"difficulty": "IQ/H",
+					"college": "Enchantment",
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "-",
+					"duration": "Permanent",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 5
+								}
+							}
+						]
+					},
+					"categories": [
+						"Weapon Enchantment"
+					]
+				}
+			]
+		}
+	],
+	"print_settings": {
+		"printer": "EPSON-Epson-Stylus-Photo-PX720WD",
+		"units": "in",
+		"orientation": "portrait",
+		"width": 8.267716,
+		"height": 11.692913,
+		"top_margin": 0.25,
+		"left_margin": 0.25,
+		"bottom_margin": 0.249999,
+		"right_margin": 0.249999,
+		"ink_chromaticity": "monochrome",
+		"sides": "single",
+		"quality": "normal"
+	}
+}

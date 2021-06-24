@@ -1,0 +1,1372 @@
+{
+	"type": "character",
+	"version": 1,
+	"id": "933e5af3-06c2-486f-88ce-2710328c6ebe",
+	"settings": {
+		"version": 1,
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"base_will_on_10": false,
+		"base_per_on_10": false,
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"use_know_your_own_strength": false,
+		"use_reduced_swing": false,
+		"use_thrust_equals_swing_minus_2": false,
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"extra_space_around_encumbrance": false,
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		]
+	},
+	"created_date": "Jun 16, 2021, 9:12 PM",
+	"modified_date": "Jun 20, 2021, 7:54 PM",
+	"profile": {
+		"player_name": "Zaz",
+		"name": "Olafur Bnorguestromberg",
+		"title": "Navigateur ?",
+		"age": "27",
+		"birthday": "Oct 1",
+		"eyes": "Marron",
+		"hair": "Rouquin, Bouclé, Court",
+		"skin": "Freckled",
+		"handedness": "Gauche",
+		"height": "5' 6\"",
+		"weight": "126 lb",
+		"gender": "Male",
+		"body_type": "humanoid",
+		"tech_level": "3"
+	},
+	"total_points": 150,
+	"ST": 12,
+	"DX": 12,
+	"IQ": 11,
+	"HT": 10,
+	"advantages": [
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "46386174-08cb-4d92-a5d3-f88c6ea06081",
+			"name": "Absolute Direction",
+			"mental": true,
+			"physical": true,
+			"base_points": 5,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f986464e-63f6-405c-b447-c612dfb07504",
+					"disabled": true,
+					"name": "Requires signal",
+					"reference": "B34",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "cf76d780-52fd-4946-91a8-96ebec5d4b82",
+					"disabled": true,
+					"name": "3D Spatial Sense",
+					"reference": "B34",
+					"cost_type": "points",
+					"cost": 5,
+					"affects": "total",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "piloting"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "aerobatics"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "free fall"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "navigation"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "hyperspace"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "navigation"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "space"
+							}
+						}
+					]
+				}
+			],
+			"reference": "B34",
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "body sense"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "air"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "land"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "sea"
+					}
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "463724b2-1e32-4f21-97bf-96623c65ace1",
+			"name": "Alcohol Tolerance",
+			"physical": true,
+			"base_points": 1,
+			"reference": "B100",
+			"notes": "+2 on all HT rolls related to drinking",
+			"categories": [
+				"Perk"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "cb63a49e-3d65-4417-8ee5-ba716185a1dc",
+			"name": "Attaques Naturelles",
+			"physical": true,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Morsure",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "DX"
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Coup de poing",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "DX"
+						},
+						{
+							"type": "Skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "Skill",
+							"name": "Karate"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Coup de pied",
+					"reach": "C,1",
+					"parry": "No",
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B271"
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "edef17bf-0b56-44a1-8ef6-f489adf6930a",
+			"name": "Language: Northlander",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "c3ad4a9d-5d40-4896-b930-03f91360f07c",
+					"name": "Native",
+					"reference": "B23",
+					"cost_type": "points",
+					"cost": -6,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "11720606-0aab-4968-9987-6a65a5d78620",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "02dd7905-0331-47fe-bece-c5510dc10255",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "cce25496-9ac9-48ca-976f-e40f44558b4a",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "4592d568-ba8b-45ae-9adc-9e76b2d73676",
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "9a0c24ff-8f62-4a47-8f2a-bfec5eaf9e89",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "fe3e69ec-510c-477a-b952-d261ba95498c",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "6ca02ee3-947c-404e-b02e-83d23538a6b4",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "7a37fb06-f689-404e-bd84-4e900bd76829",
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				}
+			],
+			"reference": "B24",
+			"categories": [
+				"Advantage",
+				"Language"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "288fdc31-9dfa-4cfd-8067-bdc23a734156",
+			"name": "Language: Common",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "59565a52-cec0-41cd-8443-82f9aace3f38",
+					"name": "Native",
+					"reference": "B23",
+					"cost_type": "points",
+					"cost": -6,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "ed6492f8-069f-4658-8264-66af43052ebd",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "94d12da4-f57a-4050-afc6-7df92d0ed9d0",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "0fc0f3e5-b9c9-4bba-8317-b74cbd80b2a0",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f96f51f5-1753-4069-baad-6871a64871a5",
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "b87dca71-12e5-441c-821b-40fcc56e0355",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "44fa3272-6e2d-4f4c-b99f-af22779ec8cf",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "418f2b19-5d3e-4f61-9daf-8bd85bc75643",
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "675be757-0366-41b2-a8ed-b18c21d87ece",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				}
+			],
+			"reference": "B24",
+			"categories": [
+				"Advantage",
+				"Language"
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "bae9e1a5-b027-4c5b-8d83-a24354c485a6",
+			"name": "Language: Lantan",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "8d3499e1-5379-4239-86cb-c67c27649d49",
+					"disabled": true,
+					"name": "Native",
+					"reference": "B23",
+					"cost_type": "points",
+					"cost": -6,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f3924952-e034-4b44-90c2-488f3a9ba922",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "0b2bae74-1a39-410f-ac99-fed38e40a353",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "39666a44-3896-454a-a6b8-64daffc5eab0",
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "5184ba76-7ad7-4dd0-be5e-8acf5770a323",
+					"disabled": true,
+					"name": "Spoken",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "b81bf335-a796-43a6-bd0e-7c43059a7ef8",
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total",
+					"notes": "None"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "93c75e27-882f-4ee7-a92e-815aa24d6477",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "Broken"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "99be3aae-04f3-4804-acbb-a73c299aa630",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "Accented"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "c9f68f1f-bf25-4978-bd7c-9259c2a84089",
+					"disabled": true,
+					"name": "Written",
+					"reference": "B24",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "Native"
+				}
+			],
+			"reference": "B24",
+			"categories": [
+				"Advantage",
+				"Language"
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "bef52085-86a8-4500-bc54-9b97d7fa525d",
+			"name": "Artist",
+			"reference": "B179",
+			"specialization": "Drawing",
+			"difficulty": "IQ/H",
+			"points": 1,
+			"defaulted_from": {
+				"type": "IQ",
+				"modifier": -6,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"defaults": [
+				{
+					"type": "IQ",
+					"modifier": -6
+				},
+				{
+					"type": "Skill",
+					"name": "Artist",
+					"specialization": "Calligraphy",
+					"modifier": -2
+				},
+				{
+					"type": "Skill",
+					"name": "Artist",
+					"specialization": "Illumination",
+					"modifier": -2
+				},
+				{
+					"type": "Skill",
+					"name": "Artist",
+					"specialization": "Painting",
+					"modifier": -2
+				},
+				{
+					"type": "Skill",
+					"name": "Artist",
+					"specialization": "Body Art",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Artist",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Arts/Entertainment"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "c0ab4c9a-4c1e-47bf-bb73-d679a382072b",
+			"name": "Carousing",
+			"reference": "B183",
+			"difficulty": "HT/E",
+			"points": 4,
+			"defaulted_from": {
+				"type": "HT",
+				"modifier": -4,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "HT",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "ec8e88b9-9c05-436b-888b-fadd2e9eed30",
+			"name": "Mechanic",
+			"reference": "B107",
+			"specialization": "Clockwork",
+			"tech_level": "4",
+			"difficulty": "IQ/A",
+			"points": 1,
+			"defaulted_from": {
+				"type": "IQ",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "IQ",
+					"modifier": -5
+				},
+				{
+					"type": "Skill",
+					"name": "Engineer",
+					"specialization": "Clockwork",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Machinist",
+					"modifier": -5
+				},
+				{
+					"type": "Skill",
+					"name": "Mechanic",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Repair/Maintainance"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "96a57535-ead3-4929-823a-c01c76bc7532",
+			"name": "Traps",
+			"reference": "B226",
+			"tech_level": "4",
+			"difficulty": "IQ/A",
+			"points": 1,
+			"defaulted_from": {
+				"type": "IQ",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "IQ",
+					"modifier": -5
+				},
+				{
+					"type": "Skill",
+					"name": "Lockpicking",
+					"modifier": -3
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Military"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "173a8e2d-d5ff-4fae-aef1-f8b38dd467ea",
+			"name": "Knife",
+			"reference": "B208",
+			"difficulty": "DX/E",
+			"points": 1,
+			"defaulted_from": {
+				"type": "DX",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "Skill",
+					"name": "Force Sword",
+					"modifier": -3
+				},
+				{
+					"type": "Skill",
+					"name": "Main-Gauche",
+					"modifier": -3
+				},
+				{
+					"type": "Skill",
+					"name": "Shortsword",
+					"modifier": -3
+				},
+				{
+					"type": "DX",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "5cf75a92-2af3-4896-a6fc-3629a4409b61",
+			"name": "Saber",
+			"reference": "B208",
+			"difficulty": "DX/A",
+			"points": 12,
+			"defaulted_from": {
+				"type": "DX",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "DX",
+					"modifier": -5
+				},
+				{
+					"type": "Skill",
+					"name": "Broadsword",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Shortswort",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Main-Gauche",
+					"modifier": -3
+				},
+				{
+					"type": "Skill",
+					"name": "Rapier",
+					"modifier": -3
+				},
+				{
+					"type": "Skill",
+					"name": "Smallsword",
+					"modifier": -3
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "248e013c-0873-4325-955f-e7c32b818253",
+			"name": "Fast-Draw",
+			"reference": "B194",
+			"specialization": "Sword",
+			"difficulty": "DX/E",
+			"points": 1,
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "3f02a581-2aae-4278-baa8-f3fa2eec9344",
+			"name": "Thrown Weapon",
+			"reference": "B226",
+			"specialization": "Knife",
+			"difficulty": "DX/E",
+			"points": 1,
+			"defaulted_from": {
+				"type": "DX",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "DX",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Ranged Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "4e200ac2-25a9-4c34-bf2e-e286986c8d86",
+			"name": "Spear",
+			"reference": "B208",
+			"difficulty": "DX/A",
+			"points": 1,
+			"defaulted_from": {
+				"type": "DX",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "DX",
+					"modifier": -5
+				},
+				{
+					"type": "Skill",
+					"name": "Polearm",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Staff",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"version": 1,
+			"id": "9ac3204c-d8e5-4086-9b7f-4bda7e9e9149",
+			"name": "Thrown Weapon",
+			"reference": "B226",
+			"specialization": "Spear",
+			"difficulty": "DX/E",
+			"points": 1,
+			"defaulted_from": {
+				"type": "DX",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "DX",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Spear Thrower",
+					"modifier": -4
+				},
+				{
+					"type": "Skill",
+					"name": "Thrown Weapon",
+					"specialization": "Harpoon",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Ranged Combat"
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "a8f43fcd-aa1b-4225-881e-9df1f5cda119",
+			"name": "Navigateur",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "0cd6904c-e032-4bb2-aa12-b035b20b7565",
+					"name": "Boating",
+					"reference": "B180",
+					"specialization": "Unpowered",
+					"tech_level": "3",
+					"difficulty": "DX/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "DX",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Boating",
+							"specialization": "Large Powerboat",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Boating",
+							"specialization": "Motorboat",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Boating",
+							"specialization": "Sailboat",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "79d57f71-c749-4544-a237-a9f7e596a20e",
+					"name": "Climbing",
+					"reference": "B183",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "DX/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Athletic",
+						"Criminal/Street",
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "873c6457-a389-4f98-b948-7c64e0b4b6b4",
+					"name": "Knot-Tying",
+					"reference": "B203",
+					"difficulty": "DX/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Seamanship",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Climbing",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Seamanship",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "b53f7aaa-6135-4f44-ae23-e15e51fc7bf8",
+					"name": "Leadership",
+					"reference": "B204",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Military",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "bc53ecea-b0fc-4d20-8193-6909b54e5183",
+					"name": "Navigation",
+					"reference": "B211",
+					"specialization": "Sea",
+					"tech_level": "4",
+					"difficulty": "IQ/A",
+					"points": 4,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Seamanship",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Astronomy",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Seamanship",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Navigation",
+							"specialization": "Air",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Navigation",
+							"specialization": "Land",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration",
+						"Technical",
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "12447ada-ea88-4611-8b08-bc94469a2751",
+					"name": "Seamanship",
+					"reference": "B185",
+					"tech_level": "4",
+					"difficulty": "IQ/E",
+					"points": 4,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a747151d-9ec3-4a60-9f2e-17df33571c52",
+					"name": "Shiphandling",
+					"reference": "B220",
+					"specialization": "Ship",
+					"tech_level": "4",
+					"difficulty": "IQ/H",
+					"points": 8,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Seamanship",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Seamanship"
+								}
+							},
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "navigation"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "sea"
+								}
+							},
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "leadership"
+								},
+								"specialization": {
+									"compare": "is"
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Seamanship",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Boating",
+							"specialization": "Large Powerboat",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Boating",
+							"specialization": "Sailboat",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "6da6e12f-40d6-4021-a045-643adeaff0ad",
+					"name": "Tactics",
+					"reference": "B224",
+					"difficulty": "IQ/H",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Military",
+						"Police"
+					]
+				}
+			]
+		}
+	],
+	"print_settings": {
+		"printer": "EPSON-Epson-Stylus-Photo-PX720WD",
+		"units": "in",
+		"orientation": "portrait",
+		"width": 8.267716,
+		"height": 11.692913,
+		"top_margin": 0.25,
+		"left_margin": 0.25,
+		"bottom_margin": 0.249999,
+		"right_margin": 0.249999,
+		"ink_chromaticity": "monochrome",
+		"sides": "single",
+		"quality": "normal"
+	}
+}
