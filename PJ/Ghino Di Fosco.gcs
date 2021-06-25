@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Jun 25, 2021, 11:29 AM",
+	"modified_date": "Jun 25, 2021, 2:02 PM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -921,16 +921,23 @@
 			"modifiers": [
 				{
 					"type": "modifier",
-					"id": "4121b778-180e-40c5-93bf-39dfa880a953",
+					"id": "cd0dd5c4-0765-45c6-be61-998cd92bdd3c",
 					"name": "-1 Reaction",
 					"reference": "B22",
 					"cost_type": "points",
 					"cost": -5,
-					"affects": "total"
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "des autres à cause de la mauvaise odeur"
+						}
+					]
 				},
 				{
 					"type": "modifier",
-					"id": "19d35124-38c0-4aa1-a007-1bb0a2d65eb4",
+					"id": "cb7ddf74-b2f2-4bcd-84c5-341f5779b5d0",
 					"disabled": true,
 					"name": "-2 Reaction",
 					"reference": "B22",
@@ -940,7 +947,7 @@
 				},
 				{
 					"type": "modifier",
-					"id": "208e64bf-3f44-4595-a38f-80238a7b226b",
+					"id": "dedbb29d-7a2d-45ae-9151-e87a2ad9c566",
 					"disabled": true,
 					"name": "-3 Reaction",
 					"reference": "B22",
@@ -956,116 +963,6 @@
 			"notes": "Mauvaise odeur",
 			"categories": [
 				"Disadvantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "2a27a15c-2297-473e-bbbd-ed21f93b5999",
-			"name": "Magery",
-			"mental": true,
-			"supernatural": true,
-			"levels": "1",
-			"base_points": 5,
-			"points_per_level": 10,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "c66c6dc3-d4ac-4422-bc02-893113b5ff65",
-					"disabled": true,
-					"name": "Dance",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "5fb27ecc-5884-43f3-8618-1fb5625bc38f",
-					"disabled": true,
-					"name": "Dark-Aspected",
-					"cost_type": "percentage",
-					"cost": -50,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "bb013df6-c376-40a4-a952-8a088b48a563",
-					"disabled": true,
-					"name": "Day-Aspected",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "09a6ccc2-b1f2-4857-a44d-76e326978d00",
-					"disabled": true,
-					"name": "Musical",
-					"cost_type": "percentage",
-					"cost": -50,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "e76aac03-debd-4838-be38-f12cccec7ae1",
-					"disabled": true,
-					"name": "Night-Aspected",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "7ab3e53a-444e-47d0-86e4-f06662335528",
-					"disabled": true,
-					"name": "One College",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only",
-					"notes": "@College@"
-				},
-				{
-					"type": "modifier",
-					"id": "7ce0a9a6-ab1a-4b30-a3d7-fdc3ea380a40",
-					"disabled": true,
-					"name": "Solitary",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "e0b70f33-1b4b-4b3d-9aeb-0df365113afc",
-					"disabled": true,
-					"name": "Song",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				}
-			],
-			"reference": "B66",
-			"calc": {
-				"points": 15
-			},
-			"features": [
-				{
-					"type": "spell_bonus",
-					"amount": 1,
-					"per_level": true,
-					"match": "all_colleges"
-				},
-				{
-					"type": "skill_bonus",
-					"amount": 1,
-					"per_level": true,
-					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "thaumatology"
-					}
-				}
-			],
-			"categories": [
-				"Advantage"
 			]
 		},
 		{
@@ -1657,6 +1554,106 @@
 			"categories": [
 				"Moto"
 			]
+		},
+		{
+			"type": "advantage",
+			"id": "52a36a58-708c-4a5c-b4f1-681b0934d152",
+			"name": "Magery (Ritual Path)",
+			"mental": true,
+			"supernatural": true,
+			"levels": "3",
+			"base_points": 5,
+			"points_per_level": 10,
+			"reference": "TRPM5",
+			"calc": {
+				"points": 35
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "71905ede-dd22-4313-9e75-5f2d1409cef8",
+			"name": "Code of Honor (Docteur)",
+			"mental": true,
+			"base_points": -5,
+			"reference": "B127",
+			"calc": {
+				"points": -5
+			},
+			"notes": "Adhère à une forme de serment d'hypocrate",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "5290ea05-9b31-41eb-a0a5-740935bcfaff",
+			"name": "Social Stigma (Excommunicated from Chauntea cult)",
+			"social": true,
+			"base_points": -5,
+			"reference": "B155",
+			"calc": {
+				"points": -5
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -3,
+					"situation": "from followers of Chauntea"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "e981937c-9219-4a73-b73a-1b4102886e53",
+			"name": "Flashbacks",
+			"physical": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "07831968-1916-497d-89e7-6e1eb0f9a846",
+					"name": "Mild",
+					"reference": "B136",
+					"cost_type": "points",
+					"cost": -5,
+					"affects": "total",
+					"notes": "Duration: 2d seconds; -2 on all skill rolls"
+				},
+				{
+					"type": "modifier",
+					"id": "066028a7-1a87-4332-94c5-d24522d7b20c",
+					"disabled": true,
+					"name": "Severe",
+					"reference": "B136",
+					"cost_type": "points",
+					"cost": -10,
+					"affects": "total",
+					"notes": "Duration: 1d minutes; -5 on all skill rolls"
+				},
+				{
+					"type": "modifier",
+					"id": "b34164dc-f7e6-45a1-805d-4ad6427a2d73",
+					"disabled": true,
+					"name": "Crippling",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"notes": "Duration: 3d minutes; Precludes all skill use"
+				}
+			],
+			"reference": "B136",
+			"calc": {
+				"points": -5
+			},
+			"notes": "In any situation that the GM feels is stressful, he will roll 3d. On a 6 or less, you have a flashback. The GM will roll whenever you miss a Fright Check or make the roll exactly, and whenever you fail a self-control roll for another stress-related disadvantage.",
+			"categories": [
+				"Disadvantage"
+			]
 		}
 	],
 	"skills": [
@@ -2002,43 +1999,478 @@
 			"children": [
 				{
 					"type": "skill",
-					"id": "949dbb22-1e6e-4506-b99d-cd0622748f14",
-					"name": "Hidden Lore",
-					"reference": "B199",
-					"specialization": "Spirit Lore",
-					"difficulty": "iq/a",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"categories": [
-						"Knowledge",
-						"Occult/Magical"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "d3c3d18a-cd98-4f6e-8819-fe40aa7cc6a7",
-					"name": "Ritual Magic",
-					"reference": "B218",
-					"specialization": "Invocation esptits",
+					"id": "6c2b9b93-b1f6-448b-86f5-3a0ddcbbe178",
+					"name": "Thaumatology",
+					"reference": "B225",
 					"difficulty": "iq/vh",
 					"points": 8,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -7,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
 					"calc": {
 						"level": 13,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
 						{
-							"type": "skill",
-							"name": "Ritual Magic",
-							"modifier": -6
+							"type": "iq",
+							"modifier": -7
 						}
 					],
 					"categories": [
 						"Occult/Magical"
 					]
+				},
+				{
+					"type": "skill",
+					"id": "dd844c23-f649-42ff-a2d3-3b44a1c8d860",
+					"name": "Path of Body (Yesod)",
+					"reference": "TRPM7",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "922c2b6c-9c84-4016-bca9-e4d1ce7625a4",
+					"name": "Path of Chance (Hod)",
+					"reference": "TRPM8",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "a2a28d98-6c76-4f48-8a39-e02c7a06a7b0",
+					"name": "Path of Crossroads (Tiphareth)",
+					"reference": "TRPM9",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "f6f2c508-fee2-423f-992b-2d654261d5e3",
+					"name": "Path of Energy (Geburah)",
+					"reference": "TRPM9",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "54c2114e-a4a0-4b96-b219-839377182702",
+					"name": "Path of Magic (Chesed)",
+					"reference": "TRPM10",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "f19150ba-6c80-40f7-a410-9b6f5f0b702d",
+					"name": "Path of Matter (Netzach)",
+					"reference": "TRPM11",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "a2e3aa5e-dfc9-478e-b8d5-5a391df49cbf",
+					"name": "Path of Mind (Chokmah)",
+					"reference": "TRPM11",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "e7400d89-c6c2-47cc-952c-1f42f7e34e05",
+					"name": "Path of Spirit (Binah)",
+					"reference": "TRPM12",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "97df7384-8fde-4b3a-9c0b-353e0ef9afc5",
+					"name": "Path of Undead (Malkuth)",
+					"reference": "TRPM12",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Thaumatology",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ-3"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Thaumatology"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Thaumatology",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Magic",
+						"Ritual Path Magic"
+					]
+				},
+				{
+					"type": "skill_container",
+					"id": "eecf48b2-9315-4e8e-a8ac-89ddef1974c0",
+					"name": "Magie rituelle",
+					"open": true
 				},
 				{
 					"type": "skill",
@@ -2073,6 +2505,23 @@
 					],
 					"categories": [
 						"Social Sciences/Humanities"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "949dbb22-1e6e-4506-b99d-cd0622748f14",
+					"name": "Hidden Lore",
+					"reference": "B199",
+					"specialization": "Spirit Lore",
+					"difficulty": "iq/a",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ-1"
+					},
+					"categories": [
+						"Knowledge",
+						"Occult/Magical"
 					]
 				}
 			]
@@ -2396,7 +2845,7 @@
 					"reference": "B226",
 					"specialization": "Panthéon classique Forgotten Realms",
 					"difficulty": "iq/h",
-					"points": 2,
+					"points": 1,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -6,
@@ -2405,8 +2854,8 @@
 						"points": -7
 					},
 					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
+						"level": 11,
+						"rsl": "IQ-2"
 					},
 					"defaults": [
 						{
@@ -2570,807 +3019,6 @@
 			"categories": [
 				"Athletic",
 				"Outdoor/Exploration"
-			]
-		}
-	],
-	"spells": [
-		{
-			"type": "spell_container",
-			"id": "8a527a2e-22b7-40e5-9151-84af4b83be7f",
-			"name": "Soins",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "797e11a8-4e07-4a0e-9cb6-61342182586a",
-					"name": "Lend Energy",
-					"reference": "M89",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "1/pt",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": false,
-								"prereqs": [
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "one college (healing)"
-										}
-									},
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "does_not_contain",
-											"qualifier": "one college"
-										}
-									}
-								]
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "empathy"
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "bd9b5bce-bea2-4e8b-a029-d1c09284b728",
-					"name": "Lend Vitality",
-					"reference": "M89",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "1/pt",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "1 hour",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "lend energy"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "4699a72e-6e39-44f5-8ef5-7a30ba43bf7e",
-					"name": "Minor Healing",
-					"reference": "M91",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "1-3",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "lend vitality"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "7115f3c0-1747-4ae5-9e7a-50c08e8c2f12",
-					"name": "Major Healing",
-					"reference": "M91",
-					"difficulty": "iq/vh",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "1-4",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 11,
-						"rsl": "IQ-2"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": false,
-								"prereqs": [
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "one college (healing)"
-										}
-									},
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "does_not_contain",
-											"qualifier": "one college"
-										}
-									}
-								]
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "minor healing"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "959a5bd2-a6e2-4051-823a-5d6efa0dbe18",
-					"name": "Recover Energy",
-					"reference": "M89",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Special",
-					"casting_cost": "0",
-					"maintenance_cost": "0",
-					"casting_time": "1 sec",
-					"duration": "Special",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": false,
-								"prereqs": [
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "one college (healing)"
-										}
-									},
-									{
-										"type": "advantage_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "magery"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "does_not_contain",
-											"qualifier": "one college"
-										}
-									}
-								]
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "lend energy"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "b5235f54-4e44-4297-9a32-90a072455d18",
-					"name": "Relieve Sickness",
-					"reference": "M90",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"resist": "Subject spell",
-					"casting_cost": "2",
-					"maintenance_cost": "-",
-					"casting_time": "10 sec",
-					"duration": "10 min",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "lend vitality"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "cc27c98e-f9f2-40c4-af77-ee11df14279e",
-					"name": "Cure Disease",
-					"reference": "M91",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "4",
-					"maintenance_cost": "-",
-					"casting_time": "10 min",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "relieve sickness"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "major healing"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "aadc6352-db1b-45bf-b4dd-291d55b8ed76",
-					"name": "Neutralize Poison",
-					"reference": "M92",
-					"difficulty": "iq/h",
-					"college": [
-						"Healing"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "5",
-					"maintenance_cost": "-",
-					"casting_time": "30 sec",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "poisons"
-								}
-							},
-							{
-								"type": "prereq_list",
-								"all": true,
-								"prereqs": [
-									{
-										"type": "spell_prereq",
-										"has": true,
-										"sub_type": "name",
-										"qualifier": {
-											"compare": "is",
-											"qualifier": "test food"
-										},
-										"quantity": {
-											"compare": "at_least",
-											"qualifier": 1
-										}
-									},
-									{
-										"type": "prereq_list",
-										"all": false,
-										"prereqs": [
-											{
-												"type": "advantage_prereq",
-												"has": true,
-												"name": {
-													"compare": "is",
-													"qualifier": "magery"
-												},
-												"level": {
-													"compare": "at_least",
-													"qualifier": 3
-												},
-												"notes": {
-													"compare": "contains",
-													"qualifier": "one college (healing)"
-												}
-											},
-											{
-												"type": "advantage_prereq",
-												"has": true,
-												"name": {
-													"compare": "is",
-													"qualifier": "magery"
-												},
-												"level": {
-													"compare": "at_least",
-													"qualifier": 3
-												}
-											}
-										]
-									}
-								]
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "cure disease"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Healing"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "b289b2a4-7ab0-4694-a8f1-a782a9274729",
-			"name": "emprise mentale",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "68f43180-00dc-479c-9267-0bb4b4aeccc4",
-					"name": "Fear",
-					"reference": "M134",
-					"difficulty": "iq/h",
-					"college": [
-						"Mind Control"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Area",
-					"resist": "Will",
-					"casting_cost": "1",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "10 min",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "sense emotion"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "empathy"
-								}
-							}
-						]
-					},
-					"categories": [
-						"Mind Control"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "82317988-32c4-4c6e-a8fd-c7193d6f5622",
-			"name": "communiccation & empathie",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "4baaeedd-679e-4cfa-b1de-caff991300ea",
-					"name": "Sense Life",
-					"reference": "M45",
-					"difficulty": "iq/h",
-					"college": [
-						"Communication & Empathy"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info/Area",
-					"casting_cost": "1/2",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"categories": [
-						"Communication"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "1090e735-1b23-4cd1-9b48-41d797ee1721",
-					"name": "Sense Foes",
-					"reference": "M44",
-					"difficulty": "iq/h",
-					"college": [
-						"Communication & Empathy"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info/Area",
-					"casting_cost": "1/area, min 2",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"categories": [
-						"Communication"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "d1b38227-88ca-4aad-b023-3d01965676f3",
-					"name": "Sense Emotion",
-					"reference": "M45",
-					"difficulty": "iq/h",
-					"college": [
-						"Communication & Empathy"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Regular",
-					"casting_cost": "2",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "sense foes"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Communication"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "15b469ae-79f9-491d-926f-cb1c8e692262",
-			"name": "necromancie",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "31410cb7-e77f-41ab-8738-4f495d0a1cb1",
-					"name": "Sense Spirit",
-					"reference": "M149",
-					"difficulty": "iq/h",
-					"college": [
-						"Necromancy"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info/Area",
-					"casting_cost": "1/2 (min 1)",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 12,
-						"rsl": "IQ-1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": true,
-								"prereqs": [
-									{
-										"type": "prereq_list",
-										"all": false,
-										"prereqs": [
-											{
-												"type": "advantage_prereq",
-												"has": true,
-												"name": {
-													"compare": "is",
-													"qualifier": "magery"
-												},
-												"level": {
-													"compare": "at_least",
-													"qualifier": 1
-												},
-												"notes": {
-													"compare": "contains",
-													"qualifier": "one college (necromancy)"
-												}
-											},
-											{
-												"type": "advantage_prereq",
-												"has": true,
-												"name": {
-													"compare": "is",
-													"qualifier": "magery"
-												},
-												"level": {
-													"compare": "at_least",
-													"qualifier": 1
-												}
-											}
-										]
-									},
-									{
-										"type": "spell_prereq",
-										"has": true,
-										"sub_type": "name",
-										"qualifier": {
-											"compare": "is",
-											"qualifier": "sense life"
-										},
-										"quantity": {
-											"compare": "at_least",
-											"qualifier": 1
-										}
-									}
-								]
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "death vision"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Necromancy"
-					]
-				}
 			]
 		}
 	]
