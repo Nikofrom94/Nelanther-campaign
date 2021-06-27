@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Jun 25, 2021, 2:02 PM",
+	"modified_date": "Jun 27, 2021, 6:53 PM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -1784,7 +1784,7 @@
 				{
 					"type": "skill",
 					"id": "d9099241-bb60-4234-a644-6d4447281cb7",
-					"name": "Couteau",
+					"name": "Knife",
 					"reference": "B208",
 					"difficulty": "dx/e",
 					"points": 4,
@@ -1795,56 +1795,6 @@
 						"adjusted_level": 8,
 						"points": -8
 					},
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "imp",
-								"st": "thr",
-								"modifier_per_die": -1
-							},
-							"usage": "Couteau",
-							"reach": "1",
-							"parry": "0",
-							"block": "0",
-							"calc": {
-								"level": 14,
-								"parry": "10",
-								"block": "10",
-								"damage": "1d-3 imp"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Couteau"
-								}
-							]
-						},
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "sw",
-								"modifier_per_die": -3
-							},
-							"usage": "Couteau",
-							"reach": "1",
-							"parry": "0",
-							"block": "0",
-							"calc": {
-								"level": 14,
-								"parry": "10",
-								"block": "10",
-								"damage": "1d-4 cut"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Couteau"
-								}
-							]
-						}
-					],
 					"calc": {
 						"level": 14,
 						"rsl": "DX+2"
@@ -1878,67 +1828,18 @@
 				{
 					"type": "skill",
 					"id": "ba60a2ed-e25d-4d38-8ed4-80852c167dfa",
-					"name": "Machette",
+					"name": "Saber",
 					"reference": "B209",
 					"difficulty": "dx/a",
 					"points": 4,
 					"defaulted_from": {
-						"type": "dx",
-						"modifier": -5,
-						"level": 7,
-						"adjusted_level": 7,
-						"points": -7
+						"type": "skill",
+						"name": "Knife",
+						"modifier": -4,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "sw"
-							},
-							"strength": "7",
-							"usage": "Machette",
-							"reach": "1",
-							"parry": "0",
-							"block": "0",
-							"calc": {
-								"level": 13,
-								"parry": "9",
-								"block": "9",
-								"damage": "1d-1 cut"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Machette"
-								}
-							]
-						},
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "imp",
-								"st": "thr"
-							},
-							"strength": "7",
-							"usage": "Machette",
-							"reach": "1",
-							"parry": "0",
-							"block": "0",
-							"calc": {
-								"level": 13,
-								"parry": "9",
-								"block": "9",
-								"damage": "1d-2 imp"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Machette"
-								}
-							]
-						}
-					],
 					"calc": {
 						"level": 13,
 						"rsl": "DX+1"
@@ -3019,6 +2920,282 @@
 			"categories": [
 				"Athletic",
 				"Outdoor/Exploration"
+			]
+		}
+	],
+	"equipment": [
+		{
+			"type": "equipment",
+			"id": "3b5869e1-ab04-427f-b94b-3423970d044b",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Large Knife",
+			"tech_level": "0",
+			"value": "40",
+			"weight": "1 lb",
+			"reference": "B272",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "C,1",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 14,
+						"parry": "9",
+						"block": "No",
+						"damage": "1d-3 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 14,
+						"parry": "9",
+						"block": "No",
+						"damage": "1d-2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.8/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-2",
+					"calc": {
+						"level": 8,
+						"range": "7/13",
+						"damage": "1d-2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "83384dff-972c-4305-97b8-3c047303cdac",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Saber",
+			"tech_level": "4",
+			"value": "700",
+			"weight": "2 lb",
+			"reference": "B273",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-1"
+					},
+					"strength": "8",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0F",
+					"block": "No",
+					"calc": {
+						"level": 13,
+						"parry": "9F",
+						"block": "No",
+						"damage": "1d-2 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Saber"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "8",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0F",
+					"block": "No",
+					"calc": {
+						"level": 13,
+						"parry": "9F",
+						"block": "No",
+						"damage": "1d-1 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Saber"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon"
 			]
 		}
 	]
