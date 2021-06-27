@@ -369,7 +369,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "8",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -382,7 +382,7 @@
 					"description": "",
 					"calc": {
 						"roll_range": "9-10",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -408,7 +408,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "12",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -473,7 +473,7 @@
 					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
 					"calc": {
 						"roll_range": "-",
-						"dr": 0
+						"dr": 1
 					}
 				}
 			]
@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 16, 2021, 9:12 PM",
-	"modified_date": "Jun 25, 2021, 6:15 PM",
+	"modified_date": "Jun 27, 2021, 5:47 PM",
 	"profile": {
 		"player_name": "Zaz",
 		"name": "Olafur Bnorguestromberg",
@@ -856,7 +856,7 @@
 					"parry": "0",
 					"calc": {
 						"level": 12,
-						"parry": "9",
+						"parry": "11",
 						"block": "",
 						"damage": "1d-2 cr"
 					},
@@ -1372,6 +1372,39 @@
 				"points": -10
 			},
 			"notes": "Tu ne te souviens de rien avant ton \"réveil\" dans les îles Nelanther. Les vêtements que tu portais indiquaient que tu venais du Nord. Tu sais faire des choses mais tu n'as aucune idée de comment tu les as apprises. Le GM se réserve jusqu'à 30pts de désavantages à appliquer selon son bon vouloir.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "814e32f9-38f9-4835-95c3-f247b7c56c30",
+			"name": "Acrophobia (Heights)",
+			"mental": true,
+			"base_points": -10,
+			"cr": 12,
+			"cr_adj": "action_penalty",
+			"reference": "B150",
+			"calc": {
+				"points": -10
+			},
+			"notes": "You may not voluntarily go more than 15 feet above ground, unless you are inside a building and away from windows. If there is some chance of an actual fall, self-control rolls are at -5.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "8248177b-7575-40fd-bce7-40de899bb5aa",
+			"name": "Arachnophobia (Spiders)",
+			"mental": true,
+			"base_points": -5,
+			"cr": 12,
+			"cr_adj": "action_penalty",
+			"reference": "B150",
+			"calc": {
+				"points": -5
+			},
 			"categories": [
 				"Disadvantage"
 			]
@@ -2162,7 +2195,7 @@
 						"points": -7
 					},
 					"calc": {
-						"level": 11,
+						"level": 10,
 						"rsl": "DX-1"
 					},
 					"defaults": [
@@ -2466,32 +2499,6 @@
 						"adjusted_level": 7,
 						"points": -7
 					},
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "sw",
-								"modifier_per_die": 2
-							},
-							"strength": "11",
-							"usage": "Axe",
-							"reach": "1",
-							"parry": "0",
-							"calc": {
-								"level": 14,
-								"parry": "10",
-								"block": "",
-								"damage": "1d+4 cut"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Axe/Mace"
-								}
-							]
-						}
-					],
 					"calc": {
 						"level": 14,
 						"rsl": "DX+2"
@@ -2532,29 +2539,6 @@
 						"adjusted_level": 8,
 						"points": -8
 					},
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": ""
-							},
-							"usage": "Block attack",
-							"block": "0",
-							"calc": {
-								"level": 12,
-								"parry": "",
-								"block": "9",
-								"damage": ""
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Shield",
-									"specialization": "Buckler"
-								}
-							]
-						}
-					],
 					"calc": {
 						"level": 12,
 						"rsl": "DX+0"
@@ -2582,7 +2566,7 @@
 					"name": "Knife",
 					"reference": "B208",
 					"difficulty": "dx/e",
-					"points": 1,
+					"points": 2,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2591,8 +2575,8 @@
 						"points": -8
 					},
 					"calc": {
-						"level": 12,
-						"rsl": "DX+0"
+						"level": 13,
+						"rsl": "DX+1"
 					},
 					"defaults": [
 						{
@@ -2628,7 +2612,7 @@
 					"specialization": "Musket",
 					"tech_level": "4",
 					"difficulty": "dx/e",
-					"points": 1,
+					"points": 8,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2637,8 +2621,8 @@
 						"points": -8
 					},
 					"calc": {
-						"level": 12,
-						"rsl": "DX+0"
+						"level": 15,
+						"rsl": "DX+3"
 					},
 					"defaults": [
 						{
@@ -2706,7 +2690,7 @@
 					"reference": "B226",
 					"specialization": "Axe/Mace",
 					"difficulty": "dx/e",
-					"points": 1,
+					"points": 2,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2714,38 +2698,9 @@
 						"adjusted_level": 8,
 						"points": -8
 					},
-					"weapons": [
-						{
-							"type": "ranged_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "sw",
-								"modifier_per_die": 2
-							},
-							"strength": "11",
-							"usage": "Thrown Axe",
-							"accuracy": "2",
-							"range": "1/2dam:ST   Max:STx1.5",
-							"rate_of_fire": "1",
-							"shots": "1",
-							"bulk": "-3",
-							"calc": {
-								"level": 12,
-								"range": "1/2dam:ST   Max:STx1.5",
-								"damage": "1d+4 cut"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Thrown Weapon",
-									"specialization": "Axe/Mace"
-								}
-							]
-						}
-					],
 					"calc": {
-						"level": 12,
-						"rsl": "DX+0"
+						"level": 13,
+						"rsl": "DX+1"
 					},
 					"defaults": [
 						{
@@ -2774,7 +2729,7 @@
 					"specialization": "Clockwork",
 					"tech_level": "4",
 					"difficulty": "iq/a",
-					"points": 1,
+					"points": 4,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
@@ -2783,8 +2738,8 @@
 						"points": -6
 					},
 					"calc": {
-						"level": 11,
-						"rsl": "IQ+0"
+						"level": 13,
+						"rsl": "IQ+2"
 					},
 					"defaults": [
 						{
@@ -2820,7 +2775,7 @@
 					"specialization": "Fireworks",
 					"tech_level": "4",
 					"difficulty": "iq/a",
-					"points": 1,
+					"points": 2,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
@@ -2829,8 +2784,8 @@
 						"points": -6
 					},
 					"calc": {
-						"level": 10,
-						"rsl": "IQ-1"
+						"level": 11,
+						"rsl": "IQ+0"
 					},
 					"defaults": [
 						{
@@ -2860,7 +2815,7 @@
 					"reference": "B226",
 					"tech_level": "4",
 					"difficulty": "iq/a",
-					"points": 1,
+					"points": 4,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
@@ -2869,8 +2824,8 @@
 						"points": -6
 					},
 					"calc": {
-						"level": 10,
-						"rsl": "IQ-1"
+						"level": 12,
+						"rsl": "IQ+1"
 					},
 					"defaults": [
 						{
@@ -2888,6 +2843,351 @@
 						"Military"
 					]
 				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"type": "equipment",
+			"id": "d5cb5d78-bc55-48cb-81ef-e86699b891ee",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Axe",
+			"tech_level": "0",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B271",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "11",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0U",
+					"block": "No",
+					"calc": {
+						"level": 14,
+						"parry": "12U",
+						"block": "No",
+						"damage": "1d+4 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Flail",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace",
+							"modifier": -3
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "deb9b9f9-f7bb-4c87-89fd-c0d3f0ce28f4",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Matchlock Musket, .80",
+			"tech_level": "4",
+			"value": "150",
+			"weight": "20 lb",
+			"reference": "B279",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "pi++",
+						"base": "4d"
+					},
+					"strength": "10R†",
+					"accuracy": "2",
+					"range": "100/600",
+					"rate_of_fire": "1",
+					"shots": "1(60)",
+					"bulk": "-6",
+					"recoil": "3",
+					"calc": {
+						"level": 15,
+						"range": "100/600",
+						"damage": "4d pi++"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket"
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Gun!"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "f4c970dc-6749-46c1-b143-2549831a6ec7",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Throwing Axe",
+			"tech_level": "0",
+			"value": "60",
+			"weight": "4 lb",
+			"reference": "B271",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "11",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0U",
+					"block": "No",
+					"calc": {
+						"level": 14,
+						"parry": "12U",
+						"block": "No",
+						"damage": "1d+4 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Flail",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "11",
+					"usage": "Thrown",
+					"accuracy": "2",
+					"range": "x1/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-3",
+					"calc": {
+						"level": 13,
+						"range": "12/18",
+						"damage": "1d+4 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Axe/Mace"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "b820f031-beab-4be7-9376-db82dae447e2",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Leather Jacket",
+			"tech_level": "1",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B283",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "arm"
+				}
+			],
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "ca812983-e851-40b7-9b8e-4f23b0067729",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Medium Shield",
+			"tech_level": "1",
+			"value": "60",
+			"weight": "15 lb",
+			"reference": "B287",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"strength": "0",
+					"usage": "Shield Bash",
+					"reach": "1",
+					"parry": "No",
+					"block": "+0",
+					"calc": {
+						"level": 12,
+						"parry": "No",
+						"block": "11",
+						"damage": "1d-1 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Buckler"
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Force Shield"
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Shield"
+						}
+					]
+				}
+			],
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "dodge"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "parry"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "block"
+				}
+			],
+			"categories": [
+				"Shield"
 			]
 		}
 	]
