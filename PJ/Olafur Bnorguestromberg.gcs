@@ -3,8 +3,8 @@
 	"version": 2,
 	"id": "933e5af3-06c2-486f-88ce-2710328c6ebe",
 	"settings": {
-		"default_length_units": "ft_in",
-		"default_weight_units": "lb",
+		"default_length_units": "m",
+		"default_weight_units": "kg",
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
@@ -330,7 +330,7 @@
 					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
 					"calc": {
 						"roll_range": "3-4",
-						"dr": 2
+						"dr": 6
 					}
 				},
 				{
@@ -447,7 +447,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "16",
-						"dr": 0
+						"dr": 2
 					}
 				},
 				{
@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 16, 2021, 9:12 PM",
-	"modified_date": "Jun 27, 2021, 5:47 PM",
+	"modified_date": "Jul 2, 2021, 2:32 PM",
 	"profile": {
 		"player_name": "Zaz",
 		"name": "Olafur Bnorguestromberg",
@@ -1389,22 +1389,6 @@
 				"points": -10
 			},
 			"notes": "You may not voluntarily go more than 15 feet above ground, unless you are inside a building and away from windows. If there is some chance of an actual fall, self-control rolls are at -5.",
-			"categories": [
-				"Disadvantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "8248177b-7575-40fd-bce7-40de899bb5aa",
-			"name": "Arachnophobia (Spiders)",
-			"mental": true,
-			"base_points": -5,
-			"cr": 12,
-			"cr_adj": "action_penalty",
-			"reference": "B150",
-			"calc": {
-				"points": -5
-			},
 			"categories": [
 				"Disadvantage"
 			]
@@ -2612,7 +2596,7 @@
 					"specialization": "Musket",
 					"tech_level": "4",
 					"difficulty": "dx/e",
-					"points": 8,
+					"points": 4,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2621,8 +2605,8 @@
 						"points": -8
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "DX+3"
+						"level": 14,
+						"rsl": "DX+2"
 					},
 					"defaults": [
 						{
@@ -2904,32 +2888,32 @@
 		},
 		{
 			"type": "equipment",
-			"id": "deb9b9f9-f7bb-4c87-89fd-c0d3f0ce28f4",
+			"id": "6f999143-767c-4f10-a160-233c9732e603",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Matchlock Musket, .80",
-			"tech_level": "4",
-			"value": "150",
-			"weight": "20 lb",
-			"reference": "B279",
+			"description": "Large Knife",
+			"tech_level": "0",
+			"value": "40",
+			"weight": "1 lb",
+			"reference": "B272",
 			"weapons": [
 				{
-					"type": "ranged_weapon",
+					"type": "melee_weapon",
 					"damage": {
-						"type": "pi++",
-						"base": "4d"
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
 					},
-					"strength": "10R†",
-					"accuracy": "2",
-					"range": "100/600",
-					"rate_of_fire": "1",
-					"shots": "1(60)",
-					"bulk": "-6",
-					"recoil": "3",
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "C,1",
+					"parry": "-1",
+					"block": "No",
 					"calc": {
-						"level": 15,
-						"range": "100/600",
-						"damage": "4d pi++"
+						"level": 13,
+						"parry": "10",
+						"block": "No",
+						"damage": "1d cut"
 					},
 					"defaults": [
 						{
@@ -2938,65 +2922,109 @@
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Pistol",
-							"modifier": -2
+							"name": "Knife"
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Rifle",
-							"modifier": -2
+							"name": "Force Sword",
+							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Shotgun",
-							"modifier": -2
+							"name": "Main-Gauche",
+							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Light Machine Gun",
-							"modifier": -2
+							"name": "Shortsword",
+							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Submachine Gun",
-							"modifier": -2
-						},
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 13,
+						"parry": "10",
+						"block": "No",
+						"damage": "1d-1 imp"
+					},
+					"defaults": [
 						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Musket"
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Grenade Launcher",
+							"type": "dx",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Gyroc",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.8/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-2",
+					"calc": {
+						"level": 8,
+						"range": "9/18",
+						"damage": "1d-1 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Light Anti-Armor Weapon",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Gun!"
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
 						}
 					]
 				}
 			],
 			"categories": [
+				"Melee Weapon",
 				"Missile Weapon"
 			]
 		},
@@ -3089,6 +3117,27 @@
 		},
 		{
 			"type": "equipment",
+			"id": "df642baa-4493-40c5-a649-8334a0202e3f",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Steel Pot",
+			"tech_level": "6",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "B285",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 4,
+					"location": "skull"
+				}
+			],
+			"categories": [
+				"Headgear"
+			]
+		},
+		{
+			"type": "equipment",
 			"id": "b820f031-beab-4be7-9376-db82dae447e2",
 			"equipped": true,
 			"quantity": 1,
@@ -3120,7 +3169,7 @@
 		},
 		{
 			"type": "equipment",
-			"id": "ca812983-e851-40b7-9b8e-4f23b0067729",
+			"id": "9c5903c8-2ce6-4ed8-873d-0726bb376d8e",
 			"equipped": true,
 			"quantity": 1,
 			"description": "Medium Shield",
@@ -3188,6 +3237,201 @@
 			],
 			"categories": [
 				"Shield"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "e88c29a0-b8e3-4166-a5a7-546d320226cd",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Reinforced Boots",
+			"tech_level": "7",
+			"value": "75",
+			"weight": "3 lb",
+			"reference": "B284",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 2,
+					"location": "foot"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					}
+				}
+			],
+			"categories": [
+				"Footwear"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "099adddf-8319-447d-aec1-d17915d0e8e6",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Flintlock Musket, .75",
+			"tech_level": "4",
+			"value": "200",
+			"weight": "13 lb",
+			"reference": "B279",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "pi++",
+						"base": "4d"
+					},
+					"strength": "10†",
+					"accuracy": "2",
+					"range": "100/1500",
+					"rate_of_fire": "1",
+					"shots": "1(15)",
+					"bulk": "-6",
+					"recoil": "4",
+					"calc": {
+						"level": 14,
+						"range": "100/1500",
+						"damage": "4d pi++"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket"
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Gun!"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "1561170c-3da5-4ac7-bfac-7f94f5988dd5",
+			"equipped": true,
+			"description": "Backpack, Small",
+			"tech_level": "1",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "B288",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true
+		},
+		{
+			"type": "equipment_container",
+			"id": "47a85dbf-8afd-4543-b6aa-45b9b2ffaabc",
+			"equipped": true,
+			"description": "Pouch",
+			"tech_level": "1",
+			"value": "10",
+			"weight": "0.2 lb",
+			"reference": "DF1:23",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "3 lb"
+						}
+					}
+				]
+			},
+			"notes": "3 lb small items",
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "30804e35-cefc-4645-8439-9e59168162ed",
+					"equipped": true,
+					"quantity": 30,
+					"description": "munitions pour mousquet",
+					"weight": "0.033 kg"
+				}
 			]
 		}
 	]

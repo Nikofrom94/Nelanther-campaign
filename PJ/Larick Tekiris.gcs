@@ -3,8 +3,8 @@
 	"version": 2,
 	"id": "8a7a3f7e-0dd5-43c2-bf51-c49226eae3a0",
 	"settings": {
-		"default_length_units": "ft_in",
-		"default_weight_units": "lb",
+		"default_length_units": "m",
+		"default_weight_units": "kg",
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 15, 2021, 6:40 PM",
-	"modified_date": "Jun 27, 2021, 6:49 PM",
+	"modified_date": "Jul 2, 2021, 2:21 PM",
 	"profile": {
 		"player_name": "Riko",
 		"name": "Larick Tekiris",
@@ -3670,6 +3670,431 @@
 					]
 				}
 			]
+		}
+	],
+	"equipment": [
+		{
+			"type": "equipment",
+			"id": "cefcec16-b8ac-4753-912c-7cfaa3611bf2",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Flintlock Musket, .75",
+			"tech_level": "4",
+			"value": "200",
+			"weight": "13 lb",
+			"reference": "B279",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "pi++",
+						"base": "4d"
+					},
+					"strength": "10†",
+					"accuracy": "2",
+					"range": "100/1500",
+					"rate_of_fire": "1",
+					"shots": "1(15)",
+					"bulk": "-6",
+					"recoil": "4",
+					"calc": {
+						"level": 10,
+						"range": "100/1500",
+						"damage": "4d pi++"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket"
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Gun!"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "3ebc9fbf-b7b1-486b-a715-af31eb1d040e",
+			"equipped": true,
+			"description": "Pouch",
+			"tech_level": "1",
+			"value": "10",
+			"weight": "0.2 lb",
+			"reference": "DF1:23",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "3 lb"
+						}
+					}
+				]
+			},
+			"notes": "3 lb small items",
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "3b48e259-70ff-466b-a02c-e8b69ecdc1ea",
+					"equipped": true,
+					"quantity": 30,
+					"description": "Munition et poudre pour 30 tirs",
+					"weight": "0.033 kg"
+				}
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "46159b59-2431-44c7-8ec6-87466c184273",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Large Knife",
+			"tech_level": "0",
+			"value": "40",
+			"weight": "1 lb",
+			"reference": "B272",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "C,1",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 10,
+						"parry": "7",
+						"block": "No",
+						"damage": "1d-2 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 10,
+						"parry": "7",
+						"block": "No",
+						"damage": "1d-2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.8/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-2",
+					"calc": {
+						"level": 6,
+						"range": "8/15",
+						"damage": "1d-2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "489fd87f-a1f9-4995-8c56-3ecc9dc9cba8",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Alchemical Antidote",
+			"value": "400",
+			"weight": "0.5 lb",
+			"reference": "DF1:29",
+			"notes": "Potion. Negates all Potions.",
+			"categories": [
+				"Concoctions",
+				"Concoctions:Potions"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "1f40331c-a58c-4546-89ed-d66adfd49c44",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Backpack Alchemy Lab",
+			"value": "1000",
+			"weight": "10 lb",
+			"reference": "DF1:26",
+			"notes": "Basic EQ to identify, -2 to brew.",
+			"categories": [
+				"Esoteric Supplies"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "113cafbd-76d6-436c-8050-8aa7bf941372",
+			"equipped": true,
+			"description": "Sack",
+			"value": "30",
+			"weight": "3 lb",
+			"reference": "DF1:24",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"notes": "40 lb, DR 1, HP 5",
+			"categories": [
+				"Container"
+			],
+			"open": true
+		},
+		{
+			"type": "equipment_container",
+			"id": "ab072904-a412-49e5-8ad5-b2a4dde14297",
+			"equipped": true,
+			"description": "Haversack",
+			"value": "30",
+			"weight": "1 lb",
+			"reference": "PY106:11",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "10 lb"
+						}
+					}
+				]
+			},
+			"notes": "Worn on Shoulder. Holds 10 lbs",
+			"categories": [
+				"Container"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "d2c105ed-70c3-471d-b9c8-daf80ae4ea33",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Alchemist's Matches",
+					"value": "15",
+					"weight": "0.25 lb",
+					"reference": "DF1:25",
+					"notes": "Tin of 50. Set fire to pack if dropped, 1 on 1d.",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "fabcb419-953f-41b4-bb9f-5479f206290d",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Whetstone",
+					"tech_level": "1",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B289",
+					"notes": "For sharpening tools and wapons",
+					"categories": [
+						"Tools"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "cd0afdb2-106b-4d8b-817a-4be6e9dd7048",
+			"equipped": true,
+			"description": "Backpack, Small",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "DFA111",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"notes": "Holds 40 lbs of gear",
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true
 		}
 	]
 }

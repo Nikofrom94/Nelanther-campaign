@@ -369,7 +369,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "8",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -382,7 +382,7 @@
 					"description": "",
 					"calc": {
 						"roll_range": "9-10",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -408,7 +408,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "12",
-						"dr": 0
+						"dr": 1
 					}
 				},
 				{
@@ -434,7 +434,7 @@
 					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "15",
-						"dr": 0
+						"dr": 2
 					}
 				},
 				{
@@ -447,7 +447,7 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "16",
-						"dr": 0
+						"dr": 2
 					}
 				},
 				{
@@ -473,7 +473,7 @@
 					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
 					"calc": {
 						"roll_range": "-",
-						"dr": 0
+						"dr": 1
 					}
 				}
 			]
@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Jun 27, 2021, 7:07 PM",
+	"modified_date": "Jul 1, 2021, 11:14 AM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -2655,53 +2655,6 @@
 						"adjusted_level": 10,
 						"points": -10
 					},
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "imp",
-								"st": "thr"
-							},
-							"usage": "large knife",
-							"reach": "C",
-							"parry": "0",
-							"calc": {
-								"level": 14,
-								"parry": "11",
-								"block": "",
-								"damage": "1d-1 imp"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Knife"
-								}
-							]
-						},
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "sw",
-								"modifier_per_die": -2
-							},
-							"usage": "large knife",
-							"reach": "C,1",
-							"parry": "0",
-							"calc": {
-								"level": 14,
-								"parry": "11",
-								"block": "",
-								"damage": "1d cut"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Knife"
-								}
-							]
-						}
-					],
 					"calc": {
 						"level": 14,
 						"rsl": "DX+0"
@@ -3079,6 +3032,28 @@
 					]
 				},
 				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": ""
+					},
+					"usage": "Parade main gauche",
+					"reach": "C",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 14,
+						"parry": "11",
+						"block": "No",
+						"damage": ""
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Main-gauche"
+						}
+					]
+				},
+				{
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
@@ -3112,6 +3087,357 @@
 			"categories": [
 				"Melee Weapon",
 				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "40a48d1a-852a-49d0-b39f-1f49d26ab4c7",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Crossbow (ST12)",
+			"tech_level": "2",
+			"value": "225",
+			"weight": "6 lb",
+			"reference": "B276",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+3"
+					},
+					"strength": "12†",
+					"accuracy": "4",
+					"range": "240/300",
+					"rate_of_fire": "1",
+					"shots": "1(4)",
+					"bulk": "-6",
+					"calc": {
+						"level": 15,
+						"range": "240/300",
+						"damage": "1d+3 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Crossbow"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Missile Weapon",
+				"UsesAmmoType:Bolt"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "c91ee7a6-b4fa-4056-ad20-2e74e5786366",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Leather Jacket",
+			"tech_level": "1",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B283",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "arm"
+				}
+			],
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "47303d25-9f67-4edc-bcfd-a3d4e0569da9",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Leather Gloves",
+			"tech_level": "1",
+			"value": "30",
+			"reference": "B284",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 2,
+					"location": "hand"
+				}
+			],
+			"categories": [
+				"Gloves"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "18b9365d-e3e1-4df6-8f78-6af74a659066",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Boots",
+			"tech_level": "2",
+			"value": "80",
+			"weight": "3 lb",
+			"reference": "B284",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 2,
+					"location": "foot"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					}
+				}
+			],
+			"notes": "Flexible; Concealable",
+			"categories": [
+				"Footwear"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "2bf4f0f9-f06e-410e-bb88-a83ffc3ade0b",
+			"equipped": true,
+			"description": "Purse, Small",
+			"tech_level": "1",
+			"value": "10",
+			"weight": "0.2 lb",
+			"reference": "B288",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "1 lb"
+						}
+					}
+				]
+			},
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true
+		},
+		{
+			"type": "equipment_container",
+			"id": "6e9fcefb-9e59-48fb-aa11-069840745333",
+			"equipped": true,
+			"description": "Backpack, Small",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "DFA111",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"notes": "Holds 40 lbs of gear",
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true
+		},
+		{
+			"type": "equipment_container",
+			"id": "098d068f-2681-45e8-816b-344d523a0848",
+			"equipped": true,
+			"description": "Haversack",
+			"value": "30",
+			"weight": "1 lb",
+			"reference": "PY106:11",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "10 lb"
+						}
+					}
+				]
+			},
+			"notes": "Worn on Shoulder. Holds 10 lbs",
+			"categories": [
+				"Container"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "3c499e4a-187c-4848-ba00-79efa8793598",
+					"equipped": true,
+					"quantity": 1,
+					"description": "First Aid Kit",
+					"value": "50",
+					"weight": "2 lb",
+					"reference": "DFA111",
+					"notes": "+1 to First Aid",
+					"categories": [
+						"Medical Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "ed1a1ad8-04a5-4ef7-b481-273211431988",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Bandages",
+					"tech_level": "0",
+					"value": "10",
+					"weight": "2 lb",
+					"reference": "B289",
+					"notes": "Bandages for a  half-dozen wounds. Might be clean cloth, adhesive dressings, or spray-on \"Plastiskin\", depending on TL. Basic equipment for First Aid skill.",
+					"categories": [
+						"Medical Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "baad81cb-27f8-4619-a76e-ca054a6a9172",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Whetstone",
+					"tech_level": "1",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B289",
+					"notes": "For sharpening tools and wapons",
+					"categories": [
+						"Tools"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "a791d424-be5d-4340-8d6b-353fb4947536",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "d8aed464-be0f-476f-8411-d57d08cc6295",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Crossbow Bolt",
+					"tech_level": "2",
+					"value": "2",
+					"weight": "0.06 lb",
+					"reference": "B276",
+					"categories": [
+						"AmmoType:Bolt",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
+			]
+		}
+	],
+	"other_equipment": [
+		{
+			"type": "equipment_container",
+			"id": "7cf0760c-bacd-403a-b4e6-028e1e0472a4",
+			"equipped": true,
+			"description": "Sack",
+			"value": "30",
+			"weight": "3 lb",
+			"reference": "DFA111",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"notes": "40 lb, DR 1, HP 5",
+			"categories": [
+				"Container"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "2928df36-def5-482c-aec3-ff78342f7a21",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Personal Basics",
+					"tech_level": "0",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B288",
+					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "53fb7ba9-a70c-48bc-95cd-50d1beeeac50",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Blanket",
+					"tech_level": "1",
+					"value": "20",
+					"weight": "4 lb",
+					"reference": "B288",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				}
 			]
 		}
 	]

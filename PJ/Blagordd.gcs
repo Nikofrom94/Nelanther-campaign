@@ -510,7 +510,7 @@
 		]
 	},
 	"created_date": "Jun 26, 2021, 9:35 AM",
-	"modified_date": "Jun 27, 2021, 5:25 PM",
+	"modified_date": "Jun 30, 2021, 9:04 AM",
 	"profile": {
 		"player_name": "Richard",
 		"name": "Blagordd",
@@ -529,10 +529,10 @@
 	"attributes": [
 		{
 			"attr_id": "st",
-			"adj": 4,
+			"adj": 3,
 			"calc": {
-				"value": 14,
-				"points": 40
+				"value": 13,
+				"points": 30
 			}
 		},
 		{
@@ -571,7 +571,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -646,8 +646,8 @@
 			"adj": 0,
 			"damage": 0,
 			"calc": {
-				"value": 16,
-				"current": 16,
+				"value": 15,
+				"current": 15,
 				"points": 0
 			}
 		}
@@ -672,7 +672,7 @@
 					"parry": "No",
 					"block": "No",
 					"calc": {
-						"level": 16,
+						"level": 18,
 						"parry": "No",
 						"block": "No",
 						"damage": "1d cr"
@@ -698,8 +698,8 @@
 					"reach": "C",
 					"parry": "0",
 					"calc": {
-						"level": 16,
-						"parry": "11",
+						"level": 18,
+						"parry": "13",
 						"block": "",
 						"damage": "1d cr"
 					},
@@ -731,7 +731,7 @@
 					"reach": "C,1",
 					"parry": "No",
 					"calc": {
-						"level": 14,
+						"level": 16,
 						"parry": "No",
 						"block": "",
 						"damage": "1d+1 cr"
@@ -758,6 +758,160 @@
 			"calc": {
 				"points": 0
 			}
+		},
+		{
+			"type": "advantage",
+			"id": "4c3e3975-bea4-4c15-9343-f39081f30e54",
+			"name": "Combat Reflexes",
+			"mental": true,
+			"base_points": 15,
+			"reference": "B43",
+			"calc": {
+				"points": 15
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Enhanced Time Sense"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "fast-draw"
+					}
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "dodge"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "parry"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "block"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "fright_check"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 6,
+					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "to initiative rolls for your side (+2 if you are the leader)"
+				}
+			],
+			"notes": "Never freeze",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "d61b0b3b-2d75-45d6-80e8-ca7f1a99c9b2",
+			"name": "Proud",
+			"mental": true,
+			"base_points": -1,
+			"reference": "B164",
+			"calc": {
+				"points": -1
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -1,
+					"situation": "to orders, insults, or social slights"
+				}
+			],
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "42d6abc1-9a49-45ef-898c-016b16fe3108",
+			"name": "Expression",
+			"mental": true,
+			"levels": "0",
+			"base_points": -1,
+			"reference": "B164",
+			"calc": {
+				"points": -1
+			},
+			"notes": "\"Si t'es pas content je te fais bouffer tes dents, Gruff !\"",
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "3fbea82d-6561-4c16-b150-bde7bd2c1d91",
+			"name": "Habit",
+			"mental": true,
+			"levels": "0",
+			"base_points": -1,
+			"reference": "B164",
+			"calc": {
+				"points": -1
+			},
+			"notes": "Plante son couteau dans la table avant de manger",
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "3d2fd4d4-2bc4-436f-a95b-bc60c9037c24",
+			"name": "Habit",
+			"mental": true,
+			"levels": "0",
+			"base_points": -1,
+			"reference": "B164",
+			"calc": {
+				"points": -1
+			},
+			"notes": "Une fois vidé, renverse son verre sur la table",
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "41855c63-9612-494f-b2e2-aba0dedd9610",
+			"name": "Like Son couteau",
+			"mental": true,
+			"levels": "0",
+			"base_points": -1,
+			"reference": "B164",
+			"calc": {
+				"points": -1
+			},
+			"categories": [
+				"Quirk"
+			]
 		},
 		{
 			"type": "advantage",
@@ -1515,684 +1669,726 @@
 	],
 	"skills": [
 		{
-			"type": "skill",
-			"id": "3e1e15ab-c220-4079-b3ce-60ce148a83e6",
-			"name": "Two-Handed Sword",
-			"reference": "B209",
-			"difficulty": "dx/a",
-			"points": 8,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
-			},
-			"calc": {
-				"level": 15,
-				"rsl": "DX+2"
-			},
-			"defaults": [
+			"type": "skill_container",
+			"id": "b4d12d05-210a-492e-a88a-6f4ec7bd9bf5",
+			"name": "athletic",
+			"open": true,
+			"children": [
 				{
 					"type": "skill",
-					"name": "Broadsword",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Force Sword",
-					"modifier": -4
-				},
-				{
-					"type": "dx",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "bf6ecc98-eaa1-49db-8462-46adfa907233",
-			"name": "Knife",
-			"reference": "B208",
-			"difficulty": "dx/e",
-			"points": 8,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -4,
-				"level": 9,
-				"adjusted_level": 9,
-				"points": -9
-			},
-			"calc": {
-				"level": 16,
-				"rsl": "DX+3"
-			},
-			"defaults": [
-				{
-					"type": "skill",
-					"name": "Force Sword",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Main-Gauche",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Shortsword",
-					"modifier": -3
-				},
-				{
-					"type": "dx",
-					"modifier": -4
-				}
-			],
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "6e9b289a-bfc9-4ee6-8b04-c45187c4fe0c",
-			"name": "Bow",
-			"reference": "B182",
-			"difficulty": "dx/a",
-			"points": 4,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
-			},
-			"calc": {
-				"level": 14,
-				"rsl": "DX+1"
-			},
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Combat/Weapon",
-				"Ranged Combat"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "0d1641b0-c51f-46fc-aee6-1d92cf21fd67",
-			"name": "Climbing",
-			"reference": "B183",
-			"encumbrance_penalty_multiplier": 1,
-			"difficulty": "dx/a",
-			"points": 2,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
-			},
-			"calc": {
-				"level": 13,
-				"rsl": "DX+0"
-			},
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Athletic",
-				"Criminal/Street",
-				"Outdoor/Exploration"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "2030eb71-a723-4cde-bdce-0c6f115e9f11",
-			"name": "Survival",
-			"reference": "B223",
-			"specialization": "Woodlands",
-			"difficulty": "per/a",
-			"points": 4,
-			"defaulted_from": {
-				"type": "per",
-				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
-			"calc": {
-				"level": 11,
-				"rsl": "Per+1"
-			},
-			"defaults": [
-				{
-					"type": "per",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Naturalist",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Arctic",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Desert",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Island/Beach",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Jungle",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Mountain",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Plains",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Survival",
-					"specialization": "Swampland",
-					"modifier": -3
-				}
-			],
-			"categories": [
-				"Outdoor/Exploration"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "1e26fa56-f20f-4f99-a138-e2848583cb2e",
-			"name": "Stealth",
-			"reference": "B222",
-			"encumbrance_penalty_multiplier": 1,
-			"difficulty": "dx/a",
-			"points": 4,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
-			},
-			"calc": {
-				"level": 14,
-				"rsl": "DX+1"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				},
-				{
-					"type": "dx",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Criminal/Street",
-				"Police",
-				"Spy"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "abe381f0-ef9f-4e3e-afc7-a52f4f394080",
-			"name": "Navigation",
-			"reference": "B211",
-			"specialization": "Land",
-			"tech_level": "4",
-			"difficulty": "iq/a",
-			"points": 2,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
-			"calc": {
-				"level": 10,
-				"rsl": "IQ+0"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Cartography",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Mathematics",
-					"specialization": "Surveying",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Navigation",
-					"specialization": "Air",
-					"modifier": -2
-				},
-				{
-					"type": "skill",
-					"name": "Navigation",
-					"specialization": "Sea",
-					"modifier": -2
-				}
-			],
-			"categories": [
-				"Outdoor/Exploration",
-				"Technical",
-				"Vehicle"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "138a78c1-56f4-442c-9cdb-63963a78c80e",
-			"name": "Tracking",
-			"reference": "B226",
-			"difficulty": "per/a",
-			"points": 8,
-			"defaulted_from": {
-				"type": "per",
-				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
-			"calc": {
-				"level": 12,
-				"rsl": "Per+2"
-			},
-			"defaults": [
-				{
-					"type": "per",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Naturalist",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Outdoor/Exploration"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "48e2d0a2-9547-41a8-a641-b46a966ddc2b",
-			"name": "Hiking",
-			"reference": "B200",
-			"difficulty": "ht/a",
-			"points": 2,
-			"defaulted_from": {
-				"type": "ht",
-				"modifier": -5,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"calc": {
-				"level": 11,
-				"rsl": "HT+0"
-			},
-			"defaults": [
-				{
-					"type": "ht",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Athletic",
-				"Outdoor/Exploration"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "adaa7dd7-8645-40a0-a5f5-4972eff4e9a8",
-			"name": "Mimicry",
-			"reference": "B210",
-			"specialization": "Animal Sounds",
-			"difficulty": "iq/h",
-			"points": 2,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -6,
-				"level": 4,
-				"adjusted_level": 4,
-				"points": -4
-			},
-			"calc": {
-				"level": 9,
-				"rsl": "IQ-1"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -6
-				},
-				{
-					"type": "skill",
-					"name": "Naturalist",
-					"modifier": -6
-				},
-				{
-					"type": "skill",
-					"name": "Mimicry",
-					"specialization": "Bird Calls",
-					"modifier": -6
-				}
-			],
-			"categories": [
-				"Animal",
-				"Arts/Entertainment",
-				"Outdoor/Exploration"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "75b3d4c1-4c4c-4497-bb49-e44094a51edb",
-			"name": "Armoury",
-			"reference": "B178",
-			"specialization": "Melee Weapons",
-			"tech_level": "4",
-			"difficulty": "iq/a",
-			"points": 1,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
-			"calc": {
-				"level": 9,
-				"rsl": "IQ-1"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Engineer",
-					"specialization": "Melee Weapons",
-					"modifier": -4
-				}
-			],
-			"categories": [
-				"Military",
-				"Repair/Maintainance"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "b2e409ce-51ab-40b5-847f-1692dbe21ce0",
-			"name": "Running",
-			"reference": "B218",
-			"difficulty": "ht/a",
-			"points": 1,
-			"defaulted_from": {
-				"type": "ht",
-				"modifier": -5,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"calc": {
-				"level": 10,
-				"rsl": "HT-1"
-			},
-			"defaults": [
-				{
-					"type": "ht",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Athletic"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "71802870-ce43-4e46-bd2a-fb2239dd9037",
-			"name": "Seamanship",
-			"reference": "B185",
-			"tech_level": "4",
-			"difficulty": "iq/e",
-			"points": 1,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -4,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"calc": {
-				"level": 10,
-				"rsl": "IQ+0"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -4
-				}
-			],
-			"categories": [
-				"Vehicle"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "e108bf74-1aeb-49c9-bad7-d8ca83598c4c",
-			"name": "Brawling",
-			"reference": "B182",
-			"difficulty": "dx/e",
-			"points": 8,
-			"calc": {
-				"level": 16,
-				"rsl": "DX+3"
-			},
-			"features": [
-				{
-					"type": "weapon_bonus",
-					"amount": 1,
-					"per_level": true,
-					"selection_type": "weapons_with_required_skill",
-					"name": {
-						"compare": "is",
-						"qualifier": "Brawling"
+					"id": "0d1641b0-c51f-46fc-aee6-1d92cf21fd67",
+					"name": "Climbing",
+					"reference": "B183",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "dx/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
 					},
-					"level": {
-						"compare": "at_least",
-						"qualifier": 2
-					}
-				}
-			],
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "1f3305e0-21f6-4aa6-8ade-3b5554a01247",
-			"name": "Wrestling",
-			"reference": "B228",
-			"difficulty": "dx/a",
-			"points": 8,
-			"calc": {
-				"level": 15,
-				"rsl": "DX+2"
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
-			]
-		},
-		{
-			"type": "technique",
-			"id": "06dba753-ad45-4e3e-a6e2-36c1b3730136",
-			"name": "Neck Snap",
-			"reference": "B232,MA77",
-			"difficulty": "h",
-			"points": 4,
-			"calc": {
-				"level": 13,
-				"rsl": "-1"
-			},
-			"limit": 3,
-			"default": {
-				"type": "st",
-				"modifier": -4
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat",
-				"Technique"
-			]
-		},
-		{
-			"type": "technique",
-			"id": "edbe7405-0652-47dd-a7a3-7a4fda367aa9",
-			"name": "Arm Lock",
-			"reference": "B230",
-			"difficulty": "a",
-			"points": 1,
-			"calc": {
-				"level": 16,
-				"rsl": "+1"
-			},
-			"limit": 4,
-			"default": {
-				"type": "skill",
-				"name": "Wrestling"
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat",
-				"Technique"
-			]
-		},
-		{
-			"type": "technique",
-			"id": "06636645-ac94-4099-b957-e48f4480ecb9",
-			"name": "Aggressive Parry",
-			"reference": "MA65",
-			"difficulty": "h",
-			"points": 2,
-			"calc": {
-				"level": 11,
-				"rsl": "+0"
-			},
-			"limit": 0,
-			"default": {
-				"type": "parry",
-				"name": "Brawling",
-				"modifier": -1
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat",
-				"Technique"
-			]
-		},
-		{
-			"type": "technique",
-			"id": "9f9fa300-487b-4b0f-bad1-181c5f25a57b",
-			"name": "Choke Hold",
-			"reference": "MA69",
-			"difficulty": "h",
-			"points": 2,
-			"calc": {
-				"level": 13,
-				"rsl": "-2"
-			},
-			"limit": 0,
-			"default": {
-				"type": "skill",
-				"name": "Wrestling",
-				"modifier": -3
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "skill_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "Wrestling"
+					"calc": {
+						"level": 12,
+						"rsl": "DX-1"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
 						}
-					}
-				]
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat",
-				"Technique"
+					],
+					"categories": [
+						"Athletic",
+						"Criminal/Street",
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "0bc0bc00-9ad8-4bed-baff-8a71bb8d6469",
+					"name": "Acrobatics",
+					"reference": "B174",
+					"difficulty": "dx/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 11,
+						"rsl": "DX-2"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Aerobatics",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Aquabatics",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Athletic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "57d27b0c-e7a6-482b-8409-c6d0c325c45d",
+					"name": "Swimming",
+					"reference": "B224",
+					"encumbrance_penalty_multiplier": 2,
+					"difficulty": "ht/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "ht",
+						"modifier": -4,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 11,
+						"rsl": "HT+0"
+					},
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Athletic",
+						"Outdoor/Exploration"
+					]
+				}
 			]
 		},
 		{
-			"type": "technique",
-			"id": "bc0270e2-3f7d-476e-9a93-077783e9569d",
-			"name": "Neck Snap",
-			"reference": "B232,MA77",
-			"difficulty": "h",
-			"points": 4,
-			"calc": {
-				"level": 13,
-				"rsl": "-1"
-			},
-			"limit": 3,
-			"default": {
-				"type": "st",
-				"modifier": -4
-			},
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat",
-				"Technique"
+			"type": "skill_container",
+			"id": "e1802139-ef3f-4c56-8a2a-d7faf12a8e5c",
+			"name": "Combat",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "75b3d4c1-4c4c-4497-bb49-e44094a51edb",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Melee Weapons",
+					"tech_level": "4",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"calc": {
+						"level": 9,
+						"rsl": "IQ-1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Melee Weapons",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "e108bf74-1aeb-49c9-bad7-d8ca83598c4c",
+					"name": "Brawling",
+					"reference": "B182",
+					"difficulty": "dx/e",
+					"points": 16,
+					"calc": {
+						"level": 18,
+						"rsl": "DX+5"
+					},
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
+							"level": {
+								"compare": "at_least",
+								"qualifier": 2
+							}
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "1f3305e0-21f6-4aa6-8ade-3b5554a01247",
+					"name": "Wrestling",
+					"reference": "B228",
+					"difficulty": "dx/a",
+					"points": 8,
+					"calc": {
+						"level": 15,
+						"rsl": "DX+2"
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "06dba753-ad45-4e3e-a6e2-36c1b3730136",
+					"name": "Neck Snap",
+					"reference": "B232,MA77",
+					"difficulty": "h",
+					"points": 4,
+					"calc": {
+						"level": 12,
+						"rsl": "-1"
+					},
+					"limit": 3,
+					"default": {
+						"type": "st",
+						"modifier": -4
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "edbe7405-0652-47dd-a7a3-7a4fda367aa9",
+					"name": "Arm Lock",
+					"reference": "B230",
+					"difficulty": "a",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "+1"
+					},
+					"limit": 4,
+					"default": {
+						"type": "skill",
+						"name": "Wrestling"
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "9f9fa300-487b-4b0f-bad1-181c5f25a57b",
+					"name": "Choke Hold",
+					"reference": "MA69",
+					"difficulty": "h",
+					"points": 2,
+					"calc": {
+						"level": 13,
+						"rsl": "-2"
+					},
+					"limit": 0,
+					"default": {
+						"type": "skill",
+						"name": "Wrestling",
+						"modifier": -3
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Wrestling"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "788adfee-55c8-47a2-8c86-70ff97c74c53",
+					"name": "Aggressive Parry",
+					"reference": "MA65",
+					"difficulty": "h",
+					"points": 2,
+					"calc": {
+						"level": 13,
+						"rsl": "+0"
+					},
+					"limit": 0,
+					"default": {
+						"type": "parry",
+						"name": "Brawling",
+						"modifier": -1
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "3e1e15ab-c220-4079-b3ce-60ce148a83e6",
+					"name": "Two-Handed Sword",
+					"reference": "B209",
+					"difficulty": "dx/a",
+					"points": 12,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "DX+3"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "6e9b289a-bfc9-4ee6-8b04-c45187c4fe0c",
+					"name": "Bow",
+					"reference": "B182",
+					"difficulty": "dx/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 14,
+						"rsl": "DX+1"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "9ac0a532-e68a-4283-b7f2-12918d8ee825",
+					"name": "Knife",
+					"reference": "B208",
+					"difficulty": "dx/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"calc": {
+						"level": 13,
+						"rsl": "DX+0"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "dx",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "da930297-81ee-4b80-9487-3fdfb3d1b4d2",
+			"name": "Outdoor",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "2030eb71-a723-4cde-bdce-0c6f115e9f11",
+					"name": "Survival",
+					"reference": "B223",
+					"specialization": "Woodlands",
+					"difficulty": "per/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "per",
+						"modifier": -5,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"calc": {
+						"level": 11,
+						"rsl": "Per+1"
+					},
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Arctic",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Desert",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Island/Beach",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Jungle",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Mountain",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Plains",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Swampland",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "1e26fa56-f20f-4f99-a138-e2848583cb2e",
+					"name": "Stealth",
+					"reference": "B222",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "dx/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 14,
+						"rsl": "DX+1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Criminal/Street",
+						"Police",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "abe381f0-ef9f-4e3e-afc7-a52f4f394080",
+					"name": "Navigation",
+					"reference": "B211",
+					"specialization": "Land",
+					"tech_level": "4",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Cartography",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Surveying",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Air",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Sea",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration",
+						"Technical",
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "138a78c1-56f4-442c-9cdb-63963a78c80e",
+					"name": "Tracking",
+					"reference": "B226",
+					"difficulty": "per/a",
+					"points": 8,
+					"defaulted_from": {
+						"type": "per",
+						"modifier": -5,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"calc": {
+						"level": 12,
+						"rsl": "Per+2"
+					},
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "48e2d0a2-9547-41a8-a641-b46a966ddc2b",
+					"name": "Hiking",
+					"reference": "B200",
+					"difficulty": "ht/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "ht",
+						"modifier": -5,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "HT-1"
+					},
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Athletic",
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "adaa7dd7-8645-40a0-a5f5-4972eff4e9a8",
+					"name": "Mimicry",
+					"reference": "B210",
+					"specialization": "Animal Sounds",
+					"difficulty": "iq/h",
+					"points": 2,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 4,
+						"adjusted_level": 4,
+						"points": -4
+					},
+					"calc": {
+						"level": 9,
+						"rsl": "IQ-1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Mimicry",
+							"specialization": "Bird Calls",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Animal",
+						"Arts/Entertainment",
+						"Outdoor/Exploration"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "71802870-ce43-4e46-bd2a-fb2239dd9037",
+					"name": "Seamanship",
+					"reference": "B185",
+					"tech_level": "4",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				}
 			]
 		}
 	],
@@ -2221,7 +2417,7 @@
 					"shots": "1(2)",
 					"bulk": "-6",
 					"calc": {
-						"level": 14,
+						"level": 13,
 						"range": "140/210",
 						"damage": "1d imp"
 					},
@@ -2266,10 +2462,10 @@
 					"parry": "-1",
 					"block": "No",
 					"calc": {
-						"level": 16,
-						"parry": "10",
+						"level": 13,
+						"parry": "9",
 						"block": "No",
-						"damage": "2d-2 cut"
+						"damage": "2d-3 cut"
 					},
 					"defaults": [
 						{
@@ -2313,8 +2509,8 @@
 					"parry": "-1",
 					"block": "No",
 					"calc": {
-						"level": 16,
-						"parry": "10",
+						"level": 13,
+						"parry": "9",
 						"block": "No",
 						"damage": "1d imp"
 					},
@@ -2363,7 +2559,7 @@
 					"bulk": "-2",
 					"calc": {
 						"level": 9,
-						"range": "11/21",
+						"range": "10/19",
 						"damage": "1d imp"
 					},
 					"defaults": [
@@ -2408,10 +2604,10 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 15,
-						"parry": "10",
+						"level": 16,
+						"parry": "12",
 						"block": "No",
-						"damage": "2d+3 cut"
+						"damage": "2d+2 cut"
 					},
 					"defaults": [
 						{
@@ -2451,8 +2647,8 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 15,
-						"parry": "10",
+						"level": 16,
+						"parry": "12",
 						"block": "No",
 						"damage": "1d+2 cr"
 					},
