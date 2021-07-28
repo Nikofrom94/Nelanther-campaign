@@ -8,6 +8,35 @@
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "na-letter",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
 		"attributes": [
 			{
 				"id": "st",
@@ -477,40 +506,10 @@
 					}
 				}
 			]
-		},
-		"page": {
-			"paper_size": "na-letter",
-			"top_margin": "0.25 in",
-			"left_margin": "0.25 in",
-			"bottom_margin": "0.25 in",
-			"right_margin": "0.25 in",
-			"orientation": "portrait"
-		},
-		"use_multiplicative_modifiers": false,
-		"use_modifying_dice_plus_adds": false,
-		"use_know_your_own_strength": false,
-		"use_reduced_swing": false,
-		"use_thrust_equals_swing_minus_2": false,
-		"use_simple_metric_conversions": true,
-		"show_college_in_sheet_spells": false,
-		"show_difficulty": false,
-		"show_advantage_modifier_adj": false,
-		"show_equipment_modifier_adj": false,
-		"show_spell_adj": true,
-		"use_title_in_footer": false,
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"advantages skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		]
+		}
 	},
 	"created_date": "Jun 16, 2021, 9:12 PM",
-	"modified_date": "Jul 2, 2021, 2:32 PM",
+	"modified_date": "Jul 28, 2021, 2:23 PM",
 	"profile": {
 		"player_name": "Zaz",
 		"name": "Olafur Bnorguestromberg",
@@ -545,10 +544,10 @@
 		},
 		{
 			"attr_id": "iq",
-			"adj": 1,
+			"adj": 2,
 			"calc": {
-				"value": 11,
-				"points": 20
+				"value": 12,
+				"points": 40
 			}
 		},
 		{
@@ -563,7 +562,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -571,7 +570,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -579,7 +578,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 11,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -587,7 +586,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 11,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -595,7 +594,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 11,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -603,7 +602,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 11,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -611,7 +610,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 11,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -652,7 +651,7 @@
 			}
 		}
 	],
-	"total_points": 150,
+	"total_points": 225,
 	"advantages": [
 		{
 			"type": "advantage",
@@ -2055,22 +2054,48 @@
 			"children": [
 				{
 					"type": "skill",
+					"id": "ae6da2f9-c001-4db5-997e-5fbdb0ec1c59",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Lathander islands",
+					"difficulty": "iq/e",
+					"points": 2,
+					"calc": {
+						"level": 13,
+						"rsl": "IQ+1"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Lathander islands",
+							"modifier": -3
+						}
+					],
+					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
 					"id": "bef52085-86a8-4500-bc54-9b97d7fa525d",
 					"name": "Artist",
 					"reference": "B179",
 					"specialization": "Drawing",
 					"difficulty": "iq/h",
-					"points": 1,
+					"points": 8,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -6,
-						"level": 5,
-						"adjusted_level": 5,
-						"points": -5
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
 					},
 					"calc": {
-						"level": 9,
-						"rsl": "IQ-2"
+						"level": 13,
+						"rsl": "IQ+1"
 					},
 					"defaults": [
 						{
@@ -2119,17 +2144,17 @@
 					"specialization": "Unpowered",
 					"tech_level": "3",
 					"difficulty": "dx/a",
-					"points": 1,
+					"points": 2,
 					"defaulted_from": {
-						"type": "dx",
+						"type": "iq",
 						"modifier": -5,
 						"level": 7,
 						"adjusted_level": 7,
 						"points": -7
 					},
 					"calc": {
-						"level": 11,
-						"rsl": "DX-1"
+						"level": 12,
+						"rsl": "DX+0"
 					},
 					"defaults": [
 						{
@@ -2170,7 +2195,7 @@
 					"reference": "B183",
 					"encumbrance_penalty_multiplier": 1,
 					"difficulty": "dx/a",
-					"points": 1,
+					"points": 4,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -5,
@@ -2179,8 +2204,8 @@
 						"points": -7
 					},
 					"calc": {
-						"level": 10,
-						"rsl": "DX-1"
+						"level": 12,
+						"rsl": "DX+1"
 					},
 					"defaults": [
 						{
@@ -2200,18 +2225,18 @@
 					"name": "Knot-Tying",
 					"reference": "B203",
 					"difficulty": "dx/e",
-					"points": 1,
+					"points": 4,
 					"defaulted_from": {
 						"type": "skill",
 						"name": "Seamanship",
 						"modifier": -4,
-						"level": 10,
-						"adjusted_level": 10,
-						"points": -10
+						"level": 13,
+						"adjusted_level": 13,
+						"points": 2
 					},
 					"calc": {
-						"level": 12,
-						"rsl": "DX+0"
+						"level": 14,
+						"rsl": "DX+2"
 					},
 					"defaults": [
 						{
@@ -2243,12 +2268,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
 					},
 					"calc": {
-						"level": 12,
+						"level": 13,
 						"rsl": "IQ+1"
 					},
 					"defaults": [
@@ -2270,18 +2295,18 @@
 					"specialization": "Sea",
 					"tech_level": "4",
 					"difficulty": "iq/a",
-					"points": 4,
+					"points": 12,
 					"defaulted_from": {
 						"type": "skill",
 						"name": "Seamanship",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 12,
+						"adjusted_level": 12,
+						"points": 2
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+4"
+						"level": 18,
+						"rsl": "IQ+6"
 					},
 					"defaults": [
 						{
@@ -2315,22 +2340,79 @@
 				},
 				{
 					"type": "skill",
+					"id": "8cb73f75-ae69-4e62-9ba5-4fefc1b1b0f0",
+					"name": "Navigation",
+					"reference": "B211",
+					"specialization": "Land",
+					"tech_level": "4",
+					"difficulty": "iq/a",
+					"points": 0,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Navigation",
+						"specialization": "Sea",
+						"modifier": -2,
+						"level": 13,
+						"adjusted_level": 13,
+						"points": 4
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+4"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Cartography",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Surveying",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Air",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Sea",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration",
+						"Technical",
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
 					"id": "12447ada-ea88-4611-8b08-bc94469a2751",
 					"name": "Seamanship",
 					"reference": "B185",
 					"tech_level": "4",
 					"difficulty": "iq/e",
-					"points": 8,
+					"points": 16,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -4,
-						"level": 7,
-						"adjusted_level": 7,
-						"points": -7
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
 					},
 					"calc": {
-						"level": 14,
-						"rsl": "IQ+3"
+						"level": 17,
+						"rsl": "IQ+5"
 					},
 					"defaults": [
 						{
@@ -2355,13 +2437,13 @@
 						"type": "skill",
 						"name": "Seamanship",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": 1
+						"level": 12,
+						"adjusted_level": 12,
+						"points": 4
 					},
 					"calc": {
-						"level": 14,
-						"rsl": "IQ+3"
+						"level": 16,
+						"rsl": "IQ+4"
 					},
 					"prereqs": {
 						"type": "prereq_list",
@@ -2433,17 +2515,17 @@
 					"name": "Tactics",
 					"reference": "B224",
 					"difficulty": "iq/h",
-					"points": 4,
+					"points": 16,
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -6,
-						"level": 5,
-						"adjusted_level": 5,
-						"points": -5
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
 					},
 					"calc": {
-						"level": 11,
-						"rsl": "IQ+0"
+						"level": 15,
+						"rsl": "IQ+3"
 					},
 					"defaults": [
 						{
@@ -2510,12 +2592,12 @@
 				},
 				{
 					"type": "skill",
-					"id": "c56dc728-ee9a-47fa-9c78-3f65e3385496",
-					"name": "Shield",
-					"reference": "B220",
-					"specialization": "Buckler",
+					"id": "58dd3388-c3f6-4cbf-aa81-533727fb0871",
+					"name": "Thrown Weapon",
+					"reference": "B226",
+					"specialization": "Axe/Mace",
 					"difficulty": "dx/e",
-					"points": 1,
+					"points": 8,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2524,8 +2606,38 @@
 						"points": -8
 					},
 					"calc": {
-						"level": 12,
-						"rsl": "DX+0"
+						"level": 15,
+						"rsl": "DX+3"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "c56dc728-ee9a-47fa-9c78-3f65e3385496",
+					"name": "Shield",
+					"reference": "B220",
+					"specialization": "Buckler",
+					"difficulty": "dx/e",
+					"points": 4,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -4,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 14,
+						"rsl": "DX+2"
 					},
 					"defaults": [
 						{
@@ -2586,6 +2698,36 @@
 					"categories": [
 						"Combat/Weapon",
 						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "4b5ff4d4-b913-4361-ae52-5937e9a4b950",
+					"name": "Thrown Weapon",
+					"reference": "B226",
+					"specialization": "Knife",
+					"difficulty": "dx/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -4,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 12,
+						"rsl": "DX+0"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
 					]
 				},
 				{
@@ -2666,36 +2808,6 @@
 						"Combat/Weapon",
 						"Ranged Combat"
 					]
-				},
-				{
-					"type": "skill",
-					"id": "58dd3388-c3f6-4cbf-aa81-533727fb0871",
-					"name": "Thrown Weapon",
-					"reference": "B226",
-					"specialization": "Axe/Mace",
-					"difficulty": "dx/e",
-					"points": 2,
-					"defaulted_from": {
-						"type": "dx",
-						"modifier": -4,
-						"level": 8,
-						"adjusted_level": 8,
-						"points": -8
-					},
-					"calc": {
-						"level": 13,
-						"rsl": "DX+1"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						}
-					],
-					"categories": [
-						"Combat/Weapon",
-						"Ranged Combat"
-					]
 				}
 			]
 		},
@@ -2717,12 +2829,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
 					},
 					"calc": {
-						"level": 13,
+						"level": 14,
 						"rsl": "IQ+2"
 					},
 					"defaults": [
@@ -2763,12 +2875,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
 					},
 					"calc": {
-						"level": 11,
+						"level": 12,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2803,12 +2915,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
 					},
 					"calc": {
-						"level": 12,
+						"level": 13,
 						"rsl": "IQ+1"
 					},
 					"defaults": [
@@ -3006,7 +3118,7 @@
 					"shots": "T(1)",
 					"bulk": "-2",
 					"calc": {
-						"level": 8,
+						"level": 12,
 						"range": "9/18",
 						"damage": "1d-1 imp"
 					},
@@ -3093,7 +3205,7 @@
 					"shots": "T(1)",
 					"bulk": "-3",
 					"calc": {
-						"level": 13,
+						"level": 15,
 						"range": "12/18",
 						"damage": "1d+4 cut"
 					},
@@ -3190,9 +3302,9 @@
 					"parry": "No",
 					"block": "+0",
 					"calc": {
-						"level": 12,
+						"level": 14,
 						"parry": "No",
-						"block": "11",
+						"block": "12",
 						"damage": "1d-1 cr"
 					},
 					"defaults": [

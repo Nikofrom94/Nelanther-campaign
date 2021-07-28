@@ -8,6 +8,35 @@
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "iso-a4",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
 		"attributes": [
 			{
 				"id": "st",
@@ -477,40 +506,10 @@
 					}
 				}
 			]
-		},
-		"page": {
-			"paper_size": "na-letter",
-			"top_margin": "0.25 in",
-			"left_margin": "0.25 in",
-			"bottom_margin": "0.25 in",
-			"right_margin": "0.25 in",
-			"orientation": "portrait"
-		},
-		"use_multiplicative_modifiers": false,
-		"use_modifying_dice_plus_adds": false,
-		"use_know_your_own_strength": false,
-		"use_reduced_swing": false,
-		"use_thrust_equals_swing_minus_2": false,
-		"use_simple_metric_conversions": true,
-		"show_college_in_sheet_spells": false,
-		"show_difficulty": false,
-		"show_advantage_modifier_adj": false,
-		"show_equipment_modifier_adj": false,
-		"show_spell_adj": true,
-		"use_title_in_footer": false,
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"advantages skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		]
+		}
 	},
 	"created_date": "Jun 15, 2021, 6:40 PM",
-	"modified_date": "Jul 2, 2021, 2:21 PM",
+	"modified_date": "Jul 28, 2021, 2:11 PM",
 	"profile": {
 		"player_name": "Riko",
 		"name": "Larick Tekiris",
@@ -545,10 +544,10 @@
 		},
 		{
 			"attr_id": "iq",
-			"adj": 4,
+			"adj": 5,
 			"calc": {
-				"value": 14,
-				"points": 80
+				"value": 15,
+				"points": 100
 			}
 		},
 		{
@@ -563,7 +562,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -571,7 +570,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -579,7 +578,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -587,7 +586,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -595,7 +594,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -603,7 +602,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -611,7 +610,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -652,7 +651,7 @@
 			}
 		}
 	],
-	"total_points": 150,
+	"total_points": 225,
 	"advantages": [
 		{
 			"type": "advantage",
@@ -672,7 +671,7 @@
 					"parry": "No",
 					"block": "No",
 					"calc": {
-						"level": 10,
+						"level": 11,
 						"parry": "No",
 						"block": "No",
 						"damage": "1d-3 cr"
@@ -698,7 +697,7 @@
 					"reach": "C",
 					"parry": "0",
 					"calc": {
-						"level": 10,
+						"level": 11,
 						"parry": "8",
 						"block": "",
 						"damage": "1d-3 cr"
@@ -731,7 +730,7 @@
 					"reach": "C,1",
 					"parry": "No",
 					"calc": {
-						"level": 8,
+						"level": 9,
 						"parry": "No",
 						"block": "",
 						"damage": "1d-2 cr"
@@ -2085,6 +2084,95 @@
 	],
 	"skills": [
 		{
+			"type": "skill",
+			"id": "71b81539-1ee4-404f-b874-5d21f0ae89f1",
+			"name": "Area Knowledge",
+			"reference": "B176",
+			"specialization": "Lantan Islands; Lived there",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 11,
+				"adjusted_level": 11,
+				"points": -11
+			},
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Geography",
+					"specialization": "Lantan Islands",
+					"modifier": -3
+				}
+			],
+			"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+			"categories": [
+				"Everyman",
+				"Knowledge"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "ae73c310-b19d-40fc-b2df-fe8976d1250f",
+			"name": "Area Knowledge",
+			"reference": "B176",
+			"specialization": "Sword Coast",
+			"difficulty": "iq/e",
+			"points": 1,
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Geography",
+					"specialization": "Sword Coast",
+					"modifier": -3
+				}
+			],
+			"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+			"categories": [
+				"Everyman",
+				"Knowledge"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "d28f4dff-68fe-4af2-814a-afaeb829f563",
+			"name": "Area Knowledge",
+			"reference": "B176",
+			"specialization": "Lathander Islands",
+			"difficulty": "iq/e",
+			"points": 1,
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Geography",
+					"specialization": "Lathander Islands",
+					"modifier": -3
+				}
+			],
+			"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+			"categories": [
+				"Everyman",
+				"Knowledge"
+			]
+		},
+		{
 			"type": "skill_container",
 			"id": "c326df92-db1e-4350-954f-11a2aca8afd7",
 			"name": "alchimie",
@@ -2099,7 +2187,7 @@
 					"difficulty": "iq/vh",
 					"points": 8,
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"categories": [
@@ -2119,12 +2207,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 13,
+						"level": 14,
 						"rsl": "IQ-1"
 					},
 					"defaults": [
@@ -2160,12 +2248,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2206,12 +2294,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2249,12 +2337,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2286,12 +2374,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2323,12 +2411,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"rsl": "IQ+0"
 					},
 					"defaults": [
@@ -2358,12 +2446,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -4,
-						"level": 10,
-						"adjusted_level": 10,
-						"points": -10
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
 					},
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"defaults": [
@@ -2394,12 +2482,12 @@
 					"defaulted_from": {
 						"type": "iq",
 						"modifier": -5,
-						"level": 9,
-						"adjusted_level": 9,
-						"points": -9
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
 					},
 					"calc": {
-						"level": 13,
+						"level": 14,
 						"rsl": "IQ-1"
 					},
 					"defaults": [
@@ -2417,6 +2505,38 @@
 					"categories": [
 						"Criminal/Street",
 						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "de1028a9-edab-4187-a241-0cf9676462da",
+					"name": "Brawling",
+					"reference": "B182",
+					"difficulty": "dx/e",
+					"points": 2,
+					"calc": {
+						"level": 11,
+						"rsl": "DX+1"
+					},
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
+							"level": {
+								"compare": "at_least",
+								"qualifier": 2
+							}
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
 					]
 				},
 				{
@@ -2541,6 +2661,35 @@
 						"Combat/Weapon",
 						"Melee Combat"
 					]
+				},
+				{
+					"type": "skill",
+					"id": "de9de28c-2f7a-4698-99de-5e259e1b1e4d",
+					"name": "Seamanship",
+					"reference": "B185",
+					"tech_level": "4",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
 				}
 			]
 		}
@@ -2548,34 +2697,1421 @@
 	"spells": [
 		{
 			"type": "spell_container",
-			"id": "bcf21b45-a786-463c-8478-3cdd53ac64dc",
-			"name": "Illusion",
+			"id": "8cd2d27f-17f5-400c-aa66-544d130ef13e",
+			"name": "Air",
 			"open": true,
 			"children": [
 				{
 					"type": "spell",
-					"id": "edee58bd-6888-493c-b088-67d259263590",
-					"name": "Sound",
-					"reference": "M171",
+					"id": "31653014-9a58-4d2d-b3ab-c9e6bcb5c236",
+					"name": "Breathe Water",
+					"reference": "M189",
 					"difficulty": "iq/h",
 					"college": [
-						"Sound"
+						"Air",
+						"Water"
 					],
 					"power_source": "Arcane",
 					"spell_class": "Regular",
-					"casting_cost": "Varies",
-					"maintenance_cost": "1/ min",
+					"casting_cost": "4",
+					"maintenance_cost": "2",
 					"casting_time": "1 sec",
-					"duration": "Varies",
+					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "destroy water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air",
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "4cbd6864-6eb2-4999-95dc-488254517c53",
+					"name": "Create Air",
+					"reference": "M23",
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "5 sec",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "dc4e8180-bfd0-4c03-9e25-a85b785bed41",
+					"name": "Purify Air",
+					"reference": "M23",
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"categories": [
-						"Sound"
+						"Air"
 					]
 				},
+				{
+					"type": "spell",
+					"id": "55b49a3f-3a43-44c4-a88a-2ee469e87dff",
+					"name": "Destroy Air",
+					"reference": "M24",
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "c04553f9-cfaa-4197-878b-129f9192e7d8",
+					"name": "Shape Air",
+					"reference": "M24",
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-10",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "2d49fc4e-3103-49c5-a28b-5ccaadc6c43e",
+					"name": "Predict Weather",
+					"reference": "M193",
+					"difficulty": "iq/h",
+					"college": [
+						"Air",
+						"Weather"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "5 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 4
+								}
+							}
+						]
+					},
+					"categories": [
+						"Air",
+						"Weather"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "aa1ddd1b-e8ad-4fa6-8186-fae7f3d378cc",
+			"name": "Communication",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "b1ce3082-9cee-4fbb-9765-bcd05f0f02fe",
+					"name": "Sense Foes",
+					"reference": "M44",
+					"difficulty": "iq/h",
+					"college": [
+						"Communication & Empathy"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info/Area",
+					"casting_cost": "1/area, min 2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Communication & Empathy"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "b4d41a3f-8721-401b-9b2a-06df6b6e07d5",
+					"name": "Sense Life",
+					"reference": "M45",
+					"difficulty": "iq/h",
+					"college": [
+						"Communication & Empathy"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info/Area",
+					"casting_cost": "1/2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Communication & Empathy"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "acf0b9ba-f112-4693-ac0c-ff624374d3d0",
+			"name": "Création & dissolution",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "66e68a75-6009-4902-993b-62ad014669e7",
+					"name": "Find Weakness",
+					"reference": "M116",
+					"difficulty": "iq/h",
+					"college": [
+						"Making & Breaking"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "2 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Making & Breaking"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "ac9ecbce-9514-4a36-8d46-f050109290f3",
+			"name": "Eau",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "1a93a149-7c89-4c32-aba3-55f2b2ee5b85",
+					"name": "Create Acid",
+					"reference": "M190",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "4/gal",
+					"maintenance_cost": "-",
+					"casting_time": "2 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "b89e8fb1-3872-49bc-95da-cea6e9a4fbd5",
+					"name": "Seek Water",
+					"reference": "M184",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "26c7526f-e5f4-4d78-bd2f-1c9527122e1c",
+					"name": "Create Water",
+					"reference": "M184",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2/gal",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "9d725672-4e9b-4c99-b484-2c71a7cc92cd",
+					"name": "Destroy Water",
+					"reference": "M185",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "3",
+					"maintenance_cost": "Same",
+					"casting_time": "1 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "cb807376-1925-482b-8b0d-0de132af8cd5",
+					"name": "Purify Water",
+					"reference": "M184",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Special",
+					"casting_cost": "1/gal",
+					"maintenance_cost": "-",
+					"casting_time": "5-10/gal#",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "809d6f65-e9d3-4de0-a21b-df3aafc7407a",
+					"name": "Shape Water",
+					"reference": "M185",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1#",
+					"maintenance_cost": "1",
+					"casting_time": "2 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "0d94b62d-482c-4215-abc6-cb0bd616621b",
+					"name": "Water Jet",
+					"reference": "M187",
+					"difficulty": "iq/h",
+					"college": [
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-3",
+					"maintenance_cost": "1-3",
+					"casting_time": "1 sec",
+					"duration": "1 sec",
+					"points": 1,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cr/point",
+								"base": "1d"
+							},
+							"usage": "Jet",
+							"reach": "1/point",
+							"parry": "No",
+							"calc": {
+								"level": 6,
+								"parry": "No",
+								"block": "",
+								"damage": "1d cr/point"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"specialization": "Beam"
+								}
+							]
+						}
+					],
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "shape water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Water"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "2008ea8f-115b-46ad-bfbe-99e426387f28",
+			"name": "Enchantement",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "89e16cec-f01b-48ca-8831-d3bdaf94a437",
+					"name": "Delay",
+					"reference": "M130",
+					"difficulty": "iq/h",
+					"college": [
+						"Meta"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "3",
+					"maintenance_cost": "3",
+					"casting_time": "10 sec",
+					"duration": "2 hrs",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "any",
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 15
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 3
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 3
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (meta)"
+										}
+									}
+								]
+							}
+						]
+					},
+					"categories": [
+						"Linking",
+						"Meta"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "9b59066e-27da-4845-991f-870c6b51519f",
+					"name": "Link",
+					"reference": "M131",
+					"difficulty": "iq/h",
+					"college": [
+						"Meta"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "8",
+					"maintenance_cost": "-",
+					"casting_time": "4 hrs",
+					"duration": "Until triggered",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "delay"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Linking",
+						"Meta"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "9055e41b-f47d-4d76-b106-ccbcf9187c62",
+					"name": "Enchant",
+					"reference": "M56",
+					"difficulty": "iq/vh",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "Varies",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 15,
+						"rsl": "IQ+0"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college_count",
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 10
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (enchantment)"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									}
+								]
+							}
+						]
+					},
+					"categories": [
+						"Enchantment"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "7eddefd5-bd26-4ffd-bce5-a8b6aad78acc",
+					"name": "Powerstone",
+					"reference": "M69",
+					"difficulty": "iq/h",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "20",
+					"maintenance_cost": "-",
+					"casting_time": "Varies",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Enchantment"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "f4bbe402-6128-44ba-8586-870173bbab0f",
+					"name": "Staff",
+					"reference": "M70",
+					"difficulty": "iq/h",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "30",
+					"maintenance_cost": "-",
+					"casting_time": "-",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Enchantment"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "064635d3-01e3-4d7d-a574-b46b6be72568",
+			"name": "enchantement armes",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "d0ece5ab-08ba-4569-aea4-87c179ef2128",
+					"name": "Accuracy",
+					"reference": "M65",
+					"difficulty": "iq/h",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "-",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 5
+								}
+							}
+						]
+					},
+					"categories": [
+						"Weapon Enchantment"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "cfe16ab3-9976-466d-8c3e-68cd342634b2",
+					"name": "Puissance",
+					"reference": "M65",
+					"difficulty": "iq/h",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "-",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "college",
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 5
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Weapon Enchantment"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "e6be80cc-7cae-48d6-8a66-baa6d32b90d0",
+			"name": "Enchantement armure",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "7b55bd55-7a62-4c3a-aa97-975b6b4a7f4a",
+					"name": "Deflect",
+					"reference": "M67",
+					"difficulty": "iq/h",
+					"college": [
+						"Enchantment"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Enchantment",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "-",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "enchant"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Armor Enchantment"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "33a2e49f-00ef-479a-ad69-d1e992ade53f",
+			"name": "Feu",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "ebfbd76b-295d-4d8f-b074-ca64468a38af",
+					"name": "Create Fire",
+					"reference": "M72",
+					"difficulty": "iq/h",
+					"college": [
+						"Fire"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "burn",
+								"base": "1d-1"
+							},
+							"usage": "Area",
+							"reach": "Special",
+							"parry": "No",
+							"calc": {
+								"level": 0,
+								"parry": "No",
+								"block": "",
+								"damage": "1d-1 burn"
+							}
+						}
+					],
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "ignite fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Fire"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "6872b173-8440-4b41-8008-ade82b6c8681",
+					"name": "Ignite Fire",
+					"reference": "M72",
+					"difficulty": "iq/h",
+					"college": [
+						"Fire"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-4",
+					"maintenance_cost": "Same",
+					"casting_time": "1 sec",
+					"duration": "1 sec",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Fire"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "c629d550-698f-4791-b88e-f2310227a445",
+					"name": "Extinguish Fire",
+					"reference": "M72",
+					"difficulty": "iq/h",
+					"college": [
+						"Fire"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "3",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "ignite fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Fire"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "a051c1d8-a693-4361-8798-3670200ebdb2",
+					"name": "Fireproof",
+					"reference": "M73",
+					"difficulty": "iq/h",
+					"college": [
+						"Fire"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "3#",
+					"maintenance_cost": "Same",
+					"casting_time": "5 min",
+					"duration": "1 day",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "extinguish fire"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Fire"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "bcf21b45-a786-463c-8478-3cdd53ac64dc",
+			"name": "Illusion",
+			"open": true,
+			"children": [
 				{
 					"type": "spell",
 					"id": "de9005b9-2903-41e1-bb82-4907f60c1ce6",
@@ -2591,10 +4127,10 @@
 					"maintenance_cost": "Half",
 					"casting_time": "1 sec",
 					"duration": "1 min",
-					"points": 1,
+					"points": 4,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 18,
+						"rsl": "IQ+3"
 					},
 					"prereqs": {
 						"type": "prereq_list",
@@ -2640,7 +4176,7 @@
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -2696,7 +4232,7 @@
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -2778,7 +4314,7 @@
 					"duration": "Permanent",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -2822,7 +4358,7 @@
 					"duration": "Instant",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -2847,34 +4383,182 @@
 					"categories": [
 						"Illusion & Creation"
 					]
+				},
+				{
+					"type": "spell",
+					"id": "edee58bd-6888-493c-b088-67d259263590",
+					"name": "Sound",
+					"reference": "M171",
+					"difficulty": "iq/h",
+					"college": [
+						"Sound"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "Varies",
+					"maintenance_cost": "1/ min",
+					"casting_time": "1 sec",
+					"duration": "Varies",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Sound"
+					]
 				}
 			]
 		},
 		{
 			"type": "spell_container",
-			"id": "2008ea8f-115b-46ad-bfbe-99e426387f28",
-			"name": "Enchantement",
+			"id": "d102b285-8d22-4edf-a6cf-f06a729f169f",
+			"name": "Meta",
 			"open": true,
 			"children": [
 				{
 					"type": "spell",
-					"id": "9055e41b-f47d-4d76-b106-ccbcf9187c62",
-					"name": "Enchant",
-					"reference": "M56",
-					"difficulty": "iq/vh",
+					"id": "62c9d147-cb92-4ae3-b285-4a0851d7e6ed",
+					"name": "Counterspell",
+					"reference": "M121",
+					"difficulty": "iq/h",
 					"college": [
-						"Enchantment"
+						"Meta"
 					],
 					"power_source": "Arcane",
-					"spell_class": "Enchantment",
-					"casting_cost": "Varies",
-					"maintenance_cost": "-",
-					"casting_time": "Varies",
-					"duration": "Permanent",
+					"spell_class": "Regular",
+					"resist": "Subject spell",
+					"casting_cost": "Half countered spell",
+					"casting_time": "5 sec",
+					"duration": "Instant",
 					"points": 1,
 					"calc": {
-						"level": 14,
-						"rsl": "IQ+0"
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (meta)"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Meta"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "6fe52cba-5032-44ea-9a22-975773769538",
+					"name": "Detect Magic",
+					"reference": "M101",
+					"difficulty": "iq/h",
+					"college": [
+						"Knowledge"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "5 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (knowledge)"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Knowledge"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "08f90aac-8960-4bc9-bb57-3a25af1b5c08",
+					"name": "Identify Spell",
+					"reference": "M102",
+					"difficulty": "iq/h",
+					"college": [
+						"Knowledge"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
 					},
 					"prereqs": {
 						"type": "prereq_list",
@@ -2883,12 +4567,107 @@
 							{
 								"type": "spell_prereq",
 								"has": true,
-								"sub_type": "college_count",
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "detect magic"
+								},
 								"quantity": {
 									"compare": "at_least",
-									"qualifier": 10
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Knowledge"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "46eb9a5a-43d1-457c-be99-e79d490a3a7d",
+					"name": "Dispel Magic",
+					"reference": "M126",
+					"difficulty": "iq/h",
+					"college": [
+						"Meta"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"resist": "Subject spells",
+					"casting_cost": "3",
+					"maintenance_cost": "-",
+					"casting_time": "sec=cost",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "any",
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 12
 								}
 							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "counterspell"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Meta"
+					]
+				}
+			]
+		},
+		{
+			"type": "spell_container",
+			"id": "2755cfbf-94c8-4f5f-a67f-42da974e7718",
+			"name": "Movement",
+			"open": true,
+			"children": [
+				{
+					"type": "spell",
+					"id": "66fa6ae9-5f30-4836-add3-3b693e76f17d",
+					"name": "Apportation",
+					"reference": "M142",
+					"difficulty": "iq/h",
+					"college": [
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Will",
+					"casting_cost": "Varies",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
 							{
 								"type": "prereq_list",
 								"all": false,
@@ -2902,11 +4681,11 @@
 										},
 										"level": {
 											"compare": "at_least",
-											"qualifier": 2
+											"qualifier": 1
 										},
 										"notes": {
-											"compare": "contains",
-											"qualifier": "one college (enchantment)"
+											"compare": "does_not_contain",
+											"qualifier": "one college"
 										}
 									},
 									{
@@ -2918,11 +4697,11 @@
 										},
 										"level": {
 											"compare": "at_least",
-											"qualifier": 2
+											"qualifier": 1
 										},
 										"notes": {
-											"compare": "does_not_contain",
-											"qualifier": "one college"
+											"compare": "contains",
+											"qualifier": "one college (movement)"
 										}
 									}
 								]
@@ -2930,32 +4709,33 @@
 						]
 					},
 					"categories": [
-						"Enchantment"
+						"Movement"
 					]
 				},
 				{
 					"type": "spell",
-					"id": "7eddefd5-bd26-4ffd-bce5-a8b6aad78acc",
-					"name": "Powerstone",
-					"reference": "M69",
-					"difficulty": "iq/h",
+					"id": "39a758fd-7035-4279-a1cb-662ee2468279",
+					"name": "Teleport",
+					"reference": "M147",
+					"difficulty": "iq/vh",
 					"college": [
-						"Enchantment"
+						"Gate",
+						"Movement"
 					],
 					"power_source": "Arcane",
-					"spell_class": "Enchantment",
-					"casting_cost": "20",
+					"spell_class": "Special",
+					"casting_cost": "Varies",
 					"maintenance_cost": "-",
-					"casting_time": "Varies",
-					"duration": "Permanent",
-					"points": 1,
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 16,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 20,
+						"rsl": "IQ+5"
 					},
 					"prereqs": {
 						"type": "prereq_list",
-						"all": true,
+						"all": false,
 						"prereqs": [
 							{
 								"type": "spell_prereq",
@@ -2963,7 +4743,131 @@
 								"sub_type": "name",
 								"qualifier": {
 									"compare": "is",
-									"qualifier": "enchant"
+									"qualifier": "hawk flight"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "attribute_prereq",
+										"has": true,
+										"which": "iq",
+										"qualifier": {
+											"compare": "at_least",
+											"qualifier": 13
+										}
+									},
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "college_count",
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 10
+										}
+									}
+								]
+							}
+						]
+					},
+					"categories": [
+						"Gate",
+						"Movement"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "803929be-d6a5-44b9-a5cd-f36da846ef66",
+					"name": "Teleport Other",
+					"reference": "M147",
+					"difficulty": "iq/vh",
+					"college": [
+						"Gate",
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Will+1",
+					"casting_cost": "Varies",
+					"maintenance_cost": "_",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 15,
+						"rsl": "IQ+0"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 3
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 3
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (gate)"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 3
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (movement)"
+										}
+									}
+								]
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "teleport"
 								},
 								"quantity": {
 									"compare": "at_least",
@@ -2973,77 +4877,36 @@
 						]
 					},
 					"categories": [
-						"Enchantment"
+						"Gate",
+						"Movement"
 					]
 				}
 			]
 		},
 		{
 			"type": "spell_container",
-			"id": "33a2e49f-00ef-479a-ad69-d1e992ade53f",
-			"name": "Feu",
+			"id": "6ded6035-3ced-415c-85bd-a443c71b5b39",
+			"name": "Protection",
 			"open": true,
 			"children": [
 				{
 					"type": "spell",
-					"id": "6872b173-8440-4b41-8008-ade82b6c8681",
-					"name": "Ignite Fire",
-					"reference": "M72",
+					"id": "a9b01926-50ee-4fbf-af9d-70722757f0a0",
+					"name": "Shield",
+					"reference": "M167",
 					"difficulty": "iq/h",
 					"college": [
-						"Fire"
+						"Protection & Warning"
 					],
 					"power_source": "Arcane",
 					"spell_class": "Regular",
-					"casting_cost": "1-4",
-					"maintenance_cost": "Same",
-					"casting_time": "1 sec",
-					"duration": "1 sec",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"categories": [
-						"Fire"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "ebfbd76b-295d-4d8f-b074-ca64468a38af",
-					"name": "Create Fire",
-					"reference": "M72",
-					"difficulty": "iq/h",
-					"college": [
-						"Fire"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Area",
-					"casting_cost": "2",
+					"casting_cost": "2 per DB",
 					"maintenance_cost": "Half",
 					"casting_time": "1 sec",
 					"duration": "1 min",
 					"points": 1,
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "burn",
-								"base": "1d-1"
-							},
-							"usage": "Area",
-							"reach": "Special",
-							"parry": "No",
-							"calc": {
-								"level": 0,
-								"parry": "No",
-								"block": "",
-								"damage": "1d-1 burn"
-							}
-						}
-					],
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -3051,25 +4914,207 @@
 						"all": false,
 						"prereqs": [
 							{
-								"type": "spell_prereq",
+								"type": "advantage_prereq",
 								"has": true,
-								"sub_type": "name",
-								"qualifier": {
+								"name": {
 									"compare": "is",
-									"qualifier": "seek fire"
+									"qualifier": "magery"
 								},
-								"quantity": {
+								"level": {
 									"compare": "at_least",
-									"qualifier": 1
+									"qualifier": 2
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
 								}
 							},
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 2
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (protection & warning)"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Protection & Warning"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "9f6b4b38-95ed-408c-997e-8167ac404c15",
+					"name": "Armor",
+					"reference": "M167",
+					"difficulty": "iq/h",
+					"college": [
+						"Protection & Warning"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2 per DR",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
 							{
 								"type": "spell_prereq",
 								"has": true,
 								"sub_type": "name",
 								"qualifier": {
 									"compare": "is",
-									"qualifier": "ignite fire"
+									"qualifier": "shield"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Protection & Warning"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "0f61fe36-171b-4787-abc1-b4dfea048d35",
+					"name": "Deflect Missile",
+					"reference": "M143",
+					"difficulty": "iq/h",
+					"college": [
+						"Movement",
+						"Protection & Warning"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Blocking",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "apportation"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Movement",
+						"Protection & Warning"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "0d849461-0089-4a3e-9268-9512af9594a2",
+					"name": "Resist Acid",
+					"reference": "M190",
+					"difficulty": "iq/h",
+					"college": [
+						"Protection & Warning",
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2 or 6",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "create acid"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Protection & Warning",
+						"Water"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "5395b27b-7acf-48b8-86b1-9d2c76b20434",
+					"name": "Resist Fire",
+					"reference": "M74",
+					"difficulty": "iq/h",
+					"college": [
+						"Fire"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2#",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "fireproof"
 								},
 								"quantity": {
 									"compare": "at_least",
@@ -3081,200 +5126,27 @@
 					"categories": [
 						"Fire"
 					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "8cd2d27f-17f5-400c-aa66-544d130ef13e",
-			"name": "Air",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "dc4e8180-bfd0-4c03-9e25-a85b785bed41",
-					"name": "Purify Air",
-					"reference": "M23",
-					"difficulty": "iq/h",
-					"college": [
-						"Air"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Area",
-					"casting_cost": "1",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"categories": [
-						"Air"
-					]
 				},
 				{
 					"type": "spell",
-					"id": "4cbd6864-6eb2-4999-95dc-488254517c53",
-					"name": "Create Air",
-					"reference": "M23",
+					"id": "c33c5cf6-e8d9-41b3-9229-1195fc301ed7",
+					"name": "Resist Lightning",
+					"reference": "M196",
 					"difficulty": "iq/h",
 					"college": [
-						"Air"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Area",
-					"casting_cost": "1",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "5 sec",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "purify air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "seek air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Air"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "c04553f9-cfaa-4197-878b-129f9192e7d8",
-					"name": "Shape Air",
-					"reference": "M24",
-					"difficulty": "iq/h",
-					"college": [
-						"Air"
+						"Air",
+						"Protection & Warning",
+						"Weather"
 					],
 					"power_source": "Arcane",
 					"spell_class": "Regular",
-					"casting_cost": "1-10",
-					"maintenance_cost": "-",
+					"casting_cost": "2",
+					"maintenance_cost": "1",
 					"casting_time": "1 sec",
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "create air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Air"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "55b49a3f-3a43-44c4-a88a-2ee469e87dff",
-					"name": "Destroy Air",
-					"reference": "M24",
-					"difficulty": "iq/h",
-					"college": [
-						"Air"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Area",
-					"casting_cost": "2",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "create air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Air"
-					]
-				},
-				{
-					"type": "spell",
-					"id": "2d49fc4e-3103-49c5-a28b-5ccaadc6c43e",
-					"name": "Predict Weather",
-					"reference": "M193",
-					"difficulty": "iq/h",
-					"college": [
-						"Air",
-						"Weather"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info",
-					"casting_cost": "Varies",
-					"maintenance_cost": "-",
-					"casting_time": "5 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -3291,14 +5163,92 @@
 								},
 								"quantity": {
 									"compare": "at_least",
-									"qualifier": 4
+									"qualifier": 6
 								}
 							}
 						]
 					},
 					"categories": [
 						"Air",
+						"Protection & Warning",
 						"Weather"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "d9dff9bf-2026-4770-81c0-61e14e840520",
+					"name": "Resist Water",
+					"reference": "M186",
+					"difficulty": "iq/h",
+					"college": [
+						"Protection & Warning",
+						"Water"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2",
+					"maintenance_cost": "1",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "shape water"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									},
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "umbrella"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									}
+								]
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "destroy water"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Protection & Warning",
+						"Water"
 					]
 				}
 			]
@@ -3326,8 +5276,132 @@
 					"duration": "Instant",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
+					},
+					"categories": [
+						"Earth"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "17c1e265-0013-4d1d-a3e2-f76e07e2e843",
+					"name": "Create Earth",
+					"reference": "M51",
+					"difficulty": "iq/h",
+					"college": [
+						"Earth"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2/25 cu ft",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "earth to stone"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"categories": [
+						"Earth"
+					]
+				},
+				{
+					"type": "spell",
+					"id": "6e15ba81-22db-48c4-9bdb-d812537a8e21",
+					"name": "Earth to Stone",
+					"reference": "M51",
+					"difficulty": "iq/h",
+					"college": [
+						"Earth"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "3/25 cu ft #",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Permanent",
+					"points": 1,
+					"calc": {
+						"level": 16,
+						"rsl": "IQ+1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (earth)"
+										}
+									}
+								]
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "shape earth"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
 					},
 					"categories": [
 						"Earth"
@@ -3350,7 +5424,7 @@
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -3375,155 +5449,53 @@
 					"categories": [
 						"Earth"
 					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "acf0b9ba-f112-4693-ac0c-ff624374d3d0",
-			"name": "Création & dissolution",
-			"open": true,
-			"children": [
+				},
 				{
 					"type": "spell",
-					"id": "66e68a75-6009-4902-993b-62ad014669e7",
-					"name": "Find Weakness",
-					"reference": "M116",
+					"id": "ec6a4c4d-89c2-4d4f-a658-3c1bdead7523",
+					"name": "Sand Jet",
+					"reference": "M52",
 					"difficulty": "iq/h",
 					"college": [
-						"Making & Breaking"
+						"Earth"
 					],
 					"power_source": "Arcane",
-					"spell_class": "Info",
-					"casting_cost": "Varies",
-					"maintenance_cost": "-",
-					"casting_time": "2 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "college",
-								"qualifier": {
-									"compare": "contains",
-									"qualifier": "Air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "college",
-								"qualifier": {
-									"compare": "contains",
-									"qualifier": "Fire"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "college",
-								"qualifier": {
-									"compare": "contains",
-									"qualifier": "Water"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "college",
-								"qualifier": {
-									"compare": "contains",
-									"qualifier": "Earth"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							}
-						]
-					},
-					"categories": [
-						"Making & Breaking"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "ac9ecbce-9514-4a36-8d46-f050109290f3",
-			"name": "Eau",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "b89e8fb1-3872-49bc-95da-cea6e9a4fbd5",
-					"name": "Seek Water",
-					"reference": "M184",
-					"difficulty": "iq/h",
-					"college": [
-						"Water"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info",
-					"casting_cost": "2",
-					"maintenance_cost": "-",
+					"spell_class": "Regular",
+					"casting_cost": "1-3",
+					"maintenance_cost": "Same",
 					"casting_time": "1 sec",
-					"duration": "Instant",
+					"duration": "1 sec",
 					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"categories": [
-						"Water"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "064635d3-01e3-4d7d-a574-b46b6be72568",
-			"name": "enchantement armes",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "d0ece5ab-08ba-4569-aea4-87c179ef2128",
-					"name": "Accuracy",
-					"reference": "M65",
-					"difficulty": "iq/h",
-					"college": [
-						"Enchantment"
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "Blinds"
+							},
+							"usage": "Jet",
+							"reach": "1/point",
+							"parry": "No",
+							"calc": {
+								"level": 6,
+								"parry": "No",
+								"block": "",
+								"damage": "Blinds"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"specialization": "Beam"
+								}
+							]
+						}
 					],
-					"power_source": "Arcane",
-					"spell_class": "Enchantment",
-					"casting_cost": "Varies",
-					"maintenance_cost": "-",
-					"casting_time": "-",
-					"duration": "Permanent",
-					"points": 1,
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
 					"prereqs": {
@@ -3536,71 +5508,7 @@
 								"sub_type": "name",
 								"qualifier": {
 									"compare": "is",
-									"qualifier": "enchant"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 1
-								}
-							},
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "college",
-								"qualifier": {
-									"compare": "contains",
-									"qualifier": "Air"
-								},
-								"quantity": {
-									"compare": "at_least",
-									"qualifier": 5
-								}
-							}
-						]
-					},
-					"categories": [
-						"Weapon Enchantment"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "e6be80cc-7cae-48d6-8a66-baa6d32b90d0",
-			"name": "Enchantement armure",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "7b55bd55-7a62-4c3a-aa97-975b6b4a7f4a",
-					"name": "Deflect",
-					"reference": "M67",
-					"difficulty": "iq/h",
-					"college": [
-						"Enchantment"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Enchantment",
-					"casting_cost": "Varies",
-					"maintenance_cost": "-",
-					"casting_time": "-",
-					"duration": "Permanent",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "spell_prereq",
-								"has": true,
-								"sub_type": "name",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": "enchant"
+									"qualifier": "create earth"
 								},
 								"quantity": {
 									"compare": "at_least",
@@ -3610,63 +5518,132 @@
 						]
 					},
 					"categories": [
-						"Armor Enchantment"
-					]
-				}
-			]
-		},
-		{
-			"type": "spell_container",
-			"id": "aa1ddd1b-e8ad-4fa6-8186-fae7f3d378cc",
-			"name": "Communication",
-			"open": true,
-			"children": [
-				{
-					"type": "spell",
-					"id": "b4d41a3f-8721-401b-9b2a-06df6b6e07d5",
-					"name": "Sense Life",
-					"reference": "M45",
-					"difficulty": "iq/h",
-					"college": [
-						"Communication & Empathy"
-					],
-					"power_source": "Arcane",
-					"spell_class": "Info/Area",
-					"casting_cost": "1/2",
-					"maintenance_cost": "-",
-					"casting_time": "1 sec",
-					"duration": "Instant",
-					"points": 1,
-					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
-					},
-					"categories": [
-						"Communication & Empathy"
+						"Earth"
 					]
 				},
 				{
 					"type": "spell",
-					"id": "b1ce3082-9cee-4fbb-9765-bcd05f0f02fe",
-					"name": "Sense Foes",
-					"reference": "M44",
+					"id": "57371b85-aea8-4524-b7bc-5672cd0cf313",
+					"name": "Mud Jet",
+					"reference": "M52",
 					"difficulty": "iq/h",
 					"college": [
-						"Communication & Empathy"
+						"Earth",
+						"Water"
 					],
 					"power_source": "Arcane",
-					"spell_class": "Info/Area",
-					"casting_cost": "1/area, min 2",
-					"maintenance_cost": "-",
+					"spell_class": "Regular",
+					"casting_cost": "1-3",
+					"maintenance_cost": "1-3",
 					"casting_time": "1 sec",
-					"duration": "Instant",
+					"duration": "1 sec",
 					"points": 1,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "kb/point - Blinds",
+								"base": "1d"
+							},
+							"usage": "Jet",
+							"reach": "1/point",
+							"parry": "No",
+							"calc": {
+								"level": 6,
+								"parry": "No",
+								"block": "",
+								"damage": "1d kb/point - Blinds"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"specialization": "Beam"
+								}
+							]
+						}
+					],
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"rsl": "IQ+1"
 					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "sand jet"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									},
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "create water"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									}
+								]
+							},
+							{
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "water jet"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									},
+									{
+										"type": "spell_prereq",
+										"has": true,
+										"sub_type": "name",
+										"qualifier": {
+											"compare": "is",
+											"qualifier": "create earth"
+										},
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 1
+										}
+									}
+								]
+							}
+						]
+					},
 					"categories": [
-						"Communication & Empathy"
+						"Earth",
+						"Water"
 					]
 				}
 			]
