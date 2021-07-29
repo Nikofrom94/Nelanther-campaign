@@ -509,7 +509,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Jul 27, 2021, 9:16 PM",
+	"modified_date": "Jul 29, 2021, 5:11 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -3020,8 +3020,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 19,
-						"parry": "13F",
+						"level": 18,
+						"parry": "12F",
 						"block": "No",
 						"damage": "1d+1 cut"
 					},
@@ -3078,8 +3078,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 19,
-						"parry": "13F",
+						"level": 18,
+						"parry": "12F",
 						"block": "No",
 						"damage": "1d imp"
 					},
@@ -3445,7 +3445,51 @@
 			"categories": [
 				"Camping and Survival Gear"
 			],
-			"open": true
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "17d2bd8a-e8af-414e-90fd-9735d0679686",
+					"equipped": true,
+					"quantity": 10,
+					"description": "Gold Coin",
+					"tech_level": "1",
+					"value": "80",
+					"weight": "0.004 lb",
+					"reference": "B264",
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "59595936-9409-4fc0-ad99-b867481e91f8",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Silver Coin",
+					"tech_level": "1",
+					"value": "4",
+					"weight": "0.004 lb",
+					"reference": "B264",
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "5072d3c2-7649-4f22-bc30-4181e4079691",
+					"equipped": true,
+					"quantity": 30,
+					"description": "Copper Farthing",
+					"tech_level": "1",
+					"value": "1",
+					"weight": "0.008 lb",
+					"reference": "B264",
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				}
+			]
 		},
 		{
 			"type": "equipment_container",
@@ -3473,7 +3517,24 @@
 			"categories": [
 				"Camping and Survival Gear"
 			],
-			"open": true
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "ea55b844-043c-4b8f-8225-1b76c0a7bbfe",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Personal Basics",
+					"tech_level": "0",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B288",
+					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				}
+			]
 		},
 		{
 			"type": "equipment_container",
