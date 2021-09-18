@@ -20,7 +20,7 @@
 		"show_spell_adj": true,
 		"use_title_in_footer": false,
 		"page": {
-			"paper_size": "na-letter",
+			"paper_size": "iso-a4",
 			"top_margin": "0.25 in",
 			"left_margin": "0.25 in",
 			"bottom_margin": "0.25 in",
@@ -509,7 +509,7 @@
 		}
 	},
 	"created_date": "Jun 16, 2021, 9:12 PM",
-	"modified_date": "Jul 28, 2021, 2:23 PM",
+	"modified_date": "Jul 30, 2021, 10:21 AM",
 	"profile": {
 		"player_name": "Zaz",
 		"name": "Olafur Bnorguestromberg",
