@@ -509,7 +509,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Jul 29, 2021, 5:11 PM",
+	"modified_date": "Dec 17, 2021, 9:04 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -899,33 +899,6 @@
 				"points": -5
 			},
 			"notes": "Make a self-control roll at the end of any battle. If you fail, roll 3d, add the amount by which you failed your self-control roll, and look up the result on the Fright Check Table.",
-			"categories": [
-				"Disadvantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "37f0e1b5-ee69-48f5-b283-fe4fd8b5859f",
-			"name": "Pacifism: Cannot Kill",
-			"mental": true,
-			"base_points": -15,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "81e9cd51-aacf-47bf-8fdd-485434eb1ad5",
-					"disabled": true,
-					"name": "Species-Specific",
-					"reference": "UT32",
-					"cost_type": "percentage",
-					"cost": -80,
-					"affects": "total"
-				}
-			],
-			"reference": "B148",
-			"calc": {
-				"points": -15
-			},
-			"notes": "You may fight – you may even start fights – but you may never do anything that seems likely to kill another. This includes abandoning a wounded foe to die “on his own”! You must do your best to keep your companions from killing, too. If you do kill someone (or feel responsible for a death), you immediately suffer a nervous breakdown. Roll 3d and be totally morose and useless for that many days. During this time, you must make a Will roll to offer any sort of violence toward anyone, for any reason.",
 			"categories": [
 				"Disadvantage"
 			]

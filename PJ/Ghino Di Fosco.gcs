@@ -8,6 +8,35 @@
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "iso-a4",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
 		"attributes": [
 			{
 				"id": "st",
@@ -477,40 +506,10 @@
 					}
 				}
 			]
-		},
-		"page": {
-			"paper_size": "iso-a4",
-			"top_margin": "0.25 in",
-			"left_margin": "0.25 in",
-			"bottom_margin": "0.25 in",
-			"right_margin": "0.25 in",
-			"orientation": "portrait"
-		},
-		"use_multiplicative_modifiers": false,
-		"use_modifying_dice_plus_adds": false,
-		"use_know_your_own_strength": false,
-		"use_reduced_swing": false,
-		"use_thrust_equals_swing_minus_2": false,
-		"use_simple_metric_conversions": true,
-		"show_college_in_sheet_spells": false,
-		"show_difficulty": false,
-		"show_advantage_modifier_adj": false,
-		"show_equipment_modifier_adj": false,
-		"show_spell_adj": true,
-		"use_title_in_footer": false,
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"advantages skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		]
+		}
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Jul 29, 2021, 8:55 PM",
+	"modified_date": "Dec 17, 2021, 8:51 PM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -692,105 +691,6 @@
 				"points": -5
 			},
 			"notes": "Adhère à une forme de serment d'hypocrate",
-			"categories": [
-				"Disadvantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "e981937c-9219-4a73-b73a-1b4102886e53",
-			"name": "Flashbacks",
-			"physical": true,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "07831968-1916-497d-89e7-6e1eb0f9a846",
-					"name": "Mild",
-					"reference": "B136",
-					"cost_type": "points",
-					"cost": -5,
-					"affects": "total",
-					"notes": "Duration: 2d seconds; -2 on all skill rolls"
-				},
-				{
-					"type": "modifier",
-					"id": "066028a7-1a87-4332-94c5-d24522d7b20c",
-					"disabled": true,
-					"name": "Severe",
-					"reference": "B136",
-					"cost_type": "points",
-					"cost": -10,
-					"affects": "total",
-					"notes": "Duration: 1d minutes; -5 on all skill rolls"
-				},
-				{
-					"type": "modifier",
-					"id": "b34164dc-f7e6-45a1-805d-4ad6427a2d73",
-					"disabled": true,
-					"name": "Crippling",
-					"cost_type": "points",
-					"cost": -20,
-					"affects": "total",
-					"notes": "Duration: 3d minutes; Precludes all skill use"
-				}
-			],
-			"reference": "B136",
-			"calc": {
-				"points": -5
-			},
-			"notes": "In any situation that the GM feels is stressful, he will roll 3d. On a 6 or less, you have a flashback. The GM will roll whenever you miss a Fright Check or make the roll exactly, and whenever you fail a self-control roll for another stress-related disadvantage.",
-			"categories": [
-				"Disadvantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "49ed34d9-a459-4df5-8a93-dda2c883a1e7",
-			"name": "Odious Personal Habit",
-			"physical": true,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "cd0dd5c4-0765-45c6-be61-998cd92bdd3c",
-					"name": "-1 Reaction",
-					"reference": "B22",
-					"cost_type": "points",
-					"cost": -5,
-					"affects": "total",
-					"features": [
-						{
-							"type": "reaction_bonus",
-							"amount": -1,
-							"situation": "des autres à cause de la mauvaise odeur"
-						}
-					]
-				},
-				{
-					"type": "modifier",
-					"id": "cb7ddf74-b2f2-4bcd-84c5-341f5779b5d0",
-					"disabled": true,
-					"name": "-2 Reaction",
-					"reference": "B22",
-					"cost_type": "points",
-					"cost": -10,
-					"affects": "total"
-				},
-				{
-					"type": "modifier",
-					"id": "dedbb29d-7a2d-45ae-9151-e87a2ad9c566",
-					"disabled": true,
-					"name": "-3 Reaction",
-					"reference": "B22",
-					"cost_type": "points",
-					"cost": -15,
-					"affects": "total"
-				}
-			],
-			"reference": "B22",
-			"calc": {
-				"points": -5
-			},
-			"notes": "Mauvaise odeur",
 			"categories": [
 				"Disadvantage"
 			]
