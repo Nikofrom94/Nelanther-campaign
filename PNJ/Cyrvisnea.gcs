@@ -13,7 +13,7 @@
 		"use_modifying_dice_plus_adds": false,
 		"damage_progression": "basic_set",
 		"use_simple_metric_conversions": true,
-		"show_college_in_sheet_spells": false,
+		"show_college_in_sheet_spells": true,
 		"show_difficulty": false,
 		"show_advantage_modifier_adj": false,
 		"show_equipment_modifier_adj": false,
@@ -509,10 +509,10 @@
 		}
 	},
 	"created_date": "Oct 6, 2021, 10:12 PM",
-	"modified_date": "Nov 18, 2021, 9:58 PM",
+	"modified_date": "Nov 18, 2021, 9:55 PM",
 	"profile": {
 		"player_name": "niko",
-		"name": "Sothillis",
+		"name": "Cyrvisnea",
 		"title": "Ogre Mage - Kalimron",
 		"age": "127",
 		"birthday": "Nov 9",
@@ -522,7 +522,7 @@
 		"handedness": "Left",
 		"height": "8'",
 		"weight": "800 lb",
-		"gender": "Male",
+		"gender": "Female",
 		"tech_level": "4"
 	},
 	"attributes": [
@@ -536,18 +536,18 @@
 		},
 		{
 			"attr_id": "dx",
-			"adj": 3,
+			"adj": 4,
 			"calc": {
-				"value": 12,
-				"points": 60
+				"value": 13,
+				"points": 80
 			}
 		},
 		{
 			"attr_id": "iq",
-			"adj": 6,
+			"adj": 5,
 			"calc": {
-				"value": 13,
-				"points": 120
+				"value": 12,
+				"points": 100
 			}
 		},
 		{
@@ -562,7 +562,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -570,7 +570,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 14,
 				"points": 0
 			}
 		},
@@ -578,7 +578,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -586,7 +586,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -594,7 +594,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -602,7 +602,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -610,7 +610,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -618,7 +618,7 @@
 			"attr_id": "basic_speed",
 			"adj": 0,
 			"calc": {
-				"value": 6.25,
+				"value": 6.5,
 				"points": 0
 			}
 		},
@@ -671,7 +671,7 @@
 					"parry": "No",
 					"block": "No",
 					"calc": {
-						"level": 12,
+						"level": 13,
 						"parry": "No",
 						"block": "No",
 						"damage": "2d-2 cr"
@@ -697,8 +697,8 @@
 					"reach": "C",
 					"parry": "0",
 					"calc": {
-						"level": 12,
-						"parry": "9",
+						"level": 13,
+						"parry": "10",
 						"block": "",
 						"damage": "2d-2 cr"
 					},
@@ -730,7 +730,7 @@
 					"reach": "C,1",
 					"parry": "No",
 					"calc": {
-						"level": 10,
+						"level": 11,
 						"parry": "No",
 						"block": "",
 						"damage": "2d-1 cr"
@@ -764,7 +764,7 @@
 			"name": "Magery",
 			"mental": true,
 			"supernatural": true,
-			"levels": "2",
+			"levels": "1",
 			"base_points": 5,
 			"points_per_level": 10,
 			"modifiers": [
@@ -844,7 +844,7 @@
 			],
 			"reference": "B66",
 			"calc": {
-				"points": 25
+				"points": 15
 			},
 			"features": [
 				{
@@ -866,6 +866,103 @@
 			],
 			"categories": [
 				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6edb5fea-471a-4695-b8de-f41fad81e7d2",
+			"name": "Combat Reflexes",
+			"mental": true,
+			"base_points": 15,
+			"reference": "B43",
+			"calc": {
+				"points": 15
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Enhanced Time Sense"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "fast-draw"
+					}
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "dodge"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "parry"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "block"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "fright_check"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 6,
+					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "to initiative rolls for your side (+2 if you are the leader)"
+				}
+			],
+			"notes": "Never freeze",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "d1674fd0-9a5c-438a-be4e-a0e392e37ded",
+			"name": "Berserk",
+			"mental": true,
+			"base_points": -10,
+			"cr": 12,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "6de8cb89-288d-4a72-9949-4f28d42fd859",
+					"name": "Battle Rage",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				}
+			],
+			"userdesc": "You are immune to stun and shock, and your injuries cause no penalty to your Move score. You make all rolls to remain conscious or alive at +4 to HT. If you don’t fail any rolls, you remain alive and madly attacking until you reach -5¥HP. Then you fall dead!",
+			"reference": "B124",
+			"calc": {
+				"points": -15
+			},
+			"notes": "Make a self-control roll any time you suffer damage over 1/4 your HP in the space of one second, and whenever you witness equivalent harm to a loved one",
+			"categories": [
+				"Disadvantage"
 			]
 		},
 		{
@@ -1380,12 +1477,12 @@
 			"defaulted_from": {
 				"type": "iq",
 				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
 			},
 			"calc": {
-				"level": 12,
+				"level": 11,
 				"rsl": "IQ-1"
 			},
 			"defaults": [
@@ -1418,7 +1515,7 @@
 			"difficulty": "iq/e",
 			"points": 1,
 			"calc": {
-				"level": 13,
+				"level": 12,
 				"rsl": "IQ+0"
 			},
 			"defaults": [
@@ -1443,7 +1540,7 @@
 			"difficulty": "iq/e",
 			"points": 1,
 			"calc": {
-				"level": 13,
+				"level": 12,
 				"rsl": "IQ+0"
 			},
 			"defaults": [
@@ -1469,12 +1566,12 @@
 			"defaulted_from": {
 				"type": "dx",
 				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
 			},
 			"calc": {
-				"level": 15,
+				"level": 16,
 				"rsl": "DX+3"
 			},
 			"defaults": [
@@ -1490,41 +1587,139 @@
 		},
 		{
 			"type": "skill",
-			"id": "872ca9c0-7dbb-4ce9-a5c5-25874951a603",
-			"name": "Two-Handed Sword",
-			"reference": "B209",
+			"id": "942c4fc3-deb8-4d80-8080-9052d9596b7a",
+			"name": "Axe/Mace",
+			"reference": "B208",
 			"difficulty": "dx/a",
-			"points": 12,
+			"points": 20,
 			"defaulted_from": {
 				"type": "dx",
 				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
 			},
 			"calc": {
-				"level": 15,
-				"rsl": "DX+3"
+				"level": 18,
+				"rsl": "DX+5"
 			},
 			"defaults": [
 				{
-					"type": "skill",
-					"name": "Broadsword",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Force Sword",
-					"modifier": -4
-				},
-				{
 					"type": "dx",
 					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Flail",
+					"modifier": -4
 				}
 			],
 			"categories": [
 				"Combat/Weapon",
 				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "de0b3ff6-aadb-45b5-86ac-87d9e69ea6d0",
+			"name": "Two-Handed Axe/Mace",
+			"reference": "B208",
+			"difficulty": "dx/a",
+			"points": 16,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Axe/Mace",
+				"modifier": -3,
+				"level": 15,
+				"adjusted_level": 15,
+				"points": 8
+			},
+			"calc": {
+				"level": 19,
+				"rsl": "DX+6"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Polearm",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Flail",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "technique",
+			"id": "7463c3e5-6310-4f06-bb82-3171d826e632",
+			"name": "Off-Hand Weapon Training",
+			"reference": "B232",
+			"difficulty": "h",
+			"points": 8,
+			"calc": {
+				"level": 18,
+				"rsl": "+0"
+			},
+			"limit": 0,
+			"default": {
+				"type": "skill",
+				"name": "Axe/Mace",
+				"modifier": -4
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat",
+				"Technique"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "a76210d8-0875-415c-95e0-6e604abb0a0a",
+			"name": "Thrown Weapon",
+			"reference": "B226",
+			"specialization": "Axe/Mace",
+			"difficulty": "dx/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 13,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Ranged Combat"
 			]
 		},
 		{
@@ -1537,12 +1732,12 @@
 			"defaulted_from": {
 				"type": "iq",
 				"modifier": -5,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
 			},
 			"calc": {
-				"level": 15,
+				"level": 14,
 				"rsl": "IQ+2"
 			},
 			"defaults": [
@@ -1562,17 +1757,17 @@
 			"name": "Tactics",
 			"reference": "B224",
 			"difficulty": "iq/h",
-			"points": 1,
+			"points": 8,
 			"defaulted_from": {
 				"type": "iq",
 				"modifier": -6,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
 			},
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-2"
+				"level": 13,
+				"rsl": "IQ+1"
 			},
 			"defaults": [
 				{
@@ -1597,17 +1792,18 @@
 			"reference": "B222",
 			"specialization": "Land",
 			"difficulty": "iq/h",
-			"points": 1,
+			"points": 8,
 			"defaulted_from": {
-				"type": "iq",
+				"type": "skill",
+				"name": "Tactics",
 				"modifier": -6,
 				"level": 7,
 				"adjusted_level": 7,
 				"points": -7
 			},
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-2"
+				"level": 13,
+				"rsl": "IQ+1"
 			},
 			"defaults": [
 				{
@@ -1638,65 +1834,6 @@
 	"spells": [
 		{
 			"type": "spell",
-			"id": "2c06e68d-8ebf-42b0-a1f1-5b82063596bd",
-			"name": "Alter Voice",
-			"reference": "M41",
-			"difficulty": "iq/h",
-			"college": [
-				"Body Control",
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "2",
-			"maintenance_cost": "2",
-			"casting_time": "1 min",
-			"duration": "1 hr",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "contains",
-							"qualifier": "body"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 4
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "college",
-						"qualifier": {
-							"compare": "contains",
-							"qualifier": "Sound"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 4
-						}
-					}
-				]
-			},
-			"categories": [
-				"Body Control",
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "20868596-b83c-4ef9-9ebd-99896ce809b4",
 			"name": "Complex Illusion",
 			"reference": "M96",
@@ -1712,8 +1849,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -1769,8 +1906,8 @@
 			"duration": "Permanent",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -1797,49 +1934,6 @@
 		},
 		{
 			"type": "spell",
-			"id": "55284bda-86fe-4d98-8285-6bd9d426e423",
-			"name": "Alertness",
-			"reference": "M133",
-			"difficulty": "iq/vh",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2/pt increase",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "10 min",
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "starts_with",
-							"qualifier": "keen"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 2
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "e9b1602f-6b4d-4367-8e95-d984f8304944",
 			"name": "Apportation",
 			"reference": "M142",
@@ -1855,8 +1949,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -1923,8 +2017,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -1966,8 +2060,8 @@
 			"duration": "1 min",
 			"points": 16,
 			"calc": {
-				"level": 18,
-				"rsl": "IQ+5"
+				"level": 16,
+				"rsl": "IQ+4"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2022,8 +2116,8 @@
 			"duration": "2d days",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2050,143 +2144,6 @@
 		},
 		{
 			"type": "spell",
-			"id": "7ade9b3f-b0e1-4149-843f-347450877325",
-			"name": "Create Object",
-			"reference": "M98",
-			"difficulty": "iq/vh",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2/5 lbs",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec/cost",
-			"duration": "While touching someone",
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "create earth"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "perfect illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 2
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 2
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (illusion & creation)"
-								}
-							}
-						]
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "c9543aa7-bae5-4d9c-add3-6cdc9b3d79ef",
-			"name": "Create Earth",
-			"reference": "M51",
-			"difficulty": "iq/h",
-			"college": [
-				"Earth"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2/25 cu ft",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Permanent",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "earth to stone"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Earth"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "156e616b-55d8-4b55-a4c2-f516e0b0cb5e",
 			"name": "Darkness",
 			"reference": "M111",
@@ -2202,8 +2159,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2246,8 +2203,8 @@
 			"duration": "Instant",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2274,518 +2231,6 @@
 		},
 		{
 			"type": "spell",
-			"id": "490f491e-0fbe-47af-99e5-a5a9f181a34e",
-			"name": "Dull Hearing",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "1/2 pts decrease",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "e16abe65-7629-45a5-94d0-192f0812bd8d",
-			"name": "Dull Taste and Smell",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "1/2 pts decrease",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "2a49ab4f-5eb9-4cda-8cfb-f9f0529516ab",
-			"name": "Dull Touch",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "1/2 pts decrease",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "6998e56a-00ad-4f7e-8e64-9aa5bd1af102",
-			"name": "Dull Vision",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "1/2 pts decrease",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "3c796453-7b2a-4804-841d-2a39ba9bb398",
-			"name": "Dullness",
-			"reference": "M134",
-			"difficulty": "iq/vh",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "2/pt decrease",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "10 min",
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "starts_with",
-							"qualifier": "dull"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 2
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "0b69cba9-9bae-4f8d-86c1-4eb56a1a247b",
-			"name": "Dye",
-			"reference": "M116",
-			"difficulty": "iq/h",
-			"college": [
-				"Making & Breaking"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "Varies",
-			"maintenance_cost": "-",
-			"casting_time": "3 sec",
-			"duration": "2d days",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "restore"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "colors"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Making & Breaking"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "221ac4df-11e0-4eaf-9b50-45e86fb453be",
-			"name": "Earth to Stone",
-			"reference": "M51",
-			"difficulty": "iq/h",
-			"college": [
-				"Earth"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "3/25 cu ft #",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Permanent",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (earth)"
-								}
-							}
-						]
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "shape earth"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Earth"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "0ef4d9a9-6f31-4bf4-836c-bb20df71c2fa",
-			"name": "False Memory",
-			"reference": "M139",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will",
-			"casting_cost": "Varies",
-			"maintenance_cost": "Varies",
-			"casting_time": "5 sec",
-			"duration": "Varies",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "forgetfulness"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "college",
-						"qualifier": {
-							"compare": "contains",
-							"qualifier": "Mind Control"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 7
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "a676eee6-8bdf-44e2-82e9-08a52d51a350",
-			"name": "Fear",
-			"reference": "M134",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"resist": "Will",
-			"casting_cost": "1",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "10 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": false,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "sense emotion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "advantage_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "empathy"
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "f635a358-df8d-4a05-b587-4c064aef86a9",
-			"name": "Foolishness",
-			"reference": "M134",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will",
-			"casting_cost": "1-5",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "attribute_prereq",
-						"has": true,
-						"which": "iq",
-						"qualifier": {
-							"compare": "at_least",
-							"qualifier": 12
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "eafebb41-f552-4732-b973-0a308da2518a",
-			"name": "Forgetfulness",
-			"reference": "M135",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will or skill",
-			"casting_cost": "3",
-			"maintenance_cost": "3",
-			"casting_time": "10 sec",
-			"duration": "1 hr",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "foolishness"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (mind control)"
-								}
-							}
-						]
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "a682790b-429a-4529-bb73-89c8c77a578e",
 			"name": "Hush",
 			"reference": "M172",
@@ -2802,8 +2247,8 @@
 			"duration": "10 sec#",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2845,8 +2290,8 @@
 			"duration": "Until illusion ends",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2888,8 +2333,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2931,8 +2376,8 @@
 			"duration": "Varies",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2975,8 +2420,8 @@
 			"duration": "Until scratched",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"categories": [
 				"Body Control"
@@ -2999,8 +2444,8 @@
 			"duration": "Instant",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3042,8 +2487,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"categories": [
 				"Light & Darkness"
@@ -3066,8 +2511,8 @@
 			"duration": "5 sec",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3094,94 +2539,6 @@
 		},
 		{
 			"type": "spell",
-			"id": "f6761e2c-9837-4e26-b183-427222c459d4",
-			"name": "Pain",
-			"reference": "M36",
-			"difficulty": "iq/h",
-			"college": [
-				"Body Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "2",
-			"maintenance_cost": "-",
-			"casting_time": "2 sec",
-			"duration": "1 sec",
-			"points": 16,
-			"calc": {
-				"level": 18,
-				"rsl": "IQ+5"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "spasm"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Body Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "694b82fd-e375-43ba-908e-28f05962796f",
-			"name": "Panic",
-			"reference": "M134",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"resist": "Will",
-			"casting_cost": "4",
-			"maintenance_cost": "2",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 8,
-			"calc": {
-				"level": 16,
-				"rsl": "IQ+3"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "fear"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "c130289f-be32-44f1-9140-20348f95a56f",
 			"name": "Perfect Illusion",
 			"reference": "M96",
@@ -3197,8 +2554,8 @@
 			"duration": "1 min",
 			"points": 16,
 			"calc": {
-				"level": 18,
-				"rsl": "IQ+5"
+				"level": 16,
+				"rsl": "IQ+4"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3279,8 +2636,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3321,196 +2678,6 @@
 		},
 		{
 			"type": "spell",
-			"id": "cedaf1e3-ddfb-47bc-b6e1-aa50f3ee5462",
-			"name": "Restore",
-			"reference": "M116",
-			"difficulty": "iq/h",
-			"college": [
-				"Making & Breaking"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2",
-			"maintenance_cost": "1",
-			"casting_time": "3 sec",
-			"duration": "10 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": false,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "find weakness"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Making & Breaking"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "3efb1250-6f8b-44ed-8fe7-e74d6cc9b64b",
-			"name": "Seek Earth",
-			"reference": "M50",
-			"difficulty": "iq/h",
-			"college": [
-				"Earth"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Info",
-			"casting_cost": "3",
-			"maintenance_cost": "-",
-			"casting_time": "10 sec",
-			"duration": "Instant",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Earth"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "78a8fcd5-4934-4b3a-b5c6-aadcb9a611b5",
-			"name": "Sense Emotion",
-			"reference": "M45",
-			"difficulty": "iq/h",
-			"college": [
-				"Communication & Empathy"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Instant",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "sense foes"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Communication & Empathy"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "5cbeb204-98cd-4149-8daa-b18408952f67",
-			"name": "Sense Foes",
-			"reference": "M44",
-			"difficulty": "iq/h",
-			"college": [
-				"Communication & Empathy"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Info/Area",
-			"casting_cost": "1/area, min 2",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Instant",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Communication & Empathy"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "ea9a7fb1-e6d8-4356-b008-66c66c346cf4",
-			"name": "Shape Earth",
-			"reference": "M50",
-			"difficulty": "iq/h",
-			"college": [
-				"Earth"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1 per 25 cu yard",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "seek earth"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Earth"
-			]
-		},
-		{
-			"type": "spell",
 			"id": "bce1ac20-fc39-4951-b346-211d2fc97f15",
 			"name": "Silence",
 			"reference": "M171",
@@ -3526,8 +2693,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3569,8 +2736,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3616,55 +2783,11 @@
 			"duration": "Varies",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"categories": [
 				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "c38b7ebe-f0be-47e0-9bda-8bc890942651",
-			"name": "Spasm",
-			"reference": "M35",
-			"difficulty": "iq/h",
-			"college": [
-				"Body Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "HT",
-			"casting_cost": "2",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Instant",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "itch"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Body Control"
 			]
 		},
 		{
@@ -3684,8 +2807,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3727,8 +2850,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
+				"level": 11,
+				"rsl": "IQ-1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -3752,136 +2875,37 @@
 			"categories": [
 				"Sound"
 			]
-		},
-		{
-			"type": "spell",
-			"id": "5ca80711-2d73-428a-8995-738e38d10035",
-			"name": "Keen Hearing",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control",
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1/pt increase",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control",
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "6986f488-069a-4b3a-9b1f-03611c009fd2",
-			"name": "Keen Taste and Smell",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1/pt increase",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "92be60a4-1992-44be-8905-cbc14658acc7",
-			"name": "Keen Touch",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1/pt increase",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "d9edd3a7-284a-4730-837b-e4e53e7cbb58",
-			"name": "Keen Vision",
-			"reference": "M133",
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1/pt increase",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "30 min",
-			"points": 1,
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+0"
-			},
-			"categories": [
-				"Mind Control"
-			]
 		}
 	],
 	"equipment": [
 		{
 			"type": "equipment",
-			"id": "051d1df7-7485-42b5-b445-3cc8b3d7465b",
+			"id": "e81b55c7-b60c-499f-8a2e-07f2a99f3eae",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Kingscar (great sword +3 tueuse d'homme)",
-			"tech_level": "3",
-			"value": "800",
-			"weight": "7 lb",
-			"reference": "B274",
+			"description": "Axe",
+			"tech_level": "0",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B271",
 			"weapons": [
 				{
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cut",
 						"st": "sw",
-						"base": "3",
-						"modifier_per_die": 3
+						"base": "2"
 					},
-					"strength": "12†",
+					"strength": "11",
 					"usage": "Swung",
-					"reach": "1,2",
-					"parry": "0",
+					"reach": "1",
+					"parry": "0U",
 					"block": "No",
 					"calc": {
 						"level": 18,
-						"parry": "12",
+						"parry": "13U",
 						"block": "No",
-						"damage": "3d+14 cut"
+						"damage": "3d+4 cut"
 					},
 					"defaults": [
 						{
@@ -3890,78 +2914,19 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 3
+							"name": "Axe/Mace"
 						},
 						{
 							"type": "skill",
-							"name": "Broadsword",
+							"name": "Flail",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
+							"name": "Two-Handed Axe/Mace",
+							"modifier": -3
 						}
 					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cr",
-						"st": "thr",
-						"base": "2",
-						"modifier_per_die": 3
-					},
-					"strength": "12†",
-					"usage": "Thrust",
-					"reach": "2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 18,
-						"parry": "12",
-						"block": "No",
-						"damage": "2d+7 cr"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 3
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				}
-			],
-			"modifiers": [
-				{
-					"type": "eqp_modifier",
-					"id": "8abe8de6-49fb-462b-bb20-0d573e99aea8",
-					"name": "Modifier",
-					"weight_type": "to_original_weight",
-					"weight": "+0 lb"
 				}
 			],
 			"categories": [
@@ -3970,13 +2935,154 @@
 		},
 		{
 			"type": "equipment",
-			"id": "c70b908e-7a9a-4345-bc68-8ccbf6a05624",
+			"id": "75907f0c-0599-4595-95b7-36012eb34e0f",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Greatsword",
-			"tech_level": "3",
-			"value": "800",
-			"weight": "7 lb",
+			"description": "Axe",
+			"tech_level": "0",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B271",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "11",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0U",
+					"block": "No",
+					"calc": {
+						"level": 18,
+						"parry": "13U",
+						"block": "No",
+						"damage": "3d+4 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Flail",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace",
+							"modifier": -3
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "ebbb6fcc-aacf-4cf4-9c4b-47dc5a212a51",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Mace",
+			"tech_level": "2",
+			"value": "50",
+			"weight": "5 lb",
+			"reference": "B271",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "3"
+					},
+					"strength": "12",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0U",
+					"block": "No",
+					"calc": {
+						"level": 18,
+						"parry": "13U",
+						"block": "No",
+						"damage": "3d+5 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Flail",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "3"
+					},
+					"strength": "12",
+					"accuracy": "1",
+					"range": "x0.5/x1",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-4",
+					"calc": {
+						"level": 13,
+						"range": "10/20",
+						"damage": "3d+5 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Axe/Mace"
+						}
+					]
+				}
+			],
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "6f0618e3-e705-49b8-acb0-5e82b61f047a",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Great Axe",
+			"tech_level": "1",
+			"value": "100",
+			"weight": "8 lb",
 			"reference": "B274",
 			"weapons": [
 				{
@@ -3986,14 +3092,14 @@
 						"st": "sw",
 						"base": "3"
 					},
-					"strength": "12†",
+					"strength": "12‡",
 					"usage": "Swung",
-					"reach": "1,2",
-					"parry": "0",
+					"reach": "1,2*",
+					"parry": "0U",
 					"block": "No",
 					"calc": {
-						"level": 15,
-						"parry": "10",
+						"level": 19,
+						"parry": "13U",
 						"block": "No",
 						"damage": "3d+5 cut"
 					},
@@ -4004,64 +3110,22 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword"
+							"name": "Two-Handed Axe/Mace"
 						},
 						{
 							"type": "skill",
-							"name": "Broadsword",
+							"name": "Axe/Mace",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Force Sword",
+							"name": "Two-Handed Flail",
 							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cr",
-						"st": "thr",
-						"base": "2"
-					},
-					"strength": "12†",
-					"usage": "Thrust",
-					"reach": "2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 15,
-						"parry": "10",
-						"block": "No",
-						"damage": "2d+1 cr"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword"
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
 						}
 					]
 				}
@@ -4094,7 +3158,7 @@
 					"shots": "1(2)",
 					"bulk": "-7",
 					"calc": {
-						"level": 15,
+						"level": 16,
 						"range": "400/500",
 						"damage": "2d+2 imp"
 					},
