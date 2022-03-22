@@ -346,7 +346,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
 					"calc": {
 						"roll_range": "-",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -359,7 +361,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
 					"calc": {
 						"roll_range": "3-4",
-						"dr": 2
+						"dr": {
+							"all": 2
+						}
 					}
 				},
 				{
@@ -372,7 +376,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
 					"calc": {
 						"roll_range": "5",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -385,7 +391,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "6-7",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -398,7 +406,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "8",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -411,7 +421,9 @@
 					"description": "",
 					"calc": {
 						"roll_range": "9-10",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -424,7 +436,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
 					"calc": {
 						"roll_range": "11",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -437,7 +451,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "12",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -450,7 +466,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "13-14",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -463,7 +481,9 @@
 					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "15",
-						"dr": 2
+						"dr": {
+							"all": 2
+						}
 					}
 				},
 				{
@@ -476,7 +496,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "16",
-						"dr": 2
+						"dr": {
+							"all": 2
+						}
 					}
 				},
 				{
@@ -489,7 +511,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
 					"calc": {
 						"roll_range": "17-18",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -502,14 +526,16 @@
 					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
 					"calc": {
 						"roll_range": "-",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				}
 			]
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Dec 17, 2021, 9:04 PM",
+	"modified_date": "Mar 20, 2022, 6:51 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -530,7 +556,7 @@
 			"attr_id": "st",
 			"adj": 2,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 20
 			}
 		},
@@ -645,8 +671,8 @@
 			"adj": 0,
 			"damage": 0,
 			"calc": {
-				"value": 12,
-				"current": 12,
+				"value": 13,
+				"current": 13,
 				"points": 0
 			}
 		}
@@ -674,7 +700,7 @@
 						"level": 14,
 						"parry": "No",
 						"block": "No",
-						"damage": "1d-2 cr"
+						"damage": "1d-1 cr"
 					},
 					"defaults": [
 						{
@@ -700,7 +726,7 @@
 						"level": 14,
 						"parry": "11",
 						"block": "",
-						"damage": "1d-2 cr"
+						"damage": "1d-1 cr"
 					},
 					"defaults": [
 						{
@@ -733,7 +759,7 @@
 						"level": 12,
 						"parry": "No",
 						"block": "",
-						"damage": "1d-1 cr"
+						"damage": "1d cr"
 					},
 					"defaults": [
 						{
@@ -892,13 +918,12 @@
 			"id": "a621526b-cdbb-4916-8d07-4fb266585c1b",
 			"name": "Post-Combat Shakes",
 			"mental": true,
-			"base_points": -5,
 			"cr": 12,
 			"reference": "B150",
 			"calc": {
-				"points": -5
+				"points": 0
 			},
-			"notes": "Make a self-control roll at the end of any battle. If you fail, roll 3d, add the amount by which you failed your self-control roll, and look up the result on the Fright Check Table.",
+			"notes": "annulé avant épisode 8",
 			"categories": [
 				"Disadvantage"
 			]
@@ -1650,6 +1675,64 @@
 			"categories": [
 				"Advantage",
 				"Language"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "8d4c48f4-aaa1-46c8-a4d9-6e68d39424a6",
+			"name": "Increased Strength",
+			"physical": true,
+			"levels": "1",
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "8d4c2b63-dfdc-410b-b636-e80eda4bf84c",
+					"disabled": true,
+					"name": "No Fine Manipulators",
+					"reference": "B15",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d688f9ba-6f21-4fc2-9893-8949adc81813",
+					"disabled": true,
+					"name": "Size",
+					"reference": "B15",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "64a87b78-c84e-43c7-8950-c94e1d848c76",
+					"disabled": true,
+					"name": "Super-Effort",
+					"reference": "SU24",
+					"cost_type": "percentage",
+					"cost": 300,
+					"affects": "total"
+				}
+			],
+			"reference": "B14",
+			"calc": {
+				"points": 10
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "st"
+				}
+			],
+			"notes": "potion",
+			"categories": [
+				"Advantage",
+				"Attribute"
 			]
 		}
 	],
@@ -2819,7 +2902,7 @@
 							"calc": {
 								"level": 15,
 								"range": "half dam:ST-2  max:ST+5",
-								"damage": "1d-1 imp"
+								"damage": "1d imp"
 							},
 							"defaults": [
 								{
@@ -2993,10 +3076,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 18,
-						"parry": "12F",
+						"level": 19,
+						"parry": "13F",
 						"block": "No",
-						"damage": "1d+1 cut"
+						"damage": "2d-2 cut"
 					},
 					"defaults": [
 						{
@@ -3051,10 +3134,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 18,
-						"parry": "12F",
+						"level": 19,
+						"parry": "13F",
 						"block": "No",
-						"damage": "1d imp"
+						"damage": "1d+1 imp"
 					},
 					"defaults": [
 						{
@@ -3097,6 +3180,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "700",
+				"extended_weight": "2 lb"
+			},
 			"categories": [
 				"Melee Weapon"
 			]
@@ -3128,7 +3215,7 @@
 						"level": 16,
 						"parry": "11",
 						"block": "No",
-						"damage": "1d cut"
+						"damage": "2d-3 cut"
 					},
 					"defaults": [
 						{
@@ -3175,7 +3262,7 @@
 						"level": 16,
 						"parry": "11",
 						"block": "No",
-						"damage": "1d-1 imp"
+						"damage": "1d imp"
 					},
 					"defaults": [
 						{
@@ -3244,8 +3331,8 @@
 					"bulk": "-2",
 					"calc": {
 						"level": 15,
-						"range": "9/18",
-						"damage": "1d-1 imp"
+						"range": "10/19",
+						"damage": "1d imp"
 					},
 					"defaults": [
 						{
@@ -3260,6 +3347,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "40",
+				"extended_weight": "1 lb"
+			},
 			"categories": [
 				"Melee Weapon",
 				"Missile Weapon"
@@ -3305,6 +3396,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "225",
+				"extended_weight": "6 lb"
+			},
 			"categories": [
 				"Missile Weapon",
 				"UsesAmmoType:Bolt"
@@ -3320,6 +3415,10 @@
 			"value": "50",
 			"weight": "4 lb",
 			"reference": "B283",
+			"calc": {
+				"extended_value": "50",
+				"extended_weight": "4 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3349,7 +3448,12 @@
 			"description": "Leather Gloves",
 			"tech_level": "1",
 			"value": "30",
+			"weight": "0 lb",
 			"reference": "B284",
+			"calc": {
+				"extended_value": "30",
+				"extended_weight": "0 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3371,6 +3475,10 @@
 			"value": "80",
 			"weight": "3 lb",
 			"reference": "B284",
+			"calc": {
+				"extended_value": "80",
+				"extended_weight": "3 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3401,6 +3509,10 @@
 			"value": "10",
 			"weight": "0.2 lb",
 			"reference": "B288",
+			"calc": {
+				"extended_value": "920",
+				"extended_weight": "0.56 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3430,6 +3542,10 @@
 					"value": "80",
 					"weight": "0.004 lb",
 					"reference": "B264",
+					"calc": {
+						"extended_value": "800",
+						"extended_weight": "0.04 lb"
+					},
 					"categories": [
 						"Money: GURPS Standard Medieval Coins"
 					]
@@ -3444,6 +3560,10 @@
 					"value": "4",
 					"weight": "0.004 lb",
 					"reference": "B264",
+					"calc": {
+						"extended_value": "80",
+						"extended_weight": "0.08 lb"
+					},
 					"categories": [
 						"Money: GURPS Standard Medieval Coins"
 					]
@@ -3458,6 +3578,10 @@
 					"value": "1",
 					"weight": "0.008 lb",
 					"reference": "B264",
+					"calc": {
+						"extended_value": "30",
+						"extended_weight": "0.24 lb"
+					},
 					"categories": [
 						"Money: GURPS Standard Medieval Coins"
 					]
@@ -3472,6 +3596,10 @@
 			"value": "60",
 			"weight": "3 lb",
 			"reference": "DFA111",
+			"calc": {
+				"extended_value": "65",
+				"extended_weight": "4 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3502,6 +3630,10 @@
 					"value": "5",
 					"weight": "1 lb",
 					"reference": "B288",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
 					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
 					"categories": [
 						"Camping and Survival Gear"
@@ -3517,6 +3649,10 @@
 			"value": "30",
 			"weight": "1 lb",
 			"reference": "PY106:11",
+			"calc": {
+				"extended_value": "95",
+				"extended_weight": "6 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3546,6 +3682,10 @@
 					"value": "50",
 					"weight": "2 lb",
 					"reference": "DFA111",
+					"calc": {
+						"extended_value": "50",
+						"extended_weight": "2 lb"
+					},
 					"notes": "+1 to First Aid",
 					"categories": [
 						"Medical Gear"
@@ -3561,6 +3701,10 @@
 					"value": "10",
 					"weight": "2 lb",
 					"reference": "B289",
+					"calc": {
+						"extended_value": "10",
+						"extended_weight": "2 lb"
+					},
 					"notes": "Bandages for a  half-dozen wounds. Might be clean cloth, adhesive dressings, or spray-on \"Plastiskin\", depending on TL. Basic equipment for First Aid skill.",
 					"categories": [
 						"Medical Gear"
@@ -3576,6 +3720,10 @@
 					"value": "5",
 					"weight": "1 lb",
 					"reference": "B289",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
 					"notes": "For sharpening tools and wapons",
 					"categories": [
 						"Tools"
@@ -3592,6 +3740,10 @@
 			"value": "15",
 			"weight": "1 lb",
 			"reference": "B289",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "2.2 lb"
+			},
 			"notes": "Holds 20 arrows or bolts",
 			"categories": [
 				"Weapon and Combat Accessories"
@@ -3608,6 +3760,10 @@
 					"value": "2",
 					"weight": "0.06 lb",
 					"reference": "B276",
+					"calc": {
+						"extended_value": "40",
+						"extended_weight": "1.2 lb"
+					},
 					"categories": [
 						"AmmoType:Bolt",
 						"Ammunition",
@@ -3626,6 +3782,10 @@
 			"value": "30",
 			"weight": "3 lb",
 			"reference": "DFA111",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "8 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3656,6 +3816,10 @@
 					"value": "5",
 					"weight": "1 lb",
 					"reference": "B288",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
 					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
 					"categories": [
 						"Camping and Survival Gear"
@@ -3671,11 +3835,47 @@
 					"value": "20",
 					"weight": "4 lb",
 					"reference": "B288",
+					"calc": {
+						"extended_value": "20",
+						"extended_weight": "4 lb"
+					},
 					"categories": [
 						"Camping and Survival Gear"
 					]
 				}
 			]
 		}
-	]
+	],
+	"notes": [
+		{
+			"type": "note",
+			"id": "2ea5187c-0a10-4201-a6ee-8d8255097307",
+			"text": "character points :\n- reste 0 avant épisode 8"
+		}
+	],
+	"calc": {
+		"swing": "2d-1",
+		"thrust": "1d",
+		"basic_lift": "17 kg",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			6,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			10,
+			9,
+			8,
+			7,
+			6
+		],
+		"dodge_bonus": 1,
+		"block_bonus": 1,
+		"parry_bonus": 1
+	}
 }
