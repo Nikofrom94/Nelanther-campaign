@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Sep 19, 2021, 9:30 PM",
-	"modified_date": "Mar 20, 2022, 5:31 PM",
+	"modified_date": "Mar 22, 2022, 8:46 PM",
 	"profile": {
 		"player_name": "Cyril",
 		"name": "Salhazard",
@@ -1961,7 +1961,7 @@
 		},
 		{
 			"type": "advantage",
-			"id": "fd34b0c0-9c9a-4673-9e84-f712efaf05fe",
+			"id": "fcb18a09-3137-4cad-97f6-8ff5ba9ac499",
 			"name": "Increased Strength",
 			"physical": true,
 			"levels": "2",
@@ -1969,7 +1969,7 @@
 			"modifiers": [
 				{
 					"type": "modifier",
-					"id": "d23830e0-f8e3-4943-9098-de058809d0b2",
+					"id": "51262df2-94dd-411d-86d5-33fdbb0b704d",
 					"disabled": true,
 					"name": "No Fine Manipulators",
 					"reference": "B15",
@@ -1979,7 +1979,7 @@
 				},
 				{
 					"type": "modifier",
-					"id": "d3af5064-826c-47b8-ad72-f7b8d567c806",
+					"id": "b9946ff1-03b4-4d80-a0fa-bb041c819921",
 					"disabled": true,
 					"name": "Size",
 					"reference": "B15",
@@ -1990,7 +1990,7 @@
 				},
 				{
 					"type": "modifier",
-					"id": "c0225866-af9f-4a1e-95ac-dfce94da09c2",
+					"id": "31577de4-5a95-4da3-a076-e61bd12cab6c",
 					"disabled": true,
 					"name": "Super-Effort",
 					"reference": "SU24",
@@ -2923,12 +2923,12 @@
 		},
 		{
 			"type": "equipment",
-			"id": "e3bdc9e1-7e68-4e86-a624-6f0c988da76d",
+			"id": "6437a364-9689-4f0f-8efc-06cdd5fa3840",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Composite Bow (ST10)",
+			"description": "Composite Bow (ST12)",
 			"tech_level": "1",
-			"value": "900",
+			"value": "1080",
 			"weight": "4 lb",
 			"reference": "B275",
 			"weapons": [
@@ -2936,18 +2936,18 @@
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
-						"base": "1d+1"
+						"base": "1d+2"
 					},
-					"strength": "10†",
+					"strength": "12†",
 					"accuracy": "3",
-					"range": "200/250",
+					"range": "240/300",
 					"rate_of_fire": "1",
 					"shots": "1(2)",
 					"bulk": "-7",
 					"calc": {
 						"level": 15,
-						"range": "200/250",
-						"damage": "1d+1 imp"
+						"range": "240/300",
+						"damage": "1d+2 imp"
 					},
 					"defaults": [
 						{
@@ -2962,7 +2962,7 @@
 				}
 			],
 			"calc": {
-				"extended_value": "900",
+				"extended_value": "1080",
 				"extended_weight": "4 lb"
 			},
 			"categories": [
@@ -3008,160 +3008,6 @@
 						"Missile Weapon"
 					]
 				}
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "617b09fc-8122-4d98-90d8-f8274f3e4a23",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Shortsword",
-			"tech_level": "2",
-			"value": "400",
-			"weight": "2 lb",
-			"reference": "B273",
-			"weapons": [
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw"
-					},
-					"strength": "8",
-					"usage": "Swung",
-					"reach": "1",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 17,
-						"parry": "11",
-						"block": "No",
-						"damage": "1d+2 cut"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword"
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Jitte/Sai",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Knife",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Saber",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Smallsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Tonfa",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr"
-					},
-					"strength": "8",
-					"usage": "Thrust",
-					"reach": "1",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 17,
-						"parry": "11",
-						"block": "No",
-						"damage": "1d-1 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword"
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Jitte/Sai",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Knife",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Saber",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Smallsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Tonfa",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "400",
-				"extended_weight": "2 lb"
-			},
-			"categories": [
-				"Melee Weapon"
 			]
 		},
 		{
@@ -3570,55 +3416,6 @@
 			"notes": "Flexible; Concealable",
 			"categories": [
 				"Footwear"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "dc29d3ad-7327-4069-a823-c2f069a742a0",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Short Bow (ST12)",
-			"tech_level": "0",
-			"value": "75",
-			"weight": "2 lb",
-			"reference": "B275",
-			"weapons": [
-				{
-					"type": "ranged_weapon",
-					"damage": {
-						"type": "imp",
-						"base": "1d-1"
-					},
-					"strength": "12†",
-					"accuracy": "1",
-					"range": "120/180",
-					"rate_of_fire": "1",
-					"shots": "1(2)",
-					"bulk": "-6",
-					"calc": {
-						"level": 15,
-						"range": "120/180",
-						"damage": "1d-1 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Bow"
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "75",
-				"extended_weight": "2 lb"
-			},
-			"categories": [
-				"Missile Weapon",
-				"UsesAmmoType:Arrow"
 			]
 		}
 	],
