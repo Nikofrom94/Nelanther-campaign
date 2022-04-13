@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Mar 20, 2022, 3:01 PM",
+	"modified_date": "Mar 22, 2022, 8:45 PM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -3081,7 +3081,7 @@
 					"categories": [
 						"Container"
 					],
-					"open": false,
+					"open": true,
 					"children": [
 						{
 							"type": "equipment",
@@ -3128,7 +3128,7 @@
 					"categories": [
 						"Container"
 					],
-					"open": false,
+					"open": true,
 					"children": [
 						{
 							"type": "equipment",
@@ -3261,7 +3261,7 @@
 			"categories": [
 				"Camping and Survival Gear"
 			],
-			"open": false,
+			"open": true,
 			"children": [
 				{
 					"type": "equipment",

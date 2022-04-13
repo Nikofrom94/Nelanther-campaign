@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Mar 22, 2022, 9:29 PM",
+	"modified_date": "Mar 22, 2022, 9:28 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -556,7 +556,7 @@
 			"attr_id": "st",
 			"adj": 2,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 20
 			}
 		},
@@ -671,8 +671,8 @@
 			"adj": 0,
 			"damage": 0,
 			"calc": {
-				"value": 12,
-				"current": 12,
+				"value": 13,
+				"current": 13,
 				"points": 0
 			}
 		}
@@ -700,7 +700,7 @@
 						"level": 14,
 						"parry": "No",
 						"block": "No",
-						"damage": "1d-2 cr"
+						"damage": "1d-1 cr"
 					},
 					"defaults": [
 						{
@@ -726,7 +726,7 @@
 						"level": 14,
 						"parry": "11",
 						"block": "",
-						"damage": "1d-2 cr"
+						"damage": "1d-1 cr"
 					},
 					"defaults": [
 						{
@@ -759,7 +759,7 @@
 						"level": 12,
 						"parry": "No",
 						"block": "",
-						"damage": "1d-1 cr"
+						"damage": "1d cr"
 					},
 					"defaults": [
 						{
@@ -1675,6 +1675,64 @@
 			"categories": [
 				"Advantage",
 				"Language"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "8d4c48f4-aaa1-46c8-a4d9-6e68d39424a6",
+			"name": "Increased Strength",
+			"physical": true,
+			"levels": "1",
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "8d4c2b63-dfdc-410b-b636-e80eda4bf84c",
+					"disabled": true,
+					"name": "No Fine Manipulators",
+					"reference": "B15",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d688f9ba-6f21-4fc2-9893-8949adc81813",
+					"disabled": true,
+					"name": "Size",
+					"reference": "B15",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "64a87b78-c84e-43c7-8950-c94e1d848c76",
+					"disabled": true,
+					"name": "Super-Effort",
+					"reference": "SU24",
+					"cost_type": "percentage",
+					"cost": 300,
+					"affects": "total"
+				}
+			],
+			"reference": "B14",
+			"calc": {
+				"points": 10
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "st"
+				}
+			],
+			"notes": "potion",
+			"categories": [
+				"Advantage",
+				"Attribute"
 			]
 		}
 	],
@@ -2934,7 +2992,7 @@
 					"calc": {
 						"level": 15,
 						"range": "half dam:ST-2  max:ST+5",
-						"damage": "1d-1 imp"
+						"damage": "1d imp"
 					},
 					"defaults": [
 						{
@@ -2987,10 +3045,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 21,
+						"parry": "14F",
 						"block": "No",
-						"damage": "1d+3 cut"
+						"damage": "2d cut"
 					},
 					"defaults": [
 						{
@@ -3047,10 +3105,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 21,
+						"parry": "14F",
 						"block": "No",
-						"damage": "1d+2 imp"
+						"damage": "1d+3 imp"
 					},
 					"defaults": [
 						{
@@ -3127,10 +3185,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 21,
+						"parry": "14F",
 						"block": "No",
-						"damage": "1d+3 cut"
+						"damage": "2d cut"
 					},
 					"defaults": [
 						{
@@ -3187,10 +3245,10 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 21,
+						"parry": "14F",
 						"block": "No",
-						"damage": "1d+2 imp"
+						"damage": "1d+3 imp"
 					},
 					"defaults": [
 						{
@@ -3269,7 +3327,7 @@
 						"level": 16,
 						"parry": "11",
 						"block": "No",
-						"damage": "1d cut"
+						"damage": "2d-3 cut"
 					},
 					"defaults": [
 						{
@@ -3316,7 +3374,7 @@
 						"level": 16,
 						"parry": "11",
 						"block": "No",
-						"damage": "1d-1 imp"
+						"damage": "1d imp"
 					},
 					"defaults": [
 						{
@@ -3385,8 +3443,8 @@
 					"bulk": "-2",
 					"calc": {
 						"level": 15,
-						"range": "9/18",
-						"damage": "1d-1 imp"
+						"range": "10/19",
+						"damage": "1d imp"
 					},
 					"defaults": [
 						{
@@ -3908,9 +3966,9 @@
 		}
 	],
 	"calc": {
-		"swing": "1d+2",
-		"thrust": "1d-1",
-		"basic_lift": "14 kg",
+		"swing": "2d-1",
+		"thrust": "1d",
+		"basic_lift": "17 kg",
 		"lifting_st_bonus": 0,
 		"striking_st_bonus": 0,
 		"throwing_st_bonus": 0,
