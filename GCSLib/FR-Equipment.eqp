@@ -1,0 +1,103 @@
+{
+	"type": "equipment_list",
+	"version": 2,
+	"id": "04cd86ed-0d62-403c-81d1-4a8077e95085",
+	"rows": [
+		{
+			"type": "equipment",
+			"id": "d191a027-7ed4-4dc6-9a9e-ed001d92b4f0",
+			"quantity": 1,
+			"description": "Drow Elven Chain +3",
+			"tech_level": "3",
+			"value": "500",
+			"weight": "12 lb",
+			"reference": "B283",
+			"calc": {
+				"extended_value": "500",
+				"extended_weight": "12 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 7,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 7,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "torso",
+					"specialization": "crushing"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "vitals",
+					"specialization": "crushing"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "Magic Resistance"
+				}
+			],
+			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
+			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Elven_Chain",
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "a066403a-7a36-4782-a4e8-51f87517bd07",
+			"quantity": 1,
+			"description": "Drow Adamantine Chain +5",
+			"tech_level": "3",
+			"value": "500",
+			"weight": "12 lb",
+			"reference": "B283",
+			"calc": {
+				"extended_value": "500",
+				"extended_weight": "12 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 9,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 9,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "torso",
+					"specialization": "crushing"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "vitals",
+					"specialization": "crushing"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "Magic Resistance"
+				}
+			],
+			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
+			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Adamantine_Chain_%2B5",
+			"categories": [
+				"Body Armor"
+			]
+		}
+	]
+}
