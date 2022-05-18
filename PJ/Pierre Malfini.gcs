@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Mar 22, 2022, 9:29 PM",
+	"modified_date": "Mar 23, 2022, 1:22 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -787,6 +787,7 @@
 		{
 			"type": "advantage",
 			"id": "fc3b49fa-9d6a-49c5-ad9a-eab3da44090f",
+			"disabled": true,
 			"name": "Secret (Cannot kill)",
 			"social": true,
 			"modifiers": [
@@ -832,8 +833,9 @@
 			],
 			"reference": "B152",
 			"calc": {
-				"points": -5
+				"points": 0
 			},
+			"notes": "annulé avant épisode 8",
 			"categories": [
 				"Disadvantage"
 			]
@@ -915,15 +917,16 @@
 		},
 		{
 			"type": "advantage",
-			"id": "a621526b-cdbb-4916-8d07-4fb266585c1b",
+			"id": "10a54dd9-8cda-4e0e-8559-5c9fd5223a2e",
 			"name": "Post-Combat Shakes",
 			"mental": true,
+			"base_points": -5,
 			"cr": 12,
 			"reference": "B150",
 			"calc": {
-				"points": 0
+				"points": -5
 			},
-			"notes": "annulé avant épisode 8",
+			"notes": "Make a self-control roll at the end of any battle. If you fail, roll 3d, add the amount by which you failed your self-control roll, and look up the result on the Fright Check Table.",
 			"categories": [
 				"Disadvantage"
 			]
