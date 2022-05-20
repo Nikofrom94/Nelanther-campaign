@@ -362,7 +362,7 @@
 					"calc": {
 						"roll_range": "3-4",
 						"dr": {
-							"all": 5
+							"all": 10
 						}
 					}
 				},
@@ -392,7 +392,7 @@
 					"calc": {
 						"roll_range": "6-7",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -407,7 +407,7 @@
 					"calc": {
 						"roll_range": "8",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -422,7 +422,7 @@
 					"calc": {
 						"roll_range": "9-10",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -437,7 +437,7 @@
 					"calc": {
 						"roll_range": "11",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -452,7 +452,7 @@
 					"calc": {
 						"roll_range": "12",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -467,7 +467,7 @@
 					"calc": {
 						"roll_range": "13-14",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -512,7 +512,7 @@
 					"calc": {
 						"roll_range": "17-18",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				},
@@ -527,7 +527,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 3
+							"all": 8
 						}
 					}
 				}
@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Oct 6, 2021, 10:12 PM",
-	"modified_date": "Apr 15, 2022, 6:29 PM",
+	"modified_date": "Apr 26, 2022, 9:58 PM",
 	"profile": {
 		"player_name": "niko",
 		"name": "Cyrvisnea",
@@ -543,11 +543,12 @@
 		"age": "127",
 		"birthday": "Nov 9",
 		"eyes": "Blue",
-		"hair": "Bald",
+		"hair": "Red",
 		"skin": "Light Brown",
 		"handedness": "Left",
-		"height": "8'",
-		"weight": "800 lb",
+		"height": "3 m",
+		"weight": "500 kg",
+		"SM": 1,
 		"gender": "Female",
 		"tech_level": "4"
 	},
@@ -572,7 +573,7 @@
 			"attr_id": "iq",
 			"adj": 5,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 100
 			}
 		},
@@ -588,7 +589,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -596,7 +597,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 17,
 				"points": 0
 			}
 		},
@@ -604,7 +605,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -612,7 +613,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -620,7 +621,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -628,7 +629,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 16,
 				"points": 0
 			}
 		},
@@ -636,7 +637,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -679,6 +680,213 @@
 	],
 	"total_points": 356,
 	"advantages": [
+		{
+			"type": "advantage",
+			"id": "d1674fd0-9a5c-438a-be4e-a0e392e37ded",
+			"name": "Berserk",
+			"mental": true,
+			"base_points": -10,
+			"cr": 12,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "6de8cb89-288d-4a72-9949-4f28d42fd859",
+					"name": "Battle Rage",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				}
+			],
+			"userdesc": "You are immune to stun and shock, and your injuries cause no penalty to your Move score. You make all rolls to remain conscious or alive at +4 to HT. If you don’t fail any rolls, you remain alive and madly attacking until you reach -5¥HP. Then you fall dead!",
+			"reference": "B124",
+			"calc": {
+				"points": -15
+			},
+			"notes": "Make a self-control roll any time you suffer damage over 1/4 your HP in the space of one second, and whenever you witness equivalent harm to a loved one",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6edb5fea-471a-4695-b8de-f41fad81e7d2",
+			"name": "Combat Reflexes",
+			"mental": true,
+			"base_points": 15,
+			"reference": "B43",
+			"calc": {
+				"points": 15
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Enhanced Time Sense"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "fast-draw"
+					}
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "dodge"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "parry"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "block"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "fright_check"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 6,
+					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "to initiative rolls for your side (+2 if you are the leader)"
+				}
+			],
+			"notes": "Never freeze",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "d17ae710-cd71-4d0d-8bc6-d706fa977a38",
+			"name": "Magery",
+			"mental": true,
+			"supernatural": true,
+			"levels": "3",
+			"base_points": 5,
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "e9eca4b0-0a39-4712-a9da-41aba4137ad5",
+					"disabled": true,
+					"name": "Dance",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "8b0b67fa-f526-49fe-91e1-749dbdc3b40c",
+					"disabled": true,
+					"name": "Dark-Aspected",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "aadbe5d5-6a3b-4957-b9aa-5905ea80aaac",
+					"disabled": true,
+					"name": "Day-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "2d42d9f1-c125-4e96-92d0-f92a7510a1aa",
+					"disabled": true,
+					"name": "Musical",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "d6dff3c8-3adc-4d9a-9314-6c932f2cda0c",
+					"disabled": true,
+					"name": "Night-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "9c94fbef-6e1b-4e67-a072-97a103a5c930",
+					"disabled": true,
+					"name": "One College",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only",
+					"notes": "@College@"
+				},
+				{
+					"type": "modifier",
+					"id": "d63ef85f-a200-418f-a1a4-bd9c868cdb74",
+					"disabled": true,
+					"name": "Solitary",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "d01335b5-a75b-4312-84ab-4f5604081562",
+					"disabled": true,
+					"name": "Song",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				}
+			],
+			"reference": "B66",
+			"calc": {
+				"points": 35
+			},
+			"features": [
+				{
+					"type": "spell_bonus",
+					"amount": 1,
+					"per_level": true,
+					"match": "all_colleges"
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "thaumatology"
+					}
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
 		{
 			"type": "advantage",
 			"id": "e0b1ad0c-6c5c-4d7d-bd25-59f6226ee76b",
@@ -785,213 +993,6 @@
 			}
 		},
 		{
-			"type": "advantage",
-			"id": "d17ae710-cd71-4d0d-8bc6-d706fa977a38",
-			"name": "Magery",
-			"mental": true,
-			"supernatural": true,
-			"levels": "1",
-			"base_points": 5,
-			"points_per_level": 10,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "e9eca4b0-0a39-4712-a9da-41aba4137ad5",
-					"disabled": true,
-					"name": "Dance",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "8b0b67fa-f526-49fe-91e1-749dbdc3b40c",
-					"disabled": true,
-					"name": "Dark-Aspected",
-					"cost_type": "percentage",
-					"cost": -50,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "aadbe5d5-6a3b-4957-b9aa-5905ea80aaac",
-					"disabled": true,
-					"name": "Day-Aspected",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "2d42d9f1-c125-4e96-92d0-f92a7510a1aa",
-					"disabled": true,
-					"name": "Musical",
-					"cost_type": "percentage",
-					"cost": -50,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "d6dff3c8-3adc-4d9a-9314-6c932f2cda0c",
-					"disabled": true,
-					"name": "Night-Aspected",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "9c94fbef-6e1b-4e67-a072-97a103a5c930",
-					"disabled": true,
-					"name": "One College",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only",
-					"notes": "@College@"
-				},
-				{
-					"type": "modifier",
-					"id": "d63ef85f-a200-418f-a1a4-bd9c868cdb74",
-					"disabled": true,
-					"name": "Solitary",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				},
-				{
-					"type": "modifier",
-					"id": "d01335b5-a75b-4312-84ab-4f5604081562",
-					"disabled": true,
-					"name": "Song",
-					"cost_type": "percentage",
-					"cost": -40,
-					"affects": "levels_only"
-				}
-			],
-			"reference": "B66",
-			"calc": {
-				"points": 15
-			},
-			"features": [
-				{
-					"type": "spell_bonus",
-					"amount": 1,
-					"per_level": true,
-					"match": "all_colleges"
-				},
-				{
-					"type": "skill_bonus",
-					"amount": 1,
-					"per_level": true,
-					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "thaumatology"
-					}
-				}
-			],
-			"categories": [
-				"Advantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "6edb5fea-471a-4695-b8de-f41fad81e7d2",
-			"name": "Combat Reflexes",
-			"mental": true,
-			"base_points": 15,
-			"reference": "B43",
-			"calc": {
-				"points": 15
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "advantage_prereq",
-						"has": false,
-						"name": {
-							"compare": "is",
-							"qualifier": "Enhanced Time Sense"
-						}
-					}
-				]
-			},
-			"features": [
-				{
-					"type": "skill_bonus",
-					"amount": 1,
-					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "starts_with",
-						"qualifier": "fast-draw"
-					}
-				},
-				{
-					"type": "attribute_bonus",
-					"amount": 1,
-					"attribute": "dodge"
-				},
-				{
-					"type": "attribute_bonus",
-					"amount": 1,
-					"attribute": "parry"
-				},
-				{
-					"type": "attribute_bonus",
-					"amount": 1,
-					"attribute": "block"
-				},
-				{
-					"type": "attribute_bonus",
-					"amount": 2,
-					"attribute": "fright_check"
-				},
-				{
-					"type": "conditional_modifier",
-					"amount": 6,
-					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun"
-				},
-				{
-					"type": "conditional_modifier",
-					"amount": 1,
-					"situation": "to initiative rolls for your side (+2 if you are the leader)"
-				}
-			],
-			"notes": "Never freeze",
-			"categories": [
-				"Advantage"
-			]
-		},
-		{
-			"type": "advantage",
-			"id": "d1674fd0-9a5c-438a-be4e-a0e392e37ded",
-			"name": "Berserk",
-			"mental": true,
-			"base_points": -10,
-			"cr": 12,
-			"modifiers": [
-				{
-					"type": "modifier",
-					"id": "6de8cb89-288d-4a72-9949-4f28d42fd859",
-					"name": "Battle Rage",
-					"cost_type": "percentage",
-					"cost": 50,
-					"affects": "total"
-				}
-			],
-			"userdesc": "You are immune to stun and shock, and your injuries cause no penalty to your Move score. You make all rolls to remain conscious or alive at +4 to HT. If you don’t fail any rolls, you remain alive and madly attacking until you reach -5¥HP. Then you fall dead!",
-			"reference": "B124",
-			"calc": {
-				"points": -15
-			},
-			"notes": "Make a self-control roll any time you suffer damage over 1/4 your HP in the space of one second, and whenever you witness equivalent harm to a loved one",
-			"categories": [
-				"Disadvantage"
-			]
-		},
-		{
 			"type": "advantage_container",
 			"id": "7cea1db4-5abf-4657-8dab-a21674127a18",
 			"container_type": "race",
@@ -999,7 +1000,7 @@
 			"reference": "BS196",
 			"ancestry": "Human",
 			"calc": {
-				"points": 24
+				"points": 84
 			},
 			"open": true,
 			"children": [
@@ -1338,29 +1339,6 @@
 				},
 				{
 					"type": "advantage",
-					"id": "e1e4f2d3-de68-45cc-b132-1161bdd8fd45",
-					"name": "Decreased Intelligence",
-					"physical": true,
-					"levels": "3",
-					"points_per_level": -20,
-					"reference": "B15",
-					"calc": {
-						"points": -60
-					},
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"amount": -1,
-							"per_level": true,
-							"attribute": "iq"
-						}
-					],
-					"categories": [
-						"Disadvantage"
-					]
-				},
-				{
-					"type": "advantage",
 					"id": "8fa3222e-2db2-46af-a968-f5e5c5984a2d",
 					"name": "High Pain Threshold",
 					"physical": true,
@@ -1504,12 +1482,12 @@
 			"defaulted_from": {
 				"type": "iq",
 				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
+				"level": 10,
+				"adjusted_level": 10,
+				"points": -10
 			},
 			"calc": {
-				"level": 11,
+				"level": 14,
 				"rsl": "IQ-1"
 			},
 			"defaults": [
@@ -1542,7 +1520,7 @@
 			"difficulty": "iq/e",
 			"points": 1,
 			"calc": {
-				"level": 12,
+				"level": 15,
 				"rsl": "IQ+0"
 			},
 			"defaults": [
@@ -1567,7 +1545,7 @@
 			"difficulty": "iq/e",
 			"points": 1,
 			"calc": {
-				"level": 12,
+				"level": 15,
 				"rsl": "IQ+0"
 			},
 			"defaults": [
@@ -1581,6 +1559,45 @@
 			"categories": [
 				"Everyman",
 				"Knowledge"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "942c4fc3-deb8-4d80-8080-9052d9596b7a",
+			"name": "Axe/Mace",
+			"reference": "B208",
+			"difficulty": "dx/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"calc": {
+				"level": 15,
+				"rsl": "DX+2"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Flail",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
 			]
 		},
 		{
@@ -1614,11 +1631,11 @@
 		},
 		{
 			"type": "skill",
-			"id": "942c4fc3-deb8-4d80-8080-9052d9596b7a",
-			"name": "Axe/Mace",
+			"id": "8602d222-f88b-4a6c-8f16-3f7b703a9854",
+			"name": "Broadsword",
 			"reference": "B208",
 			"difficulty": "dx/a",
-			"points": 20,
+			"points": 16,
 			"defaulted_from": {
 				"type": "dx",
 				"modifier": -5,
@@ -1627,23 +1644,38 @@
 				"points": -8
 			},
 			"calc": {
-				"level": 18,
-				"rsl": "DX+5"
+				"level": 17,
+				"rsl": "DX+4"
 			},
 			"defaults": [
 				{
+					"type": "skill",
+					"name": "Force Sword",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Rapier",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Saber",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Shortsword",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Sword",
+					"modifier": -4
+				},
+				{
 					"type": "dx",
 					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Two-Handed Axe/Mace",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Flail",
-					"modifier": -4
 				}
 			],
 			"categories": [
@@ -1653,47 +1685,31 @@
 		},
 		{
 			"type": "skill",
-			"id": "de0b3ff6-aadb-45b5-86ac-87d9e69ea6d0",
-			"name": "Two-Handed Axe/Mace",
-			"reference": "B208",
-			"difficulty": "dx/a",
-			"points": 16,
+			"id": "28fcd65a-7b67-437d-a55a-26fae2949e0c",
+			"name": "Leadership",
+			"reference": "B204",
+			"difficulty": "iq/a",
+			"points": 8,
 			"defaulted_from": {
-				"type": "skill",
-				"name": "Axe/Mace",
-				"modifier": -3,
-				"level": 15,
-				"adjusted_level": 15,
-				"points": 8
+				"type": "iq",
+				"modifier": -5,
+				"level": 10,
+				"adjusted_level": 10,
+				"points": -10
 			},
 			"calc": {
-				"level": 19,
-				"rsl": "DX+6"
+				"level": 17,
+				"rsl": "IQ+2"
 			},
 			"defaults": [
 				{
-					"type": "dx",
+					"type": "iq",
 					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Axe/Mace",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Polearm",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Two-Handed Flail",
-					"modifier": -4
 				}
 			],
 			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
+				"Military",
+				"Social"
 			]
 		},
 		{
@@ -1704,7 +1720,7 @@
 			"difficulty": "h",
 			"points": 8,
 			"calc": {
-				"level": 18,
+				"level": 15,
 				"rsl": "+0"
 			},
 			"limit": 0,
@@ -1717,6 +1733,85 @@
 				"Combat/Weapon",
 				"Melee Combat",
 				"Technique"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "eb0dc40f-569c-4778-af19-7303435682cf",
+			"name": "Strategy",
+			"reference": "B222",
+			"specialization": "Land",
+			"difficulty": "iq/h",
+			"points": 8,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Tactics",
+				"modifier": -6,
+				"level": 10,
+				"adjusted_level": 10,
+				"points": -10
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Intelligence Analysis",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Tactics",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Strategy",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Military"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "7bdbcdf0-0267-4de8-9c06-8bce532b0c28",
+			"name": "Tactics",
+			"reference": "B224",
+			"difficulty": "iq/h",
+			"points": 8,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Strategy",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Military",
+				"Police"
 			]
 		},
 		{
@@ -1751,343 +1846,70 @@
 		},
 		{
 			"type": "skill",
-			"id": "28fcd65a-7b67-437d-a55a-26fae2949e0c",
-			"name": "Leadership",
-			"reference": "B204",
-			"difficulty": "iq/a",
-			"points": 8,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
-			},
-			"calc": {
-				"level": 14,
-				"rsl": "IQ+2"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Military",
-				"Social"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "7bdbcdf0-0267-4de8-9c06-8bce532b0c28",
-			"name": "Tactics",
-			"reference": "B224",
-			"difficulty": "iq/h",
-			"points": 8,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -6,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"calc": {
-				"level": 13,
-				"rsl": "IQ+1"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -6
-				},
-				{
-					"type": "skill",
-					"name": "Strategy",
-					"modifier": -6
-				}
-			],
-			"categories": [
-				"Military",
-				"Police"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "eb0dc40f-569c-4778-af19-7303435682cf",
-			"name": "Strategy",
-			"reference": "B222",
-			"specialization": "Land",
-			"difficulty": "iq/h",
-			"points": 8,
+			"id": "de0b3ff6-aadb-45b5-86ac-87d9e69ea6d0",
+			"name": "Two-Handed Axe/Mace",
+			"reference": "B208",
+			"difficulty": "dx/a",
+			"points": 16,
 			"defaulted_from": {
 				"type": "skill",
-				"name": "Tactics",
-				"modifier": -6,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
+				"name": "Axe/Mace",
+				"modifier": -3,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": 1
 			},
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+1"
+				"level": 17,
+				"rsl": "DX+4"
 			},
 			"defaults": [
 				{
-					"type": "iq",
-					"modifier": -6
+					"type": "dx",
+					"modifier": -5
 				},
 				{
 					"type": "skill",
-					"name": "Intelligence Analysis",
-					"modifier": -6
+					"name": "Axe/Mace",
+					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Tactics",
-					"modifier": -6
+					"name": "Polearm",
+					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Strategy",
+					"name": "Two-Handed Flail",
 					"modifier": -4
 				}
 			],
 			"categories": [
-				"Military"
+				"Combat/Weapon",
+				"Melee Combat"
 			]
 		}
 	],
 	"spells": [
 		{
 			"type": "spell",
-			"id": "20868596-b83c-4ef9-9ebd-99896ce809b4",
-			"name": "Complex Illusion",
-			"reference": "M96",
+			"id": "3eb1cd4c-d461-42e1-b9c2-b2aacc32e9f8",
+			"name": "Body of Air",
+			"reference": "M24",
 			"difficulty": "iq/h",
 			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "sound"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "5266033c-ddf4-43a5-87e6-9b39bc794e32",
-			"name": "Control Illusion",
-			"reference": "M97",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
+				"Air"
 			],
 			"power_source": "Arcane",
 			"spell_class": "Regular",
-			"resist": "Subject spell",
-			"casting_cost": "1",
-			"maintenance_cost": "-",
-			"casting_time": "2 sec",
-			"duration": "Permanent",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "perfect illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "e9b1602f-6b4d-4367-8e95-d984f8304944",
-			"name": "Apportation",
-			"reference": "M142",
-			"difficulty": "iq/h",
-			"college": [
-				"Movement"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will",
-			"casting_cost": "Varies",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (movement)"
-								}
-							}
-						]
-					}
-				]
-			},
-			"categories": [
-				"Movement"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "6c18f4d6-b62f-44b2-a470-5ec34ceeba30",
-			"name": "Colors",
-			"reference": "M110",
-			"difficulty": "iq/h",
-			"college": [
-				"Light & Darkness"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2",
+			"resist": "HT",
+			"casting_cost": "4",
 			"maintenance_cost": "1",
-			"casting_time": "1 sec",
+			"casting_time": "5 sec",
 			"duration": "1 min",
-			"points": 1,
+			"points": 8,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "light"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Light & Darkness"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "c8f4b583-7e6d-419c-ba93-bde8697f75f9",
-			"name": "Complex Illusion",
-			"reference": "M96",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 16,
-			"calc": {
-				"level": 16,
+				"level": 19,
 				"rsl": "IQ+4"
 			},
 			"prereqs": {
@@ -2100,7 +1922,50 @@
 						"sub_type": "name",
 						"qualifier": {
 							"compare": "is",
-							"qualifier": "sound"
+							"qualifier": "shape air"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Air"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "96892e33-7465-40e6-be72-6d66c6d763c0",
+			"name": "Create Air",
+			"reference": "M23",
+			"difficulty": "iq/h",
+			"college": [
+				"Air"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "1",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "5 sec",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "purify air"
 						},
 						"quantity": {
 							"compare": "at_least",
@@ -2113,7 +1978,7 @@
 						"sub_type": "name",
 						"qualifier": {
 							"compare": "is",
-							"qualifier": "simple illusion"
+							"qualifier": "seek air"
 						},
 						"quantity": {
 							"compare": "at_least",
@@ -2123,12 +1988,207 @@
 				]
 			},
 			"categories": [
-				"Illusion & Creation"
+				"Air"
 			]
 		},
 		{
 			"type": "spell",
-			"id": "aa798625-498d-4829-9055-4f89d5411b8a",
+			"id": "435951db-eb76-4078-9725-cdf0a8a39b3e",
+			"name": "Purify Air",
+			"reference": "M23",
+			"difficulty": "iq/h",
+			"college": [
+				"Air"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "1",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "Instant",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"categories": [
+				"Air"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "939bf986-6864-49c2-affc-05df3d1b8665",
+			"name": "Shape Air",
+			"reference": "M24",
+			"difficulty": "iq/h",
+			"college": [
+				"Air"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "1-10",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "create air"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Air"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "68267a3e-f7a6-4ba5-8f15-5118718ec4d8",
+			"name": "Daze",
+			"reference": "M134",
+			"difficulty": "iq/h",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "HT",
+			"casting_cost": "3",
+			"maintenance_cost": "2",
+			"casting_time": "2 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "foolishness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Mind Control"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "5ce17147-ca45-4b81-83fa-299eb82f3b0a",
+			"name": "Foolishness",
+			"reference": "M134",
+			"difficulty": "iq/h",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "Will",
+			"casting_cost": "1-5",
+			"maintenance_cost": "Half",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "attribute_prereq",
+						"has": true,
+						"which": "iq",
+						"qualifier": {
+							"compare": "at_least",
+							"qualifier": 12
+						}
+					}
+				]
+			},
+			"categories": [
+				"Mind Control"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "54c9b376-c134-462e-831e-80c5ef6d9104",
+			"name": "Sleep",
+			"reference": "M135",
+			"difficulty": "iq/h",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "HT",
+			"casting_cost": "4",
+			"maintenance_cost": "-",
+			"casting_time": "3 sec",
+			"duration": "Until awakened",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "daze"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Mind Control"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "d27705a6-1fdd-491b-a231-c2fa4b3a9fd7",
 			"name": "Continual Light",
 			"reference": "M110",
 			"difficulty": "iq/h",
@@ -2143,8 +2203,8 @@
 			"duration": "2d days",
 			"points": 1,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 16,
+				"rsl": "IQ+1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2171,7 +2231,63 @@
 		},
 		{
 			"type": "spell",
-			"id": "156e616b-55d8-4b55-a4c2-f516e0b0cb5e",
+			"id": "4c0802e0-5244-4b51-b140-4efa3f4aaa60",
+			"name": "Blur",
+			"reference": "M113",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "1-5",
+			"maintenance_cost": "Same",
+			"casting_time": "2 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 16,
+				"rsl": "IQ+1"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "darkness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "gloom"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "c480452c-61c9-4495-8918-c6b10982abc8",
 			"name": "Darkness",
 			"reference": "M111",
 			"difficulty": "iq/h",
@@ -2184,10 +2300,10 @@
 			"maintenance_cost": "1",
 			"casting_time": "1 sec",
 			"duration": "1 min",
-			"points": 1,
+			"points": 8,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 19,
+				"rsl": "IQ+4"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2214,265 +2330,41 @@
 		},
 		{
 			"type": "spell",
-			"id": "aaa6d431-bbf1-4e2c-92c8-e94e05075f58",
-			"name": "Dispel Illusion",
-			"reference": "M97",
+			"id": "78323aa4-27dd-4578-8c48-b58f16075bf5",
+			"name": "Flash",
+			"reference": "M112",
 			"difficulty": "iq/h",
 			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Subject spell",
-			"casting_cost": "1",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Instant",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "control illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "a682790b-429a-4529-bb73-89c8c77a578e",
-			"name": "Hush",
-			"reference": "M172",
-			"difficulty": "iq/h",
-			"college": [
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will",
-			"casting_cost": "2",
-			"maintenance_cost": "1",
-			"casting_time": "2 sec",
-			"duration": "10 sec#",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "silence"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "9985d54a-57a1-45d2-aac0-2344f2dcc339",
-			"name": "Illusion Disguise",
-			"reference": "M96",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "3",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Until illusion ends",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "88851f0a-6241-4023-8d96-90159fb53fa5",
-			"name": "Illusion Shell",
-			"reference": "M96",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "1 or 2",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "6ef89332-c8b5-40b2-8e8f-d33d0c2a83ce",
-			"name": "Independence",
-			"reference": "M96",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "-",
-			"casting_time": "Varies",
-			"duration": "Varies",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "9210438f-bd68-4425-bcdf-0d6f20677716",
-			"name": "Itch",
-			"reference": "M35",
-			"difficulty": "iq/h",
-			"college": [
-				"Body Control"
+				"Light & Darkness"
 			],
 			"power_source": "Arcane",
 			"spell_class": "Regular",
 			"resist": "HT",
-			"casting_cost": "2",
+			"casting_cost": "4",
 			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Until scratched",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"categories": [
-				"Body Control"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "a60f33fd-d9bb-4dab-9542-cc1ef4b32502",
-			"name": "Know Illusion",
-			"reference": "M97",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Info",
-			"casting_cost": "2",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
+			"casting_time": "2 sec",
 			"duration": "Instant",
-			"points": 1,
+			"points": 12,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "Blinds"
+					},
+					"usage": "Area",
+					"reach": "Special",
+					"parry": "No",
+					"calc": {
+						"level": 0,
+						"parry": "No",
+						"block": "",
+						"damage": "Blinds"
+					}
+				}
+			],
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 20,
+				"rsl": "IQ+5"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2484,7 +2376,7 @@
 						"sub_type": "name",
 						"qualifier": {
 							"compare": "is",
-							"qualifier": "simple illusion"
+							"qualifier": "continual light"
 						},
 						"quantity": {
 							"compare": "at_least",
@@ -2494,12 +2386,12 @@
 				]
 			},
 			"categories": [
-				"Illusion & Creation"
+				"Light & Darkness"
 			]
 		},
 		{
 			"type": "spell",
-			"id": "bf3579a9-865d-48c8-b21f-534d43cca2bf",
+			"id": "44a5026b-c94d-463c-ac11-5cecaec39860",
 			"name": "Light",
 			"reference": "M110",
 			"difficulty": "iq/h",
@@ -2514,8 +2406,8 @@
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 16,
+				"rsl": "IQ+1"
 			},
 			"categories": [
 				"Light & Darkness"
@@ -2523,66 +2415,23 @@
 		},
 		{
 			"type": "spell",
-			"id": "457d2836-9d5f-4f73-9e0b-2595c4388bd2",
-			"name": "Noise",
-			"reference": "M173",
+			"id": "579638ec-c242-48f3-bc03-c9b95c6560b7",
+			"name": "Invisibility",
+			"reference": "M114",
 			"difficulty": "iq/h",
 			"college": [
-				"Sound"
+				"Light & Darkness"
 			],
 			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "4",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "5 sec",
+			"spell_class": "Regular",
+			"casting_cost": "5",
+			"maintenance_cost": "3",
+			"casting_time": "3 sec",
+			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "wall of silence"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "c130289f-be32-44f1-9140-20348f95a56f",
-			"name": "Perfect Illusion",
-			"reference": "M96",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "3",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 16,
-			"calc": {
 				"level": 16,
-				"rsl": "IQ+4"
+				"rsl": "IQ+1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2591,80 +2440,54 @@
 					{
 						"type": "spell_prereq",
 						"has": true,
-						"sub_type": "name",
+						"sub_type": "college",
 						"qualifier": {
-							"compare": "is",
-							"qualifier": "complex illusion"
+							"compare": "contains",
+							"qualifier": "Light & Darkness"
 						},
 						"quantity": {
 							"compare": "at_least",
-							"qualifier": 1
+							"qualifier": 6
 						}
 					},
 					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "advantage_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (illusion & creation)"
-								}
-							}
-						]
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "blur"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
 					}
 				]
 			},
 			"categories": [
-				"Illusion & Creation"
+				"Light & Darkness"
 			]
 		},
 		{
 			"type": "spell",
-			"id": "fd82fd01-f9e4-4079-b789-b5b8d94e67a0",
-			"name": "Phantom Flame",
-			"reference": "M73",
+			"id": "1273d844-a36f-4a20-b36a-6a6ee5ee2694",
+			"name": "See Invisible",
+			"reference": "M113",
 			"difficulty": "iq/h",
 			"college": [
-				"Fire",
-				"Illusion & Creation"
+				"Light & Darkness"
 			],
 			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "1",
-			"maintenance_cost": "1",
+			"spell_class": "Regular",
+			"casting_cost": "4",
+			"maintenance_cost": "2",
 			"casting_time": "1 sec",
 			"duration": "1 min",
 			"points": 1,
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 16,
+				"rsl": "IQ+1"
 			},
 			"prereqs": {
 				"type": "prereq_list",
@@ -2676,7 +2499,7 @@
 						"sub_type": "name",
 						"qualifier": {
 							"compare": "is",
-							"qualifier": "shape fire"
+							"qualifier": "invisibility"
 						},
 						"quantity": {
 							"compare": "at_least",
@@ -2684,236 +2507,54 @@
 						}
 					},
 					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "simple illusion"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "dark vision"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"has": true,
+								"sub_type": "name",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "infravision"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
 					}
 				]
 			},
 			"categories": [
-				"Fire",
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "bce1ac20-fc39-4951-b346-211d2fc97f15",
-			"name": "Silence",
-			"reference": "M171",
-			"difficulty": "iq/h",
-			"college": [
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "sound"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "0bf0e88a-9908-459a-afb7-1e04ad8cdd6a",
-			"name": "Simple Illusion",
-			"reference": "M95",
-			"difficulty": "iq/h",
-			"college": [
-				"Illusion & Creation"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "1",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "advantage_prereq",
-						"has": false,
-						"name": {
-							"compare": "starts_with",
-							"qualifier": "blind"
-						}
-					},
-					{
-						"type": "attribute_prereq",
-						"has": true,
-						"which": "iq",
-						"qualifier": {
-							"compare": "at_least",
-							"qualifier": 11
-						}
-					}
-				]
-			},
-			"categories": [
-				"Illusion & Creation"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "d84bb89d-aba4-4732-ae02-96efb509c61a",
-			"name": "Sound",
-			"reference": "M171",
-			"difficulty": "iq/h",
-			"college": [
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "Varies",
-			"maintenance_cost": "1/ min",
-			"casting_time": "1 sec",
-			"duration": "Varies",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"categories": [
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "3c52e5cf-3c18-455f-a665-d479857ef5ff",
-			"name": "Voices",
-			"reference": "M172",
-			"difficulty": "iq/h",
-			"college": [
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "3",
-			"maintenance_cost": "2",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "sound"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Sound"
-			]
-		},
-		{
-			"type": "spell",
-			"id": "787889b0-6b68-4ab3-9c00-5267a3432b3d",
-			"name": "Wall of Silence",
-			"reference": "M172",
-			"difficulty": "iq/h",
-			"college": [
-				"Sound"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"has": true,
-						"sub_type": "name",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "silence"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"categories": [
-				"Sound"
+				"Light & Darkness"
 			]
 		}
 	],
 	"equipment": [
 		{
 			"type": "equipment",
-			"id": "e81b55c7-b60c-499f-8a2e-07f2a99f3eae",
+			"id": "7f5045a7-0f31-45d6-a52b-1513d1965199",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Axe",
-			"tech_level": "0",
-			"value": "50",
-			"weight": "4 lb",
+			"description": "Scimitar - Queenslayer",
+			"tech_level": "4",
+			"value": "500",
+			"weight": "3 lb",
 			"reference": "B271",
 			"weapons": [
 				{
@@ -2921,18 +2562,18 @@
 					"damage": {
 						"type": "cut",
 						"st": "sw",
-						"base": "2"
+						"base": "3"
 					},
-					"strength": "11",
+					"strength": "10",
 					"usage": "Swung",
 					"reach": "1",
-					"parry": "0U",
+					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 18,
-						"parry": "13U",
+						"level": 19,
+						"parry": "13",
 						"block": "No",
-						"damage": "3d+4 cut"
+						"damage": "3d+5 cut"
 					},
 					"defaults": [
 						{
@@ -2941,57 +2582,57 @@
 						},
 						{
 							"type": "skill",
-							"name": "Axe/Mace"
-						},
-						{
-							"type": "skill",
-							"name": "Flail",
+							"name": "Force Sword",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Axe/Mace",
-							"modifier": -3
+							"name": "Broadsword",
+							"modifier": 2
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
 						}
 					]
-				}
-			],
-			"calc": {
-				"extended_value": "50",
-				"extended_weight": "4 lb"
-			},
-			"categories": [
-				"Melee Weapon"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "75907f0c-0599-4595-95b7-36012eb34e0f",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Axe",
-			"tech_level": "0",
-			"value": "50",
-			"weight": "4 lb",
-			"reference": "B271",
-			"weapons": [
+				},
 				{
 					"type": "melee_weapon",
 					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "2"
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
 					},
-					"strength": "11",
-					"usage": "Swung",
+					"strength": "10",
+					"usage": "Thrust",
 					"reach": "1",
-					"parry": "0U",
+					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 18,
-						"parry": "13U",
+						"level": 17,
+						"parry": "12",
 						"block": "No",
-						"damage": "3d+4 cut"
+						"damage": "2d imp"
 					},
 					"defaults": [
 						{
@@ -3000,25 +2641,45 @@
 						},
 						{
 							"type": "skill",
-							"name": "Axe/Mace"
-						},
-						{
-							"type": "skill",
-							"name": "Flail",
+							"name": "Force Sword",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Axe/Mace",
-							"modifier": -3
+							"name": "Broadsword"
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
 						}
 					]
 				}
 			],
 			"calc": {
-				"extended_value": "50",
-				"extended_weight": "4 lb"
+				"extended_value": "500",
+				"extended_weight": "3 lb"
 			},
+			"notes": "Cast Weaken Blood (Magic p40) resist by HT",
 			"categories": [
 				"Melee Weapon"
 			]
@@ -3047,8 +2708,8 @@
 					"parry": "0U",
 					"block": "No",
 					"calc": {
-						"level": 18,
-						"parry": "13U",
+						"level": 15,
+						"parry": "11U",
 						"block": "No",
 						"damage": "3d+5 cr"
 					},
@@ -3137,8 +2798,8 @@
 					"parry": "0U",
 					"block": "No",
 					"calc": {
-						"level": 19,
-						"parry": "13U",
+						"level": 17,
+						"parry": "12U",
 						"block": "No",
 						"damage": "3d+5 cut"
 					},
@@ -3224,6 +2885,159 @@
 			"categories": [
 				"Missile Weapon"
 			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "3bde5f1c-1a97-4550-8451-cfd7917dcd5c",
+			"equipped": true,
+			"description": "Scale Suit +1",
+			"value": "0",
+			"weight": "0 lb",
+			"reference": "DFA109",
+			"calc": {
+				"extended_value": "2805",
+				"extended_weight": "102 lb"
+			},
+			"categories": [
+				"Armor"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "bd4982c5-2488-4ff7-82de-33f8c617787f",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Scale Body Armor +1",
+					"value": "1155",
+					"weight": "42 lb",
+					"reference": "DFA109",
+					"calc": {
+						"extended_value": "1155",
+						"extended_weight": "42 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "groin"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Body Armor"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "07ed8db0-1c15-4a21-b344-c0b0f3a51fd2",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Scale Helmet +1",
+					"value": "275",
+					"weight": "10 lb",
+					"reference": "DFA109",
+					"calc": {
+						"extended_value": "275",
+						"extended_weight": "10 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "skull"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Headgear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "af3bea74-ecb9-481d-abd0-9101df0af1b8",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Scale Leggings +1",
+					"value": "825",
+					"weight": "30 lb",
+					"reference": "DFA109",
+					"calc": {
+						"extended_value": "825",
+						"extended_weight": "30 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "leg"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Limb Armor"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "3e97a135-914f-4bb7-b517-d807d705d1a7",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Scale Sleeves +1",
+					"value": "550",
+					"weight": "20 lb",
+					"reference": "DFA109",
+					"calc": {
+						"extended_value": "550",
+						"extended_weight": "20 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 5,
+							"location": "arm"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Limb Armor"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "aa48bd30-b400-45c5-a01f-b3a9bd136621",
+			"equipped": true,
+			"quantity": 1,
+			"description": "20 pt Powerstone",
+			"value": "7350",
+			"weight": "0.008 lb",
+			"reference": "M20",
+			"uses": 20,
+			"max_uses": 20,
+			"calc": {
+				"extended_value": "7350",
+				"extended_weight": "0.008 lb"
+			},
+			"categories": [
+				"Powerstone"
+			]
 		}
 	],
 	"notes": [
@@ -3231,6 +3045,11 @@
 			"type": "note",
 			"id": "8a6a52cc-b7da-48a3-b4af-3d111672eb84",
 			"text": "Ogres stand 7 to 8 feet tall; they are half a ton or more of pure muscle. Most are just lone wanderers, haunting the wilderness and eating whatever\nthey can kill. Unlike, say, minotaurs, ogres have no particular innate hostility to other races. In the wild, they will react normally to chance encounters unless they are hungry. However, few people wait to see if an ogre wants to be friends. Ogre personalities are as one would expect from large, stupid humans; some are sullen, some just want to be liked. Most enjoy fighting.\n\nTo figure height, take ST before the +10 racial modifier, and increase it by 60%. Average weight is 5 times that of a human of the same (pre-modifier) ST.\n\nSome ogres are smarter or more social than the norm, and a minority understand that eating other people is frowned upon. Unfortunately, many of them have a lot more mental disadvantages than listed here, including everything from Bad Temper to Sadism. A tiny number are much smarter than the norm; these ogre geniuses are likely to have Magery instead of Magic Resistance."
+		},
+		{
+			"type": "note",
+			"id": "e4dd7c6f-3fa9-4bd4-b3b2-1dfb2b106810",
+			"text": "http://realms.dndpedia.com/index.php?title=Cyrvisnea"
 		}
 	],
 	"calc": {

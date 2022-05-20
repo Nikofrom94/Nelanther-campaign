@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 26, 2021, 9:35 AM",
-	"modified_date": "Mar 22, 2022, 5:41 PM",
+	"modified_date": "May 7, 2022, 12:19 AM",
 	"profile": {
 		"player_name": "Richard",
 		"name": "Blagordd",
@@ -2719,31 +2719,31 @@
 	"equipment": [
 		{
 			"type": "equipment",
-			"id": "e47aeb3f-6961-47f2-823b-81e91d4d23ea",
+			"id": "cbee043e-2125-49de-9cdd-ea5d64425140",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Short Bow (ST14)",
-			"tech_level": "0",
-			"value": "85",
-			"weight": "2 lb",
+			"description": "Composite Bow (ST15)",
+			"tech_level": "1",
+			"value": "1350",
+			"weight": "4 lb",
 			"reference": "B275",
 			"weapons": [
 				{
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
-						"base": "1d"
+						"base": "1d+4"
 					},
-					"strength": "14†",
-					"accuracy": "2",
-					"range": "140/210",
+					"strength": "15†",
+					"accuracy": "3",
+					"range": "300/375",
 					"rate_of_fire": "1",
 					"shots": "1(2)",
-					"bulk": "-6",
+					"bulk": "-7",
 					"calc": {
 						"level": 15,
-						"range": "140/210",
-						"damage": "1d imp"
+						"range": "300/375",
+						"damage": "1d+4 imp"
 					},
 					"defaults": [
 						{
@@ -2758,12 +2758,117 @@
 				}
 			],
 			"calc": {
-				"extended_value": "85",
-				"extended_weight": "2 lb"
+				"extended_value": "1350",
+				"extended_weight": "4 lb"
 			},
 			"categories": [
-				"Missile Weapon",
-				"UsesAmmoType:Arrow"
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "3c9c688f-f5f9-47e9-bc1f-aeec2b27cd97",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Greatsword",
+			"tech_level": "3",
+			"value": "800",
+			"weight": "7 lb",
+			"reference": "B274",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "3"
+					},
+					"strength": "12†",
+					"usage": "Swung",
+					"reach": "1,2",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "12",
+						"block": "No",
+						"damage": "2d+4 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "12†",
+					"usage": "Thrust",
+					"reach": "2",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "12",
+						"block": "No",
+						"damage": "1d+3 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "800",
+				"extended_weight": "7 lb"
+			},
+			"categories": [
+				"Melee Weapon"
 			]
 		},
 		{
@@ -2914,253 +3019,6 @@
 		},
 		{
 			"type": "equipment",
-			"id": "e54701bb-86f7-46c9-890f-73b7848cbb69",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Greatsword : kingsbane",
-			"tech_level": "3",
-			"value": "800",
-			"weight": "7 lb",
-			"reference": "B274",
-			"weapons": [
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "4"
-					},
-					"strength": "12†",
-					"usage": "Swung non-human",
-					"reach": "1,2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 17,
-						"parry": "12",
-						"block": "No",
-						"damage": "2d+5 cut"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 1
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "3"
-					},
-					"strength": "12†",
-					"usage": "Thrust non-human",
-					"reach": "2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 17,
-						"parry": "12",
-						"block": "No",
-						"damage": "1d+4 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 1
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "6"
-					},
-					"strength": "12†",
-					"usage": "Swung human",
-					"reach": "1,2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 19,
-						"parry": "13",
-						"block": "No",
-						"damage": "2d+7 cut"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 3
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "5"
-					},
-					"strength": "12†",
-					"usage": "Thrust human",
-					"reach": "2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 19,
-						"parry": "13",
-						"block": "No",
-						"damage": "1d+6 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": 3
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "6"
-					},
-					"usage": "attaque au cou - human",
-					"reach": "1,2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 17,
-						"parry": "12",
-						"block": "No",
-						"damage": "2d+7 cut"
-					},
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "TA Two-Handed Sword - Neck",
-							"modifier": 3
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "4"
-					},
-					"usage": "attaque au cou - non-human",
-					"reach": "1,2",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 15,
-						"parry": "11",
-						"block": "No",
-						"damage": "2d+5 cut"
-					},
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "TA Two-Handed Sword - Neck",
-							"modifier": 1
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "800",
-				"extended_weight": "7 lb"
-			},
-			"notes": "Tueuse d'humain : +3 au toucher/dommages",
-			"categories": [
-				"Melee Weapon"
-			]
-		},
-		{
-			"type": "equipment",
 			"id": "cca8a232-c161-4727-b3f4-0033b11b73e5",
 			"equipped": true,
 			"quantity": 1,
@@ -3300,53 +3158,86 @@
 			]
 		},
 		{
-			"type": "equipment",
-			"id": "be3eae50-713a-46a9-a1e7-7432e59fe94e",
+			"type": "equipment_container",
+			"id": "fdda3cc6-85ca-4dc7-8beb-3bd5f5b5fb4e",
 			"equipped": true,
-			"quantity": 1,
-			"description": "Composite Bow (ST16) Eclair Bleu",
-			"tech_level": "1",
-			"value": "1440",
-			"weight": "4 lb",
-			"reference": "B275",
-			"weapons": [
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "3 lb"
+			},
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
 				{
-					"type": "ranged_weapon",
-					"damage": {
-						"type": "imp",
-						"base": "1d+4"
-					},
-					"strength": "16†",
-					"usage_notes": "thunderclap + Shocking Touch (1d+1 bur)",
-					"accuracy": "3",
-					"range": "320/400",
-					"rate_of_fire": "1",
-					"shots": "1(2)",
-					"bulk": "-7",
+					"type": "equipment",
+					"id": "fba7d963-ba6f-414e-bf43-78d5f746a8a2",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Arrow - poison",
+					"tech_level": "0",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "B276",
 					"calc": {
-						"level": 15,
-						"range": "320/400",
-						"damage": "1d+4 imp"
+						"extended_value": "40",
+						"extended_weight": "2 lb"
 					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Bow",
-							"modifier": 1
-						}
+					"categories": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
 					]
 				}
-			],
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "bb4d6dad-baa6-4f67-a386-c518004f025b",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
 			"calc": {
-				"extended_value": "1440",
-				"extended_weight": "4 lb"
+				"extended_value": "17",
+				"extended_weight": "1.1 lb"
 			},
+			"notes": "Holds 20 arrows or bolts",
 			"categories": [
-				"Missile Weapon"
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "8151089c-c5ff-4d36-83e8-2bc2843aee6c",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Arrow, Bodkin",
+					"tech_level": "3",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "B277",
+					"calc": {
+						"extended_value": "2",
+						"extended_weight": "0.1 lb"
+					},
+					"notes": "Changes damage to piercing with armor divisor of (2).",
+					"categories": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
 			]
 		}
 	],
