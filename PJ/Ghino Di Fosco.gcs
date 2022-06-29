@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Jun 17, 2022, 9:49 PM",
+	"modified_date": "Jun 18, 2022, 12:21 AM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -1839,31 +1839,26 @@
 			"children": [
 				{
 					"type": "skill",
-					"id": "6c2b9b93-b1f6-448b-86f5-3a0ddcbbe178",
-					"name": "Thaumatology",
-					"reference": "B225",
-					"difficulty": "iq/vh",
-					"points": 24,
-					"defaulted_from": {
-						"type": "iq",
-						"modifier": -7,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
-					},
+					"id": "949dbb22-1e6e-4506-b99d-cd0622748f14",
+					"name": "Hidden Lore",
+					"reference": "B199",
+					"specialization": "Spirit Lore",
+					"difficulty": "iq/a",
+					"points": 4,
 					"calc": {
-						"level": 17,
-						"rsl": "IQ+4"
+						"level": 14,
+						"rsl": "IQ+1"
 					},
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -7
-						}
-					],
 					"categories": [
+						"Knowledge",
 						"Occult/Magical"
 					]
+				},
+				{
+					"type": "skill_container",
+					"id": "eecf48b2-9315-4e8e-a8ac-89ddef1974c0",
+					"name": "Magie rituelle",
+					"open": true
 				},
 				{
 					"type": "skill",
@@ -2316,10 +2311,32 @@
 					]
 				},
 				{
-					"type": "skill_container",
-					"id": "eecf48b2-9315-4e8e-a8ac-89ddef1974c0",
-					"name": "Magie rituelle",
-					"open": true
+					"type": "skill",
+					"id": "6c2b9b93-b1f6-448b-86f5-3a0ddcbbe178",
+					"name": "Thaumatology",
+					"reference": "B225",
+					"difficulty": "iq/vh",
+					"points": 24,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -7,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"calc": {
+						"level": 17,
+						"rsl": "IQ+4"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -7
+						}
+					],
+					"categories": [
+						"Occult/Magical"
+					]
 				},
 				{
 					"type": "skill",
@@ -2354,23 +2371,6 @@
 					],
 					"categories": [
 						"Social Sciences/Humanities"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "949dbb22-1e6e-4506-b99d-cd0622748f14",
-					"name": "Hidden Lore",
-					"reference": "B199",
-					"specialization": "Spirit Lore",
-					"difficulty": "iq/a",
-					"points": 4,
-					"calc": {
-						"level": 14,
-						"rsl": "IQ+1"
-					},
-					"categories": [
-						"Knowledge",
-						"Occult/Magical"
 					]
 				}
 			]
@@ -2652,79 +2652,6 @@
 			]
 		},
 		{
-			"type": "skill_container",
-			"id": "8f8d7f26-be11-4881-be0e-419be40162f5",
-			"name": "Vie monastique",
-			"open": true,
-			"children": [
-				{
-					"type": "skill",
-					"id": "63d99883-4522-4d7c-a517-aaa3cc99b229",
-					"name": "Religious Ritual",
-					"reference": "B217",
-					"specialization": "Chauntea",
-					"difficulty": "iq/h",
-					"points": 1,
-					"calc": {
-						"level": 11,
-						"rsl": "IQ-2"
-					},
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Ritual Magic",
-							"specialization": "Chauntea",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Theology",
-							"specialization": "Chauntea",
-							"modifier": -4
-						}
-					],
-					"categories": [
-						"Occult/Magical"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "50481c0d-ec3d-4e01-b5c8-d74fd0fb5e88",
-					"name": "Theology",
-					"reference": "B226",
-					"specialization": "Panthéon classique Forgotten Realms",
-					"difficulty": "iq/h",
-					"points": 1,
-					"defaulted_from": {
-						"type": "iq",
-						"modifier": -6,
-						"level": 7,
-						"adjusted_level": 7,
-						"points": -7
-					},
-					"calc": {
-						"level": 11,
-						"rsl": "IQ-2"
-					},
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Religious Ritual",
-							"specialization": "Panthéon classique Forgotten Realms",
-							"modifier": -4
-						}
-					],
-					"categories": [
-						"Social Sciences/Humanities"
-					]
-				}
-			]
-		},
-		{
 			"type": "skill",
 			"id": "95922809-e1fd-4b3f-bcba-b2463e4592d6",
 			"name": "Packing",
@@ -2869,6 +2796,79 @@
 			"categories": [
 				"Athletic",
 				"Outdoor/Exploration"
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "8f8d7f26-be11-4881-be0e-419be40162f5",
+			"name": "Vie monastique",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "63d99883-4522-4d7c-a517-aaa3cc99b229",
+					"name": "Religious Ritual",
+					"reference": "B217",
+					"specialization": "Chauntea",
+					"difficulty": "iq/h",
+					"points": 1,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Ritual Magic",
+							"specialization": "Chauntea",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Theology",
+							"specialization": "Chauntea",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Occult/Magical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "50481c0d-ec3d-4e01-b5c8-d74fd0fb5e88",
+					"name": "Theology",
+					"reference": "B226",
+					"specialization": "Panthéon classique Forgotten Realms",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Religious Ritual",
+							"specialization": "Panthéon classique Forgotten Realms",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Social Sciences/Humanities"
+					]
+				}
 			]
 		}
 	],

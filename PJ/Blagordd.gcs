@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 26, 2021, 9:35 AM",
-	"modified_date": "Jun 17, 2022, 9:48 PM",
+	"modified_date": "Jun 29, 2022, 5:53 PM",
 	"profile": {
 		"player_name": "Richard",
 		"name": "Blagordd",
@@ -2767,10 +2767,10 @@
 		},
 		{
 			"type": "equipment",
-			"id": "3c9c688f-f5f9-47e9-bc1f-aeec2b27cd97",
+			"id": "a54795cf-a11e-4c8a-adc2-b7807ed7dfa8",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Greatsword",
+			"description": "Greatsword : kingsbane",
 			"tech_level": "3",
 			"value": "800",
 			"weight": "7 lb",
@@ -2781,18 +2781,18 @@
 					"damage": {
 						"type": "cut",
 						"st": "sw",
-						"base": "3"
+						"base": "4"
 					},
 					"strength": "12†",
-					"usage": "Swung",
+					"usage": "Swung non-human",
 					"reach": "1,2",
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 16,
+						"level": 17,
 						"parry": "12",
 						"block": "No",
-						"damage": "2d+4 cut"
+						"damage": "2d+5 cut"
 					},
 					"defaults": [
 						{
@@ -2801,7 +2801,8 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword"
+							"name": "Two-Handed Sword",
+							"modifier": 1
 						},
 						{
 							"type": "skill",
@@ -2822,20 +2823,20 @@
 				{
 					"type": "melee_weapon",
 					"damage": {
-						"type": "cr",
+						"type": "imp",
 						"st": "thr",
-						"base": "2"
+						"base": "3"
 					},
 					"strength": "12†",
-					"usage": "Thrust",
+					"usage": "Thrust non-human",
 					"reach": "2",
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 16,
+						"level": 17,
 						"parry": "12",
 						"block": "No",
-						"damage": "1d+3 cr"
+						"damage": "1d+4 imp"
 					},
 					"defaults": [
 						{
@@ -2844,7 +2845,96 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword"
+							"name": "Two-Handed Sword",
+							"modifier": 1
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "6"
+					},
+					"strength": "12†",
+					"usage": "Swung human",
+					"reach": "1,2",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 19,
+						"parry": "13",
+						"block": "No",
+						"damage": "2d+7 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": 3
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "5"
+					},
+					"strength": "12†",
+					"usage": "Thrust human",
+					"reach": "2",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 19,
+						"parry": "13",
+						"block": "No",
+						"damage": "1d+6 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": 3
 						},
 						{
 							"type": "skill",
@@ -2867,6 +2957,7 @@
 				"extended_value": "800",
 				"extended_weight": "7 lb"
 			},
+			"notes": "Tueuse d'humain : +3 au toucher/dommages",
 			"categories": [
 				"Melee Weapon"
 			]
