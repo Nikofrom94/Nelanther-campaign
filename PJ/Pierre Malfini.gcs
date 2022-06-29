@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Mar 23, 2022, 1:22 PM",
+	"modified_date": "Jun 17, 2022, 9:42 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -604,7 +604,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -612,7 +612,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -620,7 +620,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -628,7 +628,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -636,7 +636,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -1678,6 +1678,31 @@
 			"categories": [
 				"Advantage",
 				"Language"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "416b9ad9-c319-4273-a38a-e5a0fae393b9",
+			"name": "Increased Perception",
+			"mental": true,
+			"physical": true,
+			"levels": "1",
+			"points_per_level": 5,
+			"reference": "B16",
+			"calc": {
+				"points": 5
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "per"
+				}
+			],
+			"categories": [
+				"Advantage",
+				"Attribute"
 			]
 		}
 	],
@@ -2724,12 +2749,12 @@
 			"defaulted_from": {
 				"type": "per",
 				"modifier": -4,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
 			},
 			"calc": {
-				"level": 10,
+				"level": 11,
 				"rsl": "Per+0"
 			},
 			"defaults": [
@@ -3907,7 +3932,7 @@
 		{
 			"type": "note",
 			"id": "2ea5187c-0a10-4201-a6ee-8d8255097307",
-			"text": "character points :\n- reste 0 avant épisode 8"
+			"text": "character points :\n- reste 3 avant épisode 11"
 		}
 	],
 	"calc": {
