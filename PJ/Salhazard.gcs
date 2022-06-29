@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Sep 19, 2021, 9:30 PM",
-	"modified_date": "Jun 17, 2022, 9:47 PM",
+	"modified_date": "Jun 29, 2022, 5:43 PM",
 	"profile": {
 		"player_name": "Cyril",
 		"name": "Salhazard",
@@ -2923,12 +2923,12 @@
 		},
 		{
 			"type": "equipment",
-			"id": "6437a364-9689-4f0f-8efc-06cdd5fa3840",
+			"id": "15eac6d3-4782-4b7d-bed4-5cc3ed05e4b1",
 			"equipped": true,
 			"quantity": 1,
-			"description": "Composite Bow (ST12)",
+			"description": "Composite Bow (ST13)",
 			"tech_level": "1",
-			"value": "1080",
+			"value": "1170",
 			"weight": "4 lb",
 			"reference": "B275",
 			"weapons": [
@@ -2936,18 +2936,18 @@
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
-						"base": "1d+2"
+						"base": "1d+3"
 					},
-					"strength": "12†",
+					"strength": "13†",
 					"accuracy": "3",
-					"range": "240/300",
+					"range": "260/325",
 					"rate_of_fire": "1",
 					"shots": "1(2)",
 					"bulk": "-7",
 					"calc": {
 						"level": 15,
-						"range": "240/300",
-						"damage": "1d+2 imp"
+						"range": "260/325",
+						"damage": "1d+3 imp"
 					},
 					"defaults": [
 						{
@@ -2962,7 +2962,7 @@
 				}
 			],
 			"calc": {
-				"extended_value": "1080",
+				"extended_value": "1170",
 				"extended_weight": "4 lb"
 			},
 			"categories": [
