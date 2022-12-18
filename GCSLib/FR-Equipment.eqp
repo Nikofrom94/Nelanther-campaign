@@ -667,6 +667,55 @@
 				}
 			],
 			"notes": "+ HP per wound inflicted"
+      },
+      {
+      "type": "equipment",
+			"id": "ec5cef68-9cee-4ff0-a168-db179e96df26",
+			"quantity": 1,
+			"description": "Composite Bow (ST16) Eclair Bleu",
+			"tech_level": "1",
+			"value": "1440",
+			"weight": "4 lb",
+			"reference": "B275",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+4"
+					},
+					"strength": "16†",
+					"usage_notes": "thunderclap + Shocking Touch",
+					"accuracy": "3",
+					"range": "320/400",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"calc": {
+						"level": 0,
+						"range": "320/400",
+						"damage": "1d+4 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow",
+							"modifier": 1
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "1440",
+				"extended_weight": "4 lb"
+			},
+			"categories": [
+				"Missile Weapon"
+			]
 		}
 	]
 }
