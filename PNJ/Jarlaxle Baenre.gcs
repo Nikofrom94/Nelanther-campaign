@@ -1,0 +1,4299 @@
+{
+	"type": "character",
+	"version": 2,
+	"id": "3dd74fbc-8712-42aa-802b-e727967f7567",
+	"settings": {
+		"default_length_units": "m",
+		"default_weight_units": "kg",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": true,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": true,
+		"show_equipment_modifier_adj": true,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "iso-a4",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"full_name": "",
+				"attribute_base": "$will",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"full_name": "",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"full_name": "",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"explanation": "",
+						"multiplier": -5,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-4<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -4,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-3<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -3,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-2<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -2,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-1<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"explanation": "Move and Dodge are halved (B419)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Healthy",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			}
+		],
+		"hit_locations": {
+			"id": "humanoid",
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"slots": 0,
+					"hit_penalty": -9,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"hit_penalty": 0,
+					"dr_bonus": 0,
+					"description": "",
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"slots": 0,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 5
+						}
+					}
+				}
+			]
+		}
+	},
+	"created_date": "Nov 17, 2021, 1:02 AM",
+	"modified_date": "Sep 12, 2022, 10:36 PM",
+	"profile": {
+		"name": "Jarlaxle Baenre",
+		"title": "Vampire Lord - Captain Zord",
+		"age": "200",
+		"eyes": "violet",
+		"hair": "Noir",
+		"skin": "pale",
+		"handedness": "right",
+		"gender": "male",
+		"tech_level": "4"
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 3,
+			"calc": {
+				"value": 20,
+				"points": 30
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 4,
+			"calc": {
+				"value": 14,
+				"points": 80
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 7,
+			"calc": {
+				"value": 17,
+				"points": 140
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 20
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 3,
+			"calc": {
+				"value": 20,
+				"points": 15
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 20,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 3,
+			"calc": {
+				"value": 24,
+				"points": 15
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 24,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 24,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 24,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 24,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 3,
+			"calc": {
+				"value": 9.5,
+				"points": 60
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 9,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 24,
+				"current": 24,
+				"points": 0
+			}
+		}
+	],
+	"total_points": 629,
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "ae1584c8-8bba-4967-a75f-2ed2573c3b35",
+			"name": "Natural Attacks",
+			"physical": true,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"calc": {
+						"level": 18,
+						"parry": "No",
+						"block": "No",
+						"damage": "2d cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"calc": {
+						"level": 18,
+						"parry": "12",
+						"block": "",
+						"damage": "2d cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"parry": "No",
+					"calc": {
+						"level": 16,
+						"parry": "No",
+						"block": "",
+						"damage": "2d+1 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B271",
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"type": "advantage",
+			"id": "39a04edb-a34c-4b02-8ce4-0e89888e1a18",
+			"name": "Appearance",
+			"physical": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "d6d10f1a-219c-4146-a874-3f0da084115c",
+					"disabled": true,
+					"name": "Attractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "b439b1a1-d4ef-4ef5-943d-90ed8d301918",
+					"disabled": true,
+					"name": "Average",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a54477a6-ab03-41c8-ac65-7e5727fb6c1a",
+					"disabled": true,
+					"name": "Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "57438d60-1174-4753-8df9-63df0f4d5806",
+					"disabled": true,
+					"name": "Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "bfbf9ee2-89e8-4a21-88c8-fc02c2607058",
+					"disabled": true,
+					"name": "Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "fb3094f6-af24-4523-86ed-2791f863749c",
+					"disabled": true,
+					"name": "Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "3616f106-2a04-4222-9782-9585bcff98ee",
+					"disabled": true,
+					"name": "Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "885a79e8-a3b2-4695-87c2-bc994fa24a4c",
+					"disabled": true,
+					"name": "Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "4821fc08-fe89-45e5-ac46-5faee6176448",
+					"disabled": true,
+					"name": "Hideous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "a3df1151-d352-4099-9c80-e675d6ec0d56",
+					"disabled": true,
+					"name": "Horrific",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -24,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -6,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "0f7a2303-9eeb-42b3-aa8a-b7540865c53c",
+					"disabled": true,
+					"name": "Impressive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f982cf72-51a3-49b1-a047-8f85106dc9e5",
+					"disabled": true,
+					"name": "Monstrous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "59b281fa-5807-4989-847f-a69205c920f4",
+					"disabled": true,
+					"name": "Off-the-Shelf Looks",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "Halves the usual reaction bonus - adjust manually"
+				},
+				{
+					"type": "modifier",
+					"id": "ff77d523-c1e8-4297-8057-ed773c237310",
+					"disabled": true,
+					"name": "Transcendent",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 8,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "e501937c-a811-4b75-8dee-f574c1c75bc3",
+					"disabled": true,
+					"name": "Transcendent (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "4662626f-c174-4d2f-9de5-c662be65677e",
+					"disabled": true,
+					"name": "Transcendent (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "e49f34ff-7f55-4479-8f9e-a60810bc44e4",
+					"disabled": true,
+					"name": "Ugly",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -8,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -2,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "2f79afe8-c271-41a2-9ead-312b9c952e36",
+					"disabled": true,
+					"name": "Unattractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "621901aa-7d4f-49b9-8683-4118c4e31848",
+					"disabled": true,
+					"name": "Universal",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": 25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "634cf954-a3d3-445c-9eb7-0bc31678c198",
+					"name": "Very Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "a00cb646-1e3d-4646-9080-de803cece1eb",
+					"disabled": true,
+					"name": "Very Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "678e79d2-cfdb-4378-bcaf-068681c655f7",
+					"disabled": true,
+					"name": "Very Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "d5d9e20d-1eb1-4183-bd94-b918240fa245",
+					"disabled": true,
+					"name": "Very Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "9a4a0a17-eaad-481e-8beb-90bbe540b37a",
+					"disabled": true,
+					"name": "Very Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "df6ca463-91db-4608-955d-e2c2ab9018ca",
+					"disabled": true,
+					"name": "Very Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				}
+			],
+			"reference": "B21",
+			"calc": {
+				"points": 16
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "f4c11fe2-6721-4a2d-8b43-fa19b29b9c6e",
+			"name": "Charisma",
+			"mental": true,
+			"levels": "3",
+			"points_per_level": 5,
+			"reference": "B41",
+			"calc": {
+				"points": 15
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "fortune-telling"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "leadership"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "panhandling"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "public speaking"
+					}
+				},
+				{
+					"type": "reaction_bonus",
+					"amount": 1,
+					"per_level": true,
+					"situation": "from sapient being with whom you actively interact (converse, lecture, etc.)"
+				},
+				{
+					"type": "reaction_bonus",
+					"amount": 1,
+					"per_level": true,
+					"situation": "to Influence rolls"
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "73c17bfe-863a-4990-a800-a3ee4741a528",
+			"name": "Magery",
+			"mental": true,
+			"supernatural": true,
+			"levels": "2",
+			"base_points": 5,
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "bed935de-9db0-423f-9a3c-361ce3e0e5ef",
+					"disabled": true,
+					"name": "Dance",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "2b1c4d4c-7b63-4c2e-b397-16109ea01ad2",
+					"name": "Dark-Aspected",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "308bb511-1d5b-4050-8cfa-b6e26bec40c9",
+					"disabled": true,
+					"name": "Day-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "1a379e09-7e1d-4f03-bcb4-9f31026a9496",
+					"disabled": true,
+					"name": "Musical",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "2af9034f-76e6-4cdb-86ac-571be06bfce2",
+					"disabled": true,
+					"name": "Night-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "e64ded4b-77cb-4197-8099-557c49d01f86",
+					"disabled": true,
+					"name": "One College",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only",
+					"notes": "@College@"
+				},
+				{
+					"type": "modifier",
+					"id": "48995d8b-e070-40a5-9e3f-56da2410ec61",
+					"disabled": true,
+					"name": "Solitary",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "d60e3ac5-56f7-41b7-b9c5-3a99073702e2",
+					"disabled": true,
+					"name": "Song",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				}
+			],
+			"reference": "B66",
+			"calc": {
+				"points": 15
+			},
+			"features": [
+				{
+					"type": "spell_bonus",
+					"amount": 1,
+					"per_level": true,
+					"match": "all_colleges"
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "thaumatology"
+					}
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "c954ee87-01cf-4967-aa60-d55e6fb47f08",
+			"container_type": "race",
+			"name": "Vampire",
+			"reference": "BS201",
+			"ancestry": "Human",
+			"calc": {
+				"points": 95
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "2a3218e8-3b6f-469c-9518-60bcf5776317",
+					"name": "Dependency (Blood of sapient beings)",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "555b0976-8698-46bf-bab0-50ff6c86027f",
+							"disabled": true,
+							"name": "Rarity: Rare",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "efb05c4f-266b-42f8-aa68-f817eb18ef43",
+							"disabled": true,
+							"name": "Rarity: Occasional",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "07a3a07e-1d58-40a3-ae10-7155a362d59c",
+							"disabled": true,
+							"name": "Rarity: Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "21c251f3-6ca2-4f20-9ba0-14555d0a0714",
+							"name": "Rarity: Very Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "90e886ad-7aef-4633-bf7c-dc750a5c3970",
+							"name": "Illegal",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4ef87802-0a24-4998-bc16-94f84243e40e",
+							"disabled": true,
+							"name": "Frequency: Constantly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 5,
+							"notes": "Lose 1 HP per minute without it"
+						},
+						{
+							"type": "modifier",
+							"id": "fb8fd588-62d8-4d3d-a798-f3cfbe933a17",
+							"disabled": true,
+							"name": "Frequency: Hourly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 4,
+							"notes": "Lose 1 HP per 10 minutes after missing a hourly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "2f8e5e03-7a04-43b0-a5aa-cb2bb855b59a",
+							"disabled": true,
+							"name": "Frequency: Daily",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "Lose 1 HP per hour after missing a daily dose"
+						},
+						{
+							"type": "modifier",
+							"id": "2b94eef6-70fd-4981-8882-e7b763645ceb",
+							"name": "Frequency: Weekly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "Lose 1 HP per six hours after missing a weekly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "2c85acde-42d6-47f1-ab9e-11682d7db3dc",
+							"disabled": true,
+							"name": "Frequency: Monthly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Lose 1 HP per day after missing a monthly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "c267eeb9-4ede-4ce3-9a03-13167d763b82",
+							"disabled": true,
+							"name": "Frequency: Seasonally",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.33333,
+							"notes": "Lose 1 HP per 3 days after missing a seasonal dose"
+						},
+						{
+							"type": "modifier",
+							"id": "7c6abce0-ef0e-4533-b1cd-853459ef0f60",
+							"disabled": true,
+							"name": "Frequency: Yearly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.1,
+							"notes": "Lose 1 HP per 2 weeks after missing a yearly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "3b18ec07-8189-452a-990e-af483b082dc2",
+							"disabled": true,
+							"name": "Aging",
+							"reference": "B130",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total",
+							"notes": "Age 2 years for each HP lost due to this dependency"
+						}
+					],
+					"reference": "B130",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cd166abc-8579-4269-abb0-383da1dd0d3d",
+					"name": "Dependency (Mana)",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "eb4275f3-a283-4aac-94d0-844fe5e71bda",
+							"disabled": true,
+							"name": "Rarity: Rare",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d3d13fae-bac0-4578-8226-27474c21edce",
+							"disabled": true,
+							"name": "Rarity: Occasional",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "1650130c-5731-460d-9edd-438e97616237",
+							"disabled": true,
+							"name": "Rarity: Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "09860302-bba6-42e1-bb91-6053e653d28a",
+							"name": "Rarity: Very Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a11858cb-db3c-4a26-8274-c5de9737d682",
+							"disabled": true,
+							"name": "Illegal",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "71313c9e-ab44-4744-859e-da47d9ffe3e1",
+							"name": "Frequency: Constantly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 5,
+							"notes": "Lose 1 HP per minute without it"
+						},
+						{
+							"type": "modifier",
+							"id": "f6121928-8987-42c3-8c07-e32d46c1dd15",
+							"disabled": true,
+							"name": "Frequency: Hourly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 4,
+							"notes": "Lose 1 HP per 10 minutes after missing a hourly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "92d4afa5-547d-4883-8804-17c688bbd8be",
+							"disabled": true,
+							"name": "Frequency: Daily",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "Lose 1 HP per hour after missing a daily dose"
+						},
+						{
+							"type": "modifier",
+							"id": "fff8bc05-e554-4e6e-9e7a-ea3f1938d411",
+							"disabled": true,
+							"name": "Frequency: Weekly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "Lose 1 HP per six hours after missing a weekly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "efa2e653-c90f-4f0f-a6ee-32db85a5b9dc",
+							"disabled": true,
+							"name": "Frequency: Monthly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Lose 1 HP per day after missing a monthly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "da4a275f-423e-446c-ab4b-cf221612c08b",
+							"disabled": true,
+							"name": "Frequency: Seasonally",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.33333,
+							"notes": "Lose 1 HP per 3 days after missing a seasonal dose"
+						},
+						{
+							"type": "modifier",
+							"id": "b8d599f9-a32b-4dc9-8fa1-4984658e7ecf",
+							"disabled": true,
+							"name": "Frequency: Yearly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.1,
+							"notes": "Lose 1 HP per 2 weeks after missing a yearly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "dcd7c7a9-00cd-462e-8146-d95cd7b376c5",
+							"disabled": true,
+							"name": "Aging",
+							"reference": "B130",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total",
+							"notes": "Age 2 years for each HP lost due to this dependency"
+						}
+					],
+					"reference": "B130",
+					"calc": {
+						"points": -25
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "108eb68b-7200-4a4e-a78c-07414222f3a4",
+					"name": "Doesn't Breathe",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "51a13d9d-daf3-4e24-8016-a7ee6515caa8",
+							"disabled": true,
+							"name": "Gills",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e812f58b-ee3c-4743-98c9-fc41d60a9730",
+							"disabled": true,
+							"name": "Gills",
+							"reference": "B49",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Suffocates in air"
+						},
+						{
+							"type": "modifier",
+							"id": "b2eb2a0e-1889-49a0-b349-34e68462c7fe",
+							"disabled": true,
+							"name": "Oxygen Absorption",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "40411723-01bc-454a-bbba-a63bfac30b29",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Can hold breath 25 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "30a014d6-6b92-4774-a729-2afd561ddd1a",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Can hold breath 50 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "5025004d-01d4-421b-a5b5-e32721aad230",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "Can hold breath 100 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "0136940d-010c-42d1-bf54-8e05c10505c2",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Can hold breath 200 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "96847c29-f67d-477f-823f-e696074ba19c",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Can hold breath 300 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "f151da58-62f1-4e62-9574-0d3aeb9aa454",
+							"disabled": true,
+							"name": "Oxygen Combustion",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B49",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "de6929d1-4821-4d6b-9ddd-e041720df9a5",
+					"name": "Dread (Running water 11 yard)",
+					"mental": true,
+					"supernatural": true,
+					"levels": "1",
+					"base_points": -9,
+					"points_per_level": -1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "f6ff16f3-ca6d-4215-9ddf-065faa952c67",
+							"disabled": true,
+							"name": "Very Common",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 3
+						},
+						{
+							"type": "modifier",
+							"id": "ed68091b-3bb4-46ab-8104-08a83e15dee1",
+							"name": "Common",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 2
+						},
+						{
+							"type": "modifier",
+							"id": "8bf3fe0b-ee07-44b7-a959-84a3dfc9a669",
+							"disabled": true,
+							"name": "Occasional",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "f540bf88-6cb1-4c8c-af13-2ea59621617b",
+							"disabled": true,
+							"name": "Rare",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "f28aaab5-b9f6-42f8-b53c-fd29a4133f6d",
+							"disabled": true,
+							"name": "Cannot be trapped",
+							"reference": "B133",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "78bd9c71-90e4-4a54-9d9e-857de2c493dd",
+							"disabled": true,
+							"name": "Insensitive",
+							"reference": "H25",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B132",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "81fd60a7-b2cb-4655-83a7-df4607642663",
+					"name": "Increased HP",
+					"physical": true,
+					"levels": "4",
+					"points_per_level": 2,
+					"reference": "B16",
+					"calc": {
+						"points": 8
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "hp"
+						}
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "0c83b57e-e28e-47fa-954f-5381a7cd7e09",
+					"name": "Increased Perception",
+					"mental": true,
+					"physical": true,
+					"levels": "4",
+					"points_per_level": 5,
+					"reference": "B16",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "per"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "67a564d1-ac68-4c12-a923-00a7a10749e8",
+					"name": "Increased Strength",
+					"physical": true,
+					"levels": "7",
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "189f637b-8502-411f-b317-94770b6da803",
+							"disabled": true,
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "5cecb3a5-e336-4649-96b5-538010270f93",
+							"disabled": true,
+							"name": "Size",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "29ca756d-36e2-4ea5-9fae-ef152e806cfc",
+							"disabled": true,
+							"name": "Super-Effort",
+							"reference": "Sup24",
+							"cost_type": "percentage",
+							"cost": 300,
+							"affects": "total"
+						}
+					],
+					"reference": "B14",
+					"calc": {
+						"points": 70
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "st"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ff003f0f-53d6-4a7e-8aee-6715d10934f3",
+					"name": "Infectious Attack",
+					"physical": true,
+					"supernatural": true,
+					"base_points": -5,
+					"reference": "B140",
+					"calc": {
+						"points": -5
+					},
+					"notes": "On toxic attack",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "2f1a7f11-5cff-47d1-9796-a2c3041965a1",
+					"name": "Injury Tolerance (Unliving)",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"reference": "B61",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1cae7121-a3a7-44fc-ace8-07f29c59c93e",
+					"name": "Night Vision",
+					"physical": true,
+					"levels": "5",
+					"points_per_level": 1,
+					"reference": "B71",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "d28a788d-1b92-413b-9cf8-106b8a6977d1",
+					"name": "Resistant",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "e26ce68a-2ccf-464c-9224-314c28e9f917",
+							"name": "Metabolic Hazards",
+							"reference": "B80",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c77082e1-6890-429f-ba63-4b1d70c46801",
+							"disabled": true,
+							"name": "@Common: Poison, Sickness, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ce4c09db-a855-479a-b85a-f4aa9d21b7c7",
+							"disabled": true,
+							"name": "@Occasional: Disease, Ingested Poison, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "deef4ab7-bd93-43a2-b840-c1b7d977e0c2",
+							"disabled": true,
+							"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "07b0ca27-d1b5-4d67-89ed-e28617df5071",
+							"name": "Immunity",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "b202aa9c-730b-4b28-a01c-7bb9eac89dd2",
+							"disabled": true,
+							"name": "+8 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "d5678b7f-3375-463e-afb4-1f06c4f4dc30",
+							"disabled": true,
+							"name": "+3 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B81",
+					"calc": {
+						"points": 30
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8768c0aa-9c2d-45fa-afc3-660cd9ee4979",
+					"name": "Supernatural Features (No Body Heat and pallor)",
+					"physical": true,
+					"supernatural": true,
+					"base_points": -6,
+					"reference": "B157",
+					"calc": {
+						"points": -6
+					},
+					"notes": "except after eating",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8ec423cd-17f5-498e-8996-d5f9303ac501",
+					"name": "Toxic Attack 3d",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "b5d7172c-56bb-497d-860e-0bdf7226dd04",
+							"name": "Always on",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a0da864d-7cb9-4fc7-8702-fd46d8419e4f",
+							"name": "Aura",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "bd9454bb-6846-4bb6-86b5-fdf473135bf4",
+							"name": "Blood Agent",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "1bec1866-d432-48ee-86b5-bf578c397a4e",
+							"name": "Cyclic",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"notes": "(Special, upon death)"
+						},
+						{
+							"type": "modifier",
+							"id": "201546df-4f1f-4b8d-836a-5db42a41b7b5",
+							"name": "No Wounding",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9ba83293-acab-4411-acad-7c36f0c82059",
+							"name": "Melee Attack reach C",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3a91e86a-93c4-4cb9-b994-a92c0911b109",
+							"name": "Only vampire's bodily fluids do damage",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "dc1d1da8-92e6-4987-b75c-1a95e2d031cb",
+							"name": "Resistible by HT+5",
+							"cost_type": "percentage",
+							"cost": -55,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6084995b-a0dd-496a-8b01-c29646c5ac9a",
+							"name": "Variable (minimum 1d)",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total"
+						}
+					],
+					"reference": "B35",
+					"calc": {
+						"points": 3
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "90dc89d4-9057-457e-9ecd-c313aa84f682",
+					"name": "Unaging",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "0f5f2bbc-dc78-4c1b-9b53-22c391b858c4",
+							"disabled": true,
+							"name": "Age Control",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4a27d097-bcc8-48b1-8da9-7889718fa857",
+							"disabled": true,
+							"name": "IQ Only",
+							"reference": "RSWL24",
+							"cost_type": "percentage",
+							"cost": -75,
+							"affects": "total"
+						}
+					],
+					"reference": "B95",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "32a42d0a-2173-45ca-8716-ee4c7bd29337",
+					"name": "Uncontrollable Appetite (Blood of sapient beings)",
+					"mental": true,
+					"supernatural": true,
+					"base_points": -15,
+					"cr": 12,
+					"reference": "B159",
+					"calc": {
+						"points": -15
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "9515903e-e4e9-4b23-8f1e-a19fd8fb148f",
+					"name": "Unhealing (Partial)",
+					"physical": true,
+					"exotic": true,
+					"base_points": -20,
+					"reference": "B160",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "62b2134e-0c7a-42d1-b6a3-5d029774ee2b",
+					"name": "Unkillable",
+					"physical": true,
+					"exotic": true,
+					"levels": "2",
+					"points_per_level": 50,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "3ff7cb17-169b-4e62-8071-4d76ad36e6e5",
+							"disabled": true,
+							"name": "Achilles' Heal",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Rare Achilles' Heal@"
+						},
+						{
+							"type": "modifier",
+							"id": "dd08bb09-8864-4aed-a5fd-3a88c00113d7",
+							"disabled": true,
+							"name": "Achilles' Heal",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "@Occasional Achilles' Heal@"
+						},
+						{
+							"type": "modifier",
+							"id": "6ecdadbb-92ff-48d5-99b8-b89949521750",
+							"name": "Achilles' Heal",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Fire or Wood"
+						},
+						{
+							"type": "modifier",
+							"id": "6b0a4bc7-6ef6-4db8-a44c-80cb8fb864df",
+							"disabled": true,
+							"name": "Hindrance",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Rare Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "aa7c370a-eb7a-4aa7-a2d8-5592163ef1bd",
+							"disabled": true,
+							"name": "Hindrance",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Occasional Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "d469ce6b-7fb2-475e-bc3b-fed2023e6755",
+							"disabled": true,
+							"name": "Hindrance",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "@Common Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "077a87a1-7141-447c-99bf-4351f2e13f70",
+							"disabled": true,
+							"name": "Reincarnation",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9ce01707-1975-41a2-a2b4-96acb03bea68",
+							"disabled": true,
+							"name": "Trigger",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "@Rare Trigger@"
+						},
+						{
+							"type": "modifier",
+							"id": "7d9f4075-fb6e-4ba5-acc9-8b2ac1e4f678",
+							"disabled": true,
+							"name": "Trigger",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Occasional Trigger@"
+						},
+						{
+							"type": "modifier",
+							"id": "03c89008-0dd4-45f0-b667-fb142a5f0649",
+							"disabled": true,
+							"name": "Trigger",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Common Trigger@"
+						}
+					],
+					"reference": "B95",
+					"calc": {
+						"points": 50
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "dfc25c69-2491-4fa9-a95c-45c0c3b160f8",
+					"name": "Vampiric Bite",
+					"physical": true,
+					"exotic": true,
+					"base_points": 30,
+					"points_per_level": 5,
+					"reference": "B96",
+					"calc": {
+						"points": 25
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "dea90b4f-947e-4d05-b013-2e2b4030785c",
+					"name": "Weakness",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "afc4b0d3-3d5d-4911-84d5-b724bac6d72f",
+							"name": "1d damage per minute",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ac45bd3f-1eb9-4c13-bdbb-65419e23fcf5",
+							"disabled": true,
+							"name": "1d damage per 5 minutes",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d2d28482-7ddb-47b5-90c7-35a53210fb73",
+							"disabled": true,
+							"name": "1d damage per 30 minutes",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c0156ff2-8579-4493-9dc2-8dd5fcbb179c",
+							"disabled": true,
+							"name": "@Rare Substance@",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "3549fbca-f814-4801-8ab2-019c1b326007",
+							"disabled": true,
+							"name": "@Occasional Substance@",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "9be58ac8-f0e0-49fa-8dc5-8ca985729105",
+							"disabled": true,
+							"name": "@Common Substance@",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 2
+						},
+						{
+							"type": "modifier",
+							"id": "af531502-0da1-4277-a010-426faee70b42",
+							"name": "Sunlight",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 3
+						},
+						{
+							"type": "modifier",
+							"id": "ec7a8514-1c77-494b-9a90-78f0edb69398",
+							"disabled": true,
+							"name": "Fatigue Only",
+							"reference": "B161",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "fa28b300-a70a-4267-b870-e1c9917dc1ba",
+							"disabled": true,
+							"name": "Variable",
+							"reference": "B161",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						}
+					],
+					"reference": "B161",
+					"calc": {
+						"points": -60
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill",
+			"id": "04fd1ec5-2d76-4b77-89e5-1e8a18f0802b",
+			"name": "Acrobatics",
+			"reference": "B174,MA54",
+			"difficulty": "dx/h",
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -6,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"calc": {
+				"level": 14,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Aerobatics",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Aquabatics",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Athletic"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "97c2f18c-aa25-4da5-9609-7daae01a76f8",
+			"name": "Acting",
+			"reference": "B174",
+			"difficulty": "iq/a",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 18,
+				"rsl": "IQ+1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Performance",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Public Speaking",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Social",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "7de41558-ed87-46c7-9179-20df4acb2279",
+			"name": "Brawling",
+			"reference": "DFA93",
+			"difficulty": "dx/e",
+			"points": 12,
+			"calc": {
+				"level": 18,
+				"rsl": "DX+4"
+			},
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Brawling"
+					},
+					"level": {
+						"compare": "at_least",
+						"qualifier": 2
+					}
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "d49acff0-09e6-4c84-8463-45966925b3f3",
+			"name": "Connoisseur",
+			"reference": "B185,MA56",
+			"specialization": "Dance",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Arts/Entertainment",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "23ab2c4d-27d8-48d8-8ea3-3597e156678f",
+			"name": "Connoisseur",
+			"reference": "B185,MA56",
+			"specialization": "Literature",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Literature",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Poetry",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Writing",
+					"modifier": -3
+				},
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Arts/Entertainment",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "3ff24909-332e-468a-8b39-2c7384f99c9e",
+			"name": "Connoisseur",
+			"reference": "B185,MA56",
+			"specialization": "Music",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Group Performance",
+					"specialization": "Conducting",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Musical Composition",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Musical Instrument",
+					"modifier": -3
+				},
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Arts/Entertainment",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "f9fbc1d2-cabe-4a66-877d-e1b353ceb6fb",
+			"name": "Connoisseur",
+			"reference": "B185,MA56",
+			"specialization": "Visual Arts",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Arts/Entertainment",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "ba68ed15-8d68-47ad-8e28-a5436123716f",
+			"name": "Connoisseur",
+			"reference": "B185,MA56",
+			"specialization": "Wine",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Arts/Entertainment",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "f67ad82f-ba33-4245-88fc-b4961102e1bf",
+			"name": "Current Affairs",
+			"reference": "B186",
+			"specialization": "Business",
+			"tech_level": "4",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 13,
+				"adjusted_level": 13,
+				"points": -13
+			},
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Research",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Current Affairs",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Business",
+				"Everyman",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "fcbdc3e0-a04b-48f8-b298-127fbf654342",
+			"name": "Current Affairs",
+			"reference": "B186",
+			"specialization": "Politics",
+			"tech_level": "4",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 13,
+				"adjusted_level": 13,
+				"points": -13
+			},
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Research",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Current Affairs",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Everyman",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "ad71f878-4638-4813-9f2b-7c9398fa356a",
+			"name": "Detect Lies",
+			"reference": "B187",
+			"difficulty": "per/h",
+			"points": 1,
+			"defaulted_from": {
+				"type": "per",
+				"modifier": -6,
+				"level": 14,
+				"adjusted_level": 14,
+				"points": -14
+			},
+			"calc": {
+				"level": 22,
+				"rsl": "Per-2"
+			},
+			"defaults": [
+				{
+					"type": "per",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Body Language",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Psychology",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Police",
+				"Social",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "8c4c8df6-fdae-4203-97ca-d7b87bfdeb06",
+			"name": "Diplomacy",
+			"reference": "B187",
+			"difficulty": "iq/h",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 11,
+				"adjusted_level": 11,
+				"points": -11
+			},
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Politics",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Business",
+				"Police",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "3ec68205-cab3-4c36-a4f9-647408cb7730",
+			"name": "Fast-Draw",
+			"reference": "B194,MA56",
+			"specialization": "Knife",
+			"difficulty": "dx/e",
+			"points": 4,
+			"calc": {
+				"level": 16,
+				"rsl": "DX+2"
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "technique",
+			"id": "b8ea5083-9ac7-489a-a82c-20cbf2a9b5ca",
+			"name": "Feint",
+			"reference": "B231,MA73",
+			"difficulty": "h",
+			"points": 2,
+			"calc": {
+				"level": 18,
+				"rsl": "+1"
+			},
+			"limit": 4,
+			"default": {
+				"type": "skill",
+				"name": "Knife"
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat",
+				"Technique"
+			]
+		},
+		{
+			"type": "technique",
+			"id": "51bdcfd1-a332-40a8-8d34-0133975c8dfb",
+			"name": "Feint",
+			"reference": "B231,MA73",
+			"difficulty": "h",
+			"points": 2,
+			"limit": 4,
+			"default": {
+				"type": "skill",
+				"name": "Saber"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Saber"
+						}
+					}
+				]
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat",
+				"Technique"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "e92ef7f3-1e53-45e9-b297-2bdebe87a46f",
+			"name": "Interrogation",
+			"reference": "B202",
+			"difficulty": "iq/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 19,
+				"rsl": "IQ+2"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Intimidation",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Psychology",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Military",
+				"Police",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "a49da52d-70c2-48a4-bb71-a5fab66feaaa",
+			"name": "Knife",
+			"reference": "B208",
+			"difficulty": "dx/e",
+			"points": 8,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 10,
+				"adjusted_level": 10,
+				"points": -10
+			},
+			"calc": {
+				"level": 17,
+				"rsl": "DX+3"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Force Sword",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Main-Gauche",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Shortsword",
+					"modifier": -3
+				},
+				{
+					"type": "dx",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "2edf5747-819c-470c-a4b8-253af477784b",
+			"name": "Leadership",
+			"reference": "B204",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 19,
+				"rsl": "IQ+2"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Military",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "382d3e73-bdc3-4749-a70b-f2f3b2aa30e6",
+			"name": "Main-Gauche",
+			"reference": "B208,MA58",
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Knife",
+				"modifier": -4,
+				"level": 13,
+				"adjusted_level": 13,
+				"points": 1
+			},
+			"calc": {
+				"level": 14,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Jitte/Sai",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Knife",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Rapier",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Saber",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Smallsword",
+					"modifier": -3
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "technique",
+			"id": "e0c52cc4-fe0e-4be3-982c-8467604e8199",
+			"name": "Off-Hand Weapon Training",
+			"reference": "B232",
+			"difficulty": "h",
+			"points": 2,
+			"calc": {
+				"level": 14,
+				"rsl": "-3"
+			},
+			"limit": 0,
+			"default": {
+				"type": "skill",
+				"name": "Knife",
+				"modifier": -4
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat",
+				"Technique"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "975a742c-f7f1-48da-a0d7-09ea5872a834",
+			"name": "Public Speaking",
+			"reference": "B216",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Acting",
+				"modifier": -5,
+				"level": 13,
+				"adjusted_level": 13,
+				"points": -13
+			},
+			"calc": {
+				"level": 19,
+				"rsl": "IQ+2"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Acting",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Performance",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Politics",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Business",
+				"Scholarly",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "8162d297-bd25-43d2-aca3-b576064ad95f",
+			"name": "Rapier",
+			"reference": "B208",
+			"difficulty": "dx/a",
+			"points": 20,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Main-Gauche",
+				"modifier": -3,
+				"level": 11,
+				"adjusted_level": 11,
+				"points": -11
+			},
+			"calc": {
+				"level": 19,
+				"rsl": "DX+5"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Broadsword",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Main-Gauche",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Saber",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Smallsword",
+					"modifier": -3
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "8c7e0523-d76a-4c31-a19e-e835806d9ab1",
+			"name": "Savoir-Faire",
+			"reference": "B218,MA59",
+			"specialization": "High Society",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 13,
+				"adjusted_level": 13,
+				"points": -13
+			},
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Savoir-Faire",
+					"specialization": "Servant",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Business",
+				"Knowledge",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "017fe6c1-67b0-4bd4-902a-24fcf199587d",
+			"name": "Sex Appeal",
+			"reference": "B219",
+			"difficulty": "ht/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "ht",
+				"modifier": -3,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 14,
+				"rsl": "HT+2"
+			},
+			"defaults": [
+				{
+					"type": "ht",
+					"modifier": -3
+				}
+			],
+			"categories": [
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "77220a22-2c9c-4552-b7c2-eaa1d16aced1",
+			"name": "Stealth",
+			"reference": "DFA89",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "DX+2"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Police",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "79f5874b-4a41-48d8-9e86-a05b0f324927",
+			"name": "Thrown Weapon",
+			"reference": "B226",
+			"specialization": "Knife",
+			"difficulty": "dx/e",
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 10,
+				"adjusted_level": 10,
+				"points": -10
+			},
+			"calc": {
+				"level": 16,
+				"rsl": "DX+2"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Ranged Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "99d2a950-7ced-4b30-8af1-3c678f33e66d",
+			"name": "Wrestling",
+			"reference": "DFA93",
+			"difficulty": "dx/a",
+			"points": 8,
+			"calc": {
+				"level": 16,
+				"rsl": "DX+2"
+			},
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		}
+	],
+	"spells": [
+		{
+			"type": "spell",
+			"id": "973a6197-d7a6-45f1-9b67-f72fe9e39647",
+			"name": "Darkness",
+			"reference": "M111",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "2",
+			"maintenance_cost": "1",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "continual light"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "853caaa5-39d0-4ab4-a15a-a8fed6245f67",
+			"name": "Continual Light",
+			"reference": "M110",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "2 moon, 4 torch, 6 day",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "2d days",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "light"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "be0811a6-e0b6-42e9-982a-b7807b9600d2",
+			"name": "Light",
+			"reference": "M110",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "1",
+			"maintenance_cost": "1",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "8cf5ef9f-f9cf-416c-a5e7-71e187b845c2",
+			"name": "Shape Darkness",
+			"reference": "M113",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "2#",
+			"maintenance_cost": "Same",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "darkness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "8ade24a8-d5d9-4086-9c9a-5d0ae27ceba6",
+			"name": "Dark Vision",
+			"reference": "M111",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "5",
+			"maintenance_cost": "2",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "night vision"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "infravision"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "e285ee3d-27a0-435e-a102-e7d1ba001394",
+			"name": "Night Vision",
+			"reference": "M111",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "3",
+			"maintenance_cost": "1",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 17,
+				"rsl": "IQ+0"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "keen vision"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "college",
+						"qualifier": {
+							"compare": "contains",
+							"qualifier": "Light & Darkness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 5
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		},
+		{
+			"type": "spell",
+			"id": "c04e76b7-6640-4cba-bbdd-90ff49907312",
+			"name": "Blackout",
+			"reference": "M112",
+			"difficulty": "iq/h",
+			"college": [
+				"Light & Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "2",
+			"maintenance_cost": "Half",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 12,
+			"calc": {
+				"level": 21,
+				"rsl": "IQ+4"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"has": true,
+						"sub_type": "name",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "darkness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"categories": [
+				"Light & Darkness"
+			]
+		}
+	],
+	"equipment": [
+		{
+			"type": "equipment",
+			"id": "8b1da3f3-e5d0-4e72-b041-f4ec2b045139",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Rapier +3",
+			"value": "500",
+			"weight": "2.75 lb",
+			"reference": "DFA101",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "9",
+					"usage": "Thrust",
+					"reach": "1,2",
+					"parry": "0F",
+					"block": "No",
+					"calc": {
+						"level": 22,
+						"parry": "14F",
+						"block": "No",
+						"damage": "2d+3 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Rapier"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "500",
+				"extended_weight": "2.75 lb"
+			},
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 3,
+					"selection_type": "this_weapon"
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "this_weapon"
+				}
+			],
+			"categories": [
+				"Melee Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "559077cc-4d71-4634-b174-5c7d63abd999",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Hat of disguise",
+			"value": "0",
+			"weight": "0.2 lb",
+			"calc": {
+				"extended_value": "0",
+				"extended_weight": "0.2 lb"
+			}
+		},
+		{
+			"type": "equipment_container",
+			"id": "7b757041-404c-47be-80d0-2dde83e60543",
+			"equipped": true,
+			"description": "Leather Suit +3",
+			"value": "0",
+			"weight": "0 lb",
+			"reference": "DFA108",
+			"calc": {
+				"extended_value": "412",
+				"extended_weight": "33.8 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "neck"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "arm"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "groin"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "hand"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "leg"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 3,
+					"location": "foot"
+				}
+			],
+			"categories": [
+				"Armor"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "e5aaeff9-1771-471e-b4de-69836dd2e369",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Heavy Cloth or Leather Body Armor",
+					"value": "158",
+					"weight": "12.6 lb",
+					"reference": "DFA108",
+					"calc": {
+						"extended_value": "158",
+						"extended_weight": "12.6 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "groin"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Body Armor"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "4b87c70b-52be-45f3-b4af-70f3defc7914",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Heavy Cloth or Leather Boots",
+					"value": "52",
+					"weight": "4.2 lb",
+					"reference": "DFA108",
+					"calc": {
+						"extended_value": "52",
+						"extended_weight": "4.2 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "foot"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Footwear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "a318b99e-be53-4a07-8f13-69a8c6f8278b",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Heavy Cloth or Leather Gloves",
+					"value": "15",
+					"weight": "2 lb",
+					"reference": "DFA108",
+					"calc": {
+						"extended_value": "15",
+						"extended_weight": "2 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "hand"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Gloves"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "56b8dc53-4ab6-4907-8789-7d5d862868b8",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Heavy Cloth or Leather Leggings",
+					"value": "112",
+					"weight": "9 lb",
+					"reference": "DFA108",
+					"calc": {
+						"extended_value": "112",
+						"extended_weight": "9 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "leg"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Limb Armor"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "3ba5371f-cd4e-47f1-aa8d-927fa407ac3a",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Heavy Cloth or Leather Sleeves",
+					"value": "75",
+					"weight": "6 lb",
+					"reference": "DFA108",
+					"calc": {
+						"extended_value": "75",
+						"extended_weight": "6 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "arm"
+						}
+					],
+					"categories": [
+						"Armor",
+						"Limb Armor"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "3efb16e9-3e72-4f13-9f78-37a3d519265b",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Large Knife",
+			"value": "40",
+			"weight": "1 lb",
+			"reference": "DFA100",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "C,1",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 17,
+						"parry": "10",
+						"block": "No",
+						"damage": "3d-2 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 17,
+						"parry": "10",
+						"block": "No",
+						"damage": "1d+2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
+					},
+					"strength": "6",
+					"usage": "Main-Gauche Swing",
+					"reach": "C,1",
+					"parry": "0F",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "11F",
+						"block": "No",
+						"damage": "3d-2 cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche"
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Main-Gauche Thrust",
+					"reach": "C",
+					"parry": "0F",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "11F",
+						"block": "No",
+						"damage": "1d+2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche"
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.8/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-2",
+					"calc": {
+						"level": 16,
+						"range": "16/30",
+						"damage": "1d+2 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "40",
+				"extended_weight": "1 lb"
+			},
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "d81754c4-7374-40a4-97f1-380352022573",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Bottomless Purse",
+			"value": "12010",
+			"weight": "0.2 lb",
+			"reference": "DFA118",
+			"calc": {
+				"extended_value": "12010",
+				"extended_weight": "0.2 lb"
+			},
+			"notes": "9 lb. 6 lb don't count as encumbrance. (Hideaway)",
+			"categories": [
+				"Magic Items"
+			]
+		}
+	],
+	"notes": [
+		{
+			"type": "note",
+			"id": "d5356f89-1f19-4378-b18b-cbc8baf07aed",
+			"text": "Unliving: Machines and anyone with Injury Tolerance (Unliving)\n(p. 60), such as most corporeal undead, are less vulnerable to impaling\nand piercing damage. This gives impaling and huge piercing a wound-\ning modifier of x1; large piercing, x1/2; piercing, x1/3; and small pierc-\ning, x1/5.",
+			"reference": "380"
+		}
+	],
+	"calc": {
+		"swing": "3d+2",
+		"thrust": "2d-1",
+		"basic_lift": "40 kg",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			9,
+			7,
+			5,
+			3,
+			1
+		],
+		"dodge": [
+			12,
+			11,
+			10,
+			9,
+			8
+		],
+		"dodge_bonus": 0,
+		"block_bonus": 0,
+		"parry_bonus": 0
+	}
+}

@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Jun 17, 2022, 9:42 PM",
+	"modified_date": "Dec 9, 2022, 8:04 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -2080,6 +2080,37 @@
 		},
 		{
 			"type": "skill",
+			"id": "258d0c99-030a-4a41-8b01-38b0fc0d9cf4",
+			"name": "Climbing",
+			"reference": "B183",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 12,
+				"rsl": "DX-1"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Athletic",
+				"Criminal/Street",
+				"Outdoor/Exploration"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "a56c9c38-4915-4a26-a4ff-314036ed69cf",
 			"name": "Crossbow",
 			"reference": "B186",
@@ -2869,6 +2900,41 @@
 			"categories": [
 				"Combat/Weapon",
 				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "4ba6951a-573b-428c-9fd7-b00d0d588430",
+			"name": "Stealth",
+			"reference": "B222",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 13,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Police",
+				"Spy"
 			]
 		},
 		{

@@ -346,7 +346,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
 					"calc": {
 						"roll_range": "-",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -359,7 +361,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
 					"calc": {
 						"roll_range": "3-4",
-						"dr": 6
+						"dr": {
+							"all": 6
+						}
 					}
 				},
 				{
@@ -372,7 +376,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
 					"calc": {
 						"roll_range": "5",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -385,7 +391,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "6-7",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -398,7 +406,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "8",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -411,7 +421,9 @@
 					"description": "",
 					"calc": {
 						"roll_range": "9-10",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -424,7 +436,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
 					"calc": {
 						"roll_range": "11",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -437,7 +451,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
 					"calc": {
 						"roll_range": "12",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				},
 				{
@@ -450,7 +466,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "13-14",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -463,7 +481,9 @@
 					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "15",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -476,7 +496,9 @@
 					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
 					"calc": {
 						"roll_range": "16",
-						"dr": 2
+						"dr": {
+							"all": 2
+						}
 					}
 				},
 				{
@@ -489,7 +511,9 @@
 					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
 					"calc": {
 						"roll_range": "17-18",
-						"dr": 0
+						"dr": {
+							"all": 0
+						}
 					}
 				},
 				{
@@ -502,14 +526,16 @@
 					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
 					"calc": {
 						"roll_range": "-",
-						"dr": 1
+						"dr": {
+							"all": 1
+						}
 					}
 				}
 			]
 		}
 	},
 	"created_date": "Jun 16, 2021, 9:12 PM",
-	"modified_date": "Jul 30, 2021, 10:21 AM",
+	"modified_date": "Sep 16, 2022, 9:41 PM",
 	"profile": {
 		"player_name": "Zaz",
 		"name": "Olafur Bnorguestromberg",
@@ -712,26 +738,26 @@
 							"type": "skill_bonus",
 							"amount": 2,
 							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "navigation"
-							},
 							"specialization": {
 								"compare": "is",
 								"qualifier": "hyperspace"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "navigation"
 							}
 						},
 						{
 							"type": "skill_bonus",
 							"amount": 2,
 							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "navigation"
-							},
 							"specialization": {
 								"compare": "is",
 								"qualifier": "space"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "navigation"
 							}
 						}
 					]
@@ -755,39 +781,39 @@
 					"type": "skill_bonus",
 					"amount": 3,
 					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "navigation"
-					},
 					"specialization": {
 						"compare": "is",
 						"qualifier": "air"
+					},
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
 					}
 				},
 				{
 					"type": "skill_bonus",
 					"amount": 3,
 					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "navigation"
-					},
 					"specialization": {
 						"compare": "is",
 						"qualifier": "land"
+					},
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
 					}
 				},
 				{
 					"type": "skill_bonus",
 					"amount": 3,
 					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "navigation"
-					},
 					"specialization": {
 						"compare": "is",
 						"qualifier": "sea"
+					},
+					"name": {
+						"compare": "is",
+						"qualifier": "navigation"
 					}
 				}
 			],
@@ -1671,6 +1697,7 @@
 			"container_type": "race",
 			"name": "Dwarf",
 			"reference": "B261",
+			"ancestry": "Human",
 			"calc": {
 				"points": 35
 			},
@@ -2204,7 +2231,7 @@
 						"points": -7
 					},
 					"calc": {
-						"level": 12,
+						"level": 11,
 						"rsl": "DX+1"
 					},
 					"defaults": [
@@ -2627,7 +2654,7 @@
 					"reference": "B220",
 					"specialization": "Buckler",
 					"difficulty": "dx/e",
-					"points": 4,
+					"points": 8,
 					"defaulted_from": {
 						"type": "dx",
 						"modifier": -4,
@@ -2636,8 +2663,8 @@
 						"points": -8
 					},
 					"calc": {
-						"level": 14,
-						"rsl": "DX+2"
+						"level": 15,
+						"rsl": "DX+3"
 					},
 					"defaults": [
 						{
@@ -2994,6 +3021,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "50",
+				"extended_weight": "4 lb"
+			},
 			"categories": [
 				"Melee Weapon"
 			]
@@ -3135,6 +3166,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "40",
+				"extended_weight": "1 lb"
+			},
 			"categories": [
 				"Melee Weapon",
 				"Missile Weapon"
@@ -3222,6 +3257,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "60",
+				"extended_weight": "4 lb"
+			},
 			"categories": [
 				"Melee Weapon",
 				"Missile Weapon"
@@ -3237,6 +3276,10 @@
 			"value": "60",
 			"weight": "3 lb",
 			"reference": "B285",
+			"calc": {
+				"extended_value": "60",
+				"extended_weight": "3 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3258,6 +3301,10 @@
 			"value": "50",
 			"weight": "4 lb",
 			"reference": "B283",
+			"calc": {
+				"extended_value": "50",
+				"extended_weight": "4 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3302,7 +3349,7 @@
 					"parry": "No",
 					"block": "+0",
 					"calc": {
-						"level": 14,
+						"level": 15,
 						"parry": "No",
 						"block": "12",
 						"damage": "1d-1 cr"
@@ -3330,6 +3377,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "60",
+				"extended_weight": "15 lb"
+			},
 			"features": [
 				{
 					"type": "attribute_bonus",
@@ -3361,6 +3412,10 @@
 			"value": "75",
 			"weight": "3 lb",
 			"reference": "B284",
+			"calc": {
+				"extended_value": "75",
+				"extended_weight": "3 lb"
+			},
 			"features": [
 				{
 					"type": "dr_bonus",
@@ -3475,6 +3530,10 @@
 					]
 				}
 			],
+			"calc": {
+				"extended_value": "200",
+				"extended_weight": "13 lb"
+			},
 			"categories": [
 				"Missile Weapon"
 			]
@@ -3488,6 +3547,10 @@
 			"value": "60",
 			"weight": "3 lb",
 			"reference": "B288",
+			"calc": {
+				"extended_value": "60",
+				"extended_weight": "3 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3516,6 +3579,10 @@
 			"value": "10",
 			"weight": "0.2 lb",
 			"reference": "DF1:23",
+			"calc": {
+				"extended_value": "10",
+				"extended_weight": "2.18 lb"
+			},
 			"prereqs": {
 				"type": "prereq_list",
 				"all": true,
@@ -3542,9 +3609,245 @@
 					"equipped": true,
 					"quantity": 30,
 					"description": "munitions pour mousquet",
-					"weight": "0.033 kg"
+					"value": "0",
+					"weight": "0.033 kg",
+					"calc": {
+						"extended_value": "0",
+						"extended_weight": "0.99 kg"
+					}
 				}
 			]
+		},
+		{
+			"type": "equipment",
+			"id": "7c39a541-c401-4b62-a3e2-3cc12d904723",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Flintlock Pistol, .51",
+			"tech_level": "4",
+			"legality_class": "3",
+			"value": "200",
+			"weight": "3 lb",
+			"reference": "B278",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "pi+",
+						"base": "2d-1"
+					},
+					"strength": "10",
+					"accuracy": "1",
+					"range": "75/450",
+					"rate_of_fire": "1",
+					"shots": "1(20)",
+					"bulk": "-3",
+					"recoil": "2",
+					"calc": {
+						"level": 12,
+						"range": "75/450",
+						"damage": "2d-1 pi+"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol"
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Gun!"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "200",
+				"extended_weight": "3 lb"
+			},
+			"categories": [
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "e97deb89-05c9-4179-ba03-a6be017b0053",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Flintlock Pistol, .51",
+			"tech_level": "4",
+			"legality_class": "3",
+			"value": "200",
+			"weight": "3 lb",
+			"reference": "B278",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "pi+",
+						"base": "2d-1"
+					},
+					"strength": "10",
+					"accuracy": "1",
+					"range": "75/450",
+					"rate_of_fire": "1",
+					"shots": "1(20)",
+					"bulk": "-3",
+					"recoil": "2",
+					"calc": {
+						"level": 12,
+						"range": "75/450",
+						"damage": "2d-1 pi+"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol"
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Gun!"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "200",
+				"extended_weight": "3 lb"
+			},
+			"categories": [
+				"Missile Weapon"
+			]
 		}
-	]
+	],
+	"calc": {
+		"swing": "1d+2",
+		"thrust": "1d-1",
+		"basic_lift": "14 kg",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			5,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			10,
+			9,
+			8,
+			7,
+			6
+		],
+		"dodge_bonus": 2,
+		"block_bonus": 2,
+		"parry_bonus": 2
+	}
 }

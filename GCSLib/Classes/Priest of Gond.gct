@@ -1,0 +1,1991 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "e78d7ff8-4fbd-4ae8-9ac7-5a4ce4acf72e",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "8615380a-5baf-41b4-bdd0-74ce54e64809",
+			"name": "Class Advantage",
+			"calc": {
+				"points": 140
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage_container",
+					"id": "b21477d8-a757-41d6-872a-4b263eb43ac3",
+					"name": "Attributes",
+					"calc": {
+						"points": 40
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "be6dd389-a42c-45bd-bb08-775d3da1c08c",
+							"name": "Increased Intelligence",
+							"mental": true,
+							"levels": "2",
+							"points_per_level": 20,
+							"reference": "B15",
+							"calc": {
+								"points": 40
+							},
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"per_level": true,
+									"attribute": "iq"
+								}
+							],
+							"categories": [
+								"Advantage",
+								"Attribute"
+							]
+						}
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "088eb504-6d79-41e9-8db4-efbc1da5e345",
+					"name": "Talent (Craftman & Engineer)",
+					"mental": true,
+					"levels": "2",
+					"points_per_level": 15,
+					"reference": "B90",
+					"calc": {
+						"points": 30
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "armoury"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Carpentry"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electrician"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electronics Repair"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Engineer"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Machinist"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Masonry"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mechanic"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Smith"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "from any employer"
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Explosives"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Artist"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Lockpicking"
+							}
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1354d3ab-8cb5-4408-b0d8-58cc7b965339",
+					"name": "Clerical Investment",
+					"social": true,
+					"base_points": 5,
+					"reference": "B43",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "2a2f85ba-5645-4122-9e16-caa2642272ec",
+					"name": "Power Investiture",
+					"mental": true,
+					"supernatural": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"reference": "B77",
+					"calc": {
+						"points": 10
+					},
+					"notes": "Clerical spells from Gond",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage_container",
+					"id": "a87d3515-3a5d-4e33-8c7a-ca1c6bc8b3ee",
+					"name": "15 points chosen from",
+					"calc": {
+						"points": 55
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "4fed1394-4db2-416c-8bf6-3cf60b584b31",
+							"name": "Charisma",
+							"mental": true,
+							"levels": "1",
+							"points_per_level": 5,
+							"reference": "B41",
+							"calc": {
+								"points": 5
+							},
+							"features": [
+								{
+									"type": "skill_bonus",
+									"amount": 1,
+									"per_level": true,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "fortune-telling"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 1,
+									"per_level": true,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "leadership"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 1,
+									"per_level": true,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "panhandling"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 1,
+									"per_level": true,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "public speaking"
+									}
+								}
+							],
+							"notes": "+1/level to Influence rolls",
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "e3a637c3-17bf-48b8-a13f-0e4bd868d49f",
+							"name": "Language Talent",
+							"mental": true,
+							"base_points": 10,
+							"reference": "B65",
+							"calc": {
+								"points": 10
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "2facd98c-6850-4b15-8ac8-db3afd2d147a",
+							"name": "Language: ",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "8c30eb81-e15e-476e-9821-b5544da7af4f",
+									"disabled": true,
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "fafa2a3c-2dbc-4f54-ba56-7706120a5d7a",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "063a7a35-c000-48fb-bcb4-7566d7798c9f",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "3da57c6a-711b-44e9-b6db-342cea977fb6",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "dd273f37-24bb-421b-985b-ba3a594de08a",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "28c60c55-0be6-402f-bb5c-39a92498df79",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "e08e975b-59d6-42a4-930f-b68d591973fd",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "36010156-af7b-4517-a653-34221e286797",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "c1f43fe2-af37-4f3a-bf29-241e405518c7",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": 0
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "f69e8bdd-874c-48dd-978b-48000ce4bf76",
+							"name": "Language: ",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "f6214a5b-0170-4dac-9bc1-2c09404a0a84",
+									"disabled": true,
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -4,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "b39e60d4-20ba-475a-bade-5ee95916dd1b",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "917ef2d4-38d7-4f9a-9070-4e4cc1a69ada",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "fbfff6e4-da0b-4f70-bbc8-ad7f5e9fea10",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "3bd61393-18bd-4ae8-84b6-e397f731b104",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": 0
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										}
+									}
+								]
+							},
+							"notes": "With Language Talent",
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "2d1c75e9-68a9-449d-a483-41b5db9a8f64",
+							"name": "Patron",
+							"social": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "b60e137e-5956-4be6-a068-36e1d0163ddc",
+									"disabled": true,
+									"name": "@Who: Individual with 150% of PC's starting points@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 10,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "f1b962bf-09f0-4143-8b7f-1ebd0cade87f",
+									"disabled": true,
+									"name": "@Who: Organization with assets of at least 1000 times starting wealth@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 10,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "58aec060-3d0f-4fdd-8c0d-c091e212fd0a",
+									"disabled": true,
+									"name": "@Who: Individual with twice the PC's starting points@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 15,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "8b057f9e-fb05-4a8a-93c0-badba061a109",
+									"disabled": true,
+									"name": "@Who: Organization with assets of at least 10000 times starting wealth@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 15,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "6139aa52-8687-4929-8276-df477807e2e2",
+									"disabled": true,
+									"name": "@Who: An ultra-powerful individual@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "aea37089-bd37-4ad5-96e7-2f323f9b1985",
+									"name": "Gond church",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "611d9476-9330-48e5-9db7-ed1404284ca1",
+									"disabled": true,
+									"name": "@Who: Organization with assets of at least 1000000 times starting wealth@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 25,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "35b6b664-d1f9-4e4c-8a3b-1abc5247f272",
+									"disabled": true,
+									"name": "@Who: A national government or giant multi-national organization@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 30,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "fcbaa658-69ee-42bf-97af-4d9ff8316da2",
+									"disabled": true,
+									"name": "@Who: A diety@",
+									"reference": "B72",
+									"cost_type": "points",
+									"cost": 30,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "b76fe7cf-a0ae-4a44-bb59-b9f85164367b",
+									"disabled": true,
+									"name": "Appears almost all the time",
+									"reference": "B36",
+									"cost_type": "multiplier",
+									"cost": 3,
+									"notes": "15-"
+								},
+								{
+									"type": "modifier",
+									"id": "ebdf64c5-7861-406a-af13-84ae18b5c735",
+									"disabled": true,
+									"name": "Appears quite often",
+									"reference": "B36",
+									"cost_type": "multiplier",
+									"cost": 2,
+									"notes": "12-"
+								},
+								{
+									"type": "modifier",
+									"id": "a3e6d112-6129-47fd-b4a4-9ba6edbd1961",
+									"disabled": true,
+									"name": "Appears fairly often",
+									"reference": "B36",
+									"cost_type": "multiplier",
+									"cost": 1,
+									"notes": "9-"
+								},
+								{
+									"type": "modifier",
+									"id": "f947c155-8c8a-4e68-9c3b-7c2a538644a1",
+									"disabled": true,
+									"name": "Appears quite rarely",
+									"reference": "B36",
+									"cost_type": "multiplier",
+									"cost": 0.5,
+									"notes": "6-"
+								},
+								{
+									"type": "modifier",
+									"id": "a1d2f158-6dc3-400c-8e52-bd1e68308235",
+									"disabled": true,
+									"name": "Equipment",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": 50,
+									"affects": "total",
+									"notes": "@Equipment worth no more than average starting wealth@"
+								},
+								{
+									"type": "modifier",
+									"id": "d04b0398-1eee-4295-8833-fd77717990d8",
+									"disabled": true,
+									"name": "Equipment",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": 100,
+									"affects": "total",
+									"notes": "@Equipment worth more than average starting wealth@"
+								},
+								{
+									"type": "modifier",
+									"id": "8cc021ae-6a94-47c6-912d-0ffd8d32c8da",
+									"disabled": true,
+									"name": "Highly Accessible",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": 50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "8ec8441c-311c-44c0-96d5-781870ec5f29",
+									"disabled": true,
+									"name": "Special Abilities",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": 50,
+									"affects": "total",
+									"notes": "@Extensive social or political power@"
+								},
+								{
+									"type": "modifier",
+									"id": "2e7ede42-8d8d-414b-b26b-1e16d27b4f3f",
+									"disabled": true,
+									"name": "Special Abilities",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": 100,
+									"affects": "total",
+									"notes": "@Magical powers in a non-magical world, higher TL equipment, grants special powers or is supernatural@"
+								},
+								{
+									"type": "modifier",
+									"id": "ec040132-0ce6-44bb-b322-9eb3f2299fe3",
+									"disabled": true,
+									"name": "Minimal Interventions",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "04533fd5-5899-44e9-9410-741d44b40314",
+									"disabled": true,
+									"name": "Secret",
+									"reference": "B73",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "80a3dcfb-5ccb-494d-843f-1fec1e24b398",
+									"disabled": true,
+									"name": "Unwilling",
+									"reference": "B74",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "47fd8fc3-9f70-4e08-8a40-7592cc76da3b",
+									"disabled": true,
+									"name": "Favor",
+									"reference": "B55",
+									"cost_type": "multiplier",
+									"cost": 0.2
+								}
+							],
+							"reference": "B72",
+							"calc": {
+								"points": 20
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "28073781-4d60-4c6f-9f22-365bb7533061",
+							"name": "Rank",
+							"physical": true,
+							"levels": "1",
+							"points_per_level": 5,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "0e7ef95d-b4ea-4878-8c68-54c0549e5cae",
+									"disabled": true,
+									"name": "Replaces Status",
+									"reference": "B29",
+									"cost_type": "points",
+									"cost": 5,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "dcc4f471-8431-4b36-a735-f610b882812b",
+									"disabled": true,
+									"name": "Courtesy",
+									"reference": "B29",
+									"cost_type": "points",
+									"cost": -4,
+									"affects": "levels_only"
+								}
+							],
+							"reference": "B29",
+							"calc": {
+								"points": 5
+							},
+							"notes": "Religious: ",
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "ee40274a-2d58-4948-a6d2-583c0aa141b3",
+							"name": "Voice",
+							"physical": true,
+							"base_points": 10,
+							"reference": "B97",
+							"calc": {
+								"points": 10
+							},
+							"features": [
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "diplomacy"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "fast-talk"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "starts_with",
+										"qualifier": "mimicry"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "performance"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "politics"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "public speaking"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "sex appeal"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "singing"
+									}
+								}
+							],
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "3401c67b-96ab-484b-80fc-afaf3ab3b05c",
+							"name": "Clerical Investment",
+							"social": true,
+							"base_points": 5,
+							"reference": "B43",
+							"calc": {
+								"points": 5
+							},
+							"categories": [
+								"Advantage"
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill_container",
+			"id": "9eac4ea7-6747-4a1a-b5a5-a2050f389088",
+			"name": "Gond Priest",
+			"open": true,
+			"children": [
+				{
+					"type": "skill_container",
+					"id": "1e48e11b-ff2e-487b-ab5c-ef3b0166532a",
+					"name": "Primary Skill",
+					"open": true,
+					"children": [
+						{
+							"type": "skill",
+							"id": "35eb0a07-30ee-49b4-8fd4-eab0b52450b1",
+							"name": "Religious Ritual",
+							"reference": "B217",
+							"specialization": "Gond",
+							"difficulty": "iq/h",
+							"points": 4,
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Ritual Magic",
+									"specialization": "Gond",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Theology",
+									"specialization": "Gond",
+									"modifier": -4
+								}
+							],
+							"categories": [
+								"Occult/Magical"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "9b15d4eb-a665-410c-8da1-a3b43c2c2574",
+							"name": "Theology",
+							"reference": "B226",
+							"specialization": "Gond",
+							"difficulty": "iq/h",
+							"points": 4,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Religious Ritual",
+									"specialization": "Gond",
+									"modifier": -4
+								}
+							],
+							"categories": [
+								"Social Sciences/Humanities"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "1975feaa-f1f3-477e-8b43-ffb347b8380a",
+							"name": "Axe/Mace",
+							"reference": "B208",
+							"difficulty": "dx/a",
+							"points": 4,
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Two-Handed Axe/Mace",
+									"modifier": -3
+								},
+								{
+									"type": "skill",
+									"name": "Flail",
+									"modifier": -4
+								}
+							],
+							"categories": [
+								"Combat/Weapon",
+								"Melee Combat"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "1920e592-c6f3-451e-bd99-6ee2b3e53b57",
+			"name": "Secondary Skill",
+			"open": true,
+			"children": [
+				{
+					"type": "skill_container",
+					"id": "54a69983-6c90-40d3-a6e1-8f4a48289388",
+					"name": "Engineering",
+					"open": true,
+					"children": [
+						{
+							"type": "skill_container",
+							"id": "822bd8d0-f2b7-45d4-9f67-25a98398f98c",
+							"name": "6 points hcosen from",
+							"open": true,
+							"children": [
+								{
+									"type": "skill",
+									"id": "3af6fea4-aa3e-4a3f-8a3d-5c552cbccbfb",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Artillery",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Armoury",
+											"specialization": "Heavy Weapons",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "9459d7ea-237d-45ad-a740-1fabdf1fe94f",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Civil",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Architecture",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "dd7aefd4-3555-4bb9-9acd-50f7dad9fb43",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Clockwork",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Mechanic",
+											"specialization": "Clockwork",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "f069790c-9019-4e29-a113-b882389616cb",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Mining",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Explosives",
+											"specialization": "Demolition",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Geology",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "7fe89895-7910-4ec5-9685-ba715c015584",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Ships",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Mechanic",
+											"specialization": "Ships",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "8268bf35-76e4-4b8b-8fe4-5406d4cba29a",
+									"name": "Engineer",
+									"reference": "B190",
+									"specialization": "Small Arms",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"when_tl": {
+											"compare": "at_least",
+											"qualifier": 5
+										},
+										"prereqs": [
+											{
+												"type": "skill_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "mathematics"
+												},
+												"specialization": {
+													"compare": "is",
+													"qualifier": "applied"
+												}
+											}
+										]
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Armoury",
+											"specialization": "Small Arms",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Design/Invention",
+										"Engineer"
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "skill_container",
+					"id": "af6b2f82-a768-4120-86e0-ce427ca52ef8",
+					"name": "6 points chosen from",
+					"open": true,
+					"children": [
+						{
+							"type": "skill",
+							"id": "7bd33cff-651a-453b-af88-6a968eb6cb27",
+							"name": "Guns",
+							"reference": "B198",
+							"specialization": "Musket",
+							"tech_level": "",
+							"difficulty": "dx/e",
+							"points": 1,
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Grenade Launcher",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Gyroc",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Light Anti-Armor Weapon",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Light Machine Gun",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Pistol",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Rifle",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Shotgun",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Submachine Gun",
+									"modifier": -2
+								}
+							],
+							"categories": [
+								"Combat/Weapon",
+								"Ranged Combat"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "1bf19194-2f4b-42b7-8518-640a7f322953",
+							"name": "Finance",
+							"reference": "B195",
+							"difficulty": "iq/h",
+							"points": 1,
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Accounting",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Economics",
+									"modifier": -3
+								},
+								{
+									"type": "skill",
+									"name": "Merchant",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Business"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "5bf5a351-e8b1-44fd-a3fd-a1ff92b4525f",
+							"name": "Thaumatology",
+							"reference": "B225",
+							"difficulty": "iq/vh",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -7
+								}
+							],
+							"categories": [
+								"Occult/Magical"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "7122c55b-c450-4c24-9e1c-8b65fccdc843",
+							"name": "Teaching",
+							"reference": "B224",
+							"difficulty": "iq/a",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -5
+								}
+							],
+							"categories": [
+								"Scholarly",
+								"Social"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "b3196a73-e6be-4df9-bcbe-122cf24bb697",
+							"name": "Public Speaking",
+							"reference": "B216",
+							"difficulty": "iq/a",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Acting",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Performance",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Politics",
+									"modifier": -5
+								}
+							],
+							"categories": [
+								"Business",
+								"Scholarly",
+								"Social"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "44b48e98-2ed2-4e10-a78e-8c4eda7cd825",
+							"name": "Philosophy",
+							"reference": "B213",
+							"specialization": "FR gods",
+							"difficulty": "iq/h",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Social Sciences/Humanities"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "20c2c006-cb26-46c2-a469-b9a20b6ea5bd",
+							"name": "Diplomacy",
+							"reference": "B187",
+							"difficulty": "iq/h",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Politics",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Business",
+								"Police",
+								"Social"
+							]
+						}
+					]
+				},
+				{
+					"type": "skill",
+					"id": "096fcd89-e2fa-4501-831e-2068982ac288",
+					"name": "Merchant",
+					"reference": "B209",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Finance",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Market Analysis",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Business",
+						"Social"
+					]
+				},
+				{
+					"type": "skill_container",
+					"id": "78e8dd6f-02b7-4ece-904b-a9e6abfcc3da",
+					"name": "Craft",
+					"open": true,
+					"children": [
+						{
+							"type": "skill_container",
+							"id": "989cc194-4cd1-47ac-b973-483f759f207f",
+							"name": "12 points chosen from",
+							"open": true,
+							"children": [
+								{
+									"type": "skill",
+									"id": "7fd7969c-9070-4355-a550-5e178ffe7602",
+									"name": "Artist",
+									"reference": "B179",
+									"specialization": "Pottery",
+									"difficulty": "iq/h",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Artist",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Arts/Entertainment",
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "f90b06c3-60b1-4eab-a008-5e15207fe5f1",
+									"name": "Artist",
+									"reference": "B179",
+									"specialization": "Sculpting",
+									"difficulty": "iq/h",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Artist",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Arts/Entertainment",
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "31d8d1f9-11a4-4ef1-bc84-5ff57560e61f",
+									"name": "Artist",
+									"reference": "B179",
+									"specialization": "Woodworking",
+									"difficulty": "iq/h",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Carpentry",
+											"modifier": -3
+										},
+										{
+											"type": "skill",
+											"name": "Artist",
+											"specialization": "Interior Decorating",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Artist",
+											"specialization": "Scene Design",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Artist",
+											"modifier": -6
+										}
+									],
+									"categories": [
+										"Arts/Entertainment",
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "19b38d79-9389-42b6-8fe3-41433344d1b2",
+									"name": "Armoury",
+									"reference": "B178",
+									"specialization": "Body Armor",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Engineer",
+											"specialization": "Body Armor",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Military",
+										"Repair/Maintainance"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "024029f5-ed6d-4136-b033-09fc7be0577a",
+									"name": "Armoury",
+									"reference": "B178",
+									"specialization": "Melee Weapons",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Engineer",
+											"specialization": "Melee Weapons",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Military",
+										"Repair/Maintainance"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "fae62c85-c7c2-471d-9b67-c39f708a93d5",
+									"name": "Armoury",
+									"reference": "B178",
+									"specialization": "Heavy Weapons",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Engineer",
+											"specialization": "Heavy Weapons",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Military",
+										"Repair/Maintainance"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "72d43b90-4415-4491-952a-d635b6ee2171",
+									"name": "Carpentry",
+									"reference": "B183",
+									"difficulty": "iq/e",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "3282f545-5c1b-47b7-a4b3-807777004475",
+									"name": "Explosives",
+									"reference": "B194",
+									"specialization": "Fireworks",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Chemistry",
+											"modifier": -3
+										},
+										{
+											"type": "skill",
+											"name": "Explosives",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Military",
+										"Technical"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "2fe00e8b-a346-45d2-a62c-c0ba2cd8f405",
+									"name": "Lockpicking",
+									"reference": "B206",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										}
+									],
+									"categories": [
+										"Criminal/Street",
+										"Police",
+										"Spy",
+										"Technical"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "b254aea0-9b23-4b3a-9f5e-cd1a30541269",
+									"name": "Jeweler",
+									"reference": "B203",
+									"tech_level": "",
+									"difficulty": "iq/h",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Smith",
+											"specialization": "Copper",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Smith",
+											"specialization": "Lead & Tin",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "b76073e9-9a5a-4c83-bbfb-1c04afe4f47a",
+									"name": "Masonry",
+									"reference": "B207",
+									"difficulty": "iq/e",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "c72d459e-8264-4bb8-b36d-7d3282a698a7",
+									"name": "Mechanic",
+									"reference": "B107",
+									"specialization": "Clockwork",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Engineer",
+											"specialization": "Clockwork",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Machinist",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Mechanic",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Repair/Maintainance"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "f506f347-910a-46b7-bc9a-ceef7a5d0a27",
+									"name": "Smith",
+									"reference": "B221",
+									"specialization": "Copper",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -6
+										},
+										{
+											"type": "skill",
+											"name": "Jeweler",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Smith",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "7513c10c-8ef5-43ef-8583-6e6883d19c8f",
+									"name": "Smith",
+									"reference": "B221",
+									"specialization": "Iron",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Smith",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								},
+								{
+									"type": "skill",
+									"id": "c33dad5f-161b-4288-b1f0-f902621a33fc",
+									"name": "Smith",
+									"reference": "B221",
+									"specialization": "Lead & Tin",
+									"tech_level": "",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Jeweler",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Smith",
+											"modifier": -4
+										}
+									],
+									"categories": [
+										"Craft"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"spells": [
+		{
+			"type": "spell_container",
+			"id": "b6407a43-0757-4e94-aeba-30f0bf6cc8b4",
+			"name": "Choose from below colleges",
+			"open": true,
+			"children": [
+				{
+					"type": "spell_container",
+					"id": "2539a76d-d036-44fd-abd9-6126c98d9d9d",
+					"name": "Enchantment",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "e05a25cf-e903-43c8-a99d-993887de20fa",
+					"name": "Earth",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "21a24f19-74b6-4f4a-a2ac-2fd89b2c9c31",
+					"name": "Fire",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "6fca800c-cf97-4cd8-aa0a-055d17d9e542",
+					"name": "Knowledge",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "f61c6cee-de97-4f54-b295-02a98f9b8610",
+					"name": "Air",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "6115fc85-b25d-444a-adc6-66fa36b83d10",
+					"name": "Making & Breaking",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "c7c3255d-9866-4bea-9f7e-cb1a4ba32b67",
+					"name": "Protection & Warning",
+					"open": true
+				},
+				{
+					"type": "spell_container",
+					"id": "b8b6038c-707b-4a46-8ef4-dae36b186ec7",
+					"name": "Healing",
+					"open": true
+				}
+			]
+		}
+	]
+}

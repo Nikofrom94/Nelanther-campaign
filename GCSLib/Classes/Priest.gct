@@ -1,0 +1,138 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "be86ceb2-c903-41ff-89f5-8e2408ff1e32",
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "0aac2231-2687-487b-bbb3-764552a5eea4",
+			"name": "Clerical Investment",
+			"social": true,
+			"base_points": 5,
+			"reference": "B43",
+			"calc": {
+				"points": 5
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "12a4dc44-be9e-4cf9-8e75-859aa8ab4b99",
+			"name": "Blessed",
+			"mental": true,
+			"supernatural": true,
+			"base_points": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "1a146810-23e6-4d26-b6e4-fe4c895f5909",
+					"disabled": true,
+					"name": "Very",
+					"reference": "B40",
+					"cost_type": "points",
+					"cost": 10,
+					"affects": "total"
+				}
+			],
+			"reference": "B40",
+			"calc": {
+				"points": 10
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "ee8ece97-1c19-4643-8f9e-ce83941b39d6",
+			"name": "Rank",
+			"physical": true,
+			"levels": "1",
+			"points_per_level": 5,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "3a854382-d3b5-457a-9364-6cb700b7df5e",
+					"disabled": true,
+					"name": "Replaces Status",
+					"reference": "B29",
+					"cost_type": "points",
+					"cost": 5,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "637754af-96d3-45f1-8196-15484edb7879",
+					"disabled": true,
+					"name": "Courtesy",
+					"reference": "B29",
+					"cost_type": "points",
+					"cost": -4,
+					"affects": "levels_only"
+				}
+			],
+			"reference": "B29",
+			"calc": {
+				"points": 5
+			},
+			"notes": "Religious: Priest",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6de92df8-24bc-493e-b4f1-3a0db95d9e33",
+			"name": "True Faith",
+			"mental": true,
+			"supernatural": true,
+			"base_points": 15,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "b5400d21-6e0f-4ee4-be14-99e1c805dc04",
+					"disabled": true,
+					"name": "Chosen",
+					"reference": "P84",
+					"cost_type": "percentage",
+					"cost": 0,
+					"affects": "total",
+					"notes": "@Deity@"
+				},
+				{
+					"type": "modifier",
+					"id": "61233d2f-51bb-4046-a5d7-525a18f6a1f4",
+					"disabled": true,
+					"name": "Turning",
+					"reference": "P84",
+					"cost_type": "percentage",
+					"cost": 65,
+					"affects": "total"
+				}
+			],
+			"reference": "B94",
+			"calc": {
+				"points": 15
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "52e8898b-2a21-44ed-83af-376d728142b3",
+			"name": "Disciplines of Faith (Ritualism)",
+			"mental": true,
+			"base_points": -5,
+			"reference": "B132",
+			"calc": {
+				"points": -5
+			},
+			"categories": [
+				"Disadvantage"
+			]
+		}
+	]
+}

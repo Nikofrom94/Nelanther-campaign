@@ -1,0 +1,1502 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "7062828f-691e-4ad9-9f83-16e000a81f4d",
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "254dcf69-78b9-480e-91b7-d39860f13823",
+			"name": "Increased Intelligence",
+			"mental": true,
+			"levels": "8",
+			"points_per_level": 20,
+			"reference": "B15",
+			"calc": {
+				"points": 160
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "iq"
+				}
+			],
+			"categories": [
+				"Advantage",
+				"Attribute"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "1d0428ee-e2bb-49cf-9db3-71dbd7904ec0",
+			"name": "Increased Will",
+			"mental": true,
+			"levels": "2",
+			"points_per_level": 5,
+			"reference": "B16",
+			"calc": {
+				"points": 10
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "will"
+				}
+			],
+			"categories": [
+				"Advantage",
+				"Attribute"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "eef3d929-94ab-4160-90eb-9529fd816655",
+			"name": "Flight",
+			"physical": true,
+			"exotic": true,
+			"base_points": 40,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "5f1569ca-9a7c-4ae1-9b05-f79c9ae13adf",
+					"disabled": true,
+					"name": "Newtonian Space Flight",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": 25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d8d2c4a6-29b2-4dd8-a327-2584c8f97eac",
+					"disabled": true,
+					"name": "Space Flight",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "7677dd91-7cf6-4e7f-87b1-75e2efd4958e",
+					"disabled": true,
+					"name": "Cannot Hover",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -15,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "8d1a86a8-a37d-4e21-87dc-50cc910204c2",
+					"disabled": true,
+					"name": "Controlled Gliding",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -45,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "fde5e416-1fb9-4ef8-b94e-fb0e7b6af759",
+					"disabled": true,
+					"name": "Gliding",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "15d19762-f94b-468d-a03b-a4ea0f8c7325",
+					"disabled": true,
+					"name": "Lighter Than Air",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a92352e9-910e-4788-9c25-36f157ecd75d",
+					"disabled": true,
+					"name": "Low Ceiling",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"notes": "30'"
+				},
+				{
+					"type": "modifier",
+					"id": "769eeae5-a50b-4e5a-9286-731a53baf0d2",
+					"disabled": true,
+					"name": "Low Ceiling",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "10'"
+				},
+				{
+					"type": "modifier",
+					"id": "66219474-e7e9-466e-87e4-adcd4dff58d3",
+					"disabled": true,
+					"name": "Low Ceiling",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total",
+					"notes": "5'"
+				},
+				{
+					"type": "modifier",
+					"id": "3c998883-73a3-4d38-86bd-20713aac5dbb",
+					"disabled": true,
+					"name": "Small Wings",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "99640f78-b82c-4e56-8051-f9c49d3a3678",
+					"disabled": true,
+					"name": "Space Flight Only",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -75,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "e14ecbf9-e30c-4f07-a9dc-77106e1babb9",
+					"disabled": true,
+					"name": "Winged",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "85f45346-1b70-4d51-b176-6af84cacaf3f",
+					"disabled": true,
+					"name": "Planetary",
+					"reference": "P50",
+					"cost_type": "percentage",
+					"cost": -5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f9e4a541-a73a-47d9-ba82-2b7e0670385c",
+					"disabled": true,
+					"name": "Requires Surface",
+					"reference": "P50",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "e4296bcf-351a-4f89-9ffe-b219feb2cd89",
+					"disabled": true,
+					"name": "Slow",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total",
+					"notes": "Basic Speed"
+				},
+				{
+					"type": "modifier",
+					"id": "15dc98cb-e5eb-49e0-ad49-52801f6b6ff1",
+					"disabled": true,
+					"name": "Slow, Move 1",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": -45,
+					"affects": "total"
+				}
+			],
+			"reference": "B56,P50,PSI14",
+			"calc": {
+				"points": 40
+			},
+			"notes": "Air Move is Basic Speed x 2 (drop all fractions)",
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "fe550fa7-de54-4201-b8ab-467e0d6453b1",
+			"name": "Dark Vision",
+			"physical": true,
+			"exotic": true,
+			"base_points": 25,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "b981a00c-d852-47c4-921d-56be66abe556",
+					"disabled": true,
+					"name": "Can see colors in the dark",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a38dd2ca-2938-4870-b339-ba9b3cbde8f0",
+					"disabled": true,
+					"name": "Hypersensory",
+					"reference": "P46",
+					"cost_type": "percentage",
+					"cost": 40,
+					"affects": "total"
+				}
+			],
+			"reference": "B47,P46",
+			"calc": {
+				"points": 25
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "9d2e8fb4-92ff-4c1c-a166-21a7a735d866",
+			"name": "Psychic powers",
+			"calc": {
+				"points": 298
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "ac295a9f-31ea-4b28-8f58-76eddd0cc1ab",
+					"name": "Psychic Vampirism Talent",
+					"mental": true,
+					"levels": "5",
+					"points_per_level": 5,
+					"reference": "PSI19",
+					"calc": {
+						"points": 25
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Detect Life"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drain DX"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drain Emotion"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drain HT"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drain IQ"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drain ST"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Steal Dreams"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Steal Energy"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Steal Life"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Steal Power"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Annihilating Weapon"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Chilling Strike"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Corrosive Strike"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Energizing Defense"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Envenomed Weapon"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Sudden Death"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Toxic Strike"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Traumatic Blow"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Vampiric Weapon"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Vengeful Defense"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Psychic Vampirism"
+							},
+							"name": {
+								"compare": "is",
+								"qualifier": "Withering Strike"
+							}
+						}
+					],
+					"categories": [
+						"Power",
+						"Psychic Vampirism"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "f3a00558-ee89-4579-8948-afb41dd5d31b",
+					"name": "Steal Energy",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "82bc3ccd-8908-45d2-873d-b903063c5296",
+							"disabled": true,
+							"name": "Steal Energy_1",
+							"cost_type": "points",
+							"cost": 32,
+							"affects": "total",
+							"notes": "30 seconds"
+						},
+						{
+							"type": "modifier",
+							"id": "7bb03abf-0630-4e3e-8929-1575a5e8248f",
+							"disabled": true,
+							"name": "Steal Energy_2",
+							"cost_type": "points",
+							"cost": 34,
+							"affects": "total",
+							"notes": "15 seconds"
+						},
+						{
+							"type": "modifier",
+							"id": "05efad04-4da6-4229-8115-d02ac78b2f4b",
+							"disabled": true,
+							"name": "Steal Energy_3",
+							"cost_type": "points",
+							"cost": 37,
+							"affects": "total",
+							"notes": "8 seconds"
+						},
+						{
+							"type": "modifier",
+							"id": "668fa149-be3c-487d-ac4b-7fcd01814f8a",
+							"disabled": true,
+							"name": "Steal Energy_4",
+							"cost_type": "points",
+							"cost": 39,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4c0ef425-e4c5-496f-adf7-f5d9d01d5058",
+							"disabled": true,
+							"name": "Steal Energy_5",
+							"cost_type": "points",
+							"cost": 42,
+							"affects": "total",
+							"notes": "4 seconds"
+						},
+						{
+							"type": "modifier",
+							"id": "ec589b94-d062-40ef-8a7c-9c77c0b7b035",
+							"disabled": true,
+							"name": "Steal Energy_6",
+							"cost_type": "points",
+							"cost": 44,
+							"affects": "total",
+							"notes": "1 second"
+						},
+						{
+							"type": "modifier",
+							"id": "5ff26ab7-2355-4f89-83ba-5383b4f2fe63",
+							"disabled": true,
+							"name": "Steal Energy_7",
+							"cost_type": "points",
+							"cost": 51,
+							"affects": "total",
+							"notes": "2 FP per sec"
+						},
+						{
+							"type": "modifier",
+							"id": "18614270-d2f8-46f8-aca4-a39d9e655acc",
+							"name": "Steal Energy_8",
+							"cost_type": "points",
+							"cost": 58,
+							"affects": "total",
+							"notes": "3 FP per sec"
+						}
+					],
+					"reference": "PSI51",
+					"calc": {
+						"points": 58
+					},
+					"notes": "Psychic vampirism ability. Rob someone of their FP to replenish your own. ",
+					"categories": [
+						"Psionics",
+						"Psychic Vampirism"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e1b516d0-037b-42cd-91b3-5fd347993d23",
+					"name": "Steal Life",
+					"mental": true,
+					"levels": "20",
+					"base_points": 21,
+					"points_per_level": 4,
+					"reference": "PSI52",
+					"calc": {
+						"points": 101
+					},
+					"notes": "Psychic vampirism ability. Rob someone of their HP to replenish your own.",
+					"categories": [
+						"Psionics",
+						"Psychic Vampirism"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "bf486e6a-96b6-4b13-85dc-21167305f511",
+					"name": "Drain ST",
+					"mental": true,
+					"levels": "1",
+					"base_points": 22,
+					"points_per_level": 2,
+					"reference": "PSI50",
+					"calc": {
+						"points": 24
+					},
+					"notes": "Psychic vampirism ability. Reduce someone's ST.",
+					"categories": [
+						"Psionics",
+						"Psychic Vampirism"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "df4d766e-e6a3-48cc-bfba-e130a2cf869f",
+					"name": "Telecontrol",
+					"mental": true,
+					"levels": "5",
+					"base_points": 15,
+					"points_per_level": 15,
+					"reference": "PSI64",
+					"calc": {
+						"points": 90
+					},
+					"notes": "Control ability.  You can completely take over the body of a human being. ",
+					"categories": [
+						"Control",
+						"Psionics",
+						"Telepathy"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "406ecc0b-bada-4b64-bdcb-01c70839c955",
+			"name": "360° Vision",
+			"physical": true,
+			"exotic": true,
+			"base_points": 25,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "7862c62a-f34d-4f42-b448-ca118b20b397",
+					"name": "Easy to hit ",
+					"reference": "B34",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "Others can target your eyes at -6"
+				},
+				{
+					"type": "modifier",
+					"id": "8eef9e37-a2c6-4363-9f86-e6915396ce8d",
+					"disabled": true,
+					"name": "Panoptic 1",
+					"reference": "P39",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "82e87137-24a3-4bba-8a69-3b2a9b2a5c11",
+					"disabled": true,
+					"name": "Panoptic 2",
+					"reference": "P39",
+					"cost_type": "percentage",
+					"cost": 60,
+					"affects": "total"
+				}
+			],
+			"reference": "B34,P39",
+			"calc": {
+				"points": 20
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "5d7fef20-3335-4cb7-a160-3aad76de8c29",
+			"name": "Mental Stab",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "e76259d5-8557-4087-9b6e-84c730248743",
+					"disabled": true,
+					"name": "Mental Stab_1",
+					"cost_type": "points",
+					"cost": 33,
+					"affects": "total",
+					"notes": "Skin-to-skin contact"
+				},
+				{
+					"type": "modifier",
+					"id": "cb9bddaf-6f09-4614-8839-d2d21c3d0367",
+					"disabled": true,
+					"name": "Mental Stab_2",
+					"cost_type": "points",
+					"cost": 43,
+					"affects": "total",
+					"notes": "Any touch will suffice"
+				},
+				{
+					"type": "modifier",
+					"id": "2b25f640-5441-4bcc-ba64-b3f7b3d193e7",
+					"disabled": true,
+					"name": "Mental Stab_3",
+					"cost_type": "points",
+					"cost": 52,
+					"affects": "total",
+					"notes": "Mental Blow at range; -1 penalty/yard distance"
+				},
+				{
+					"type": "modifier",
+					"id": "948a9f8f-cee2-49e6-8112-8170187ce7ad",
+					"name": "Mental Stab_4",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 69,
+					"affects": "total",
+					"notes": "Use range penalties p. B550"
+				},
+				{
+					"type": "modifier",
+					"id": "b86988bf-2a8d-447d-9951-b673bc8f5f90",
+					"disabled": true,
+					"name": "Mental Stab_5",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 85,
+					"affects": "total",
+					"notes": "Use long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "7be5c162-069e-49ed-8ebe-76b37a527839",
+					"disabled": true,
+					"name": "Mental Stab_6",
+					"cost_type": "points",
+					"cost": 101,
+					"affects": "total",
+					"notes": "No penalty for range"
+				}
+			],
+			"reference": "PSI65",
+			"calc": {
+				"points": 69
+			},
+			"notes": "Offense ability. Psychically attack someone's brain, doing real damage.",
+			"categories": [
+				"Communication",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "9db9db5a-d7dd-4224-b0a8-3201dc927749",
+			"name": "Sleep (Telepathy)",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "25bcc251-839d-42cc-847e-e439a763e18f",
+					"disabled": true,
+					"name": "Sleep_1",
+					"cost_type": "points",
+					"cost": 25,
+					"affects": "total",
+					"notes": "Skin-to-skin contact."
+				},
+				{
+					"type": "modifier",
+					"id": "da571680-0e5d-41f3-9946-b68a18ca9c16",
+					"disabled": true,
+					"name": "Sleep_2",
+					"cost_type": "points",
+					"cost": 28,
+					"affects": "total",
+					"notes": "Any touch will suffice."
+				},
+				{
+					"type": "modifier",
+					"id": "e55e2ffd-d0d0-4bb0-b3b3-efc226a32df9",
+					"name": "Sleep_3",
+					"cost_type": "points",
+					"cost": 31,
+					"affects": "total",
+					"notes": "Can use sleep at range; -1 penalty/yard distance"
+				},
+				{
+					"type": "modifier",
+					"id": "45626388-f307-4a43-abdf-fa9117afaad1",
+					"disabled": true,
+					"name": "Sleep_4",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 36,
+					"affects": "total",
+					"notes": "Use range penalties p. B550"
+				}
+			],
+			"reference": "PSI66",
+			"calc": {
+				"points": 31
+			},
+			"notes": "Offense ability. You safely put someone to sleep.",
+			"categories": [
+				"Offense",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "363175f5-649d-4080-b173-a50510237685",
+			"name": "Telescan",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "9abec582-1a6f-41b9-a274-802482a29124",
+					"disabled": true,
+					"name": "Telescan_1",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 11,
+					"affects": "total",
+					"notes": "Range penalties p. B550"
+				},
+				{
+					"type": "modifier",
+					"id": "72d74c62-2aa0-46b1-98db-c52f138fbad1",
+					"disabled": true,
+					"name": "Telescan_2",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 15,
+					"affects": "total",
+					"notes": "Range penalties P. B550"
+				},
+				{
+					"type": "modifier",
+					"id": "28d4809d-b606-42ce-a28f-2ce566ff362a",
+					"name": "Telescan_3",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"notes": "Long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "eff1e361-82f2-4590-be5e-40a44b9be23d",
+					"disabled": true,
+					"name": "Telescan_4",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 25,
+					"affects": "total",
+					"notes": "Long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "2fc3bc41-a195-4022-bdb6-7d09bc556406",
+					"disabled": true,
+					"name": "Telescan_5",
+					"cost_type": "points",
+					"cost": 30,
+					"affects": "total",
+					"notes": "No range penalties"
+				}
+			],
+			"reference": "PSI67",
+			"calc": {
+				"points": 20
+			},
+			"notes": "Sense and defense ability. You can search for minds you know. ",
+			"categories": [
+				"Psionics",
+				"Sense and Defense",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "1548efe2-8a35-455b-b20e-368f7c496231",
+			"name": "Suggestion",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "3594c5e9-1fc4-4155-936e-84f35198b174",
+					"disabled": true,
+					"name": "Suggestion_1",
+					"cost_type": "points",
+					"cost": 10,
+					"affects": "total",
+					"notes": "Skin-to-skin contact"
+				},
+				{
+					"type": "modifier",
+					"id": "95a5c71f-c594-4c81-90dc-5fe237b8078f",
+					"disabled": true,
+					"name": "Suggestion_2",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"notes": "Any touch will suffice"
+				},
+				{
+					"type": "modifier",
+					"id": "62148e0b-bddc-4387-8cd3-c01dbe24ff6b",
+					"disabled": true,
+					"name": "Suggestion_3",
+					"cost_type": "points",
+					"cost": 30,
+					"affects": "total",
+					"notes": "Suggestion at range; -1 penalty/yard distance"
+				},
+				{
+					"type": "modifier",
+					"id": "277e1b97-17d2-4d44-bc71-6fc43dcb1b1a",
+					"name": "Suggestion_4",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 35,
+					"affects": "total",
+					"notes": "Use range penalties p. B550"
+				},
+				{
+					"type": "modifier",
+					"id": "9d854407-0403-4afa-91f2-b55a4c69583c",
+					"disabled": true,
+					"name": "Suggestion_5",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 50,
+					"affects": "total",
+					"notes": "Use long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "0c3cb624-5f9c-4013-ad51-aa6e8570247b",
+					"disabled": true,
+					"name": "Suggestion_6",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 75,
+					"affects": "total",
+					"notes": "Use long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "2ad5b8df-9cd7-4ff3-9db4-c45d8ca7bd75",
+					"disabled": true,
+					"name": "Suggestion_7",
+					"cost_type": "points",
+					"cost": 100,
+					"affects": "total",
+					"notes": "No penalty for range"
+				}
+			],
+			"reference": "PSI63",
+			"calc": {
+				"points": 35
+			},
+			"notes": "Control ability.  You can send telepathic commands to a subject.",
+			"categories": [
+				"Control",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "0819b85b-2f92-4e4e-83a5-7fa776e6ddae",
+			"name": "Telekinetic Control",
+			"mental": true,
+			"levels": "10",
+			"points_per_level": 8,
+			"reference": "PSI54",
+			"calc": {
+				"points": 80
+			},
+			"notes": "Telekinesis ability. Unified telekinetic abilities.",
+			"categories": [
+				"Psionics",
+				"Psychokinesis",
+				"Telekinesis"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "34edc703-7b02-4d89-a901-9f87a161fa71",
+			"name": "Paranoia",
+			"mental": true,
+			"base_points": -10,
+			"reference": "B148",
+			"calc": {
+				"points": -10
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -2,
+					"situation": "from others"
+				},
+				{
+					"type": "reaction_bonus",
+					"amount": -4,
+					"situation": "toward any stranger and any “legitimate” reaction penalty (e.g., for an unfriendly race or nationality) is doubled"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "d2b38031-b35d-4424-b394-ac3373ef9229",
+			"name": "No Legs (Bounces)",
+			"physical": true,
+			"exotic": true,
+			"reference": "B145",
+			"calc": {
+				"points": 0
+			},
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "ee26b0b7-15a0-47d0-af8d-c3b3e91ea216",
+			"name": "No Manipulators",
+			"physical": true,
+			"base_points": -50,
+			"reference": "B145",
+			"calc": {
+				"points": -50
+			},
+			"features": [
+				{
+					"type": "cost_reduction",
+					"attribute": "st",
+					"percentage": 40
+				},
+				{
+					"type": "cost_reduction",
+					"attribute": "dx",
+					"percentage": 40
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "c4e89b41-5040-4897-be87-1e944281134d",
+			"name": "No Sense of Humor",
+			"physical": true,
+			"base_points": -10,
+			"reference": "B146",
+			"calc": {
+				"points": -10
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -2,
+					"situation": "from others in any situation where No Sense of Humor becomes evident"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "9ce2e85f-390a-4536-86c0-4b8a68eaae7a",
+			"name": "Sharp Teeth",
+			"physical": true,
+			"exotic": true,
+			"base_points": 1,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"calc": {
+						"level": 0,
+						"parry": "No",
+						"block": "No",
+						"damage": "thr-1 cut"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "dx"
+						}
+					]
+				}
+			],
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "a6dd459a-b85b-4df2-9f19-492fd62bc2c3",
+					"disabled": true,
+					"name": "Provided by Vampiric Bite",
+					"reference": "B96",
+					"cost_type": "points",
+					"cost": -1,
+					"affects": "total"
+				}
+			],
+			"reference": "B91",
+			"calc": {
+				"points": 1
+			},
+			"categories": [
+				"Perk"
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "technique",
+			"id": "4ebf7509-1dd1-4327-a39b-f143c4b02223",
+			"name": "Animalism",
+			"reference": "PSI64",
+			"difficulty": "h",
+			"points": 2,
+			"limit": 0,
+			"default": {
+				"type": "skill",
+				"name": "Telecontrol",
+				"modifier": -4
+			},
+			"categories": [
+				"Control",
+				"Psionics",
+				"Technique",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "d1851006-3a5f-4d6a-bc22-ba555c60b665",
+			"name": "Drain ST",
+			"reference": "PSI50",
+			"difficulty": "will/h",
+			"points": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Drain ST"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Psychic Vampirism"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "c18e3283-04fd-4c84-b895-05a7b858e7b0",
+			"name": "Steal Energy",
+			"reference": "PSI51",
+			"difficulty": "will/h",
+			"points": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Steal Energy"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Psychic Vampirism"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "057195f3-7abf-4412-95cc-020bece88e2b",
+			"name": "Steal Life",
+			"reference": "PSI52",
+			"difficulty": "will/h",
+			"points": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Steal Life"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Psychic Vampirism"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "e5fa0b80-e9c2-407b-b734-d28f18ac0990",
+			"name": "Telecontrol",
+			"reference": "PSI64",
+			"difficulty": "iq/h",
+			"points": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Telecontrol"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Control",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "08624d0a-72de-4748-9bbf-3cd654b25ee1",
+			"name": "Telescan",
+			"reference": "PSI67",
+			"difficulty": "per/h",
+			"points": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Telescan"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "per",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Sense and Defense",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "b660afc1-a4c9-4e52-8488-e9bbb243d590",
+			"name": "Suggestion",
+			"reference": "PSI61",
+			"difficulty": "iq/h",
+			"points": 8,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Suggestion"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					},
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Emotion Control"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Control",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "ee7e97f8-4537-4269-9574-bbb1361b955c",
+			"name": "Telekinetic Control",
+			"reference": "PSI54",
+			"difficulty": "iq/vh",
+			"points": 4,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Telekinetic Control"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Psychokinesis",
+				"Telekinesis"
+			]
+		}
+	]
+}

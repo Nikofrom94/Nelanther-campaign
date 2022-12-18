@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Sep 19, 2021, 9:30 PM",
-	"modified_date": "Jun 17, 2022, 9:47 PM",
+	"modified_date": "Jul 8, 2022, 10:41 PM",
 	"profile": {
 		"player_name": "Cyril",
 		"name": "Salhazard",
@@ -2240,6 +2240,45 @@
 		},
 		{
 			"type": "skill",
+			"id": "9a85bfb7-fbb9-41e1-a6c3-6f36f2a88617",
+			"name": "Merchant",
+			"reference": "B209",
+			"difficulty": "iq/a",
+			"points": 0,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 7,
+				"rsl": "IQ-5"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Finance",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Market Analysis",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Business",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "b2d74618-265c-4fa6-bddc-f9a97d0e08b3",
 			"name": "Lockpicking",
 			"reference": "B206",
@@ -3496,7 +3535,7 @@
 		{
 			"type": "note",
 			"id": "b72f61b1-3bfc-4a8e-b0f8-7e97cbecb423",
-			"text": "character points :\nrest 2pts avant épisode 11"
+			"text": "character points :\nrest 5pts avant épisode 12"
 		}
 	],
 	"calc": {
