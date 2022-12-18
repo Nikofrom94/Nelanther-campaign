@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 13, 2021, 9:50 PM",
-	"modified_date": "Jun 18, 2022, 12:21 AM",
+	"modified_date": "Nov 4, 2022, 8:07 PM",
 	"profile": {
 		"player_name": "Fabrice",
 		"name": "Ghino Di Fosco",
@@ -1966,7 +1966,7 @@
 					"name": "Path of Crossroads (Tiphareth)",
 					"reference": "TRPM9",
 					"difficulty": "iq/vh",
-					"points": 0,
+					"points": 2,
 					"defaulted_from": {
 						"type": "skill",
 						"name": "Thaumatology",
@@ -1976,8 +1976,8 @@
 						"points": 2
 					},
 					"calc": {
-						"level": 11,
-						"rsl": "IQ-2"
+						"level": 12,
+						"rsl": "IQ-1"
 					},
 					"prereqs": {
 						"type": "prereq_list",
@@ -2166,7 +2166,7 @@
 					"name": "Path of Mind (Chokmah)",
 					"reference": "TRPM11",
 					"difficulty": "iq/vh",
-					"points": 0,
+					"points": 2,
 					"defaulted_from": {
 						"type": "skill",
 						"name": "Thaumatology",
@@ -2176,8 +2176,8 @@
 						"points": 2
 					},
 					"calc": {
-						"level": 11,
-						"rsl": "IQ-2"
+						"level": 12,
+						"rsl": "IQ-1"
 					},
 					"prereqs": {
 						"type": "prereq_list",
@@ -2870,6 +2870,111 @@
 					]
 				}
 			]
+		},
+		{
+			"type": "skill",
+			"id": "48e6155b-8e8c-4c59-a8ad-673b652a7a28",
+			"name": "Merchant",
+			"reference": "B209",
+			"difficulty": "iq/a",
+			"points": 0,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"calc": {
+				"level": 8,
+				"rsl": "IQ-5"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Finance",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Market Analysis",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Business",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "c4c958b1-7a4d-44b8-876f-c6f425090f54",
+			"name": "Stealth",
+			"reference": "B222",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "DX-1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Police",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "dd63daff-ff57-4327-a346-d9d08bf71e64",
+			"name": "Climbing",
+			"reference": "B183",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "DX-1"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Athletic",
+				"Criminal/Street",
+				"Outdoor/Exploration"
+			]
 		}
 	],
 	"equipment": [
@@ -3410,7 +3515,7 @@
 		{
 			"type": "note",
 			"id": "b00f98c7-1c51-4847-af41-daee1ee20fe0",
-			"text": "Character points\n- reste 1 pt avant épisode 8"
+			"text": "Character points\n- reste 4 pt avant épisode 15"
 		}
 	],
 	"calc": {

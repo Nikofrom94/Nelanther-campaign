@@ -5,50 +5,321 @@
 	"rows": [
 		{
 			"type": "equipment",
-			"id": "d191a027-7ed4-4dc6-9a9e-ed001d92b4f0",
+			"id": "487ce3d3-f303-42f6-8643-b58a0e41eab1",
 			"quantity": 1,
-			"description": "Drow Elven Chain +3",
-			"tech_level": "3",
+			"description": "Arrow +1",
+			"value": "25",
+			"weight": "0.1 lb",
+			"calc": {
+				"extended_value": "25",
+				"extended_weight": "0.1 lb"
+			},
+			"notes": "+1 to hit & damage"
+		},
+		{
+			"type": "equipment",
+			"id": "a840c84e-c834-4731-b46f-51e29a448954",
+			"quantity": 1,
+			"description": "Arrow +2",
+			"value": "100",
+			"weight": "0.1 lb",
+			"calc": {
+				"extended_value": "100",
+				"extended_weight": "0.1 lb"
+			},
+			"notes": "+2 to hit & damage"
+		},
+		{
+			"type": "equipment",
+			"id": "a42e653d-818b-47ec-bf22-1b0f6dd1c94e",
+			"quantity": 1,
+			"description": "Arrow +3",
 			"value": "500",
-			"weight": "12 lb",
-			"reference": "B283",
+			"weight": "0.1 lb",
 			"calc": {
 				"extended_value": "500",
-				"extended_weight": "12 lb"
+				"extended_weight": "0.1 lb"
+			},
+			"notes": "+3 to hit & damage"
+		},
+		{
+			"type": "equipment",
+			"id": "5a43be2b-c223-4dbf-a66e-e30b59b49aca",
+			"quantity": 1,
+			"description": "Arrow of Acid +1",
+			"value": "20",
+			"weight": "0.1 lb",
+			"reference": "B61",
+			"calc": {
+				"extended_value": "20",
+				"extended_weight": "0.1 lb"
 			},
 			"features": [
 				{
-					"type": "dr_bonus",
-					"amount": 7,
-					"location": "torso"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": 7,
-					"location": "vitals"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": -2,
-					"location": "torso",
-					"specialization": "crushing"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": -2,
-					"location": "vitals",
-					"specialization": "crushing"
-				},
-				{
-					"type": "conditional_modifier",
+					"type": "weapon_bonus",
 					"amount": 1,
-					"situation": "Magic Resistance"
+					"selection_type": "this_weapon"
 				}
 			],
-			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
-			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Elven_Chain",
+			"notes": "1d-3 corrosion damage (reduce DR by 1 per 5 pts of damage)"
+		},
+		{
+			"type": "equipment",
+			"id": "a2c88963-63f9-41ab-85f3-b5dd1371fb63",
+			"quantity": 1,
+			"description": "Arrow of Antimagic",
+			"value": "1500",
+			"weight": "0.3 lb",
+			"calc": {
+				"extended_value": "1500",
+				"extended_weight": "0.3 lb"
+			},
+			"notes": "-1 to shot, on failure to resist (Will) the target cannot cast a spell in the next 5 sec"
+		},
+		{
+			"type": "equipment",
+			"id": "594f3b0a-2d5a-4a41-821c-7abdf8334a9d",
+			"quantity": 1,
+			"description": "Arrow of dispelling",
+			"value": "1500",
+			"weight": "0.3 lb",
+			"reference": "M123",
+			"calc": {
+				"extended_value": "1500",
+				"extended_weight": "0.3 lb"
+			},
+			"notes": "Dispel magic effects for 20sec as the spell \"Suspend Magic\""
+		},
+		{
+			"type": "equipment",
+			"id": "6979167d-d7f2-4fae-87b6-3c386e015bf8",
+			"quantity": 1,
+			"description": "Arrow of fire +2",
+			"value": "15",
+			"weight": "0.1 lb",
+			"calc": {
+				"extended_value": "15",
+				"extended_weight": "0.1 lb"
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 2,
+					"selection_type": "this_weapon"
+				}
+			],
+			"notes": "+2 to shot skill & +2 damage of fire"
+		},
+		{
+			"type": "equipment",
+			"id": "f875732f-c854-46d5-84ca-280a29fbd647",
+			"quantity": 1,
+			"description": "Arrow of fireball",
+			"legality_class": "2",
+			"value": "300",
+			"weight": "0.3 lb",
+			"calc": {
+				"extended_value": "300",
+				"extended_weight": "0.3 lb"
+			},
+			"notes": "+1d of fire damage on 1.5m radius"
+		},
+		{
+			"type": "equipment",
+			"id": "1499b5df-f5ee-4c25-9843-3390d3c7ec0b",
+			"quantity": 1,
+			"description": "Heartseeker composite longbow +3",
+			"value": "78000",
+			"weight": "7 lb",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+3"
+					},
+					"strength": "14",
+					"usage": "Hearthseeker",
+					"accuracy": "3",
+					"range": "280/350",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"calc": {
+						"level": 0,
+						"range": "280/350",
+						"damage": "1d+3 imp"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Bow"
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+3"
+					},
+					"strength": "14",
+					"usage": "Hearthseeker +7 for 9sec",
+					"accuracy": "3",
+					"range": "280/350",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"calc": {
+						"level": 0,
+						"range": "280/350",
+						"damage": "1d+3 imp"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Bow",
+							"modifier": 4
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "78000",
+				"extended_weight": "7 lb"
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 3,
+					"selection_type": "this_weapon"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 3,
+					"selection_type": "this_weapon"
+				}
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "e6eaabd1-d2da-4acd-941d-59705bb61bf9",
+			"quantity": 1,
+			"description": "Arrow of Piercing",
+			"value": "500",
+			"weight": "0.3 lb",
+			"calc": {
+				"extended_value": "500",
+				"extended_weight": "0.3 lb"
+			},
+			"notes": "DR divided by 2"
+		},
+		{
+			"type": "equipment",
+			"id": "534d338b-fd3f-459e-a260-5d3d7c5de0e0",
+			"quantity": 1,
+			"description": "Composite Bow (ST16) Eclair Bleu",
+			"tech_level": "1",
+			"value": "1440",
+			"weight": "4 lb",
+			"reference": "B275",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+4"
+					},
+					"strength": "16†",
+					"usage_notes": "thunderclap + Shocking Touch",
+					"accuracy": "3",
+					"range": "320/400",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"calc": {
+						"level": 0,
+						"range": "320/400",
+						"damage": "1d+4 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow",
+							"modifier": 1
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "1440",
+				"extended_weight": "4 lb"
+			},
 			"categories": [
-				"Body Armor"
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "abe4bdfc-f6fe-4831-be63-b8b49c1da0a8",
+			"quantity": 1,
+			"description": "Darkfire Bow",
+			"value": "6500",
+			"weight": "1 lb",
+			"reference": "DFA104",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "7†",
+					"usage": "Shoot",
+					"accuracy": "1",
+					"range": "x10/x15",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-6",
+					"calc": {
+						"level": 0,
+						"range": "x10/x15",
+						"damage": "thr imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "6500",
+				"extended_weight": "1 lb"
+			},
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 4,
+					"selection_type": "this_weapon"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 4,
+					"selection_type": "this_weapon"
+				}
+			],
+			"notes": "Grant Great Haste once per day (speedx2)",
+			"categories": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
 			]
 		},
 		{
@@ -57,11 +328,11 @@
 			"quantity": 1,
 			"description": "Drow Adamantine Chain +5",
 			"tech_level": "3",
-			"value": "500",
+			"value": "5000",
 			"weight": "12 lb",
 			"reference": "B283",
 			"calc": {
-				"extended_value": "500",
+				"extended_value": "5000",
 				"extended_weight": "12 lb"
 			},
 			"features": [
@@ -101,11 +372,59 @@
 		},
 		{
 			"type": "equipment",
-			"id": "0dae264e-12ed-4e76-ae8c-d4e1dab56745",
+			"id": "d191a027-7ed4-4dc6-9a9e-ed001d92b4f0",
+			"quantity": 1,
+			"description": "Drow Elven Chain +3",
+			"tech_level": "3",
+			"value": "5000",
+			"weight": "12 lb",
+			"reference": "B283",
+			"calc": {
+				"extended_value": "5000",
+				"extended_weight": "12 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 7,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 7,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "torso",
+					"specialization": "crushing"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": -2,
+					"location": "vitals",
+					"specialization": "crushing"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": 1,
+					"situation": "Magic Resistance"
+				}
+			],
+			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
+			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Elven_Chain",
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "2629c655-9115-4e6d-b74a-c79391c9cc3b",
 			"quantity": 1,
 			"description": "Greatsword : kingsbane",
 			"tech_level": "3",
-			"value": "800",
+			"value": "8000",
 			"weight": "7 lb",
 			"reference": "B274",
 			"weapons": [
@@ -287,7 +606,7 @@
 				}
 			],
 			"calc": {
-				"extended_value": "800",
+				"extended_value": "8000",
 				"extended_weight": "7 lb"
 			},
 			"notes": "Tueuse d'humain : +3 au toucher/dommages",
@@ -297,6 +616,60 @@
 		},
 		{
 			"type": "equipment",
+			"id": "d29b35f0-e2b7-4353-8dae-3e71bac20918",
+			"quantity": 1,
+			"description": "Bolt of Polymorphing",
+			"legality_class": "2",
+			"value": "5000",
+			"weight": "0.3 lb",
+			"reference": "M43",
+			"calc": {
+				"extended_value": "5000",
+				"extended_weight": "0.3 lb"
+			},
+			"notes": "polymorph other as the spell Transmogrification"
+		},
+		{
+			"type": "equipment",
+			"id": "a4085155-ad9c-4fac-904b-4d34454eac8b",
+			"quantity": 1,
+			"description": "Bolt of Lightning",
+			"value": "300",
+			"weight": "0 lb",
+			"reference": "M196",
+			"calc": {
+				"extended_value": "300",
+				"extended_weight": "0 lb"
+			},
+			"notes": "1d lightning damage"
+		},
+		{
+			"type": "equipment",
+			"id": "0a23acb7-47ac-4bad-9720-f5bff3d9fdfe",
+			"quantity": 1,
+			"description": "Sword of Chaos +2",
+			"value": "30000",
+			"weight": "10 lb",
+			"calc": {
+				"extended_value": "30000",
+				"extended_weight": "10 lb"
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 2,
+					"selection_type": "this_weapon"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 2,
+					"selection_type": "this_weapon"
+				}
+			],
+			"notes": "+ HP per wound inflicted"
+      },
+      {
+      "type": "equipment",
 			"id": "ec5cef68-9cee-4ff0-a168-db179e96df26",
 			"quantity": 1,
 			"description": "Composite Bow (ST16) Eclair Bleu",

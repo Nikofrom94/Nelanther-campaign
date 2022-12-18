@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 26, 2021, 9:35 AM",
-	"modified_date": "Jun 29, 2022, 5:53 PM",
+	"modified_date": "Nov 4, 2022, 8:01 PM",
 	"profile": {
 		"player_name": "Richard",
 		"name": "Blagordd",
@@ -588,7 +588,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -596,7 +596,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 14,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -604,7 +604,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -612,7 +612,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -620,7 +620,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 13,
+				"value": 14,
 				"points": 0
 			}
 		},
@@ -628,7 +628,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -636,7 +636,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 13,
 				"points": 0
 			}
 		},
@@ -1702,11 +1702,11 @@
 			"name": "Increased Perception",
 			"mental": true,
 			"physical": true,
-			"levels": "2",
+			"levels": "3",
 			"points_per_level": 5,
 			"reference": "B16",
 			"calc": {
-				"points": 10
+				"points": 15
 			},
 			"features": [
 				{
@@ -1716,6 +1716,7 @@
 					"attribute": "per"
 				}
 			],
+			"notes": "+1 lvl après épisode 11",
 			"categories": [
 				"Advantage",
 				"Attribute"
@@ -1726,11 +1727,11 @@
 			"id": "97895de5-e0c1-4ba7-95c1-d945439b790b",
 			"name": "Increased Will",
 			"mental": true,
-			"levels": "2",
+			"levels": "3",
 			"points_per_level": 5,
 			"reference": "B16",
 			"calc": {
-				"points": 10
+				"points": 15
 			},
 			"features": [
 				{
@@ -1740,7 +1741,7 @@
 					"attribute": "will"
 				}
 			],
-			"notes": "+2 lvl après episose 7",
+			"notes": "+2 lvl après episose 7 + 1 lvl après épisode 11",
 			"categories": [
 				"Advantage",
 				"Attribute"
@@ -1754,37 +1755,6 @@
 			"name": "athletic",
 			"open": true,
 			"children": [
-				{
-					"type": "skill",
-					"id": "0d1641b0-c51f-46fc-aee6-1d92cf21fd67",
-					"name": "Climbing",
-					"reference": "B183",
-					"encumbrance_penalty_multiplier": 1,
-					"difficulty": "dx/a",
-					"points": 2,
-					"defaulted_from": {
-						"type": "dx",
-						"modifier": -5,
-						"level": 8,
-						"adjusted_level": 8,
-						"points": -8
-					},
-					"calc": {
-						"level": 13,
-						"rsl": "DX+0"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						}
-					],
-					"categories": [
-						"Athletic",
-						"Criminal/Street",
-						"Outdoor/Exploration"
-					]
-				},
 				{
 					"type": "skill",
 					"id": "0bc0bc00-9ad8-4bed-baff-8a71bb8d6469",
@@ -1821,6 +1791,37 @@
 					],
 					"categories": [
 						"Athletic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "0d1641b0-c51f-46fc-aee6-1d92cf21fd67",
+					"name": "Climbing",
+					"reference": "B183",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "dx/a",
+					"points": 2,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 13,
+						"rsl": "DX+0"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Athletic",
+						"Criminal/Street",
+						"Outdoor/Exploration"
 					]
 				},
 				{
@@ -1862,6 +1863,28 @@
 			"open": true,
 			"children": [
 				{
+					"type": "technique",
+					"id": "edbe7405-0652-47dd-a7a3-7a4fda367aa9",
+					"name": "Arm Lock",
+					"reference": "B230",
+					"difficulty": "a",
+					"points": 2,
+					"calc": {
+						"level": 19,
+						"rsl": "+2"
+					},
+					"limit": 4,
+					"default": {
+						"type": "skill",
+						"name": "Wrestling"
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
 					"type": "skill",
 					"id": "75b3d4c1-4c4c-4497-bb49-e44094a51edb",
 					"name": "Armoury",
@@ -1900,6 +1923,35 @@
 				},
 				{
 					"type": "skill",
+					"id": "6e9b289a-bfc9-4ee6-8b04-c45187c4fe0c",
+					"name": "Bow",
+					"reference": "B182",
+					"difficulty": "dx/a",
+					"points": 8,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "DX+2"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
 					"id": "e108bf74-1aeb-49c9-bad7-d8ca83598c4c",
 					"name": "Brawling",
 					"reference": "B182",
@@ -1928,6 +1980,120 @@
 					"categories": [
 						"Combat/Weapon",
 						"Melee Combat"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "9f9fa300-487b-4b0f-bad1-181c5f25a57b",
+					"name": "Choke Hold",
+					"reference": "MA69",
+					"difficulty": "h",
+					"points": 4,
+					"calc": {
+						"level": 17,
+						"rsl": "+0"
+					},
+					"limit": 0,
+					"default": {
+						"type": "skill",
+						"name": "Wrestling",
+						"modifier": -3
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Wrestling"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "20ca9149-a727-4b6d-9afd-ee76cd8ce008",
+					"name": "Elbow Strike",
+					"reference": "B230,MA71",
+					"difficulty": "a",
+					"points": 0,
+					"calc": {
+						"level": 17,
+						"rsl": "-2"
+					},
+					"limit": 0,
+					"default": {
+						"type": "skill",
+						"name": "Brawling",
+						"modifier": -2
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Brawling"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "1fc21c80-994e-40c5-be8e-3902ac9f92f4",
+					"name": "Fast-Draw",
+					"reference": "B194",
+					"specialization": "Knife",
+					"difficulty": "dx/e",
+					"points": 1,
+					"calc": {
+						"level": 14,
+						"rsl": "DX+1"
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "technique",
+					"id": "1b815032-9219-4b9c-b33a-21b2ee7111a2",
+					"name": "Kicking",
+					"reference": "B231,MA75",
+					"difficulty": "h",
+					"points": 0,
+					"calc": {
+						"level": 17,
+						"rsl": "-2"
+					},
+					"limit": 0,
+					"default": {
+						"type": "skill",
+						"name": "Brawling",
+						"modifier": -2
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
 					]
 				},
 				{
@@ -1980,248 +2146,6 @@
 					]
 				},
 				{
-					"type": "technique",
-					"id": "1b815032-9219-4b9c-b33a-21b2ee7111a2",
-					"name": "Kicking",
-					"reference": "B231,MA75",
-					"difficulty": "h",
-					"points": 0,
-					"calc": {
-						"level": 17,
-						"rsl": "-2"
-					},
-					"limit": 0,
-					"default": {
-						"type": "skill",
-						"name": "Brawling",
-						"modifier": -2
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat",
-						"Technique"
-					]
-				},
-				{
-					"type": "technique",
-					"id": "20ca9149-a727-4b6d-9afd-ee76cd8ce008",
-					"name": "Elbow Strike",
-					"reference": "B230,MA71",
-					"difficulty": "a",
-					"points": 0,
-					"calc": {
-						"level": 17,
-						"rsl": "-2"
-					},
-					"limit": 0,
-					"default": {
-						"type": "skill",
-						"name": "Brawling",
-						"modifier": -2
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "Brawling"
-								}
-							}
-						]
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat",
-						"Technique"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "1f3305e0-21f6-4aa6-8ade-3b5554a01247",
-					"name": "Wrestling",
-					"reference": "B228",
-					"difficulty": "dx/a",
-					"points": 16,
-					"calc": {
-						"level": 17,
-						"rsl": "DX+4"
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat"
-					]
-				},
-				{
-					"type": "technique",
-					"id": "06dba753-ad45-4e3e-a6e2-36c1b3730136",
-					"name": "Neck Snap",
-					"reference": "B232,MA77",
-					"difficulty": "h",
-					"points": 4,
-					"calc": {
-						"level": 14,
-						"rsl": "-1"
-					},
-					"limit": 3,
-					"default": {
-						"type": "st",
-						"modifier": -4
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat",
-						"Technique"
-					]
-				},
-				{
-					"type": "technique",
-					"id": "edbe7405-0652-47dd-a7a3-7a4fda367aa9",
-					"name": "Arm Lock",
-					"reference": "B230",
-					"difficulty": "a",
-					"points": 2,
-					"calc": {
-						"level": 19,
-						"rsl": "+2"
-					},
-					"limit": 4,
-					"default": {
-						"type": "skill",
-						"name": "Wrestling"
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat",
-						"Technique"
-					]
-				},
-				{
-					"type": "technique",
-					"id": "9f9fa300-487b-4b0f-bad1-181c5f25a57b",
-					"name": "Choke Hold",
-					"reference": "MA69",
-					"difficulty": "h",
-					"points": 4,
-					"calc": {
-						"level": 17,
-						"rsl": "+0"
-					},
-					"limit": 0,
-					"default": {
-						"type": "skill",
-						"name": "Wrestling",
-						"modifier": -3
-					},
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "Wrestling"
-								}
-							}
-						]
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat",
-						"Technique"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "3e1e15ab-c220-4079-b3ce-60ce148a83e6",
-					"name": "Two-Handed Sword",
-					"reference": "B209",
-					"difficulty": "dx/a",
-					"points": 12,
-					"defaulted_from": {
-						"type": "dx",
-						"modifier": -5,
-						"level": 8,
-						"adjusted_level": 8,
-						"points": -8
-					},
-					"calc": {
-						"level": 16,
-						"rsl": "DX+3"
-					},
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Broadsword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "dx",
-							"modifier": -5
-						}
-					],
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "6e9b289a-bfc9-4ee6-8b04-c45187c4fe0c",
-					"name": "Bow",
-					"reference": "B182",
-					"difficulty": "dx/a",
-					"points": 8,
-					"defaulted_from": {
-						"type": "dx",
-						"modifier": -5,
-						"level": 8,
-						"adjusted_level": 8,
-						"points": -8
-					},
-					"calc": {
-						"level": 15,
-						"rsl": "DX+2"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						}
-					],
-					"categories": [
-						"Combat/Weapon",
-						"Ranged Combat"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "1fc21c80-994e-40c5-be8e-3902ac9f92f4",
-					"name": "Fast-Draw",
-					"reference": "B194",
-					"specialization": "Knife",
-					"difficulty": "dx/e",
-					"points": 1,
-					"calc": {
-						"level": 14,
-						"rsl": "DX+1"
-					},
-					"categories": [
-						"Combat/Weapon",
-						"Melee Combat"
-					]
-				},
-				{
 					"type": "skill",
 					"id": "9ac0a532-e68a-4283-b7f2-12918d8ee825",
 					"name": "Knife",
@@ -2264,6 +2188,83 @@
 						"Combat/Weapon",
 						"Melee Combat"
 					]
+				},
+				{
+					"type": "technique",
+					"id": "06dba753-ad45-4e3e-a6e2-36c1b3730136",
+					"name": "Neck Snap",
+					"reference": "B232,MA77",
+					"difficulty": "h",
+					"points": 4,
+					"calc": {
+						"level": 14,
+						"rsl": "-1"
+					},
+					"limit": 3,
+					"default": {
+						"type": "st",
+						"modifier": -4
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat",
+						"Technique"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "3e1e15ab-c220-4079-b3ce-60ce148a83e6",
+					"name": "Two-Handed Sword",
+					"reference": "B209",
+					"difficulty": "dx/a",
+					"points": 20,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 18,
+						"rsl": "DX+5"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "1f3305e0-21f6-4aa6-8ade-3b5554a01247",
+					"name": "Wrestling",
+					"reference": "B228",
+					"difficulty": "dx/a",
+					"points": 16,
+					"calc": {
+						"level": 17,
+						"rsl": "DX+4"
+					},
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
 				}
 			]
 		},
@@ -2275,6 +2276,95 @@
 			"children": [
 				{
 					"type": "skill",
+					"id": "d2a4f8a7-593f-42fa-9d2b-dd9253f3c496",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "@Barony, County, Duchy, or Small Nation@",
+					"difficulty": "iq/e",
+					"points": 1,
+					"calc": {
+						"level": 10,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "@Specialty@",
+							"modifier": -3
+						}
+					],
+					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "620f11dd-b793-480f-ac50-fa0a57c57dc1",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Savage Frontiere; Lived there",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"calc": {
+						"level": 10,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Sword Mountains",
+							"modifier": -3
+						}
+					],
+					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "fcdd4644-4c58-4d51-833d-dbf546f9eb0f",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Sword Coast",
+					"difficulty": "iq/e",
+					"points": 1,
+					"calc": {
+						"level": 10,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Sword Coast",
+							"modifier": -3
+						}
+					],
+					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
 					"id": "95c99e8e-28dc-448e-893d-ffff671c8949",
 					"name": "Camouflage",
 					"reference": "B183",
@@ -2284,9 +2374,9 @@
 						"type": "skill",
 						"name": "Survival",
 						"modifier": -2,
-						"level": 11,
-						"adjusted_level": 11,
-						"points": 2
+						"level": 12,
+						"adjusted_level": 12,
+						"points": 4
 					},
 					"calc": {
 						"level": 12,
@@ -2305,205 +2395,6 @@
 					],
 					"categories": [
 						"Military",
-						"Outdoor/Exploration"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "2030eb71-a723-4cde-bdce-0c6f115e9f11",
-					"name": "Survival",
-					"reference": "B223",
-					"specialization": "Woodlands",
-					"difficulty": "per/a",
-					"points": 4,
-					"defaulted_from": {
-						"type": "per",
-						"modifier": -5,
-						"level": 7,
-						"adjusted_level": 7,
-						"points": -7
-					},
-					"calc": {
-						"level": 13,
-						"rsl": "Per+1"
-					},
-					"defaults": [
-						{
-							"type": "per",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Naturalist",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Arctic",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Desert",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Island/Beach",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Jungle",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Mountain",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Plains",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Survival",
-							"specialization": "Swampland",
-							"modifier": -3
-						}
-					],
-					"categories": [
-						"Outdoor/Exploration"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "1e26fa56-f20f-4f99-a138-e2848583cb2e",
-					"name": "Stealth",
-					"reference": "B222",
-					"encumbrance_penalty_multiplier": 1,
-					"difficulty": "dx/a",
-					"points": 8,
-					"defaulted_from": {
-						"type": "dx",
-						"modifier": -5,
-						"level": 8,
-						"adjusted_level": 8,
-						"points": -8
-					},
-					"calc": {
-						"level": 15,
-						"rsl": "DX+2"
-					},
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "dx",
-							"modifier": -5
-						}
-					],
-					"categories": [
-						"Criminal/Street",
-						"Police",
-						"Spy"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "abe381f0-ef9f-4e3e-afc7-a52f4f394080",
-					"name": "Navigation",
-					"reference": "B211",
-					"specialization": "Land",
-					"tech_level": "4",
-					"difficulty": "iq/a",
-					"points": 4,
-					"defaulted_from": {
-						"type": "iq",
-						"modifier": -5,
-						"level": 5,
-						"adjusted_level": 5,
-						"points": -5
-					},
-					"calc": {
-						"level": 11,
-						"rsl": "IQ+1"
-					},
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Cartography",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Mathematics",
-							"specialization": "Surveying",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Navigation",
-							"specialization": "Air",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Navigation",
-							"specialization": "Sea",
-							"modifier": -2
-						}
-					],
-					"categories": [
-						"Outdoor/Exploration",
-						"Technical",
-						"Vehicle"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "138a78c1-56f4-442c-9cdb-63963a78c80e",
-					"name": "Tracking",
-					"reference": "B226",
-					"difficulty": "per/a",
-					"points": 8,
-					"defaulted_from": {
-						"type": "per",
-						"modifier": -5,
-						"level": 7,
-						"adjusted_level": 7,
-						"points": -7
-					},
-					"calc": {
-						"level": 14,
-						"rsl": "Per+2"
-					},
-					"defaults": [
-						{
-							"type": "per",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Naturalist",
-							"modifier": -5
-						}
-					],
-					"categories": [
 						"Outdoor/Exploration"
 					]
 				},
@@ -2580,6 +2471,61 @@
 				},
 				{
 					"type": "skill",
+					"id": "abe381f0-ef9f-4e3e-afc7-a52f4f394080",
+					"name": "Navigation",
+					"reference": "B211",
+					"specialization": "Land",
+					"tech_level": "4",
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 5,
+						"adjusted_level": 5,
+						"points": -5
+					},
+					"calc": {
+						"level": 11,
+						"rsl": "IQ+1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Cartography",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Surveying",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Air",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Sea",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration",
+						"Technical",
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
 					"id": "71802870-ce43-4e46-bd2a-fb2239dd9037",
 					"name": "Seamanship",
 					"reference": "B185",
@@ -2609,91 +2555,146 @@
 				},
 				{
 					"type": "skill",
-					"id": "620f11dd-b793-480f-ac50-fa0a57c57dc1",
-					"name": "Area Knowledge",
-					"reference": "B176",
-					"specialization": "Savage Frontiere; Lived there",
-					"difficulty": "iq/e",
-					"points": 1,
+					"id": "1e26fa56-f20f-4f99-a138-e2848583cb2e",
+					"name": "Stealth",
+					"reference": "B222",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "dx/a",
+					"points": 8,
 					"defaulted_from": {
-						"type": "iq",
-						"modifier": -4,
-						"level": 6,
-						"adjusted_level": 6,
-						"points": -6
+						"type": "dx",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
 					},
 					"calc": {
-						"level": 10,
-						"rsl": "IQ+0"
+						"level": 15,
+						"rsl": "DX+2"
 					},
 					"defaults": [
 						{
 							"type": "iq",
-							"modifier": -4
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Criminal/Street",
+						"Police",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "2030eb71-a723-4cde-bdce-0c6f115e9f11",
+					"name": "Survival",
+					"reference": "B223",
+					"specialization": "Woodlands",
+					"difficulty": "per/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "per",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 14,
+						"rsl": "Per+1"
+					},
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -5
 						},
 						{
 							"type": "skill",
-							"name": "Geography",
-							"specialization": "Sword Mountains",
+							"name": "Naturalist",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Arctic",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Desert",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Island/Beach",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Jungle",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Mountain",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Plains",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Survival",
+							"specialization": "Swampland",
 							"modifier": -3
 						}
 					],
-					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
 					"categories": [
-						"Everyman",
-						"Knowledge"
+						"Outdoor/Exploration"
 					]
 				},
 				{
 					"type": "skill",
-					"id": "d2a4f8a7-593f-42fa-9d2b-dd9253f3c496",
-					"name": "Area Knowledge",
-					"reference": "B176",
-					"specialization": "@Barony, County, Duchy, or Small Nation@",
-					"difficulty": "iq/e",
-					"points": 1,
+					"id": "138a78c1-56f4-442c-9cdb-63963a78c80e",
+					"name": "Tracking",
+					"reference": "B226",
+					"difficulty": "per/a",
+					"points": 8,
+					"defaulted_from": {
+						"type": "per",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
 					"calc": {
-						"level": 10,
-						"rsl": "IQ+0"
+						"level": 15,
+						"rsl": "Per+2"
 					},
 					"defaults": [
 						{
-							"type": "skill",
-							"name": "Geography",
-							"specialization": "@Specialty@",
-							"modifier": -3
-						}
-					],
-					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
-					"categories": [
-						"Everyman",
-						"Knowledge"
-					]
-				},
-				{
-					"type": "skill",
-					"id": "fcdd4644-4c58-4d51-833d-dbf546f9eb0f",
-					"name": "Area Knowledge",
-					"reference": "B176",
-					"specialization": "Sword Coast",
-					"difficulty": "iq/e",
-					"points": 1,
-					"calc": {
-						"level": 10,
-						"rsl": "IQ+0"
-					},
-					"defaults": [
+							"type": "per",
+							"modifier": -5
+						},
 						{
 							"type": "skill",
-							"name": "Geography",
-							"specialization": "Sword Coast",
-							"modifier": -3
+							"name": "Naturalist",
+							"modifier": -5
 						}
 					],
-					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
 					"categories": [
-						"Everyman",
-						"Knowledge"
+						"Outdoor/Exploration"
 					]
 				}
 			]
@@ -2705,7 +2706,7 @@
 			"difficulty": "a",
 			"points": 3,
 			"calc": {
-				"level": 14,
+				"level": 16,
 				"rsl": "-2"
 			},
 			"default": {
@@ -2717,6 +2718,38 @@
 		}
 	],
 	"equipment": [
+		{
+			"type": "equipment_container",
+			"id": "7d8d8540-4c1d-4c0d-b3ba-55abdb43fd4f",
+			"equipped": true,
+			"description": "Backpack, Small",
+			"tech_level": "1",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "B288",
+			"calc": {
+				"extended_value": "60",
+				"extended_weight": "3 lb"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true
+		},
 		{
 			"type": "equipment",
 			"id": "cbee043e-2125-49de-9cdd-ea5d64425140",
@@ -2767,7 +2800,7 @@
 		},
 		{
 			"type": "equipment",
-			"id": "a54795cf-a11e-4c8a-adc2-b7807ed7dfa8",
+			"id": "3ad8cbbe-e785-4533-b249-914708b7a288",
 			"equipped": true,
 			"quantity": 1,
 			"description": "Greatsword : kingsbane",
@@ -2789,8 +2822,8 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 17,
-						"parry": "12",
+						"level": 19,
+						"parry": "13",
 						"block": "No",
 						"damage": "2d+5 cut"
 					},
@@ -2833,8 +2866,8 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 17,
-						"parry": "12",
+						"level": 19,
+						"parry": "13",
 						"block": "No",
 						"damage": "1d+4 imp"
 					},
@@ -2877,8 +2910,8 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 19,
-						"parry": "13",
+						"level": 21,
+						"parry": "14",
 						"block": "No",
 						"damage": "2d+7 cut"
 					},
@@ -2921,8 +2954,8 @@
 					"parry": "0",
 					"block": "No",
 					"calc": {
-						"level": 19,
-						"parry": "13",
+						"level": 21,
+						"parry": "14",
 						"block": "No",
 						"damage": "1d+6 imp"
 					},
@@ -2960,6 +2993,130 @@
 			"notes": "Tueuse d'humain : +3 au toucher/dommages",
 			"categories": [
 				"Melee Weapon"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "bb4d6dad-baa6-4f67-a386-c518004f025b",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"calc": {
+				"extended_value": "17",
+				"extended_weight": "1.1 lb"
+			},
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "8151089c-c5ff-4d36-83e8-2bc2843aee6c",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Arrow, Bodkin",
+					"tech_level": "3",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "B277",
+					"calc": {
+						"extended_value": "2",
+						"extended_weight": "0.1 lb"
+					},
+					"notes": "Changes damage to piercing with armor divisor of (2).",
+					"categories": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "155e1440-5bef-482c-990f-7010b5405166",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "3 lb"
+			},
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "a6038161-a4e8-45db-b58f-f5c45182d468",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Arrow",
+					"tech_level": "0",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "B276",
+					"calc": {
+						"extended_value": "40",
+						"extended_weight": "2 lb"
+					},
+					"categories": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "fdda3cc6-85ca-4dc7-8beb-3bd5f5b5fb4e",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "3 lb"
+			},
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "fba7d963-ba6f-414e-bf43-78d5f746a8a2",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Arrow - poison",
+					"tech_level": "0",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "B276",
+					"calc": {
+						"extended_value": "40",
+						"extended_weight": "2 lb"
+					},
+					"categories": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
 			]
 		},
 		{
@@ -3174,162 +3331,6 @@
 				"Camping and Survival Gear"
 			],
 			"open": true
-		},
-		{
-			"type": "equipment_container",
-			"id": "7d8d8540-4c1d-4c0d-b3ba-55abdb43fd4f",
-			"equipped": true,
-			"description": "Backpack, Small",
-			"tech_level": "1",
-			"value": "60",
-			"weight": "3 lb",
-			"reference": "B288",
-			"calc": {
-				"extended_value": "60",
-				"extended_weight": "3 lb"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "contained_weight_prereq",
-						"has": true,
-						"qualifier": {
-							"compare": "at_most",
-							"qualifier": "40 lb"
-						}
-					}
-				]
-			},
-			"categories": [
-				"Camping and Survival Gear"
-			],
-			"open": true
-		},
-		{
-			"type": "equipment_container",
-			"id": "155e1440-5bef-482c-990f-7010b5405166",
-			"equipped": true,
-			"description": "Hip Quiver",
-			"tech_level": "0",
-			"value": "15",
-			"weight": "1 lb",
-			"reference": "B289",
-			"calc": {
-				"extended_value": "55",
-				"extended_weight": "3 lb"
-			},
-			"notes": "Holds 20 arrows or bolts",
-			"categories": [
-				"Weapon and Combat Accessories"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "a6038161-a4e8-45db-b58f-f5c45182d468",
-					"equipped": true,
-					"quantity": 20,
-					"description": "Arrow",
-					"tech_level": "0",
-					"value": "2",
-					"weight": "0.1 lb",
-					"reference": "B276",
-					"calc": {
-						"extended_value": "40",
-						"extended_weight": "2 lb"
-					},
-					"categories": [
-						"AmmoType:Arrow",
-						"Ammunition",
-						"Missile Weapon"
-					]
-				}
-			]
-		},
-		{
-			"type": "equipment_container",
-			"id": "fdda3cc6-85ca-4dc7-8beb-3bd5f5b5fb4e",
-			"equipped": true,
-			"description": "Hip Quiver",
-			"tech_level": "0",
-			"value": "15",
-			"weight": "1 lb",
-			"reference": "B289",
-			"calc": {
-				"extended_value": "55",
-				"extended_weight": "3 lb"
-			},
-			"notes": "Holds 20 arrows or bolts",
-			"categories": [
-				"Weapon and Combat Accessories"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "fba7d963-ba6f-414e-bf43-78d5f746a8a2",
-					"equipped": true,
-					"quantity": 20,
-					"description": "Arrow - poison",
-					"tech_level": "0",
-					"value": "2",
-					"weight": "0.1 lb",
-					"reference": "B276",
-					"calc": {
-						"extended_value": "40",
-						"extended_weight": "2 lb"
-					},
-					"categories": [
-						"AmmoType:Arrow",
-						"Ammunition",
-						"Missile Weapon"
-					]
-				}
-			]
-		},
-		{
-			"type": "equipment_container",
-			"id": "bb4d6dad-baa6-4f67-a386-c518004f025b",
-			"equipped": true,
-			"description": "Hip Quiver",
-			"tech_level": "0",
-			"value": "15",
-			"weight": "1 lb",
-			"reference": "B289",
-			"calc": {
-				"extended_value": "17",
-				"extended_weight": "1.1 lb"
-			},
-			"notes": "Holds 20 arrows or bolts",
-			"categories": [
-				"Weapon and Combat Accessories"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "8151089c-c5ff-4d36-83e8-2bc2843aee6c",
-					"equipped": true,
-					"quantity": 1,
-					"description": "Arrow, Bodkin",
-					"tech_level": "3",
-					"value": "2",
-					"weight": "0.1 lb",
-					"reference": "B277",
-					"calc": {
-						"extended_value": "2",
-						"extended_weight": "0.1 lb"
-					},
-					"notes": "Changes damage to piercing with armor divisor of (2).",
-					"categories": [
-						"AmmoType:Arrow",
-						"Ammunition",
-						"Missile Weapon"
-					]
-				}
-			]
 		}
 	],
 	"notes": [
@@ -3357,7 +3358,7 @@
 		{
 			"type": "note",
 			"id": "650866f2-9af9-4952-b97e-4c72e6802919",
-			"text": "Character points\n- reste 9 pts avant épisode 11"
+			"text": "Character points\n- reste 1+4+4+3 pts avant épisode 15\n- 8 ajouté en two-handed sword avant éisode 15"
 		}
 	],
 	"calc": {

@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Jun 17, 2022, 9:53 PM",
+	"modified_date": "Dec 9, 2022, 8:04 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -2080,6 +2080,37 @@
 		},
 		{
 			"type": "skill",
+			"id": "258d0c99-030a-4a41-8b01-38b0fc0d9cf4",
+			"name": "Climbing",
+			"reference": "B183",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 12,
+				"rsl": "DX-1"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Athletic",
+				"Criminal/Street",
+				"Outdoor/Exploration"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "a56c9c38-4915-4a26-a4ff-314036ed69cf",
 			"name": "Crossbow",
 			"reference": "B186",
@@ -2873,6 +2904,41 @@
 		},
 		{
 			"type": "skill",
+			"id": "4ba6951a-573b-428c-9fd7-b00d0d588430",
+			"name": "Stealth",
+			"reference": "B222",
+			"encumbrance_penalty_multiplier": 1,
+			"difficulty": "dx/a",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 13,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "dx",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Criminal/Street",
+				"Police",
+				"Spy"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "99d73438-7dcf-4687-8dba-24a16cd035ae",
 			"name": "Tactics",
 			"reference": "B224",
@@ -2987,755 +3053,9 @@
 				"Combat/Weapon",
 				"Ranged Combat"
 			]
-		},
-		{
-			"type": "skill",
-			"id": "c2f0963f-4ff8-4d33-8cb0-07c9ab408f1a",
-			"name": "Leadership",
-			"reference": "B204",
-			"difficulty": "iq/a",
-			"points": 1,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
-			"calc": {
-				"level": 9,
-				"rsl": "IQ-1"
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Military",
-				"Social"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "dde95f39-657d-47ee-bcb5-d89de214c03b",
-			"name": "Navigation",
-			"reference": "B211",
-			"specialization": "Sea",
-			"tech_level": "4",
-			"difficulty": "iq/a",
-			"points": 1,
-			"defaulted_from": {
-				"type": "skill",
-				"name": "Seamanship",
-				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
-			},
-			"calc": {
-				"level": 9,
-				"rsl": "IQ-1"
-			},
-			"defaults": [
-				{
-					"type": "skill",
-					"name": "Astronomy",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Seamanship",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Navigation",
-					"specialization": "Air",
-					"modifier": -2
-				},
-				{
-					"type": "skill",
-					"name": "Navigation",
-					"specialization": "Land",
-					"modifier": -2
-				}
-			],
-			"categories": [
-				"Outdoor/Exploration",
-				"Technical",
-				"Vehicle"
-			]
-		},
-		{
-			"type": "skill",
-			"id": "ea595d6e-ec99-4fb5-9d08-c90bb3ea78a2",
-			"name": "Shiphandling",
-			"reference": "B220",
-			"specialization": "Ship",
-			"tech_level": "4",
-			"difficulty": "iq/h",
-			"points": 1,
-			"defaulted_from": {
-				"type": "skill",
-				"name": "Seamanship",
-				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
-			},
-			"calc": {
-				"level": 8,
-				"rsl": "IQ-2"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "skill_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "seamanship"
-						}
-					},
-					{
-						"type": "skill_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "navigation"
-						},
-						"specialization": {
-							"compare": "is",
-							"qualifier": "sea"
-						}
-					},
-					{
-						"type": "skill_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "leadership"
-						}
-					}
-				]
-			},
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -6
-				},
-				{
-					"type": "skill",
-					"name": "Seamanship",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Boating",
-					"specialization": "Large Powerboat",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Boating",
-					"specialization": "Sailboat",
-					"modifier": -5
-				}
-			],
-			"categories": [
-				"Vehicle"
-			]
 		}
 	],
 	"equipment": [
-		{
-			"type": "equipment_container",
-			"id": "6e9fcefb-9e59-48fb-aa11-069840745333",
-			"equipped": true,
-			"description": "Backpack, Small",
-			"value": "60",
-			"weight": "3 lb",
-			"reference": "DFA111",
-			"calc": {
-				"extended_value": "65",
-				"extended_weight": "4 lb"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "contained_weight_prereq",
-						"has": true,
-						"qualifier": {
-							"compare": "at_most",
-							"qualifier": "40 lb"
-						}
-					}
-				]
-			},
-			"notes": "Holds 40 lbs of gear",
-			"categories": [
-				"Camping and Survival Gear"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "ea55b844-043c-4b8f-8225-1b76c0a7bbfe",
-					"equipped": true,
-					"quantity": 1,
-					"description": "Personal Basics",
-					"tech_level": "0",
-					"value": "5",
-					"weight": "1 lb",
-					"reference": "B288",
-					"calc": {
-						"extended_value": "5",
-						"extended_weight": "1 lb"
-					},
-					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
-					"categories": [
-						"Camping and Survival Gear"
-					]
-				}
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "18b9365d-e3e1-4df6-8f78-6af74a659066",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Boots",
-			"tech_level": "2",
-			"value": "80",
-			"weight": "3 lb",
-			"reference": "B284",
-			"calc": {
-				"extended_value": "80",
-				"extended_weight": "3 lb"
-			},
-			"features": [
-				{
-					"type": "dr_bonus",
-					"amount": 2,
-					"location": "foot"
-				},
-				{
-					"type": "weapon_bonus",
-					"amount": 1,
-					"selection_type": "weapons_with_name",
-					"specialization": {
-						"compare": "is",
-						"qualifier": "Kick"
-					}
-				}
-			],
-			"notes": "Flexible; Concealable",
-			"categories": [
-				"Footwear"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "40a48d1a-852a-49d0-b39f-1f49d26ab4c7",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Crossbow (ST12)",
-			"tech_level": "2",
-			"value": "225",
-			"weight": "6 lb",
-			"reference": "B276",
-			"weapons": [
-				{
-					"type": "ranged_weapon",
-					"damage": {
-						"type": "imp",
-						"base": "1d+3"
-					},
-					"strength": "12†",
-					"accuracy": "4",
-					"range": "240/300",
-					"rate_of_fire": "1",
-					"shots": "1(4)",
-					"bulk": "-6",
-					"calc": {
-						"level": 16,
-						"range": "240/300",
-						"damage": "1d+3 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Crossbow"
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "225",
-				"extended_weight": "6 lb"
-			},
-			"categories": [
-				"Missile Weapon",
-				"UsesAmmoType:Bolt"
-			]
-		},
-		{
-			"type": "equipment_container",
-			"id": "098d068f-2681-45e8-816b-344d523a0848",
-			"equipped": true,
-			"description": "Haversack",
-			"value": "30",
-			"weight": "1 lb",
-			"reference": "PY106:11",
-			"calc": {
-				"extended_value": "95",
-				"extended_weight": "6 lb"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "contained_weight_prereq",
-						"has": true,
-						"qualifier": {
-							"compare": "at_most",
-							"qualifier": "10 lb"
-						}
-					}
-				]
-			},
-			"notes": "Worn on Shoulder. Holds 10 lbs",
-			"categories": [
-				"Container"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "ed1a1ad8-04a5-4ef7-b481-273211431988",
-					"equipped": true,
-					"quantity": 1,
-					"description": "Bandages",
-					"tech_level": "0",
-					"value": "10",
-					"weight": "2 lb",
-					"reference": "B289",
-					"calc": {
-						"extended_value": "10",
-						"extended_weight": "2 lb"
-					},
-					"notes": "Bandages for a  half-dozen wounds. Might be clean cloth, adhesive dressings, or spray-on \"Plastiskin\", depending on TL. Basic equipment for First Aid skill.",
-					"categories": [
-						"Medical Gear"
-					]
-				},
-				{
-					"type": "equipment",
-					"id": "3c499e4a-187c-4848-ba00-79efa8793598",
-					"equipped": true,
-					"quantity": 1,
-					"description": "First Aid Kit",
-					"value": "50",
-					"weight": "2 lb",
-					"reference": "DFA111",
-					"calc": {
-						"extended_value": "50",
-						"extended_weight": "2 lb"
-					},
-					"notes": "+1 to First Aid",
-					"categories": [
-						"Medical Gear"
-					]
-				},
-				{
-					"type": "equipment",
-					"id": "baad81cb-27f8-4619-a76e-ca054a6a9172",
-					"equipped": true,
-					"quantity": 1,
-					"description": "Whetstone",
-					"tech_level": "1",
-					"value": "5",
-					"weight": "1 lb",
-					"reference": "B289",
-					"calc": {
-						"extended_value": "5",
-						"extended_weight": "1 lb"
-					},
-					"notes": "For sharpening tools and wapons",
-					"categories": [
-						"Tools"
-					]
-				}
-			]
-		},
-		{
-			"type": "equipment_container",
-			"id": "a791d424-be5d-4340-8d6b-353fb4947536",
-			"equipped": true,
-			"description": "Hip Quiver",
-			"tech_level": "0",
-			"value": "15",
-			"weight": "1 lb",
-			"reference": "B289",
-			"calc": {
-				"extended_value": "55",
-				"extended_weight": "2.2 lb"
-			},
-			"notes": "Holds 20 arrows or bolts",
-			"categories": [
-				"Weapon and Combat Accessories"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "d8aed464-be0f-476f-8411-d57d08cc6295",
-					"equipped": true,
-					"quantity": 20,
-					"description": "Crossbow Bolt",
-					"tech_level": "2",
-					"value": "2",
-					"weight": "0.06 lb",
-					"reference": "B276",
-					"calc": {
-						"extended_value": "40",
-						"extended_weight": "1.2 lb"
-					},
-					"categories": [
-						"AmmoType:Bolt",
-						"Ammunition",
-						"Missile Weapon"
-					]
-				}
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "8efaf4a6-23b0-4ca1-b096-5a169f39e5f9",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Large Knife",
-			"tech_level": "0",
-			"value": "40",
-			"weight": "1 lb",
-			"reference": "B272",
-			"weapons": [
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "-2"
-					},
-					"strength": "6",
-					"usage": "Swung",
-					"reach": "C,1",
-					"parry": "-1",
-					"block": "No",
-					"calc": {
-						"level": 16,
-						"parry": "11",
-						"block": "No",
-						"damage": "1d cut"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Knife"
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Main-Gauche",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr"
-					},
-					"strength": "6",
-					"usage": "Thrust",
-					"reach": "C",
-					"parry": "-1",
-					"block": "No",
-					"calc": {
-						"level": 16,
-						"parry": "11",
-						"block": "No",
-						"damage": "1d-1 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Knife"
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Main-Gauche",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					]
-				},
-				{
-					"type": "melee_weapon",
-					"damage": {
-						"type": ""
-					},
-					"usage": "Parade main gauche",
-					"reach": "C",
-					"parry": "0",
-					"block": "No",
-					"calc": {
-						"level": 18,
-						"parry": "13",
-						"block": "No",
-						"damage": ""
-					},
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Main-gauche"
-						}
-					]
-				},
-				{
-					"type": "ranged_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr"
-					},
-					"strength": "6",
-					"usage": "Thrown",
-					"accuracy": "+0",
-					"range": "x0.8/x1.5",
-					"rate_of_fire": "1",
-					"shots": "T(1)",
-					"bulk": "-2",
-					"calc": {
-						"level": 15,
-						"range": "9/18",
-						"damage": "1d-1 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Knife"
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "40",
-				"extended_weight": "1 lb"
-			},
-			"categories": [
-				"Melee Weapon",
-				"Missile Weapon"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "47303d25-9f67-4edc-bcfd-a3d4e0569da9",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Leather Gloves",
-			"tech_level": "1",
-			"value": "30",
-			"weight": "0 lb",
-			"reference": "B284",
-			"calc": {
-				"extended_value": "30",
-				"extended_weight": "0 lb"
-			},
-			"features": [
-				{
-					"type": "dr_bonus",
-					"amount": 2,
-					"location": "hand"
-				}
-			],
-			"categories": [
-				"Gloves"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "c91ee7a6-b4fa-4056-ad20-2e74e5786366",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Leather Jacket",
-			"tech_level": "1",
-			"value": "50",
-			"weight": "4 lb",
-			"reference": "B283",
-			"calc": {
-				"extended_value": "50",
-				"extended_weight": "4 lb"
-			},
-			"features": [
-				{
-					"type": "dr_bonus",
-					"amount": 1,
-					"location": "torso"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": 1,
-					"location": "vitals"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": 1,
-					"location": "arm"
-				}
-			],
-			"categories": [
-				"Body Armor"
-			]
-		},
-		{
-			"type": "equipment_container",
-			"id": "2bf4f0f9-f06e-410e-bb88-a83ffc3ade0b",
-			"equipped": true,
-			"description": "Purse, Small",
-			"tech_level": "1",
-			"value": "10",
-			"weight": "0.2 lb",
-			"reference": "B288",
-			"calc": {
-				"extended_value": "920",
-				"extended_weight": "0.56 lb"
-			},
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "contained_weight_prereq",
-						"has": true,
-						"qualifier": {
-							"compare": "at_most",
-							"qualifier": "1 lb"
-						}
-					}
-				]
-			},
-			"categories": [
-				"Camping and Survival Gear"
-			],
-			"open": true,
-			"children": [
-				{
-					"type": "equipment",
-					"id": "5072d3c2-7649-4f22-bc30-4181e4079691",
-					"equipped": true,
-					"quantity": 30,
-					"description": "Copper Farthing",
-					"tech_level": "1",
-					"value": "1",
-					"weight": "0.008 lb",
-					"reference": "B264",
-					"calc": {
-						"extended_value": "30",
-						"extended_weight": "0.24 lb"
-					},
-					"categories": [
-						"Money: GURPS Standard Medieval Coins"
-					]
-				},
-				{
-					"type": "equipment",
-					"id": "17d2bd8a-e8af-414e-90fd-9735d0679686",
-					"equipped": true,
-					"quantity": 10,
-					"description": "Gold Coin",
-					"tech_level": "1",
-					"value": "80",
-					"weight": "0.004 lb",
-					"reference": "B264",
-					"calc": {
-						"extended_value": "800",
-						"extended_weight": "0.04 lb"
-					},
-					"categories": [
-						"Money: GURPS Standard Medieval Coins"
-					]
-				},
-				{
-					"type": "equipment",
-					"id": "59595936-9409-4fc0-ad99-b867481e91f8",
-					"equipped": true,
-					"quantity": 20,
-					"description": "Silver Coin",
-					"tech_level": "1",
-					"value": "4",
-					"weight": "0.004 lb",
-					"reference": "B264",
-					"calc": {
-						"extended_value": "80",
-						"extended_weight": "0.08 lb"
-					},
-					"categories": [
-						"Money: GURPS Standard Medieval Coins"
-					]
-				}
-			]
-		},
 		{
 			"type": "equipment",
 			"id": "d0ee1482-cf5d-4abc-8b16-e4048d7a074d",
@@ -4015,6 +3335,590 @@
 			"categories": [
 				"Melee Weapon"
 			]
+		},
+		{
+			"type": "equipment",
+			"id": "8efaf4a6-23b0-4ca1-b096-5a169f39e5f9",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Large Knife",
+			"tech_level": "0",
+			"value": "40",
+			"weight": "1 lb",
+			"reference": "B272",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "-2"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "C,1",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "11",
+						"block": "No",
+						"damage": "1d cut"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"calc": {
+						"level": 16,
+						"parry": "11",
+						"block": "No",
+						"damage": "1d-1 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": ""
+					},
+					"usage": "Parade main gauche",
+					"reach": "C",
+					"parry": "0",
+					"block": "No",
+					"calc": {
+						"level": 18,
+						"parry": "13",
+						"block": "No",
+						"damage": ""
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Main-gauche"
+						}
+					]
+				},
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.8/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-2",
+					"calc": {
+						"level": 15,
+						"range": "9/18",
+						"damage": "1d-1 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "40",
+				"extended_weight": "1 lb"
+			},
+			"categories": [
+				"Melee Weapon",
+				"Missile Weapon"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "40a48d1a-852a-49d0-b39f-1f49d26ab4c7",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Crossbow (ST12)",
+			"tech_level": "2",
+			"value": "225",
+			"weight": "6 lb",
+			"reference": "B276",
+			"weapons": [
+				{
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"base": "1d+3"
+					},
+					"strength": "12†",
+					"accuracy": "4",
+					"range": "240/300",
+					"rate_of_fire": "1",
+					"shots": "1(4)",
+					"bulk": "-6",
+					"calc": {
+						"level": 16,
+						"range": "240/300",
+						"damage": "1d+3 imp"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Crossbow"
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "225",
+				"extended_weight": "6 lb"
+			},
+			"categories": [
+				"Missile Weapon",
+				"UsesAmmoType:Bolt"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "c91ee7a6-b4fa-4056-ad20-2e74e5786366",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Leather Jacket",
+			"tech_level": "1",
+			"value": "50",
+			"weight": "4 lb",
+			"reference": "B283",
+			"calc": {
+				"extended_value": "50",
+				"extended_weight": "4 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"location": "arm"
+				}
+			],
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "47303d25-9f67-4edc-bcfd-a3d4e0569da9",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Leather Gloves",
+			"tech_level": "1",
+			"value": "30",
+			"weight": "0 lb",
+			"reference": "B284",
+			"calc": {
+				"extended_value": "30",
+				"extended_weight": "0 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 2,
+					"location": "hand"
+				}
+			],
+			"categories": [
+				"Gloves"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "18b9365d-e3e1-4df6-8f78-6af74a659066",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Boots",
+			"tech_level": "2",
+			"value": "80",
+			"weight": "3 lb",
+			"reference": "B284",
+			"calc": {
+				"extended_value": "80",
+				"extended_weight": "3 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 2,
+					"location": "foot"
+				},
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					}
+				}
+			],
+			"notes": "Flexible; Concealable",
+			"categories": [
+				"Footwear"
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "2bf4f0f9-f06e-410e-bb88-a83ffc3ade0b",
+			"equipped": true,
+			"description": "Purse, Small",
+			"tech_level": "1",
+			"value": "10",
+			"weight": "0.2 lb",
+			"reference": "B288",
+			"calc": {
+				"extended_value": "920",
+				"extended_weight": "0.56 lb"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "1 lb"
+						}
+					}
+				]
+			},
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "17d2bd8a-e8af-414e-90fd-9735d0679686",
+					"equipped": true,
+					"quantity": 10,
+					"description": "Gold Coin",
+					"tech_level": "1",
+					"value": "80",
+					"weight": "0.004 lb",
+					"reference": "B264",
+					"calc": {
+						"extended_value": "800",
+						"extended_weight": "0.04 lb"
+					},
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "59595936-9409-4fc0-ad99-b867481e91f8",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Silver Coin",
+					"tech_level": "1",
+					"value": "4",
+					"weight": "0.004 lb",
+					"reference": "B264",
+					"calc": {
+						"extended_value": "80",
+						"extended_weight": "0.08 lb"
+					},
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "5072d3c2-7649-4f22-bc30-4181e4079691",
+					"equipped": true,
+					"quantity": 30,
+					"description": "Copper Farthing",
+					"tech_level": "1",
+					"value": "1",
+					"weight": "0.008 lb",
+					"reference": "B264",
+					"calc": {
+						"extended_value": "30",
+						"extended_weight": "0.24 lb"
+					},
+					"categories": [
+						"Money: GURPS Standard Medieval Coins"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "6e9fcefb-9e59-48fb-aa11-069840745333",
+			"equipped": true,
+			"description": "Backpack, Small",
+			"value": "60",
+			"weight": "3 lb",
+			"reference": "DFA111",
+			"calc": {
+				"extended_value": "65",
+				"extended_weight": "4 lb"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"notes": "Holds 40 lbs of gear",
+			"categories": [
+				"Camping and Survival Gear"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "ea55b844-043c-4b8f-8225-1b76c0a7bbfe",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Personal Basics",
+					"tech_level": "0",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B288",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
+					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "098d068f-2681-45e8-816b-344d523a0848",
+			"equipped": true,
+			"description": "Haversack",
+			"value": "30",
+			"weight": "1 lb",
+			"reference": "PY106:11",
+			"calc": {
+				"extended_value": "95",
+				"extended_weight": "6 lb"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "10 lb"
+						}
+					}
+				]
+			},
+			"notes": "Worn on Shoulder. Holds 10 lbs",
+			"categories": [
+				"Container"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "3c499e4a-187c-4848-ba00-79efa8793598",
+					"equipped": true,
+					"quantity": 1,
+					"description": "First Aid Kit",
+					"value": "50",
+					"weight": "2 lb",
+					"reference": "DFA111",
+					"calc": {
+						"extended_value": "50",
+						"extended_weight": "2 lb"
+					},
+					"notes": "+1 to First Aid",
+					"categories": [
+						"Medical Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "ed1a1ad8-04a5-4ef7-b481-273211431988",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Bandages",
+					"tech_level": "0",
+					"value": "10",
+					"weight": "2 lb",
+					"reference": "B289",
+					"calc": {
+						"extended_value": "10",
+						"extended_weight": "2 lb"
+					},
+					"notes": "Bandages for a  half-dozen wounds. Might be clean cloth, adhesive dressings, or spray-on \"Plastiskin\", depending on TL. Basic equipment for First Aid skill.",
+					"categories": [
+						"Medical Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "baad81cb-27f8-4619-a76e-ca054a6a9172",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Whetstone",
+					"tech_level": "1",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B289",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
+					"notes": "For sharpening tools and wapons",
+					"categories": [
+						"Tools"
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "a791d424-be5d-4340-8d6b-353fb4947536",
+			"equipped": true,
+			"description": "Hip Quiver",
+			"tech_level": "0",
+			"value": "15",
+			"weight": "1 lb",
+			"reference": "B289",
+			"calc": {
+				"extended_value": "55",
+				"extended_weight": "2.2 lb"
+			},
+			"notes": "Holds 20 arrows or bolts",
+			"categories": [
+				"Weapon and Combat Accessories"
+			],
+			"open": true,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "d8aed464-be0f-476f-8411-d57d08cc6295",
+					"equipped": true,
+					"quantity": 20,
+					"description": "Crossbow Bolt",
+					"tech_level": "2",
+					"value": "2",
+					"weight": "0.06 lb",
+					"reference": "B276",
+					"calc": {
+						"extended_value": "40",
+						"extended_weight": "1.2 lb"
+					},
+					"categories": [
+						"AmmoType:Bolt",
+						"Ammunition",
+						"Missile Weapon"
+					]
+				}
+			]
 		}
 	],
 	"other_equipment": [
@@ -4094,7 +3998,7 @@
 		{
 			"type": "note",
 			"id": "2ea5187c-0a10-4201-a6ee-8d8255097307",
-			"text": "character points :\n- reste 0 avant épisode 11"
+			"text": "character points :\n- reste 3 avant épisode 11"
 		}
 	],
 	"calc": {

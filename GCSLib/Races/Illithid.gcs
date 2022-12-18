@@ -1,0 +1,2866 @@
+{
+	"type": "character",
+	"version": 2,
+	"id": "f7f5287b-bc3c-47e7-b6c4-543df8afb8ba",
+	"settings": {
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "na-letter",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"full_name": "",
+				"attribute_base": "$will",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"full_name": "",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"full_name": "",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"attribute_base": "$ht",
+				"cost_per_point": 3,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"explanation": "",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "<html><body>\n<b>Roll vs. Will<\/b> to do anything besides talk or rest; failure causes unconsciousness<br>\nEach FP you lose below 0 also causes 1 HP of injury<br>\nMove, Dodge and ST are halved (B426)\n<\/body><\/html>",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Rested",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"explanation": "",
+						"multiplier": -5,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-4<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -4,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-3<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -3,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-2<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -2,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-1<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"explanation": "Move and Dodge are halved (B419)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Healthy",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			}
+		],
+		"hit_locations": {
+			"id": "humanoid",
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"slots": 0,
+					"hit_penalty": -9,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 5
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"hit_penalty": 0,
+					"dr_bonus": 0,
+					"description": "",
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"slots": 0,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0
+						}
+					}
+				}
+			]
+		}
+	},
+	"created_date": "Sep 25, 2022, 8:19 PM",
+	"modified_date": "Sep 25, 2022, 8:50 PM",
+	"profile": {
+		"player_name": "niko",
+		"name": "Illithid",
+		"eyes": "Amber",
+		"hair": "Bald",
+		"skin": "Dark Brown",
+		"handedness": "Right",
+		"height": "5' 3\"",
+		"weight": "168 lb",
+		"gender": "Hermaphrodyte",
+		"tech_level": "5"
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": -1,
+			"calc": {
+				"value": 9,
+				"points": -10
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 1,
+			"calc": {
+				"value": 11,
+				"points": 20
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 5,
+			"calc": {
+				"value": 15,
+				"points": 100
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 5.25,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 10,
+				"current": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 9,
+				"current": 9,
+				"points": 0
+			}
+		}
+	],
+	"total_points": 250,
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "f0bc8b88-3e6b-422a-bb4f-ff28ae6cd165",
+			"name": "Natural Attacks",
+			"physical": true,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"calc": {
+						"level": 11,
+						"parry": "No",
+						"block": "No",
+						"damage": "1d-3 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"calc": {
+						"level": 11,
+						"parry": "8",
+						"block": "",
+						"damage": "1d-3 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"parry": "No",
+					"calc": {
+						"level": 9,
+						"parry": "No",
+						"block": "",
+						"damage": "1d-2 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B271",
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"type": "advantage",
+			"id": "4b8babb1-f1af-45d2-b04f-4ab7192158b1",
+			"name": "Hermaphromorph",
+			"physical": true,
+			"exotic": true,
+			"base_points": 5,
+			"reference": "B59",
+			"calc": {
+				"points": 5
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "cc927c52-810e-4ff8-82cc-474b80d7eae2",
+			"name": "Lightning Calculator",
+			"mental": true,
+			"base_points": 2,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "8d2f5281-d0fe-4d7f-8cea-e6c99f840a48",
+					"disabled": true,
+					"name": "Intuitive Mathematician",
+					"reference": "B66",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total"
+				}
+			],
+			"reference": "B66",
+			"calc": {
+				"points": 2
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "b91d339f-2d0f-4d9d-883b-66b08167a337",
+			"name": "Eidetic Memory",
+			"mental": true,
+			"base_points": 5,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "3f5185d3-1bcf-4570-9aa4-9d0dd897cfc2",
+					"disabled": true,
+					"name": "Photographic",
+					"reference": "B51",
+					"cost_type": "points",
+					"cost": 5,
+					"affects": "total"
+				}
+			],
+			"reference": "B51",
+			"calc": {
+				"points": 5
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "fc7ec0f7-9c9f-4689-9965-dafa160ab24a",
+			"name": "Single-Minded",
+			"mental": true,
+			"base_points": 5,
+			"reference": "B85",
+			"calc": {
+				"points": 5
+			},
+			"features": [
+				{
+					"type": "conditional_modifier",
+					"amount": 3,
+					"situation": "to rolls for any lengthy mental task you concentrate on to the exclusion of other activities, if the GM feels such focus would be beneficial"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": -5,
+					"situation": "to all rolls to notice interruptions while obsessed with a task"
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "2217d40d-f9ad-4a34-8604-05c85f8ac6d4",
+			"name": "Fangs",
+			"physical": true,
+			"exotic": true,
+			"base_points": 2,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"calc": {
+						"level": 11,
+						"parry": "No",
+						"block": "No",
+						"damage": "1d-3 imp"
+					},
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "dx"
+						}
+					]
+				}
+			],
+			"reference": "B91",
+			"calc": {
+				"points": 2
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "4a394195-ec6c-4b51-a85b-b4e6a65edf4b",
+			"name": "Night Vision",
+			"physical": true,
+			"levels": "10",
+			"points_per_level": 1,
+			"reference": "B71,P87",
+			"calc": {
+				"points": 10
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6ba4f3df-0f56-4fe0-80af-2c3637f3d85e",
+			"name": "Doesn't Breathe",
+			"physical": true,
+			"exotic": true,
+			"base_points": 20,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "5bbd8aaa-4763-4ffb-8403-b1154488d454",
+					"name": "Gills",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "92f428ae-04e4-4bf2-b8c5-8e2f9affcded",
+					"disabled": true,
+					"name": "Gills",
+					"reference": "B49",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"notes": "Suffocates in air"
+				},
+				{
+					"type": "modifier",
+					"id": "b40b4278-60e9-4428-b421-b06bc873a5aa",
+					"disabled": true,
+					"name": "Oxygen Absorption",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "2a2d3953-1597-4c45-b2d3-3efa227e1fd3",
+					"disabled": true,
+					"name": "Oxygen Storage",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "Can hold breath 25 times as long as normal"
+				},
+				{
+					"type": "modifier",
+					"id": "bb4fe004-c4ab-4b0a-82fc-19ba4777ca5f",
+					"disabled": true,
+					"name": "Oxygen Storage",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total",
+					"notes": "Can hold breath 50 times as long as normal"
+				},
+				{
+					"type": "modifier",
+					"id": "34f04899-7455-40d1-a8f2-acf1fa394703",
+					"disabled": true,
+					"name": "Oxygen Storage",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -30,
+					"affects": "total",
+					"notes": "Can hold breath 100 times as long as normal"
+				},
+				{
+					"type": "modifier",
+					"id": "2b8843bb-5423-4792-8ffe-74a98ae42036",
+					"disabled": true,
+					"name": "Oxygen Storage",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "Can hold breath 200 times as long as normal"
+				},
+				{
+					"type": "modifier",
+					"id": "15048599-39f7-451d-ada5-b7abcdf2198a",
+					"disabled": true,
+					"name": "Oxygen Storage",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"notes": "Can hold breath 300 times as long as normal"
+				},
+				{
+					"type": "modifier",
+					"id": "0b445292-7050-4540-b178-731bf9eee016",
+					"disabled": true,
+					"name": "Oxygen Combustion",
+					"reference": "B49",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				}
+			],
+			"reference": "B49",
+			"calc": {
+				"points": 10
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "bfa80f50-6e72-4798-b656-5674ad16b9ab",
+			"name": "Nictitating Membrane",
+			"physical": true,
+			"exotic": true,
+			"levels": "5",
+			"points_per_level": 1,
+			"reference": "B71",
+			"calc": {
+				"points": 5
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "eye"
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6e7270bd-276e-4d5f-9c1c-73f7cd02d2fa",
+			"name": "Racial Memory",
+			"mental": true,
+			"exotic": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "51b96475-d9dd-4f4c-90e9-f2fa5d456bee",
+					"disabled": true,
+					"name": "Passive",
+					"reference": "B78",
+					"cost_type": "points",
+					"cost": 15,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a62b6453-7a34-4272-aefb-e8de81cbe1a2",
+					"disabled": true,
+					"name": "Active",
+					"reference": "B78",
+					"cost_type": "points",
+					"cost": 40,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "fd90f686-976b-4cb0-aaf5-e7b4cc0cf620",
+					"disabled": true,
+					"name": "Immersive",
+					"reference": "P70",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				}
+			],
+			"reference": "B78,P70",
+			"calc": {
+				"points": 0
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "46856036-60ef-445b-96ba-40d94ff89582",
+			"name": "Affliction",
+			"physical": true,
+			"exotic": true,
+			"levels": "1",
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "2aa4dca3-b1fe-42df-bdaf-edf8bc9ffe0a",
+					"disabled": true,
+					"name": "Advantage; one point per level",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "0feddd13-0f00-4ac9-a38d-21ddafec568d",
+					"disabled": true,
+					"name": "Atribute Penalty; -1 to ST or HT per level",
+					"cost_type": "percentage",
+					"cost": 5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "0c795354-dc79-43ee-b8a4-5ffced37d27b",
+					"disabled": true,
+					"name": "Atribute Penalty; -1 to DX or IQ per level",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "fa73cd2e-e402-4e51-a586-a15020a7c962",
+					"disabled": true,
+					"name": "Mortal Condition; Coma",
+					"cost_type": "percentage",
+					"cost": 250,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "0c4d87eb-aff1-4aa8-b848-5e8a13c4b244",
+					"disabled": true,
+					"name": "Mortal Condition; Heart Attack",
+					"cost_type": "percentage",
+					"cost": 300,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "b12c73d0-2058-459a-83a6-2c8006dfcd1a",
+					"disabled": true,
+					"name": "Disadvantage; one point per level",
+					"cost_type": "percentage",
+					"cost": 1,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "5dd89e63-a59b-4a1a-b66c-d4f705eed04a",
+					"disabled": true,
+					"name": "Incapacitating Condition; Daze",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "0e37ad41-f932-4b68-ba5d-ad78e7693c96",
+					"disabled": true,
+					"name": "Incapacitating Condition; Hallucination",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "9c01c340-81a2-45a3-87bf-a513f08d67eb",
+					"disabled": true,
+					"name": "Incapacitating Condition; Retching",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "630f9452-ec75-4c5b-99dc-babe0804c6cd",
+					"disabled": true,
+					"name": "Incapacitating Condition; Agony",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "00b31910-6dce-4294-a172-a8040c8f3179",
+					"disabled": true,
+					"name": "Incapacitating Condition; Choking",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "c74a921b-0650-4863-bed1-34828d9a45f5",
+					"disabled": true,
+					"name": "Incapacitating Condition; Ecstasy",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "c29931b3-c271-4773-a35f-da3b15ceebb3",
+					"disabled": true,
+					"name": "Incapacitating Condition; Seizure",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "ba48f0b8-0452-4237-8fa1-c458807f9d1c",
+					"disabled": true,
+					"name": "Incapacitating Condition; Paralysis",
+					"cost_type": "percentage",
+					"cost": 150,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "8fb8ad83-99bd-4d47-a1d0-3b649f81cdc8",
+					"disabled": true,
+					"name": "Incapacitating Condition; Sleep",
+					"cost_type": "percentage",
+					"cost": 150,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "fcf7b4a9-fd81-4133-8ad8-bcabe172d90d",
+					"disabled": true,
+					"name": "Incapacitating Condition; Unconsciousness",
+					"cost_type": "percentage",
+					"cost": 200,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "8db05f41-d6d3-4a6f-9e7b-b667a05aae02",
+					"disabled": true,
+					"name": "Irritating Condition; Tipsy",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d316a970-264b-4e62-b1a4-d14288a9ec00",
+					"disabled": true,
+					"name": "Irritating Condition; Coughing",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "35d2e025-e84b-4329-b6f9-bed2c8f4e57e",
+					"disabled": true,
+					"name": "Irritating Condition; Drunk",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "8a9ad801-63c9-48d8-b78e-495c525a81ac",
+					"disabled": true,
+					"name": "Irritating Condition; Moderate Pain",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "ae808c01-2608-4262-b6ce-a63c03f6e1c5",
+					"disabled": true,
+					"name": "Irritating Condition; Euphoria",
+					"cost_type": "percentage",
+					"cost": 30,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f9fb2d30-6f0c-42b9-9b64-c0cf8e9c2735",
+					"disabled": true,
+					"name": "Irritating Condition; Nauseated",
+					"cost_type": "percentage",
+					"cost": 30,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "cf1a7d5b-21e3-4bbe-8b36-295d9d894ed2",
+					"disabled": true,
+					"name": "Irritating Condition; Severe Pain",
+					"cost_type": "percentage",
+					"cost": 40,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "99da54f6-94a0-449b-b1e9-569fe9cc1faa",
+					"disabled": true,
+					"name": "Irritating Condition; Terrible Pain",
+					"cost_type": "percentage",
+					"cost": 60,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "bd707ebf-e1b0-4779-a238-c86b517e7819",
+					"disabled": true,
+					"name": "Negated Advantage; one point per level",
+					"cost_type": "percentage",
+					"cost": 1,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "84cb16d1-c9c8-4eed-8714-b4f6d22f1895",
+					"disabled": true,
+					"name": "Stunning",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "38a4cde7-6607-4a88-a811-020ce0804f7f",
+					"disabled": true,
+					"name": "Cumulative",
+					"cost_type": "percentage",
+					"cost": 400,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "70c96b42-4dbb-4017-9a4e-042f298432d5",
+					"disabled": true,
+					"name": "Cancellation",
+					"reference": "PSI13",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "84a6885e-53bd-4242-9b58-072c9c761bf9",
+					"name": "Incapacitation Condition : deafness",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f378613a-f6ef-4266-b396-35706b1b3d9d",
+					"name": "Emanation",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "7fe597a0-374a-44c3-b177-90215b0fe8f0",
+					"name": "Sense-Based (Hearing)",
+					"reference": "B109",
+					"cost_type": "percentage",
+					"cost": 150,
+					"affects": "total",
+					"notes": "Manually add +50% for each sense beyond the first"
+				},
+				{
+					"type": "modifier",
+					"id": "b93e134a-9288-477b-81af-447c776fcf9c",
+					"name": "Area Effect",
+					"reference": "B102,P100",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total",
+					"levels": 1,
+					"notes": "2^level radius"
+				}
+			],
+			"reference": "B35,P39,PSI13",
+			"calc": {
+				"points": 30
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6d2e77b2-6e1d-43d8-89a3-12ed4d91e0a6",
+			"name": "Magery",
+			"mental": true,
+			"supernatural": true,
+			"levels": "3",
+			"base_points": 5,
+			"points_per_level": 10,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "535f1a81-70a4-4865-a70c-76bded270ce0",
+					"disabled": true,
+					"name": "Dance",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "852f7ba4-b340-4ace-98e2-ac9a0a2d90a8",
+					"disabled": true,
+					"name": "Dark-Aspected",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "d06a0fea-abd3-4e51-b987-c7c262d80782",
+					"disabled": true,
+					"name": "Day-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "cbd38197-f341-46d1-a167-e4ae638c0454",
+					"disabled": true,
+					"name": "Musical",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "a5d655d1-e97f-45b6-9733-e867a9bfccc5",
+					"disabled": true,
+					"name": "Night-Aspected",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "39a53596-eebe-4cf1-84e5-277baa164885",
+					"disabled": true,
+					"name": "One College",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only",
+					"notes": "@College@"
+				},
+				{
+					"type": "modifier",
+					"id": "7bdb67f0-5681-44dd-9bb1-46f87c0986e0",
+					"disabled": true,
+					"name": "Solitary",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				},
+				{
+					"type": "modifier",
+					"id": "1e9c65d9-f720-4d86-8a61-3baf55797822",
+					"disabled": true,
+					"name": "Song",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "levels_only"
+				}
+			],
+			"reference": "B66",
+			"calc": {
+				"points": 35
+			},
+			"features": [
+				{
+					"type": "spell_bonus",
+					"amount": 1,
+					"per_level": true,
+					"match": "all_colleges"
+				},
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "thaumatology"
+					}
+				}
+			],
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "ed07def3-d4b0-41d8-84cf-52949e54472d",
+			"name": "Mind Shield",
+			"mental": true,
+			"exotic": true,
+			"levels": "10",
+			"points_per_level": 4,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "71f6aea1-66cb-4472-a9aa-0c91674ad37a",
+					"disabled": true,
+					"name": "Cybernetic",
+					"reference": "B70",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "747d8a1c-eebc-41cc-a584-41930932f4ef",
+					"disabled": true,
+					"name": "Limited",
+					"reference": "P62",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "@Source@"
+				},
+				{
+					"type": "modifier",
+					"id": "68e0f2fc-15cb-493a-9691-cede57bc6452",
+					"disabled": true,
+					"name": "Limited",
+					"reference": "P62",
+					"cost_type": "percentage",
+					"cost": -75,
+					"affects": "total",
+					"notes": "@Power/College/Focus@"
+				},
+				{
+					"type": "modifier",
+					"id": "0f273f52-b26d-48a3-ad25-56588594860c",
+					"disabled": true,
+					"name": "Lockdown",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d4181795-fc44-4b57-a123-ba38acd959cc",
+					"disabled": true,
+					"name": "Profiling",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "95d63759-83f1-401d-bcb2-ab7570494cef",
+					"disabled": true,
+					"name": "Reflection",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "96f4f705-752d-4236-8ce2-0a12f06e08d7",
+					"disabled": true,
+					"name": "Active",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f61ed92b-5e8e-4897-b37e-3c5bd74518cc",
+					"disabled": true,
+					"name": "Always On",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "073e077a-535b-4738-8e8d-58a6163a4b7d",
+					"disabled": true,
+					"name": "Feedback",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "9a67fca2-2a26-4ec4-9e6c-54c5bbedef9c",
+					"disabled": true,
+					"name": "Feedback",
+					"reference": "PSI15",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "With Always On"
+				}
+			],
+			"reference": "B70,P62,PSI15",
+			"calc": {
+				"points": 40
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "808c9bb5-5bbc-495c-8561-a8cabcb50202",
+			"name": "Mental Blow",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "fd542162-ec50-4bbe-869b-a18b3ba0b322",
+					"disabled": true,
+					"name": "Mental Blow_1",
+					"cost_type": "points",
+					"cost": 17,
+					"affects": "total",
+					"notes": "Skin-to-skin contact"
+				},
+				{
+					"type": "modifier",
+					"id": "2566b748-03b8-4379-863f-6b1eb658f436",
+					"disabled": true,
+					"name": "Mental Blow_2",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"notes": "Any touch will suffice"
+				},
+				{
+					"type": "modifier",
+					"id": "f4e31ee4-5815-441f-a9bf-e06d529d63b1",
+					"disabled": true,
+					"name": "Mental Blow_3",
+					"cost_type": "points",
+					"cost": 23,
+					"affects": "total",
+					"notes": "Mental Blow at range; -1 penalty/yard distance"
+				},
+				{
+					"type": "modifier",
+					"id": "3d37e796-c328-4efd-9e95-b1a129db1bf6",
+					"disabled": true,
+					"name": "Mental Blow_4",
+					"reference": "BX550",
+					"cost_type": "points",
+					"cost": 28,
+					"affects": "total",
+					"notes": "Use range penalties p. B550"
+				},
+				{
+					"type": "modifier",
+					"id": "1a14eac4-f5ed-45d3-9d60-241318dc460e",
+					"disabled": true,
+					"name": "Mental Blow_5",
+					"reference": "B241",
+					"cost_type": "points",
+					"cost": 33,
+					"affects": "total",
+					"notes": "Use long-distance modifiers p. B241"
+				},
+				{
+					"type": "modifier",
+					"id": "f7f5bf6b-5fee-4f5f-9c23-da70f4f48beb",
+					"name": "Mental Blow_6",
+					"cost_type": "points",
+					"cost": 38,
+					"affects": "total",
+					"notes": "No penalty for range"
+				}
+			],
+			"reference": "PSI65",
+			"calc": {
+				"points": 38
+			},
+			"notes": "Offense ability. Overload someone's brain with a psychic attack. ",
+			"categories": [
+				"Communication",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "799af4d4-95f7-49a5-adc7-20390a43ea78",
+			"name": "Steal Energy",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "3431b91e-7c11-43cf-b154-1fd664db9e6f",
+					"disabled": true,
+					"name": "Steal Energy_1",
+					"cost_type": "points",
+					"cost": 32,
+					"affects": "total",
+					"notes": "30 seconds"
+				},
+				{
+					"type": "modifier",
+					"id": "2a9cf223-5859-4361-ad85-068fe9853eae",
+					"disabled": true,
+					"name": "Steal Energy_2",
+					"cost_type": "points",
+					"cost": 34,
+					"affects": "total",
+					"notes": "15 seconds"
+				},
+				{
+					"type": "modifier",
+					"id": "ba47c715-39ab-4776-97c4-f370be979765",
+					"disabled": true,
+					"name": "Steal Energy_3",
+					"cost_type": "points",
+					"cost": 37,
+					"affects": "total",
+					"notes": "8 seconds"
+				},
+				{
+					"type": "modifier",
+					"id": "8b072816-37c1-4c16-9b6f-85ec82a075d2",
+					"disabled": true,
+					"name": "Steal Energy_4",
+					"cost_type": "points",
+					"cost": 39,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a9431f3c-108b-4c32-88e2-00eafc8adf99",
+					"disabled": true,
+					"name": "Steal Energy_5",
+					"cost_type": "points",
+					"cost": 42,
+					"affects": "total",
+					"notes": "4 seconds"
+				},
+				{
+					"type": "modifier",
+					"id": "9b16790f-becd-46d8-a424-cde1a35a7084",
+					"name": "Steal Energy_6",
+					"cost_type": "points",
+					"cost": 44,
+					"affects": "total",
+					"notes": "1 second"
+				}
+			],
+			"reference": "PSI51",
+			"calc": {
+				"points": 44
+			},
+			"notes": "Psychic vampirism ability. Rob someone of their FP to replenish your own. ",
+			"categories": [
+				"Psionics",
+				"Psychic Vampirism"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "a2788f3e-7838-45b0-aaf7-396c67d360b1",
+			"name": "Odious Personal Habit",
+			"physical": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "9ddf39b4-92d7-4937-8911-6825ba87255f",
+					"disabled": true,
+					"name": "-1 Reaction",
+					"reference": "B22",
+					"cost_type": "points",
+					"cost": -5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "3941a50c-a447-4c4b-b5be-f4cdf7b36e71",
+					"disabled": true,
+					"name": "-2 Reaction",
+					"reference": "B22",
+					"cost_type": "points",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "5723ec3d-aad6-4eb6-81ce-dac0d27e1f7a",
+					"disabled": true,
+					"name": "-3 Reaction",
+					"reference": "B22",
+					"cost_type": "points",
+					"cost": -15,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "bda2f620-a5d3-4c5a-b451-989477ef6cf5",
+					"name": "-4 reaction",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -4,
+							"situation": "from others as brain eater"
+						}
+					]
+				}
+			],
+			"reference": "B22",
+			"calc": {
+				"points": -20
+			},
+			"notes": "brain heater",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "2ee26930-85ad-4bc5-9954-fe99b5e61582",
+			"name": "Low Pain Threshold",
+			"physical": true,
+			"base_points": -10,
+			"reference": "B142",
+			"calc": {
+				"points": -10
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "high pain threshold"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -1,
+					"situation": "from \"macho\" individuals"
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": -4,
+					"situation": "to resist knockdown, stunning, and physical torture"
+				}
+			],
+			"notes": "Double the shock from any injury. Whenever you take a wound that does more than 1 HP of damage, you must make a Will roll to avoid crying out.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "bfc9abc3-91dd-407e-8be9-b1c4868c6e42",
+			"name": "Skinny",
+			"physical": true,
+			"base_points": -5,
+			"reference": "B18",
+			"calc": {
+				"points": -5
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "attribute_prereq",
+						"has": true,
+						"which": "ht",
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": 14
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": -2,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "disguise"
+					}
+				},
+				{
+					"type": "skill_bonus",
+					"amount": -2,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "shadowing"
+					}
+				},
+				{
+					"type": "conditional_modifier",
+					"amount": -2,
+					"situation": "to ST vs. knockback"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "9741fe2e-0707-412b-96e5-aa1cd37e29bd",
+			"name": "Cowardice",
+			"mental": true,
+			"base_points": -10,
+			"cr": 12,
+			"reference": "B129",
+			"calc": {
+				"points": -10
+			},
+			"notes": "Make a self-control roll any time you are called on to risk physical danger. Roll at -5 if you must risk death.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "a150c18f-959b-41cc-8b4d-163813b9ca37",
+			"name": "Greed",
+			"mental": true,
+			"base_points": -15,
+			"cr": 12,
+			"reference": "B137",
+			"calc": {
+				"points": -15
+			},
+			"notes": "Make a self-control roll any time riches are offered – as payment for fair work, gains from adventure, spoils of crime, or just bait. If you fail, you do whatever it takes to get the payoff.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "98e6ecb3-4d3a-4a69-963e-3c0211825285",
+			"name": "Intolerance (all others)",
+			"mental": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "175eb077-3b42-4f5a-8ba9-e9da939ac9e0",
+					"disabled": true,
+					"name": "Scope: Common",
+					"reference": "B140",
+					"cost_type": "points",
+					"cost": -5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "5cf5cc8d-7fc2-46b4-af5c-147120d0931a",
+					"disabled": true,
+					"name": "Scope: Occasional",
+					"reference": "B140",
+					"cost_type": "points",
+					"cost": -2,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "b103eda2-3673-4832-b96c-985bbfa2dee9",
+					"disabled": true,
+					"name": "Scope: Rare",
+					"reference": "B140",
+					"cost_type": "points",
+					"cost": -1,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "12028591-dfca-4a05-a1ee-5f413d67cef4",
+					"name": "Scope: Anyone unlike you",
+					"reference": "B140",
+					"cost_type": "points",
+					"cost": -10,
+					"affects": "total"
+				}
+			],
+			"reference": "B140",
+			"calc": {
+				"points": -10
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -1,
+					"situation": "from victims of your intolerance (may be as much as -5, at GM's discretion)"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "c406b5fa-528d-4a92-9f1b-7e63cf0d2f1e",
+			"name": "Jealousy",
+			"mental": true,
+			"base_points": -10,
+			"reference": "B140",
+			"calc": {
+				"points": -10
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -2,
+					"situation": "toward those you are jealous of (may be as much as -4, at GM's discretion)"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "16257edc-8a66-478c-80f1-8122280c0670",
+			"name": "Megalomania",
+			"mental": true,
+			"base_points": -10,
+			"reference": "B144",
+			"calc": {
+				"points": -10
+			},
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "1bb1b827-7782-4676-83e7-4b11c9eb3753",
+			"name": "Paranoia",
+			"mental": true,
+			"base_points": -10,
+			"reference": "B148",
+			"calc": {
+				"points": -10
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -2,
+					"situation": "from others"
+				},
+				{
+					"type": "reaction_bonus",
+					"amount": -4,
+					"situation": "toward any stranger and any “legitimate” reaction penalty (e.g., for an unfriendly race or nationality) is doubled"
+				}
+			],
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6a33c4c7-8e1a-47ed-8222-1c1e6df71fd7",
+			"name": "Sadism",
+			"mental": true,
+			"base_points": -15,
+			"cr": 12,
+			"reference": "B152",
+			"calc": {
+				"points": -15
+			},
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"amount": -3,
+					"situation": "from those who become aware of your Sadism unless they are from a culture that holds life in little esteem"
+				}
+			],
+			"notes": "Make a self-control roll whenever you have an opportunity to indulge your desires and know you shouldn’t (e.g., because the prisoner is one who should be released unharmed). If you fail, you cannot restrain yourself.",
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "dfe8de1b-e256-4abc-be43-1e58fa298d9c",
+			"name": "Appearance",
+			"physical": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "c48cda86-5cb1-4e69-b66e-f3a3a9f37d87",
+					"disabled": true,
+					"name": "Attractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "84f08ac8-eee7-4082-9c64-ba07ead7ba59",
+					"disabled": true,
+					"name": "Average",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "5a997044-e5cf-4210-8496-6f549c93bb75",
+					"disabled": true,
+					"name": "Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "6d83e748-c555-48c3-823a-75a78e2b6043",
+					"disabled": true,
+					"name": "Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "82bfe121-d0a1-4643-99f6-74073600c75e",
+					"disabled": true,
+					"name": "Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "c6b30e7f-8138-4c22-9cda-8aea742a7b27",
+					"disabled": true,
+					"name": "Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from those attracted to members of your sex, +2 from everyone else"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "361d73c1-f8e6-4549-9c44-fe6f68064199",
+					"disabled": true,
+					"name": "Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "47cffd1b-4f82-4d23-ae9e-1348484acac5",
+					"disabled": true,
+					"name": "Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 12,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 3,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "c1359a33-19c5-41b4-bad8-004419faf43f",
+					"name": "Hideous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "1b7ccf19-5cff-4b4a-89b3-c28bdca550b3",
+					"disabled": true,
+					"name": "Horrific",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -24,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -6,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "4a12de60-a4a9-4c73-a960-0bd2e44fb590",
+					"disabled": true,
+					"name": "Impressive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "cfa282fa-73d8-442d-84b7-a965d5d03524",
+					"disabled": true,
+					"name": "Monstrous",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "738db21a-1a1f-4afd-8a77-5dddff53d8dd",
+					"disabled": true,
+					"name": "Off-the-Shelf Looks",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "Halves the usual reaction bonus - adjust manually"
+				},
+				{
+					"type": "modifier",
+					"id": "76f5500b-723d-4cb8-9cfa-032f732ae7d7",
+					"disabled": true,
+					"name": "Transcendent",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 8,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "dd933b42-e7a2-4ae9-8db1-a19be14d2f73",
+					"disabled": true,
+					"name": "Transcendent (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "2b3b3f4b-d98f-49b4-8900-431f7019ea43",
+					"disabled": true,
+					"name": "Transcendent (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 20,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 5,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "1cd04f4b-66f4-4af0-acaa-ee0ddae9ff63",
+					"disabled": true,
+					"name": "Ugly",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -8,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -2,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "ccfc8905-7650-4817-b100-7ddf608f7fbc",
+					"disabled": true,
+					"name": "Unattractive",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": -4,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "9003230f-d488-47b6-b88a-1b8bd248a728",
+					"disabled": true,
+					"name": "Universal",
+					"reference": "B21",
+					"cost_type": "percentage",
+					"cost": 25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "31b3c0bb-d2e5-457e-b1e8-2b97b0adad6f",
+					"disabled": true,
+					"name": "Very Beautiful",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "8453e1ad-ac56-4d48-86d6-b602b6d50167",
+					"disabled": true,
+					"name": "Very Beautiful (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "2607c6e4-178a-4de9-9768-c46451dbccf7",
+					"disabled": true,
+					"name": "Very Beautiful (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "21836077-1a53-42e6-88a5-4b5bc7a37a1d",
+					"disabled": true,
+					"name": "Very Handsome",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 6,
+							"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead."
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "a7ee4c23-0c8f-41b4-b7e9-fe96821f29b7",
+					"disabled": true,
+					"name": "Very Handsome (Androgynous)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				},
+				{
+					"type": "modifier",
+					"id": "a9b01dc8-fcca-4695-ace3-38947eb41576",
+					"disabled": true,
+					"name": "Very Handsome (Impressive)",
+					"reference": "B21",
+					"cost_type": "points",
+					"cost": 16,
+					"affects": "total",
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": 4,
+							"situation": "from others"
+						}
+					]
+				}
+			],
+			"reference": "B21",
+			"calc": {
+				"points": -16
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "031ef1f7-84e0-4ed0-8d7b-e938640039a5",
+			"name": "Weakness",
+			"physical": true,
+			"exotic": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "9c736b30-e990-4bdf-b921-fd234092bd47",
+					"disabled": true,
+					"name": "1d damage per minute",
+					"reference": "B161",
+					"cost_type": "points",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "e0f2d7f7-69e6-46eb-829c-ec56bcadeaaf",
+					"name": "1d damage per 5 minutes",
+					"reference": "B161",
+					"cost_type": "points",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "6e4849be-a2cd-4b5c-8295-67290fdafcb9",
+					"name": "1d damage per 30 minutes",
+					"reference": "B161",
+					"cost_type": "points",
+					"cost": -5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "6f609cc1-90cb-48ec-864b-bbdec1b5b209",
+					"disabled": true,
+					"name": "@Rare Substance@",
+					"reference": "B161",
+					"cost_type": "multiplier",
+					"cost": 0.5
+				},
+				{
+					"type": "modifier",
+					"id": "ca09195b-5a91-4533-9921-6653c11589d5",
+					"disabled": true,
+					"name": "@Occasional Substance@",
+					"reference": "B161",
+					"cost_type": "multiplier",
+					"cost": 1
+				},
+				{
+					"type": "modifier",
+					"id": "f8816fa5-d845-4017-97fd-c332986abcd1",
+					"name": "sun",
+					"reference": "B161",
+					"cost_type": "multiplier",
+					"cost": 2
+				},
+				{
+					"type": "modifier",
+					"id": "a417c4a5-e7b9-4a7e-8a99-aedff7c63d10",
+					"disabled": true,
+					"name": "@Very Common Substance@",
+					"reference": "B161",
+					"cost_type": "multiplier",
+					"cost": 3
+				},
+				{
+					"type": "modifier",
+					"id": "29b51f3f-cfda-468f-b2b9-c7991b2773f0",
+					"disabled": true,
+					"name": "Fatigue Only",
+					"reference": "B161",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "5785d931-07a5-43c6-befe-537453ad3ac9",
+					"disabled": true,
+					"name": "Variable",
+					"reference": "B161",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total"
+				}
+			],
+			"reference": "B161",
+			"calc": {
+				"points": -30
+			},
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "c7696f0b-04b1-4127-af63-d8480ccbebf2",
+			"name": "High TL",
+			"mental": true,
+			"levels": "1",
+			"points_per_level": 5,
+			"reference": "B23",
+			"calc": {
+				"points": 5
+			},
+			"categories": [
+				"Advantage"
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill",
+			"id": "a8b26636-e4b4-4bb9-bec8-f127c7abbedd",
+			"name": "Innate Attack",
+			"reference": "B201",
+			"specialization": "Beam",
+			"difficulty": "dx/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 11,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Innate Attack",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Ranged Combat"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "bdfdc462-1fa4-4c98-954e-1fc9606af48b",
+			"name": "Mental Blow",
+			"reference": "PSI65",
+			"difficulty": "will/h",
+			"points": 16,
+			"defaulted_from": {
+				"type": "will",
+				"modifier": -6,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 18,
+				"rsl": "Will+3"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Mental Blow"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Offense",
+				"Psionics",
+				"Telepathy"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "7ce06b9a-ac60-488c-8e51-e74cdaf5595a",
+			"name": "Steal Energy",
+			"reference": "PSI51",
+			"difficulty": "will/h",
+			"points": 16,
+			"defaulted_from": {
+				"type": "will",
+				"modifier": -6,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 18,
+				"rsl": "Will+3"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Steal Energy"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"categories": [
+				"Psionics",
+				"Psychic Vampirism"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "b215a41e-99fb-4f61-b13f-93e1f4111bf8",
+			"name": "Brawling",
+			"reference": "B182,MA55",
+			"difficulty": "dx/e",
+			"points": 1,
+			"calc": {
+				"level": 11,
+				"rsl": "DX+0"
+			},
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Brawling"
+					},
+					"level": {
+						"compare": "at_least",
+						"qualifier": 2
+					}
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		}
+	],
+	"calc": {
+		"swing": "1d-1",
+		"thrust": "1d-2",
+		"basic_lift": "16 lb",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			5,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			8,
+			7,
+			6,
+			5,
+			4
+		],
+		"dodge_bonus": 0,
+		"block_bonus": 0,
+		"parry_bonus": 0
+	}
+}
