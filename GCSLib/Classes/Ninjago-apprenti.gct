@@ -1,0 +1,341 @@
+{
+	"type": "template",
+	"version": 4,
+	"id": "7e8773ce-30e2-4021-8ece-1edcfb7de41f",
+	"skills": [
+		{
+			"id": "7d7b8f39-21b4-4a96-a1e8-0cf585bd9ffc",
+			"type": "skill",
+			"name": "Acrobatics",
+			"reference": "B174,MA54",
+			"tags": [
+				"Athletic"
+			],
+			"difficulty": "dx/h",
+			"points": 1,
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Aerobatics",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Aquabatics",
+					"modifier": -4
+				}
+			]
+		},
+		{
+			"id": "5fd9ba3d-9593-447f-9e50-7768a8bdaa38",
+			"type": "skill",
+			"name": "Judo",
+			"reference": "B203,MA57",
+			"notes": "Allows parrying two different attacks per turn, one with each hand.",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/h",
+			"points": 1,
+			"encumbrance_penalty_multiplier": 1
+		},
+		{
+			"id": "91d11ba4-e625-4d7d-b887-7ac26d679e3f",
+			"type": "skill",
+			"name": "Karate",
+			"reference": "B203,MA57",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/h",
+			"points": 1,
+			"encumbrance_penalty_multiplier": 1,
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Karate"
+					},
+					"level": {
+						"compare": "at_least"
+					},
+					"amount": 1,
+					"per_level": true
+				},
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Karate"
+					},
+					"level": {
+						"compare": "at_least",
+						"qualifier": 1
+					},
+					"amount": 1,
+					"per_level": true
+				}
+			]
+		},
+		{
+			"id": "a44350a9-16c3-4600-8c95-d4453e72ac8f",
+			"type": "skill",
+			"name": "Combat Art",
+			"reference": "B184,MA55",
+			"tags": [
+				"Athletic"
+			],
+			"specialization": "Karate",
+			"difficulty": "dx/h",
+			"points": 1,
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Karate",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Combat Sport",
+					"specialization": "Karate",
+					"modifier": -3
+				},
+				{
+					"type": "dx",
+					"modifier": -6
+				}
+			]
+		},
+		{
+			"id": "9f756c67-62cd-40e0-8567-1242d474517e",
+			"type": "skill",
+			"name": "Savoir-Faire",
+			"reference": "B218,MA59",
+			"tags": [
+				"Knowledge",
+				"Social"
+			],
+			"specialization": "Dojo",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Games",
+					"modifier": -3
+				}
+			]
+		},
+		{
+			"id": "2ca59230-0faa-4530-8a12-e9086b9aa692",
+			"type": "technique",
+			"name": "Arm Lock",
+			"reference": "B230,MA65",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Judo"
+			},
+			"limit": 4
+		},
+		{
+			"id": "b6ebce14-55ba-46f7-9b9a-49c460aa51ff",
+			"type": "technique",
+			"name": "Breakfall",
+			"reference": "MA68",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Acrobatics"
+			},
+			"limit": 5
+		},
+		{
+			"id": "5a934812-ca5c-4e9a-91fa-441a0dcece40",
+			"type": "technique",
+			"name": "Choke Hold",
+			"reference": "MA69",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "h",
+			"points": 2,
+			"default": {
+				"type": "skill",
+				"name": "Judo",
+				"modifier": -2
+			},
+			"limit": 0
+		},
+		{
+			"id": "589abb09-2e3a-48b8-8164-5e602665a336",
+			"type": "technique",
+			"name": "Ear Clap",
+			"reference": "MA70",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Karate",
+				"modifier": -3
+			},
+			"limit": -1
+		},
+		{
+			"id": "f1083a02-ad43-4598-bcf7-8d88049f7f4a",
+			"type": "technique",
+			"name": "Elbow Strike",
+			"reference": "MA71",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Karate",
+				"modifier": -2
+			},
+			"limit": 0
+		},
+		{
+			"id": "95a63f2b-d769-429d-98af-79feff49c154",
+			"type": "technique",
+			"name": "Evade",
+			"reference": "MA71",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Acrobatics"
+			},
+			"limit": 5
+		},
+		{
+			"id": "eef2c969-30a8-42cb-8e86-728d21c270df",
+			"type": "technique",
+			"name": "Exotic Hand Strike",
+			"reference": "MA71",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Karate",
+				"modifier": -1
+			},
+			"limit": 0
+		},
+		{
+			"id": "ef2d2a13-bc9a-4dc9-9051-d9a0d496fa56",
+			"type": "technique",
+			"name": "Feint",
+			"reference": "B231,MA73",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "h",
+			"points": 2,
+			"default": {
+				"type": "skill",
+				"name": "Karate"
+			},
+			"limit": 4
+		},
+		{
+			"id": "e9dbef02-7f15-4eb5-95a3-bdc27376d858",
+			"type": "technique",
+			"name": "Kicking",
+			"reference": "B231,MA75",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "h",
+			"points": 2,
+			"default": {
+				"type": "skill",
+				"name": "Karate",
+				"modifier": -2
+			},
+			"limit": 0
+		},
+		{
+			"id": "c552833f-f160-4a9b-b96d-d948d3c4ef81",
+			"type": "technique",
+			"name": "Knee Strike",
+			"reference": "B232,MA76",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Technique",
+				"Weapon"
+			],
+			"difficulty": "a",
+			"points": 1,
+			"default": {
+				"type": "skill",
+				"name": "Karate",
+				"modifier": -1
+			},
+			"limit": 0
+		}
+	]
+}

@@ -1,0 +1,378 @@
+{
+	"type": "template",
+	"version": 4,
+	"id": "b2380f73-9e5c-4861-b8a2-6c89caf10034",
+	"traits": [
+		{
+			"id": "22f1030f-3a02-4f90-b613-183c74a3dc61",
+			"type": "trait_container",
+			"open": true,
+			"children": [
+				{
+					"id": "2182f7d9-5344-462f-80ff-5c3a0b07f131",
+					"type": "trait",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"notes": "can support easily 50°C",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"levels": 3,
+					"points_per_level": 1,
+					"can_level": true,
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "a6edcc89-0171-43ed-a9ca-1646ae8670f3",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "5b83af3e-92ac-4137-87a4-5d7bf915e254",
+							"type": "trait",
+							"name": "Damage Resistance",
+							"reference": "B47,P45,MA43,PSI14",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "71e0ea7a-bb0e-409d-b01d-aa247b4e66f6",
+									"type": "modifier",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost": 20,
+									"disabled": true
+								},
+								{
+									"id": "a5e89aca-0b61-483e-8ae3-d6086856cf9a",
+									"type": "modifier",
+									"name": "Hardened",
+									"reference": "B47",
+									"cost": 20,
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "0377b71f-5bfe-44a7-b1a0-db38c7952845",
+									"type": "modifier",
+									"name": "Absorption",
+									"reference": "B46",
+									"notes": "Enhances @Trait@",
+									"cost": 80,
+									"disabled": true
+								},
+								{
+									"id": "db27da09-5815-4776-9af9-6d9741d8e52a",
+									"type": "modifier",
+									"name": "Absorption",
+									"reference": "B46",
+									"notes": "Healing only",
+									"cost": 80,
+									"disabled": true
+								},
+								{
+									"id": "0e4c391b-1076-40f2-92b6-c5d3c60b78fd",
+									"type": "modifier",
+									"name": "Absorption",
+									"reference": "B46",
+									"notes": "Enhances any trait",
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "8b422514-296a-4b7c-b350-6b7e7d2be0e9",
+									"type": "modifier",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "419ab96d-ea87-4894-b6d8-a6ee32a5d416",
+									"type": "modifier",
+									"name": "Bane",
+									"reference": "H14",
+									"notes": "@Rare@",
+									"cost": -1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "a8c6d43d-430e-4773-a64c-200f75009e65",
+									"type": "modifier",
+									"name": "Bane",
+									"reference": "H14",
+									"notes": "@Occasional@",
+									"cost": -5,
+									"disabled": true
+								},
+								{
+									"id": "e9503abd-7621-42c4-8ced-3981ec7c6d9a",
+									"type": "modifier",
+									"name": "Bane",
+									"reference": "H14",
+									"notes": "@Common@",
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "1585a884-94e2-4152-b7b7-d3b6cc253c58",
+									"type": "modifier",
+									"name": "Bane",
+									"reference": "H14",
+									"notes": "@Very Common@",
+									"cost": -15,
+									"disabled": true
+								},
+								{
+									"id": "131c5627-2f5a-4f3f-8a52-08417003bc95",
+									"type": "modifier",
+									"name": "Directional",
+									"reference": "B47",
+									"notes": "Front",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "132e7d43-7920-45f5-bcde-036029aa49f2",
+									"type": "modifier",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "d9e01c00-3ac2-4f4d-ae5f-45b34441df13",
+									"type": "modifier",
+									"name": "Limited",
+									"reference": "B46",
+									"notes": "Fire",
+									"cost": -20
+								},
+								{
+									"id": "72f08aac-bc4a-43fe-875b-8747b7397bec",
+									"type": "modifier",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "13410164-cee1-4956-832c-47bcf41fdab8",
+									"type": "modifier",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "9ad2a005-947f-4ef9-ba99-ed88a4adaa49",
+									"type": "modifier",
+									"name": "Directional",
+									"reference": "B47",
+									"notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "34ffce90-cba0-4d1a-a8ce-b3e6b12a51e3",
+									"type": "modifier",
+									"name": "Limited",
+									"reference": "B46",
+									"notes": "@Common Attack Form@",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "10940926-bf24-4984-a984-d974384f0874",
+									"type": "modifier",
+									"name": "Tough Skin",
+									"notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "db046fce-bac2-4fae-98d4-ee66925c0e9e",
+									"type": "modifier",
+									"name": "Limited",
+									"reference": "B46",
+									"notes": "@Occasional Attack Form@",
+									"cost": -60,
+									"disabled": true
+								},
+								{
+									"id": "b112e7ab-adac-40ef-a544-598ae0f7436f",
+									"type": "modifier",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost": -80,
+									"disabled": true
+								},
+								{
+									"id": "3b761122-5da1-46dd-992c-2f9df40890cb",
+									"type": "modifier",
+									"name": "Limited",
+									"reference": "B46",
+									"notes": "@Rare Attack Form@",
+									"cost": -80,
+									"disabled": true
+								},
+								{
+									"id": "0ed89045-94df-4ab0-ac26-53103a2ad43f",
+									"type": "modifier",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost": 10,
+									"disabled": true
+								},
+								{
+									"id": "a1baddab-14e3-402e-a209-1eee48ba98ec",
+									"type": "modifier",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "b1b407f3-24ca-4beb-8f3a-d362891e5af9",
+									"type": "modifier",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "a48b115e-bf63-41f8-84cd-3b6d1e41653e",
+									"type": "modifier",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost": -10,
+									"disabled": true
+								}
+							],
+							"levels": 1,
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "dr_bonus",
+									"location": "all",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 4
+							}
+						}
+					],
+					"name": "Choose DR level 1 to 5",
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "1cc9be5d-9154-42d6-ab04-682add768173",
+					"type": "trait",
+					"name": "Eyes flare when angered",
+					"reference": "B164",
+					"tags": [
+						"Physical",
+						"Quirk"
+					],
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"id": "aadbbfca-0943-411c-a8de-3ab730d1572d",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "9ee64e2b-f967-45f4-b034-3786e94a7206",
+							"type": "trait",
+							"name": "Bad Temper",
+							"reference": "B124",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -10,
+							"cr": 12,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "5520bdec-075e-4651-9b8f-f39553eb093f",
+							"type": "trait",
+							"name": "Supersensitive",
+							"reference": "B158",
+							"tags": [
+								"Disadvantage",
+								"Mental",
+								"Supernatural"
+							],
+							"base_points": -15,
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "b167072d-358d-4864-9319-572f1811b193",
+							"type": "trait",
+							"name": "Stubbornness",
+							"reference": "B157",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others",
+									"amount": -1
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "e579789a-002c-4591-b5cf-f84f02de8621",
+							"type": "trait",
+							"name": "Responsive",
+							"reference": "B164",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						}
+					],
+					"name": "Choose any",
+					"calc": {
+						"points": -31
+					}
+				}
+			],
+			"name": "Fire Genasi",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"calc": {
+				"points": -25
+			}
+		}
+	]
+}

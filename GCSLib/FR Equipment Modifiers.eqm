@@ -1,0 +1,13 @@
+{
+	"type": "eqp_modifier_list",
+	"version": 4,
+	"rows": [
+		{
+			"id": "6f031328-3c73-4513-917b-01ae40199041",
+			"type": "eqp_modifier",
+			"name": "Elven mail",
+			"cost": "x100",
+			"weight": "-80%"
+		}
+	]
+}

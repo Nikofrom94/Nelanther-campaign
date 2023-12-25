@@ -535,7 +535,7 @@
 		}
 	},
 	"created_date": "Jun 21, 2021, 10:07 AM",
-	"modified_date": "Dec 9, 2022, 8:04 PM",
+	"modified_date": "Jan 20, 2023, 8:56 PM",
 	"profile": {
 		"player_name": "Yann",
 		"name": "Pierre « vif argent » Malfini",
@@ -1776,45 +1776,6 @@
 		},
 		{
 			"type": "skill",
-			"id": "2b655e07-e245-4506-a30d-e2518ad09d2a",
-			"name": "Axe/Mace",
-			"reference": "B208",
-			"difficulty": "dx/a",
-			"points": 2,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 9,
-				"adjusted_level": 9,
-				"points": -9
-			},
-			"calc": {
-				"level": 14,
-				"rsl": "DX+0"
-			},
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Two-Handed Axe/Mace",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Flail",
-					"modifier": -4
-				}
-			],
-			"categories": [
-				"Combat/Weapon",
-				"Melee Combat"
-			]
-		},
-		{
-			"type": "skill",
 			"id": "2b24e3c3-12ce-47c9-90b3-c503b2ea6c8d",
 			"name": "Area Knowledge",
 			"reference": "B176",
@@ -1967,6 +1928,45 @@
 		},
 		{
 			"type": "skill",
+			"id": "2b655e07-e245-4506-a30d-e2518ad09d2a",
+			"name": "Axe/Mace",
+			"reference": "B208",
+			"difficulty": "dx/a",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"calc": {
+				"level": 14,
+				"rsl": "DX+0"
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Flail",
+					"modifier": -4
+				}
+			],
+			"categories": [
+				"Combat/Weapon",
+				"Melee Combat"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "0e90acb8-6899-4e4d-a94c-f9580caa18a8",
 			"name": "Boating",
 			"reference": "B180",
@@ -2094,7 +2094,7 @@
 				"points": -9
 			},
 			"calc": {
-				"level": 12,
+				"level": 13,
 				"rsl": "DX-1"
 			},
 			"defaults": [
@@ -2146,7 +2146,7 @@
 			"difficulty": "h",
 			"points": 2,
 			"calc": {
-				"level": 20,
+				"level": 21,
 				"rsl": "+1"
 			},
 			"limit": 5,
@@ -2216,7 +2216,7 @@
 			"difficulty": "h",
 			"points": 1,
 			"calc": {
-				"level": 19,
+				"level": 20,
 				"rsl": "+0"
 			},
 			"limit": 4,
@@ -2499,6 +2499,35 @@
 		},
 		{
 			"type": "skill",
+			"id": "85227045-2fb6-4675-8e4f-8a9eba78186c",
+			"name": "Leadership",
+			"reference": "B204",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"calc": {
+				"level": 9,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Military",
+				"Social"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "d0bece86-3b61-43a9-95f8-c3d00153d5a2",
 			"name": "Main-Gauche",
 			"reference": "B208",
@@ -2553,6 +2582,57 @@
 			]
 		},
 		{
+			"type": "skill",
+			"id": "e3ba37fd-57f3-4923-ab49-3b20a7fbd343",
+			"name": "Navigation",
+			"reference": "B211",
+			"specialization": "Sea",
+			"tech_level": "4",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Seamanship",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 9,
+				"rsl": "IQ-1"
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "Astronomy",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Seamanship",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Navigation",
+					"specialization": "Air",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Navigation",
+					"specialization": "Land",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Outdoor/Exploration",
+				"Technical",
+				"Vehicle"
+			]
+		},
+		{
 			"type": "technique",
 			"id": "45fd3902-ae18-47fe-a28a-a33672e19387",
 			"name": "Off-Hand Weapon Training",
@@ -2583,7 +2663,7 @@
 			"difficulty": "h",
 			"points": 8,
 			"calc": {
-				"level": 19,
+				"level": 20,
 				"rsl": "+0"
 			},
 			"limit": 0,
@@ -2640,7 +2720,7 @@
 			"difficulty": "h",
 			"points": 2,
 			"calc": {
-				"level": 20,
+				"level": 21,
 				"rsl": "+1"
 			},
 			"limit": 5,
@@ -2695,7 +2775,7 @@
 			"name": "Saber",
 			"reference": "B208",
 			"difficulty": "dx/a",
-			"points": 16,
+			"points": 20,
 			"defaulted_from": {
 				"type": "skill",
 				"name": "Main-Gauche",
@@ -2705,8 +2785,8 @@
 				"points": 4
 			},
 			"calc": {
-				"level": 19,
-				"rsl": "DX+5"
+				"level": 20,
+				"rsl": "DX+6"
 			},
 			"defaults": [
 				{
@@ -2865,6 +2945,88 @@
 		},
 		{
 			"type": "skill",
+			"id": "04525ab6-4dbb-424f-a13d-3eca54b5329c",
+			"name": "Shiphandling",
+			"reference": "B220",
+			"specialization": "Ship",
+			"tech_level": "4",
+			"difficulty": "iq/h",
+			"points": 1,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Seamanship",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 8,
+				"rsl": "IQ-2"
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "seamanship"
+						}
+					},
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "navigation"
+						},
+						"specialization": {
+							"compare": "is",
+							"qualifier": "sea"
+						}
+					},
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "leadership"
+						}
+					}
+				]
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Seamanship",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Boating",
+					"specialization": "Large Powerboat",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Boating",
+					"specialization": "Sailboat",
+					"modifier": -5
+				}
+			],
+			"categories": [
+				"Vehicle"
+			]
+		},
+		{
+			"type": "skill",
 			"id": "0e07b18d-77d9-44c4-a116-9d9d01e2469f",
 			"name": "Spear",
 			"reference": "B208",
@@ -2918,7 +3080,7 @@
 				"points": -9
 			},
 			"calc": {
-				"level": 13,
+				"level": 14,
 				"rsl": "DX+0"
 			},
 			"defaults": [
@@ -3081,8 +3243,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 22,
+						"parry": "15F",
 						"block": "No",
 						"damage": "1d+3 cut"
 					},
@@ -3141,8 +3303,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 22,
+						"parry": "15F",
 						"block": "No",
 						"damage": "1d+2 imp"
 					},
@@ -3221,8 +3383,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 22,
+						"parry": "15F",
 						"block": "No",
 						"damage": "1d+3 cut"
 					},
@@ -3281,8 +3443,8 @@
 					"parry": "0F",
 					"block": "No",
 					"calc": {
-						"level": 20,
-						"parry": "13F",
+						"level": 22,
+						"parry": "15F",
 						"block": "No",
 						"damage": "1d+2 imp"
 					},
@@ -3502,55 +3664,6 @@
 			"categories": [
 				"Melee Weapon",
 				"Missile Weapon"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "40a48d1a-852a-49d0-b39f-1f49d26ab4c7",
-			"equipped": true,
-			"quantity": 1,
-			"description": "Crossbow (ST12)",
-			"tech_level": "2",
-			"value": "225",
-			"weight": "6 lb",
-			"reference": "B276",
-			"weapons": [
-				{
-					"type": "ranged_weapon",
-					"damage": {
-						"type": "imp",
-						"base": "1d+3"
-					},
-					"strength": "12†",
-					"accuracy": "4",
-					"range": "240/300",
-					"rate_of_fire": "1",
-					"shots": "1(4)",
-					"bulk": "-6",
-					"calc": {
-						"level": 16,
-						"range": "240/300",
-						"damage": "1d+3 imp"
-					},
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Crossbow"
-						}
-					]
-				}
-			],
-			"calc": {
-				"extended_value": "225",
-				"extended_weight": "6 lb"
-			},
-			"categories": [
-				"Missile Weapon",
-				"UsesAmmoType:Bolt"
 			]
 		},
 		{
@@ -3998,7 +4111,7 @@
 		{
 			"type": "note",
 			"id": "2ea5187c-0a10-4201-a6ee-8d8255097307",
-			"text": "character points :\n- reste 3 avant épisode 11"
+			"text": "character points :\n- reste 0 avant épisode 17"
 		}
 	],
 	"calc": {
