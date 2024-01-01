@@ -12,7 +12,7 @@
 	],
 	"profile": {
 		"name": "Pierre « vif argent » Malfini",
-		"age": "17",
+		"age": "27",
 		"birthday": "Dec 30",
 		"eyes": "Marron",
 		"hair": "Marron, Droit, Court",
@@ -634,8 +634,6 @@
 					],
 					"calc": {
 						"level": 15,
-						"parry": "No",
-						"block": "No",
 						"damage": "1d-1 cr"
 					}
 				},
@@ -649,7 +647,6 @@
 					},
 					"usage": "Coup de poing",
 					"reach": "C",
-					"parry": "0",
 					"defaults": [
 						{
 							"type": "dx"
@@ -669,8 +666,9 @@
 					],
 					"calc": {
 						"level": 15,
+						"damage": "1d-1 cr",
 						"parry": "11",
-						"damage": "1d-1 cr"
+						"block": "11"
 					}
 				},
 				{
@@ -701,8 +699,8 @@
 					],
 					"calc": {
 						"level": 13,
-						"parry": "No",
-						"damage": "1d cr"
+						"damage": "1d cr",
+						"block": "10"
 					}
 				}
 			],
@@ -1675,37 +1673,6 @@
 			}
 		},
 		{
-			"id": "ba40fdc9-0671-4df0-9ee8-6feda2a94801",
-			"type": "skill",
-			"name": "Swimming",
-			"reference": "B224",
-			"tags": [
-				"Athletic",
-				"Exploration",
-				"Outdoor"
-			],
-			"difficulty": "ht/e",
-			"points": 1,
-			"encumbrance_penalty_multiplier": 2,
-			"defaulted_from": {
-				"type": "ht",
-				"modifier": -4,
-				"level": 8,
-				"adjusted_level": 8,
-				"points": -8
-			},
-			"defaults": [
-				{
-					"type": "ht",
-					"modifier": -4
-				}
-			],
-			"calc": {
-				"level": 12,
-				"rsl": "HT+0"
-			}
-		},
-		{
 			"id": "b9caae40-cb49-4932-8ffb-f53b91d28a37",
 			"type": "skill",
 			"name": "Animal Handling",
@@ -2004,7 +1971,7 @@
 						"qualifier": 2
 					},
 					"amount": 1,
-					"per_level": true
+					"per_die": true
 				}
 			],
 			"calc": {
@@ -3085,6 +3052,37 @@
 			}
 		},
 		{
+			"id": "ba40fdc9-0671-4df0-9ee8-6feda2a94801",
+			"type": "skill",
+			"name": "Swimming",
+			"reference": "B224",
+			"tags": [
+				"Athletic",
+				"Exploration",
+				"Outdoor"
+			],
+			"difficulty": "ht/e",
+			"points": 1,
+			"encumbrance_penalty_multiplier": 2,
+			"defaulted_from": {
+				"type": "ht",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "ht",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "HT+0"
+			}
+		},
+		{
 			"id": "99d73438-7dcf-4687-8dba-24a16cd035ae",
 			"type": "skill",
 			"name": "Tactics",
@@ -3181,8 +3179,7 @@
 						"st": "thr"
 					},
 					"usage": "Thrown large knife",
-					"accuracy": "0",
-					"range": "half dam:ST-2  max:ST+5",
+					"range": "2",
 					"rate_of_fire": "1",
 					"defaults": [
 						{
@@ -3193,7 +3190,6 @@
 					],
 					"calc": {
 						"level": 15,
-						"range": "half dam:ST-2  max:ST+5",
 						"damage": "1d imp"
 					}
 				}
@@ -3272,9 +3268,8 @@
 					],
 					"calc": {
 						"level": 21,
-						"parry": "14F",
-						"block": "No",
-						"damage": "2d-2 cut"
+						"damage": "2d-2 cut",
+						"parry": "14F"
 					}
 				},
 				{
@@ -3331,9 +3326,8 @@
 					],
 					"calc": {
 						"level": 21,
-						"parry": "14F",
-						"block": "No",
-						"damage": "1d+1 imp"
+						"damage": "1d+1 imp",
+						"parry": "14F"
 					}
 				}
 			],
@@ -3410,9 +3404,8 @@
 					],
 					"calc": {
 						"level": 21,
-						"parry": "14F",
-						"block": "No",
-						"damage": "2d-2 cut"
+						"damage": "2d-2 cut",
+						"parry": "14F"
 					}
 				},
 				{
@@ -3469,9 +3462,8 @@
 					],
 					"calc": {
 						"level": 21,
-						"parry": "14F",
-						"block": "No",
-						"damage": "1d+1 imp"
+						"damage": "1d+1 imp",
+						"parry": "14F"
 					}
 				}
 			],
@@ -3539,9 +3531,8 @@
 					],
 					"calc": {
 						"level": 16,
-						"parry": "11",
-						"block": "No",
-						"damage": "2d-3 cut"
+						"damage": "2d-3 cut",
+						"parry": "11"
 					}
 				},
 				{
@@ -3587,9 +3578,8 @@
 					],
 					"calc": {
 						"level": 16,
-						"parry": "11",
-						"block": "No",
-						"damage": "1d imp"
+						"damage": "1d imp",
+						"parry": "11"
 					}
 				},
 				{
@@ -3600,7 +3590,6 @@
 					},
 					"usage": "Parade main gauche",
 					"reach": "C",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -3610,8 +3599,7 @@
 					],
 					"calc": {
 						"level": 18,
-						"parry": "13",
-						"block": "No"
+						"parry": "13"
 					}
 				},
 				{
@@ -3623,10 +3611,9 @@
 					},
 					"strength": "6",
 					"usage": "Thrown",
-					"accuracy": "+0",
 					"range": "x0.8/x1.5",
 					"rate_of_fire": "1",
-					"shots": "T(1)",
+					"shots": "T",
 					"bulk": "-2",
 					"defaults": [
 						{
@@ -3641,8 +3628,8 @@
 					],
 					"calc": {
 						"level": 15,
-						"range": "10/19",
-						"damage": "1d imp"
+						"damage": "1d imp",
+						"range": "10/19"
 					}
 				}
 			],
@@ -4056,9 +4043,8 @@
 					],
 					"calc": {
 						"level": 23,
-						"parry": "15F",
-						"block": "No",
-						"damage": "2d cut"
+						"damage": "2d cut",
+						"parry": "15F"
 					}
 				},
 				{
@@ -4117,9 +4103,8 @@
 					],
 					"calc": {
 						"level": 23,
-						"parry": "15F",
-						"block": "No",
-						"damage": "1d+3 imp"
+						"damage": "1d+3 imp",
+						"parry": "15F"
 					}
 				}
 			],
@@ -4619,7 +4604,7 @@
 		}
 	],
 	"created_date": "2021-06-21T10:07:00+02:00",
-	"modified_date": "2023-11-17T21:00:38+01:00",
+	"modified_date": "2024-01-01T20:55:55+01:00",
 	"calc": {
 		"swing": "2d-1",
 		"thrust": "1d",
