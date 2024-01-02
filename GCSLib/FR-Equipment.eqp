@@ -1,138 +1,838 @@
 {
 	"type": "equipment_list",
-	"version": 2,
-	"id": "04cd86ed-0d62-403c-81d1-4a8077e95085",
+	"version": 4,
 	"rows": [
 		{
-			"type": "equipment",
 			"id": "487ce3d3-f303-42f6-8643-b58a0e41eab1",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow +1",
-			"value": "25",
+			"notes": "+1 to hit \u0026 damage",
+			"quantity": 1,
+			"value": 25,
 			"weight": "0.1 lb",
 			"calc": {
-				"extended_value": "25",
+				"extended_value": 25,
 				"extended_weight": "0.1 lb"
-			},
-			"notes": "+1 to hit & damage"
+			}
 		},
 		{
+			"id": "55462089-f0d2-47f9-ac64-0654ab8d6c2c",
 			"type": "equipment",
+			"description": "Ankheg Plate Mail",
+			"legality_class": "4",
+			"quantity": 1,
+			"weight": "12 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 6
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 0,
+				"extended_weight": "12 lb"
+			}
+		},
+		{
 			"id": "a840c84e-c834-4731-b46f-51e29a448954",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow +2",
-			"value": "100",
+			"notes": "+2 to hit \u0026 damage",
+			"quantity": 1,
+			"value": 100,
 			"weight": "0.1 lb",
 			"calc": {
-				"extended_value": "100",
+				"extended_value": 100,
 				"extended_weight": "0.1 lb"
-			},
-			"notes": "+2 to hit & damage"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "a42e653d-818b-47ec-bf22-1b0f6dd1c94e",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow +3",
-			"value": "500",
+			"notes": "+3 to hit \u0026 damage",
+			"quantity": 1,
+			"value": 500,
 			"weight": "0.1 lb",
 			"calc": {
-				"extended_value": "500",
+				"extended_value": 500,
 				"extended_weight": "0.1 lb"
-			},
-			"notes": "+3 to hit & damage"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "5a43be2b-c223-4dbf-a66e-e30b59b49aca",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow of Acid +1",
-			"value": "20",
-			"weight": "0.1 lb",
 			"reference": "B61",
-			"calc": {
-				"extended_value": "20",
-				"extended_weight": "0.1 lb"
-			},
+			"notes": "1d-3 corrosion damage (reduce DR by 1 per 5 pts of damage)",
+			"quantity": 1,
+			"value": 20,
+			"weight": "0.1 lb",
 			"features": [
 				{
 					"type": "weapon_bonus",
-					"amount": 1,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 1
 				}
 			],
-			"notes": "1d-3 corrosion damage (reduce DR by 1 per 5 pts of damage)"
-		},
-		{
-			"type": "equipment",
-			"id": "a2c88963-63f9-41ab-85f3-b5dd1371fb63",
-			"quantity": 1,
-			"description": "Arrow of Antimagic",
-			"value": "1500",
-			"weight": "0.3 lb",
 			"calc": {
-				"extended_value": "1500",
-				"extended_weight": "0.3 lb"
-			},
-			"notes": "-1 to shot, on failure to resist (Will) the target cannot cast a spell in the next 5 sec"
-		},
-		{
-			"type": "equipment",
-			"id": "594f3b0a-2d5a-4a41-821c-7abdf8334a9d",
-			"quantity": 1,
-			"description": "Arrow of dispelling",
-			"value": "1500",
-			"weight": "0.3 lb",
-			"reference": "M123",
-			"calc": {
-				"extended_value": "1500",
-				"extended_weight": "0.3 lb"
-			},
-			"notes": "Dispel magic effects for 20sec as the spell \"Suspend Magic\""
-		},
-		{
-			"type": "equipment",
-			"id": "6979167d-d7f2-4fae-87b6-3c386e015bf8",
-			"quantity": 1,
-			"description": "Arrow of fire +2",
-			"value": "15",
-			"weight": "0.1 lb",
-			"calc": {
-				"extended_value": "15",
+				"extended_value": 20,
 				"extended_weight": "0.1 lb"
-			},
+			}
+		},
+		{
+			"id": "a2c88963-63f9-41ab-85f3-b5dd1371fb63",
+			"type": "equipment",
+			"description": "Arrow of Antimagic",
+			"notes": "-1 to shot, on failure to resist (Will) the target cannot cast a spell in the next 5 sec",
+			"quantity": 1,
+			"value": 1500,
+			"weight": "0.3 lb",
+			"calc": {
+				"extended_value": 1500,
+				"extended_weight": "0.3 lb"
+			}
+		},
+		{
+			"id": "594f3b0a-2d5a-4a41-821c-7abdf8334a9d",
+			"type": "equipment",
+			"description": "Arrow of dispelling",
+			"reference": "M123",
+			"notes": "Dispel magic effects for 20sec as the spell \"Suspend Magic\"",
+			"quantity": 1,
+			"value": 1500,
+			"weight": "0.3 lb",
+			"calc": {
+				"extended_value": 1500,
+				"extended_weight": "0.3 lb"
+			}
+		},
+		{
+			"id": "6979167d-d7f2-4fae-87b6-3c386e015bf8",
+			"type": "equipment",
+			"description": "Arrow of fire +2",
+			"notes": "+2 to shot skill \u0026 +2 damage of fire",
+			"quantity": 1,
+			"value": 15,
+			"weight": "0.1 lb",
 			"features": [
 				{
 					"type": "skill_bonus",
-					"amount": 2,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 2
 				}
 			],
-			"notes": "+2 to shot skill & +2 damage of fire"
+			"calc": {
+				"extended_value": 15,
+				"extended_weight": "0.1 lb"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "f875732f-c854-46d5-84ca-280a29fbd647",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow of fireball",
+			"notes": "+1d of fire damage on 1.5m radius",
 			"legality_class": "2",
-			"value": "300",
+			"quantity": 1,
+			"value": 300,
 			"weight": "0.3 lb",
 			"calc": {
-				"extended_value": "300",
+				"extended_value": 300,
 				"extended_weight": "0.3 lb"
-			},
-			"notes": "+1d of fire damage on 1.5m radius"
+			}
 		},
 		{
+			"id": "30e930de-a29b-4c16-b88d-7ea061d90423",
 			"type": "equipment",
-			"id": "1499b5df-f5ee-4c25-9843-3390d3c7ec0b",
+			"description": "Medallion of the Myrmidion",
+			"legality_class": "4",
+			"modifiers": [
+				{
+					"id": "c1fa34df-8e11-49de-9d56-9bc65a574a41",
+					"type": "eqp_modifier",
+					"name": "Equipment Modifier"
+				}
+			],
 			"quantity": 1,
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"limitation": "lifting_only",
+					"attribute": "st",
+					"amount": 3
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 0,
+				"extended_weight": "0 lb"
+			}
+		},
+		{
+			"id": "16e630cb-84c2-42cf-8862-c73173d7c6b1",
+			"type": "equipment",
+			"description": "Dagger +2 - returning",
+			"reference": "B272",
+			"notes": "fly back to owner, up to 30m",
+			"tech_level": "1",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"quantity": 1,
+			"value": 3000,
+			"weight": "0.25 lb",
+			"weapons": [
+				{
+					"id": "7ba39755-8571-43fa-a9af-4d6cc53df929",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"parry": "-1",
+						"block": "No",
+						"damage": "thr-1 imp"
+					}
+				},
+				{
+					"id": "7d6f591f-516a-4cc3-92bf-8971b0537f84",
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.5/x1",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					],
+					"calc": {
+						"range": "x0.5/x1",
+						"damage": "thr-1 imp"
+					}
+				}
+			],
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"selection_type": "this_weapon",
+					"name": {
+						"compare": "is",
+						"qualifier": "Knife"
+					},
+					"level": {
+						"compare": "at_least"
+					},
+					"amount": 2
+				},
+				{
+					"type": "skill_bonus",
+					"selection_type": "this_weapon",
+					"name": {
+						"compare": "is",
+						"qualifier": "Knife"
+					},
+					"amount": 2
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 3000,
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "3d1f9fee-f2a9-4f2b-83f3-e2240afddd06",
+			"type": "equipment",
+			"description": "Dagger - \"Canter\"",
+			"reference": "B272",
+			"notes": "form change (any edged weapon from dagger to broadsword) - fly back to owner, up to 30m\nIntelligent\nSpeaks all elvish tongues\nDetect Mana, elves, curses up to 30m",
+			"tech_level": "3",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"quantity": 1,
+			"value": 50000,
+			"weight": "0.25 lb",
+			"weapons": [
+				{
+					"id": "7ba39755-8571-43fa-a9af-4d6cc53df929",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Knife"
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"parry": "-1",
+						"block": "No",
+						"damage": "thr-1 imp"
+					}
+				},
+				{
+					"id": "7d6f591f-516a-4cc3-92bf-8971b0537f84",
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrown",
+					"accuracy": "+0",
+					"range": "x0.5/x1",
+					"rate_of_fire": "1",
+					"shots": "T(1)",
+					"bulk": "-1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Knife"
+						}
+					],
+					"calc": {
+						"range": "x0.5/x1",
+						"damage": "thr-1 imp"
+					}
+				}
+			],
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "this_weapon",
+					"name": {
+						"compare": "is",
+						"qualifier": "Knife"
+					},
+					"amount": 3
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 50000,
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "ca01baa2-2dc3-41e4-be68-b7527de623f3",
+			"type": "equipment_container",
+			"open": true,
+			"children": [
+				{
+					"id": "dac4d29b-118a-4e0b-b0c4-c37cf5865b17",
+					"type": "equipment",
+					"description": "Mail Body Armor - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Body Armor"
+					],
+					"modifiers": [
+						{
+							"id": "ca34a432-544d-4fe6-9c99-93113436156d",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 945,
+					"weight": "15.8 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"location": "torso",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "vitals",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "neck",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "groin",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "torso",
+							"amount": 4
+						},
+						{
+							"type": "dr_bonus",
+							"location": "vitals",
+							"amount": 4
+						},
+						{
+							"type": "dr_bonus",
+							"location": "neck",
+							"amount": 4
+						},
+						{
+							"type": "dr_bonus",
+							"location": "groin",
+							"amount": 4
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 94500,
+						"extended_weight": "3.16 lb"
+					}
+				},
+				{
+					"id": "30ae090d-e2d5-4ea9-b76c-aa0d6a5fce15",
+					"type": "equipment",
+					"description": "Mail Boots - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Footwear"
+					],
+					"modifiers": [
+						{
+							"id": "48f1a05e-789d-43c0-be8d-c8e74f3e3415",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 315,
+					"weight": "5.2 lb",
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Natural Attacks"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Kick"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 1
+						},
+						{
+							"type": "dr_bonus",
+							"location": "foot",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "foot",
+							"amount": 4
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 31500,
+						"extended_weight": "1.04 lb"
+					}
+				},
+				{
+					"id": "0a6b1549-0790-4611-8963-df86f58f6031",
+					"type": "equipment",
+					"description": "Mail Gloves - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Gloves"
+					],
+					"modifiers": [
+						{
+							"id": "7e091f1b-d8b8-48a6-9e1c-ac5670fe70e0",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 90,
+					"weight": "1.5 lb",
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Natural Attacks"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Punch"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 1
+						},
+						{
+							"type": "dr_bonus",
+							"location": "hand",
+							"amount": 4
+						},
+						{
+							"type": "dr_bonus",
+							"location": "hand",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Traps"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sleight of Hand"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Pickpocket"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Lockpicking"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Knot-Tying"
+							},
+							"amount": -3
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 9000,
+						"extended_weight": "0.3 lb"
+					}
+				},
+				{
+					"id": "dd97ef3a-6640-477b-a114-f79c07b9369b",
+					"type": "equipment",
+					"description": "Mail Helmet - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Headgear"
+					],
+					"modifiers": [
+						{
+							"id": "79652977-9254-4b5f-ba41-d28c7044069e",
+							"type": "eqp_modifier",
+							"name": "Full Face Coverage",
+							"reference": "DFA109",
+							"notes": "Can't see your side hexes, even if you have Peripheral Vision",
+							"disabled": true,
+							"cost": "+90",
+							"weight": "+1.5 lb",
+							"features": [
+								{
+									"type": "dr_bonus",
+									"location": "eye",
+									"specialization": "crushing",
+									"amount": -2
+								},
+								{
+									"type": "dr_bonus",
+									"location": "eye",
+									"amount": 4
+								},
+								{
+									"type": "dr_bonus",
+									"location": "face",
+									"specialization": "crushing",
+									"amount": -2
+								},
+								{
+									"type": "dr_bonus",
+									"location": "face",
+									"amount": 4
+								},
+								{
+									"type": "attribute_bonus",
+									"attribute": "hearing",
+									"amount": -4
+								}
+							]
+						},
+						{
+							"id": "257a121c-f7e3-4638-8008-b07d24df1bf4",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 225,
+					"weight": "3.8 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"location": "skull",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "skull",
+							"amount": 4
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 22500,
+						"extended_weight": "0.76 lb"
+					}
+				},
+				{
+					"id": "ed3bafa7-1345-4986-9a70-ad93fd1036a1",
+					"type": "equipment",
+					"description": "Mail Leggings - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Limb Armor"
+					],
+					"modifiers": [
+						{
+							"id": "55a642de-f70d-4e3d-aaea-667686d97149",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 675,
+					"weight": "11.2 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"location": "leg",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "leg",
+							"amount": 4
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 67500,
+						"extended_weight": "2.24 lb"
+					}
+				},
+				{
+					"id": "29ac9023-32ad-457a-afbf-3f241f7750bb",
+					"type": "equipment",
+					"description": "Mail Sleeves - Elven",
+					"reference": "DFA109",
+					"tags": [
+						"Armor",
+						"Limb Armor"
+					],
+					"modifiers": [
+						{
+							"id": "c80c9715-f5fa-46a0-8f9f-8249fb0969c1",
+							"type": "eqp_modifier",
+							"name": "Elven mail",
+							"cost": "x100",
+							"weight": "-80%"
+						}
+					],
+					"quantity": 1,
+					"value": 450,
+					"weight": "7.5 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"location": "arm",
+							"specialization": "crushing",
+							"amount": -2
+						},
+						{
+							"type": "dr_bonus",
+							"location": "arm",
+							"amount": 4
+						}
+					],
+					"equipped": true,
+					"calc": {
+						"extended_value": 45000,
+						"extended_weight": "1.5 lb"
+					}
+				}
+			],
+			"description": "Mail Suit - Elven",
+			"reference": "MI1 25",
+			"tags": [
+				"Armor"
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"extended_value": 270000,
+				"extended_weight": "9 lb"
+			}
+		},
+		{
+			"id": "1499b5df-f5ee-4c25-9843-3390d3c7ec0b",
+			"type": "equipment",
 			"description": "Heartseeker composite longbow +3",
-			"value": "78000",
+			"quantity": 1,
+			"value": 78000,
 			"weight": "7 lb",
 			"weapons": [
 				{
+					"id": "8ccc60c7-0b61-4837-94bd-94eaba2917c3",
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
@@ -144,19 +844,19 @@
 					"range": "280/350",
 					"rate_of_fire": "1",
 					"shots": "1(2)",
-					"calc": {
-						"level": 0,
-						"range": "280/350",
-						"damage": "1d+3 imp"
-					},
 					"defaults": [
 						{
 							"type": "skill",
 							"name": "Bow"
 						}
-					]
+					],
+					"calc": {
+						"range": "280/350",
+						"damage": "1d+3 imp"
+					}
 				},
 				{
+					"id": "2c7d36ab-6913-4dde-9645-845480a03a66",
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
@@ -168,61 +868,64 @@
 					"range": "280/350",
 					"rate_of_fire": "1",
 					"shots": "1(2)",
-					"calc": {
-						"level": 0,
-						"range": "280/350",
-						"damage": "1d+3 imp"
-					},
 					"defaults": [
 						{
 							"type": "skill",
 							"name": "Bow",
 							"modifier": 4
 						}
-					]
+					],
+					"calc": {
+						"range": "280/350",
+						"damage": "1d+3 imp"
+					}
 				}
 			],
-			"calc": {
-				"extended_value": "78000",
-				"extended_weight": "7 lb"
-			},
 			"features": [
 				{
 					"type": "skill_bonus",
-					"amount": 3,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 3
 				},
 				{
 					"type": "weapon_bonus",
-					"amount": 3,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 3
 				}
-			]
+			],
+			"calc": {
+				"extended_value": 78000,
+				"extended_weight": "7 lb"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "e6eaabd1-d2da-4acd-941d-59705bb61bf9",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Arrow of Piercing",
-			"value": "500",
+			"notes": "DR divided by 2",
+			"quantity": 1,
+			"value": 500,
 			"weight": "0.3 lb",
 			"calc": {
-				"extended_value": "500",
+				"extended_value": 500,
 				"extended_weight": "0.3 lb"
-			},
-			"notes": "DR divided by 2"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "534d338b-fd3f-459e-a260-5d3d7c5de0e0",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Composite Bow (ST16) Eclair Bleu",
-			"tech_level": "1",
-			"value": "1440",
-			"weight": "4 lb",
 			"reference": "B275",
+			"tech_level": "1",
+			"tags": [
+				"Missile Weapon"
+			],
+			"quantity": 1,
+			"value": 1440,
+			"weight": "4 lb",
 			"weapons": [
 				{
+					"id": "c451d687-c92f-41e4-8494-4eea7f445c6c",
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
@@ -235,11 +938,6 @@
 					"rate_of_fire": "1",
 					"shots": "1(2)",
 					"bulk": "-7",
-					"calc": {
-						"level": 0,
-						"range": "320/400",
-						"damage": "1d+4 imp"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -250,27 +948,34 @@
 							"name": "Bow",
 							"modifier": 1
 						}
-					]
+					],
+					"calc": {
+						"range": "320/400",
+						"damage": "1d+4 imp"
+					}
 				}
 			],
 			"calc": {
-				"extended_value": "1440",
+				"extended_value": 1440,
 				"extended_weight": "4 lb"
-			},
-			"categories": [
-				"Missile Weapon"
-			]
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "abe4bdfc-f6fe-4831-be63-b8b49c1da0a8",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Darkfire Bow",
-			"value": "6500",
-			"weight": "1 lb",
 			"reference": "DFA104",
+			"notes": "Grant Great Haste once per day (speedx2)",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"quantity": 1,
+			"value": 6500,
+			"weight": "1 lb",
 			"weapons": [
 				{
+					"id": "a14ea8c2-d3b9-4ed9-af22-ab8dd42997fb",
 					"type": "ranged_weapon",
 					"damage": {
 						"type": "imp",
@@ -283,11 +988,6 @@
 					"rate_of_fire": "1",
 					"shots": "1(2)",
 					"bulk": "-6",
-					"calc": {
-						"level": 0,
-						"range": "x10/x15",
-						"damage": "thr imp"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -297,138 +997,142 @@
 							"type": "skill",
 							"name": "Bow"
 						}
-					]
+					],
+					"calc": {
+						"range": "x10/x15",
+						"damage": "thr imp"
+					}
 				}
 			],
-			"calc": {
-				"extended_value": "6500",
-				"extended_weight": "1 lb"
-			},
 			"features": [
 				{
 					"type": "weapon_bonus",
-					"amount": 4,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 4
 				},
 				{
 					"type": "weapon_bonus",
-					"amount": 4,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 4
 				}
 			],
-			"notes": "Grant Great Haste once per day (speedx2)",
-			"categories": [
-				"Missile Weapon",
-				"UsesAmmoType:Arrow"
-			]
+			"calc": {
+				"extended_value": 6500,
+				"extended_weight": "1 lb"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "a066403a-7a36-4782-a4e8-51f87517bd07",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Drow Adamantine Chain +5",
-			"tech_level": "3",
-			"value": "5000",
-			"weight": "12 lb",
 			"reference": "B283",
-			"calc": {
-				"extended_value": "5000",
-				"extended_weight": "12 lb"
-			},
-			"features": [
-				{
-					"type": "dr_bonus",
-					"amount": 9,
-					"location": "torso"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": 9,
-					"location": "vitals"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": -2,
-					"location": "torso",
-					"specialization": "crushing"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": -2,
-					"location": "vitals",
-					"specialization": "crushing"
-				},
-				{
-					"type": "conditional_modifier",
-					"amount": 1,
-					"situation": "Magic Resistance"
-				}
-			],
 			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
 			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Adamantine_Chain_%2B5",
-			"categories": [
-				"Body Armor"
-			]
-		},
-		{
-			"type": "equipment",
-			"id": "d191a027-7ed4-4dc6-9a9e-ed001d92b4f0",
-			"quantity": 1,
-			"description": "Drow Elven Chain +3",
 			"tech_level": "3",
-			"value": "5000",
+			"tags": [
+				"Body Armor"
+			],
+			"quantity": 1,
+			"value": 5000,
 			"weight": "12 lb",
-			"reference": "B283",
-			"calc": {
-				"extended_value": "5000",
-				"extended_weight": "12 lb"
-			},
 			"features": [
 				{
 					"type": "dr_bonus",
-					"amount": 7,
-					"location": "torso"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": 7,
-					"location": "vitals"
-				},
-				{
-					"type": "dr_bonus",
-					"amount": -2,
 					"location": "torso",
-					"specialization": "crushing"
+					"amount": 9
 				},
 				{
 					"type": "dr_bonus",
-					"amount": -2,
 					"location": "vitals",
-					"specialization": "crushing"
+					"amount": 9
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"specialization": "crushing",
+					"amount": -2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"specialization": "crushing",
+					"amount": -2
 				},
 				{
 					"type": "conditional_modifier",
-					"amount": 1,
-					"situation": "Magic Resistance"
+					"situation": "Magic Resistance",
+					"amount": 1
 				}
 			],
-			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
-			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Elven_Chain",
-			"categories": [
-				"Body Armor"
-			]
+			"calc": {
+				"extended_value": 5000,
+				"extended_weight": "12 lb"
+			}
 		},
 		{
+			"id": "d191a027-7ed4-4dc6-9a9e-ed001d92b4f0",
 			"type": "equipment",
-			"id": "2629c655-9115-4e6d-b74a-c79391c9cc3b",
-			"quantity": 1,
-			"description": "Greatsword : kingsbane",
+			"description": "Drow Elven Chain +3",
+			"reference": "B283",
+			"notes": "Flexible, concealable, will dissolve to Adamantine Dust if it's exposed to sunlight",
+			"vtt_notes": "https://baldursgate.fandom.com/wiki/Drow_Elven_Chain",
 			"tech_level": "3",
-			"value": "8000",
-			"weight": "7 lb",
+			"tags": [
+				"Body Armor"
+			],
+			"quantity": 1,
+			"value": 5000,
+			"weight": "12 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 7
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 7
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"specialization": "crushing",
+					"amount": -2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"specialization": "crushing",
+					"amount": -2
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "Magic Resistance",
+					"amount": 1
+				}
+			],
+			"calc": {
+				"extended_value": 5000,
+				"extended_weight": "12 lb"
+			}
+		},
+		{
+			"id": "2629c655-9115-4e6d-b74a-c79391c9cc3b",
+			"type": "equipment",
+			"description": "Greatsword : kingsbane",
 			"reference": "B274",
+			"notes": "Tueuse d'humain : +3 au toucher/dommages",
+			"tech_level": "3",
+			"tags": [
+				"Melee Weapon"
+			],
+			"quantity": 1,
+			"value": 8000,
+			"weight": "7 lb",
 			"weapons": [
 				{
+					"id": "a2d045b0-73b0-4a84-b119-ae7af88ff3b9",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cut",
@@ -440,12 +1144,6 @@
 					"reach": "1,2",
 					"parry": "0",
 					"block": "No",
-					"calc": {
-						"level": 0,
-						"parry": "0",
-						"block": "No",
-						"damage": "sw+4 cut"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -470,9 +1168,15 @@
 							"type": "skill",
 							"name": "Sword!"
 						}
-					]
+					],
+					"calc": {
+						"parry": "0",
+						"block": "No",
+						"damage": "sw+4 cut"
+					}
 				},
 				{
+					"id": "d67cfdcb-c927-4327-adde-77413c85e013",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "imp",
@@ -484,12 +1188,6 @@
 					"reach": "2",
 					"parry": "0",
 					"block": "No",
-					"calc": {
-						"level": 0,
-						"parry": "0",
-						"block": "No",
-						"damage": "thr+3 imp"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -514,9 +1212,15 @@
 							"type": "skill",
 							"name": "Sword!"
 						}
-					]
+					],
+					"calc": {
+						"parry": "0",
+						"block": "No",
+						"damage": "thr+3 imp"
+					}
 				},
 				{
+					"id": "d2584b89-6420-4706-a2d0-589bbfff26d1",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cut",
@@ -528,12 +1232,6 @@
 					"reach": "1,2",
 					"parry": "0",
 					"block": "No",
-					"calc": {
-						"level": 0,
-						"parry": "0",
-						"block": "No",
-						"damage": "sw+6 cut"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -558,9 +1256,15 @@
 							"type": "skill",
 							"name": "Sword!"
 						}
-					]
+					],
+					"calc": {
+						"parry": "0",
+						"block": "No",
+						"damage": "sw+6 cut"
+					}
 				},
 				{
+					"id": "bd27bc19-389d-432c-abd5-f07bed115a76",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "imp",
@@ -572,12 +1276,6 @@
 					"reach": "2",
 					"parry": "0",
 					"block": "No",
-					"calc": {
-						"level": 0,
-						"parry": "0",
-						"block": "No",
-						"damage": "thr+5 imp"
-					},
 					"defaults": [
 						{
 							"type": "dx",
@@ -602,70 +1300,71 @@
 							"type": "skill",
 							"name": "Sword!"
 						}
-					]
+					],
+					"calc": {
+						"parry": "0",
+						"block": "No",
+						"damage": "thr+5 imp"
+					}
 				}
 			],
 			"calc": {
-				"extended_value": "8000",
+				"extended_value": 8000,
 				"extended_weight": "7 lb"
-			},
-			"notes": "Tueuse d'humain : +3 au toucher/dommages",
-			"categories": [
-				"Melee Weapon"
-			]
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "d29b35f0-e2b7-4353-8dae-3e71bac20918",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Bolt of Polymorphing",
-			"legality_class": "2",
-			"value": "5000",
-			"weight": "0.3 lb",
 			"reference": "M43",
+			"notes": "polymorph other as the spell Transmogrification",
+			"legality_class": "2",
+			"quantity": 1,
+			"value": 5000,
+			"weight": "0.3 lb",
 			"calc": {
-				"extended_value": "5000",
+				"extended_value": 5000,
 				"extended_weight": "0.3 lb"
-			},
-			"notes": "polymorph other as the spell Transmogrification"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "a4085155-ad9c-4fac-904b-4d34454eac8b",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Bolt of Lightning",
-			"value": "300",
-			"weight": "0 lb",
 			"reference": "M196",
+			"notes": "1d lightning damage",
+			"quantity": 1,
+			"value": 300,
 			"calc": {
-				"extended_value": "300",
+				"extended_value": 300,
 				"extended_weight": "0 lb"
-			},
-			"notes": "1d lightning damage"
+			}
 		},
 		{
-			"type": "equipment",
 			"id": "0a23acb7-47ac-4bad-9720-f5bff3d9fdfe",
-			"quantity": 1,
+			"type": "equipment",
 			"description": "Sword of Chaos +2",
-			"value": "30000",
+			"notes": "+ HP per wound inflicted",
+			"quantity": 1,
+			"value": 30000,
 			"weight": "10 lb",
-			"calc": {
-				"extended_value": "30000",
-				"extended_weight": "10 lb"
-			},
 			"features": [
 				{
 					"type": "skill_bonus",
-					"amount": 2,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 2
 				},
 				{
 					"type": "weapon_bonus",
-					"amount": 2,
-					"selection_type": "this_weapon"
+					"selection_type": "this_weapon",
+					"amount": 2
 				}
 			],
+			"calc": {
+				"extended_value": 30000,
+				"extended_weight": "10 lb"
+			}
 			"notes": "+ HP per wound inflicted"
       },
       {
