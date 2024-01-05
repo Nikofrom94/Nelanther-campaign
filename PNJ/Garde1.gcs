@@ -1,29 +1,28 @@
 {
 	"type": "character",
 	"version": 4,
-	"id": "574b351c-3bb8-433a-b42b-972d86a67506",
-	"total_points": 65,
+	"id": "4cb0f4ce-b0a9-4cbb-a317-a337901802ae",
+	"total_points": 150,
 	"points_record": [
 		{
-			"when": "2024-01-02T18:40:33+01:00",
-			"points": 65,
-			"reason": "Reconciliation"
+			"when": "2024-01-01T17:48:36+01:00",
+			"points": 150,
+			"reason": "Initial points"
 		}
 	],
 	"profile": {
-		"name": "Amn Fighter 1",
-		"age": "30",
-		"birthday": "Sep 2",
-		"eyes": "Blue",
-		"hair": "Blond, Straight, Short",
-		"skin": "Dark Brown",
+		"name": "Clora Tegner",
+		"age": "24",
+		"birthday": "November 10",
+		"eyes": "Brown",
+		"hair": "Brown",
+		"skin": "Freckled",
 		"handedness": "Right",
-		"gender": "Male",
-		"height": "4'11.7564\"",
-		"weight": "122 lb",
-		"player_name": "PNJ",
-		"title": "Amn",
-		"tech_level": "4"
+		"gender": "Female",
+		"height": "5'10.9992\"",
+		"weight": "173 lb",
+		"player_name": "Nicolas",
+		"tech_level": "3"
 	},
 	"settings": {
 		"page": {
@@ -162,7 +161,7 @@
 					{
 						"state": "Collapse",
 						"expression": "0",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. Will\u003c/b\u003e to do anything besides talk or rest; failure causes unconsciousness\u003cbr\u003e\nEach FP you lose below 0 also causes 1 HP of injury\u003cbr\u003e\nMove, Dodge and ST are halved (B426)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
 						"ops": [
 							"halve_move",
 							"halve_dodge",
@@ -171,7 +170,7 @@
 					},
 					{
 						"state": "Tired",
-						"expression": "round($fp/3)",
+						"expression": "ceil($fp/3)-1",
 						"explanation": "Move, Dodge and ST are halved (B426)",
 						"ops": [
 							"halve_move",
@@ -209,7 +208,7 @@
 					{
 						"state": "Dying #4",
 						"expression": "round(-$hp*4)",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. HT\u003c/b\u003e to avoid death\u003cbr\u003e\n\u003cb\u003eRoll vs. HT-4\u003c/b\u003e every second to avoid falling unconscious\u003cbr\u003e\nMove and Dodge are halved (B419)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
 							"halve_dodge"
@@ -218,7 +217,7 @@
 					{
 						"state": "Dying #3",
 						"expression": "round(-$hp*3)",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. HT\u003c/b\u003e to avoid death\u003cbr\u003e\n\u003cb\u003eRoll vs. HT-3\u003c/b\u003e every second to avoid falling unconscious\u003cbr\u003e\nMove and Dodge are halved (B419)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
 							"halve_dodge"
@@ -227,7 +226,7 @@
 					{
 						"state": "Dying #2",
 						"expression": "round(-$hp*2)",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. HT\u003c/b\u003e to avoid death\u003cbr\u003e\n\u003cb\u003eRoll vs. HT-2\u003c/b\u003e every second to avoid falling unconscious\u003cbr\u003e\nMove and Dodge are halved (B419)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
 							"halve_dodge"
@@ -236,7 +235,7 @@
 					{
 						"state": "Dying #1",
 						"expression": "-$hp",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. HT\u003c/b\u003e to avoid death\u003cbr\u003e\n\u003cb\u003eRoll vs. HT-1\u003c/b\u003e every second to avoid falling unconscious\u003cbr\u003e\nMove and Dodge are halved (B419)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
 							"halve_dodge"
@@ -245,7 +244,7 @@
 					{
 						"state": "Collapse",
 						"expression": "0",
-						"explanation": "\u003chtml\u003e\u003cbody\u003e\n\u003cb\u003eRoll vs. HT\u003c/b\u003e every second to avoid falling unconscious\u003cbr\u003e\nMove and Dodge are halved (B419)\n\u003c/body\u003e\u003c/html\u003e",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
 							"halve_dodge"
@@ -253,7 +252,7 @@
 					},
 					{
 						"state": "Reeling",
-						"expression": "round($hp/3)",
+						"expression": "ceil($hp/3)-1",
 						"explanation": "Move and Dodge are halved (B419)",
 						"ops": [
 							"halve_move",
@@ -353,7 +352,8 @@
 					"calc": {
 						"roll_range": "9-10",
 						"dr": {
-							"all": 4
+							"all": 4,
+							"crushing": -2
 						}
 					}
 				},
@@ -367,7 +367,8 @@
 					"calc": {
 						"roll_range": "11",
 						"dr": {
-							"all": 4
+							"all": 4,
+							"crushing": -2
 						}
 					}
 				},
@@ -450,7 +451,8 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 4
+							"all": 4,
+							"crushing": -2
 						}
 					}
 				}
@@ -462,25 +464,25 @@
 		"user_description_display": "tooltip",
 		"modifiers_display": "inline",
 		"notes_display": "inline",
-		"skill_level_adj_display": "not_shown",
+		"skill_level_adj_display": "tooltip",
 		"show_spell_adj": true,
 		"exclude_unspent_points_from_total": false
 	},
 	"attributes": [
 		{
 			"attr_id": "st",
-			"adj": 3,
+			"adj": 2,
 			"calc": {
-				"value": 13,
-				"points": 30
+				"value": 12,
+				"points": 20
 			}
 		},
 		{
 			"attr_id": "dx",
-			"adj": 0,
+			"adj": 2,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 12,
+				"points": 40
 			}
 		},
 		{
@@ -511,7 +513,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -559,7 +561,7 @@
 			"attr_id": "basic_speed",
 			"adj": 0,
 			"calc": {
-				"value": 5,
+				"value": 5.5,
 				"points": 0
 			}
 		},
@@ -584,24 +586,21 @@
 			"attr_id": "hp",
 			"adj": 0,
 			"calc": {
-				"value": 13,
-				"current": 13,
+				"value": 12,
+				"current": 12,
 				"points": 0
 			}
 		}
 	],
 	"traits": [
 		{
-			"id": "81546b51-03d8-418d-956f-7c55b71ba88c",
+			"id": "7051f398-7524-41a2-bc3e-6a99518ab55c",
 			"type": "trait",
 			"name": "Natural Attacks",
 			"reference": "B271",
-			"tags": [
-				"Physical"
-			],
 			"weapons": [
 				{
-					"id": "fd1a3afb-3742-491c-897a-b86d481bec98",
+					"id": "591d76e0-12ef-477b-8f18-3ec41fd52ec2",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cr",
@@ -609,7 +608,7 @@
 						"base": "-1"
 					},
 					"usage": "Bite",
-					"reach": "C",
+					"reach": "C,1",
 					"parry": "No",
 					"block": "No",
 					"defaults": [
@@ -622,12 +621,12 @@
 						}
 					],
 					"calc": {
-						"level": 10,
-						"damage": "1d-1 cr"
+						"level": 12,
+						"damage": "1d-2 cr"
 					}
 				},
 				{
-					"id": "638412d9-54e5-44a2-8aca-5695a608d7cd",
+					"id": "f1a4b878-9a51-475e-a025-2cea7858b31c",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cr",
@@ -635,7 +634,7 @@
 						"base": "-1"
 					},
 					"usage": "Punch",
-					"reach": "C",
+					"reach": "C,1",
 					"defaults": [
 						{
 							"type": "dx"
@@ -654,14 +653,14 @@
 						}
 					],
 					"calc": {
-						"level": 10,
-						"damage": "1d-1 cr",
+						"level": 12,
+						"damage": "1d-2 cr",
 						"parry": "10",
 						"block": "10"
 					}
 				},
 				{
-					"id": "3b1aa24b-ba9b-40da-92dc-b2f7f85484b3",
+					"id": "49afc4a9-89fb-4836-8936-bf2f9358c3ef",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cr",
@@ -670,6 +669,7 @@
 					"usage": "Kick",
 					"reach": "C,1",
 					"parry": "No",
+					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -682,101 +682,120 @@
 						},
 						{
 							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
 							"name": "Karate",
 							"modifier": -2
 						}
 					],
 					"calc": {
-						"level": 8,
-						"damage": "1d+1 cr",
-						"block": "9"
+						"level": 10,
+						"damage": "1d cr"
 					}
 				}
 			],
 			"calc": {
 				"points": 0
 			}
+		},
+		{
+			"id": "abd6768b-49f4-462e-87ff-0c50517bb2ac",
+			"type": "trait",
+			"name": "Combat Reflexes",
+			"reference": "B43",
+			"notes": "Never freeze",
+			"tags": [
+				"Advantage",
+				"Mental"
+			],
+			"base_points": 15,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Enhanced Time Sense"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "fast-draw"
+					},
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "dodge",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "parry",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "block",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "fright_check",
+					"amount": 2
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
+					"amount": 6
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "to initiative rolls for your side (+2 if you are the leader)",
+					"amount": 1
+				}
+			],
+			"calc": {
+				"points": 15
+			}
+		},
+		{
+			"id": "9bc0d6d9-fa84-452b-865d-8b0570aa2aed",
+			"type": "trait",
+			"name": "Fit",
+			"reference": "B55",
+			"notes": "Recover FP at twice the normal rate (but not FP spent for spells or psi powers)",
+			"tags": [
+				"Advantage",
+				"Physical"
+			],
+			"base_points": 5,
+			"features": [
+				{
+					"type": "conditional_modifier",
+					"situation": "to all HT rolls to stay conscious, avoid death, resist disease, or resist poison",
+					"amount": 1
+				}
+			],
+			"calc": {
+				"points": 5
+			}
 		}
 	],
 	"skills": [
 		{
-			"id": "b5672fe3-a201-4cbb-814f-c8e8103b9114",
-			"type": "skill",
-			"name": "Knife",
-			"reference": "B208",
-			"tags": [
-				"Combat",
-				"Melee Combat",
-				"Weapon"
-			],
-			"difficulty": "dx/e",
-			"points": 4,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -4,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"defaults": [
-				{
-					"type": "skill",
-					"name": "Force Sword",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Main-Gauche",
-					"modifier": -3
-				},
-				{
-					"type": "skill",
-					"name": "Shortsword",
-					"modifier": -3
-				},
-				{
-					"type": "dx",
-					"modifier": -4
-				}
-			],
-			"calc": {
-				"level": 12,
-				"rsl": "DX+2"
-			}
-		},
-		{
-			"id": "ec0e5920-3f78-48bb-835f-63d34a5f547a",
-			"type": "skill",
-			"name": "Shield",
-			"reference": "B220",
-			"tags": [
-				"Combat",
-				"Melee Combat",
-				"Weapon"
-			],
-			"specialization": "Shield",
-			"difficulty": "dx/e",
-			"points": 8,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -4,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -4
-				}
-			],
-			"calc": {
-				"level": 13,
-				"rsl": "DX+3"
-			}
-		},
-		{
-			"id": "98d5ba29-88d3-4e69-9b9f-04371743d766",
+			"id": "fd678875-eb40-436f-a3fe-2e06b4d8bb1c",
 			"type": "skill",
 			"name": "Broadsword",
 			"reference": "B208",
@@ -786,13 +805,13 @@
 				"Weapon"
 			],
 			"difficulty": "dx/a",
-			"points": 16,
+			"points": 2,
 			"defaulted_from": {
 				"type": "dx",
 				"modifier": -5,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
 			},
 			"defaults": [
 				{
@@ -826,110 +845,125 @@
 				}
 			],
 			"calc": {
-				"level": 14,
-				"rsl": "DX+4"
+				"level": 12,
+				"rsl": "DX+0"
+			}
+		},
+		{
+			"id": "9b87d934-ea25-45a8-8faa-319016689817",
+			"type": "skill",
+			"name": "Shield",
+			"reference": "B220",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"specialization": "Shield",
+			"difficulty": "dx/e",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 13,
+				"rsl": "DX+1"
+			}
+		},
+		{
+			"id": "589f1212-a86b-42b6-a003-e4f1a491ef49",
+			"type": "skill",
+			"name": "Axe/Mace",
+			"reference": "B208",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Flail",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "DX+0"
+			}
+		},
+		{
+			"id": "9837eb15-329b-42c6-82e5-874274234ec6",
+			"type": "skill",
+			"name": "Spear",
+			"reference": "B208",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Polearm",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Staff",
+					"modifier": -2
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "DX+0"
 			}
 		}
 	],
 	"equipment": [
 		{
-			"id": "cb2a32e3-2c91-4496-b4a1-b58195f47c6e",
-			"type": "equipment",
-			"description": "Mail Hauberk",
-			"reference": "B283",
-			"tech_level": "2",
-			"legality_class": "3",
-			"tags": [
-				"Body Armor"
-			],
-			"quantity": 1,
-			"value": 230,
-			"weight": "25 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"location": "torso",
-					"amount": 4
-				},
-				{
-					"type": "dr_bonus",
-					"location": "vitals",
-					"amount": 4
-				},
-				{
-					"type": "dr_bonus",
-					"location": "groin",
-					"amount": 4
-				}
-			],
-			"equipped": true,
-			"calc": {
-				"extended_value": 230,
-				"extended_weight": "25 lb"
-			}
-		},
-		{
-			"id": "93d3e6dc-a574-4580-a27f-a8579a1ae073",
-			"type": "equipment",
-			"description": "Steel Pot",
-			"reference": "B285",
-			"tech_level": "6",
-			"tags": [
-				"Headgear"
-			],
-			"quantity": 1,
-			"value": 60,
-			"weight": "3 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"location": "skull",
-					"amount": 4
-				}
-			],
-			"equipped": true,
-			"calc": {
-				"extended_value": 60,
-				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "eb199a44-6fa5-45c9-8b04-e21dd1ab1e98",
-			"type": "equipment",
-			"description": "Boots",
-			"reference": "B284",
-			"notes": "Flexible; Concealable",
-			"tech_level": "2",
-			"tags": [
-				"Footwear"
-			],
-			"quantity": 1,
-			"value": 80,
-			"weight": "3 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"location": "foot",
-					"amount": 2
-				},
-				{
-					"type": "weapon_bonus",
-					"selection_type": "weapons_with_name",
-					"specialization": {
-						"compare": "is",
-						"qualifier": "Kick"
-					},
-					"amount": 1
-				}
-			],
-			"equipped": true,
-			"calc": {
-				"extended_value": 80,
-				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "e2656871-185d-4415-83da-675936a336f7",
+			"id": "114e84ab-6ea6-406a-9384-666918536124",
 			"type": "equipment",
 			"description": "Broadsword",
 			"reference": "B271",
@@ -942,7 +976,7 @@
 			"weight": "3 lb",
 			"weapons": [
 				{
-					"id": "975e104f-b8e8-4cf9-9d75-fd0712e15073",
+					"id": "294c4e7e-c390-4660-8c70-008dba5dad1a",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cut",
@@ -993,13 +1027,13 @@
 						}
 					],
 					"calc": {
-						"level": 14,
-						"damage": "2d cut",
-						"parry": "12"
+						"level": 12,
+						"damage": "1d+3 cut",
+						"parry": "10"
 					}
 				},
 				{
-					"id": "57d67cf9-da8c-46df-8270-d547ba3239b2",
+					"id": "43ac8fd1-cfdf-4c93-8850-d276f4987761",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cr",
@@ -1050,9 +1084,9 @@
 						}
 					],
 					"calc": {
-						"level": 14,
-						"damage": "1d+1 cr",
-						"parry": "12"
+						"level": 12,
+						"damage": "1d cr",
+						"parry": "10"
 					}
 				}
 			],
@@ -1063,127 +1097,72 @@
 			}
 		},
 		{
-			"id": "bc7d3591-3bfb-4015-94cd-265112bdd5cc",
+			"id": "c311fae8-a61c-443a-a5dd-bdba0d16da68",
 			"type": "equipment",
-			"description": "Large Knife",
-			"reference": "B272",
-			"tech_level": "0",
+			"description": "Mace",
+			"reference": "B271",
+			"tech_level": "2",
 			"tags": [
 				"Melee Weapon",
 				"Missile Weapon"
 			],
 			"quantity": 1,
-			"value": 40,
-			"weight": "1 lb",
+			"value": 50,
+			"weight": "5 lb",
 			"weapons": [
 				{
-					"id": "0150f0d2-f1c9-41c7-ad3b-d7f1a71c0ba6",
+					"id": "446e19d4-cb30-46c6-a160-2c7a31728d89",
 					"type": "melee_weapon",
 					"damage": {
-						"type": "cut",
+						"type": "cr",
 						"st": "sw",
-						"base": "-2"
+						"base": "3"
 					},
-					"strength": "6",
+					"strength": "12",
 					"usage": "Swung",
-					"reach": "C,1",
-					"parry": "-1",
+					"reach": "1",
+					"parry": "0U",
 					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Flail",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Knife"
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
+							"name": "Two-Handed Axe/Mace",
 							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Main-Gauche",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
 						}
 					],
 					"calc": {
 						"level": 12,
-						"damage": "2d-3 cut",
-						"parry": "10"
+						"damage": "1d+5 cr",
+						"parry": "10U"
 					}
 				},
 				{
-					"id": "3d452d0b-625d-4ebf-989d-2b6e539d9d37",
-					"type": "melee_weapon",
-					"damage": {
-						"type": "imp",
-						"st": "thr"
-					},
-					"strength": "6",
-					"usage": "Thrust",
-					"reach": "C",
-					"parry": "-1",
-					"block": "No",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Knife"
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Main-Gauche",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					],
-					"calc": {
-						"level": 12,
-						"damage": "1d imp",
-						"parry": "10"
-					}
-				},
-				{
-					"id": "30e05ac0-ca96-4495-a4ba-a27d7e4811f9",
+					"id": "72831d23-632b-4769-94e4-b3cbbed96690",
 					"type": "ranged_weapon",
 					"damage": {
-						"type": "imp",
-						"st": "thr"
+						"type": "cr",
+						"st": "sw",
+						"base": "3"
 					},
-					"strength": "6",
-					"usage": "Thrown",
-					"range": "x0.8/x1.5",
+					"strength": "12",
+					"accuracy": "1",
+					"range": "x0.5/x1",
 					"rate_of_fire": "1",
 					"shots": "T",
-					"bulk": "-2",
+					"bulk": "-4",
 					"defaults": [
 						{
 							"type": "dx",
@@ -1192,24 +1171,163 @@
 						{
 							"type": "skill",
 							"name": "Thrown Weapon",
-							"specialization": "Knife"
+							"specialization": "Axe/Mace"
 						}
 					],
 					"calc": {
-						"level": 6,
-						"damage": "1d imp",
-						"range": "10/19"
+						"level": 8,
+						"damage": "1d+5 cr",
+						"range": "6/12"
+					}
+				}
+			],
+			"calc": {
+				"extended_value": 50,
+				"extended_weight": "5 lb"
+			}
+		},
+		{
+			"id": "962dc633-0f19-42b8-87c8-128e413e517d",
+			"type": "equipment",
+			"description": "Spear",
+			"reference": "B273",
+			"tech_level": "0",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"quantity": 1,
+			"value": 40,
+			"weight": "4 lb",
+			"weapons": [
+				{
+					"id": "a0ab4b29-3d89-4e1a-b631-242a5dd9061a",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "9",
+					"usage": "Thrust",
+					"reach": "1*",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d+1 imp",
+						"parry": "10"
+					}
+				},
+				{
+					"id": "c08a3872-56ac-438a-91af-b5164b8af563",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9†",
+					"usage": "Thrust",
+					"reach": "1-2*",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d+2 imp",
+						"parry": "10"
+					}
+				},
+				{
+					"id": "144a40da-e63e-47c5-86df-45782f6c5c35",
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9",
+					"usage": "Thrown",
+					"accuracy": "2",
+					"range": "x1/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Spear Thrower",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Harpoon",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 8,
+						"damage": "1d+2 imp",
+						"range": "12/18"
 					}
 				}
 			],
 			"equipped": true,
 			"calc": {
 				"extended_value": 40,
-				"extended_weight": "1 lb"
+				"extended_weight": "4 lb"
 			}
 		},
 		{
-			"id": "e49b7ec9-4209-4e92-bf24-4435aeb58091",
+			"id": "f9466cee-0506-4a43-9b63-6d80b0e15579",
 			"type": "equipment",
 			"description": "Medium Shield",
 			"reference": "B287",
@@ -1222,7 +1340,7 @@
 			"weight": "15 lb",
 			"weapons": [
 				{
-					"id": "f71bb70b-b5fa-4160-b89f-f1675ae29401",
+					"id": "6e671ffc-1163-4bf0-b5c7-e2ca9868be51",
 					"type": "melee_weapon",
 					"damage": {
 						"type": "cr",
@@ -1254,25 +1372,15 @@
 					],
 					"calc": {
 						"level": 13,
-						"damage": "1d cr",
-						"block": "11"
+						"damage": "1d-1 cr",
+						"block": "10"
 					}
 				}
 			],
 			"features": [
 				{
-					"type": "attribute_bonus",
-					"attribute": "dodge",
-					"amount": 2
-				},
-				{
-					"type": "attribute_bonus",
-					"attribute": "parry",
-					"amount": 2
-				},
-				{
-					"type": "attribute_bonus",
-					"attribute": "block",
+					"type": "conditional_modifier",
+					"situation": "to Dodge, Parry \u0026 Block against attacks from the front or shield side",
 					"amount": 2
 				}
 			],
@@ -1281,17 +1389,131 @@
 				"extended_value": 60,
 				"extended_weight": "15 lb"
 			}
+		},
+		{
+			"id": "7511515f-b135-458b-addb-ab874ab08c36",
+			"type": "equipment",
+			"description": "Pot-Helm",
+			"reference": "B284",
+			"tech_level": "3",
+			"tags": [
+				"Headgear"
+			],
+			"quantity": 1,
+			"value": 100,
+			"weight": "5 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "skull",
+					"amount": 4
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 100,
+				"extended_weight": "5 lb"
+			}
+		},
+		{
+			"id": "1bd358f4-6420-4d73-ac34-0d928b6c2a19",
+			"type": "equipment",
+			"description": "Reinforced Boots",
+			"reference": "B284",
+			"tech_level": "7",
+			"tags": [
+				"Footwear"
+			],
+			"quantity": 1,
+			"value": 75,
+			"weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "foot",
+					"amount": 2
+				},
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					},
+					"amount": 1
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 75,
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "935ec987-44c8-4cc5-b5d3-cf07e34b56f0",
+			"type": "equipment",
+			"description": "Mail Hauberk",
+			"reference": "B283",
+			"notes": "Flexible",
+			"tech_level": "2",
+			"legality_class": "3",
+			"tags": [
+				"Body Armor"
+			],
+			"quantity": 1,
+			"value": 230,
+			"weight": "25 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"specialization": "crushing",
+					"amount": -2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"specialization": "crushing",
+					"amount": -2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"specialization": "crushing",
+					"amount": -2
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 230,
+				"extended_weight": "25 lb"
+			}
 		}
 	],
-	"created_date": "2021-06-29T15:10:00+02:00",
-	"modified_date": "2024-01-02T18:40:42+01:00",
+	"created_date": "2024-01-01T17:48:36+01:00",
+	"modified_date": "2024-01-01T17:58:11+01:00",
 	"calc": {
-		"swing": "2d-1",
-		"thrust": "1d",
-		"basic_lift": "34 lb",
-		"dodge_bonus": 2,
-		"parry_bonus": 2,
-		"block_bonus": 2,
+		"swing": "1d+2",
+		"thrust": "1d-1",
+		"basic_lift": "29 lb",
+		"dodge_bonus": 1,
+		"parry_bonus": 1,
+		"block_bonus": 1,
 		"move": [
 			5,
 			4,
@@ -1300,11 +1522,11 @@
 			1
 		],
 		"dodge": [
-			10,
 			9,
 			8,
 			7,
-			6
+			6,
+			5
 		]
 	}
 }

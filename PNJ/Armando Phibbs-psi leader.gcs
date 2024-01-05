@@ -11,7 +11,7 @@
 		}
 	],
 	"profile": {
-		"name": "Armando Phibbs",
+		"name": "    ",
 		"age": "40",
 		"birthday": "December 31",
 		"eyes": "Brown",
@@ -22,7 +22,8 @@
 		"height": "4'11.4\"",
 		"weight": "104 lb",
 		"player_name": "niko",
-		"tech_level": "4"
+		"tech_level": "4",
+		"portrait": "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"
 	},
 	"settings": {
 		"page": {
@@ -596,112 +597,47 @@
 	],
 	"traits": [
 		{
-			"id": "4530c77f-f1bd-4a30-ba7f-b30ed6ccbd33",
+			"id": "85004d57-c545-4e80-b009-7026be4ed483",
 			"type": "trait",
-			"name": "Natural Attacks",
-			"reference": "B271",
-			"weapons": [
+			"name": "Callous",
+			"reference": "B125",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -5,
+			"features": [
 				{
-					"id": "3ecf178b-e191-48b4-b8db-79aacf4450bf",
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cr",
-						"st": "thr",
-						"base": "-1"
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "psychology"
 					},
-					"usage": "Bite",
-					"reach": "C",
-					"parry": "No",
-					"block": "No",
-					"defaults": [
-						{
-							"type": "dx"
-						},
-						{
-							"type": "skill",
-							"name": "Brawling"
-						}
-					],
-					"calc": {
-						"level": 11,
-						"parry": "No",
-						"block": "No",
-						"damage": "1d-3 cr"
-					}
+					"amount": -3
 				},
 				{
-					"id": "ec4bc0fa-d929-461b-a18d-0ee3bae7848b",
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cr",
-						"st": "thr",
-						"base": "-1"
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "teaching"
 					},
-					"usage": "Punch",
-					"reach": "C",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx"
-						},
-						{
-							"type": "skill",
-							"name": "Boxing"
-						},
-						{
-							"type": "skill",
-							"name": "Brawling"
-						},
-						{
-							"type": "skill",
-							"name": "Karate"
-						}
-					],
-					"calc": {
-						"level": 11,
-						"parry": "8",
-						"damage": "1d-3 cr"
-					}
+					"amount": -3
 				},
 				{
-					"id": "f2d15d0b-8df7-44eb-83f3-004c79910e1c",
-					"type": "melee_weapon",
-					"damage": {
-						"type": "cr",
-						"st": "thr"
-					},
-					"usage": "Kick",
-					"reach": "C,1",
-					"parry": "No",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Brawling",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Kicking"
-						},
-						{
-							"type": "skill",
-							"name": "Karate",
-							"modifier": -2
-						}
-					],
-					"calc": {
-						"level": 9,
-						"parry": "No",
-						"damage": "1d-2 cr"
-					}
+					"type": "reaction_bonus",
+					"situation": "from past victims and anyone with Empathy",
+					"amount": -1
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
+					"amount": 1
 				}
 			],
 			"calc": {
-				"points": 0
+				"points": -5
 			}
 		},
 		{
@@ -775,6 +711,70 @@
 			}
 		},
 		{
+			"id": "b01d878b-5876-4f6d-9197-0d43cf436c88",
+			"type": "trait",
+			"name": "Increased Will",
+			"reference": "B16",
+			"tags": [
+				"Advantage",
+				"Attribute",
+				"Mental"
+			],
+			"levels": 2,
+			"points_per_level": 5,
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"attribute": "will",
+					"amount": 1,
+					"per_level": true
+				}
+			],
+			"can_level": true,
+			"calc": {
+				"points": 10
+			}
+		},
+		{
+			"id": "3033bb7f-6725-4619-bfc8-aa402c8753ac",
+			"type": "trait",
+			"name": "Instill Fear",
+			"reference": "PSI64",
+			"notes": "Offense ability. Project fear and terror into someone's heart.",
+			"tags": [
+				"Mental",
+				"Offense",
+				"Psionics",
+				"Telepathy"
+			],
+			"base_points": 15,
+			"levels": 5,
+			"points_per_level": 3,
+			"can_level": true,
+			"calc": {
+				"points": 30
+			}
+		},
+		{
+			"id": "9d2fbc7a-6e96-48f6-9fdd-1a36ca6793be",
+			"type": "trait",
+			"name": "Mind Clouding",
+			"reference": "PSI66",
+			"notes": "Sense and defense ability. People don't perceive your presence. ",
+			"tags": [
+				"Mental",
+				"Psionics",
+				"Sense and Defense",
+				"Telepathy"
+			],
+			"levels": 5,
+			"points_per_level": 6,
+			"can_level": true,
+			"calc": {
+				"points": 30
+			}
+		},
+		{
 			"id": "ea792184-0f6d-42a9-9107-9ce79857c99d",
 			"type": "trait",
 			"name": "Mind Shield",
@@ -804,111 +804,266 @@
 			}
 		},
 		{
-			"id": "3033bb7f-6725-4619-bfc8-aa402c8753ac",
+			"id": "4530c77f-f1bd-4a30-ba7f-b30ed6ccbd33",
 			"type": "trait",
-			"name": "Instill Fear",
-			"reference": "PSI64",
-			"notes": "Offense ability. Project fear and terror into someone's heart.",
+			"name": "Natural Attacks",
+			"reference": "B271",
+			"weapons": [
+				{
+					"id": "3ecf178b-e191-48b4-b8db-79aacf4450bf",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr"
+					}
+				},
+				{
+					"id": "ec4bc0fa-d929-461b-a18d-0ee3bae7848b",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr",
+						"parry": "8",
+						"block": "8"
+					}
+				},
+				{
+					"id": "f2d15d0b-8df7-44eb-83f3-004c79910e1c",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"parry": "No",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 9,
+						"damage": "1d-2 cr",
+						"block": "7"
+					}
+				}
+			],
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "14047bec-d09a-4a98-86d0-c0bf37a0cd90",
+			"type": "trait",
+			"name": "Suggestion",
+			"reference": "PSI63",
+			"notes": "Control ability.  You can send telepathic commands to a subject.",
 			"tags": [
+				"Control",
 				"Mental",
-				"Offense",
 				"Psionics",
 				"Telepathy"
 			],
-			"base_points": 15,
-			"levels": 5,
-			"points_per_level": 3,
-			"can_level": true,
-			"calc": {
-				"points": 30
-			}
-		},
-		{
-			"id": "b01d878b-5876-4f6d-9197-0d43cf436c88",
-			"type": "trait",
-			"name": "Increased Will",
-			"reference": "B16",
-			"tags": [
-				"Advantage",
-				"Attribute",
-				"Mental"
-			],
-			"levels": 2,
-			"points_per_level": 5,
-			"features": [
+			"modifiers": [
 				{
-					"type": "attribute_bonus",
-					"attribute": "will",
-					"amount": 1,
-					"per_level": true
+					"id": "9b3ed131-dc50-47d4-bb66-7d0c9e4c31c3",
+					"type": "modifier",
+					"name": "Suggestion_1",
+					"notes": "Skin-to-skin contact",
+					"cost": 10,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "42bfe4f7-5437-4b8b-952d-8b0d8b792764",
+					"type": "modifier",
+					"name": "Suggestion_2",
+					"notes": "Any touch will suffice",
+					"cost": 20,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "25daf0cc-7028-49ed-bbcf-1ab863a4427b",
+					"type": "modifier",
+					"name": "Suggestion_3",
+					"notes": "Suggestion at range; -1 penalty/yard distance",
+					"cost": 30,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "ce17b242-e7bf-433d-9ff8-bbf6bf789719",
+					"type": "modifier",
+					"name": "Suggestion_4",
+					"reference": "BX550",
+					"notes": "Use range penalties p. B550",
+					"cost": 35,
+					"cost_type": "points"
+				},
+				{
+					"id": "607d72b3-5cd5-4c9d-b4cc-f7f6edcdee64",
+					"type": "modifier",
+					"name": "Suggestion_5",
+					"reference": "B241",
+					"notes": "Use long-distance modifiers p. B241",
+					"cost": 50,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "60cbbe2f-03be-4ae7-ac74-f6c2d51b5b11",
+					"type": "modifier",
+					"name": "Suggestion_6",
+					"reference": "B241",
+					"notes": "Use long-distance modifiers p. B241",
+					"cost": 75,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "718e2b07-4b49-492b-82a3-634f8d167742",
+					"type": "modifier",
+					"name": "Suggestion_7",
+					"notes": "No penalty for range",
+					"cost": 100,
+					"cost_type": "points",
+					"disabled": true
 				}
 			],
-			"can_level": true,
 			"calc": {
-				"points": 10
+				"points": 35
 			}
 		},
 		{
-			"id": "9d2fbc7a-6e96-48f6-9fdd-1a36ca6793be",
+			"id": "ede2a6eb-a930-4224-a321-d960c494c4ee",
 			"type": "trait",
-			"name": "Mind Clouding",
-			"reference": "PSI66",
-			"notes": "Sense and defense ability. People don't perceive your presence. ",
+			"name": "Mental Blow",
+			"reference": "PSI65",
+			"notes": "Offense ability. Overload someone's brain with a psychic attack. ",
 			"tags": [
+				"Communication",
 				"Mental",
 				"Psionics",
-				"Sense and Defense",
 				"Telepathy"
 			],
-			"levels": 5,
-			"points_per_level": 6,
-			"can_level": true,
-			"calc": {
-				"points": 30
-			}
-		},
-		{
-			"id": "85004d57-c545-4e80-b009-7026be4ed483",
-			"type": "trait",
-			"name": "Callous",
-			"reference": "B125",
-			"tags": [
-				"Disadvantage",
-				"Mental"
-			],
-			"base_points": -5,
-			"features": [
+			"modifiers": [
 				{
-					"type": "skill_bonus",
-					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "psychology"
-					},
-					"amount": -3
+					"id": "16e1b343-c605-475e-b672-d24ae6f9f019",
+					"type": "modifier",
+					"name": "Mental Blow_1",
+					"notes": "Skin-to-skin contact",
+					"cost": 17,
+					"cost_type": "points",
+					"disabled": true
 				},
 				{
-					"type": "skill_bonus",
-					"selection_type": "skills_with_name",
-					"name": {
-						"compare": "is",
-						"qualifier": "teaching"
-					},
-					"amount": -3
+					"id": "7a812a4d-0da9-4b91-aa9a-8bb5dbd44bf5",
+					"type": "modifier",
+					"name": "Mental Blow_2",
+					"notes": "Any touch will suffice",
+					"cost": 20,
+					"cost_type": "points",
+					"disabled": true
 				},
 				{
-					"type": "reaction_bonus",
-					"situation": "from past victims and anyone with Empathy",
-					"amount": -1
+					"id": "a9867543-a145-4488-a481-3ede23fadddd",
+					"type": "modifier",
+					"name": "Mental Blow_3",
+					"notes": "Mental Blow at range; -1 penalty/yard distance",
+					"cost": 23,
+					"cost_type": "points"
 				},
 				{
-					"type": "conditional_modifier",
-					"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
-					"amount": 1
+					"id": "f904ab36-5b77-4ceb-a5ee-925cee3ab0ff",
+					"type": "modifier",
+					"name": "Mental Blow_4",
+					"reference": "BX550",
+					"notes": "Use range penalties p. B550",
+					"cost": 28,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "dc517819-5af3-45fb-beb7-2c182a91e8e8",
+					"type": "modifier",
+					"name": "Mental Blow_5",
+					"reference": "B241",
+					"notes": "Use long-distance modifiers p. B241",
+					"cost": 33,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "766e0ca3-e3c5-4f30-af65-30db9ba26c78",
+					"type": "modifier",
+					"name": "Mental Blow_6",
+					"notes": "No penalty for range",
+					"cost": 38,
+					"cost_type": "points",
+					"disabled": true
 				}
 			],
 			"calc": {
-				"points": -5
+				"points": 23
 			}
 		}
 	],
@@ -928,9 +1083,9 @@
 				"type": "skill",
 				"name": "Merchant",
 				"modifier": -3,
-				"level": 10,
-				"adjusted_level": 10,
-				"points": -10
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
 			},
 			"defaults": [
 				{
@@ -946,6 +1101,45 @@
 			"calc": {
 				"level": 13,
 				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "8db3415a-ca1f-40bd-aae8-e42473e8aafb",
+			"type": "skill",
+			"name": "Acting",
+			"reference": "B174",
+			"tags": [
+				"Social",
+				"Spy"
+			],
+			"difficulty": "iq/a",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 9,
+				"adjusted_level": 9,
+				"points": -9
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Performance",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Public Speaking",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+1"
 			}
 		},
 		{
@@ -1181,6 +1375,54 @@
 					}
 				},
 				{
+					"id": "cdb8aed1-5432-41b2-82be-a79c61c09d2d",
+					"type": "skill",
+					"name": "Mental Blow",
+					"reference": "PSI65",
+					"tags": [
+						"Offense",
+						"Psionics",
+						"Telepathy"
+					],
+					"difficulty": "will/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "will",
+						"modifier": -6,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"defaults": [
+						{
+							"type": "will",
+							"modifier": -6
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Mental Blow"
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "_"
+								}
+							}
+						]
+					},
+					"calc": {
+						"level": 14,
+						"rsl": "Will-2"
+					}
+				},
+				{
 					"id": "666772ef-7e44-43f3-beb2-7938dc862662",
 					"type": "skill",
 					"name": "Mind Clouding",
@@ -1299,10 +1541,69 @@
 						"level": 18,
 						"rsl": "+0"
 					}
+				},
+				{
+					"id": "268d8c2c-7a2e-48d4-87a9-77d8e6d45c7b",
+					"type": "skill",
+					"name": "Suggestion",
+					"reference": "PSI61",
+					"tags": [
+						"Control",
+						"Psionics",
+						"Telepathy"
+					],
+					"difficulty": "iq/h",
+					"points": 8,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Suggestion"
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "_"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Emotion Control"
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "_"
+								}
+							}
+						]
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ+1"
+					}
 				}
 			],
-			"name": "psi",
-			"calc": {}
+			"name": "psi"
 		},
 		{
 			"id": "419e8566-f75b-4baa-ade9-8677462a6172",
@@ -1359,11 +1660,12 @@
 			"difficulty": "will/a",
 			"points": 1,
 			"defaulted_from": {
-				"type": "will",
-				"modifier": -5,
-				"level": 11,
-				"adjusted_level": 11,
-				"points": -11
+				"type": "skill",
+				"name": "Acting",
+				"modifier": -3,
+				"level": 12,
+				"adjusted_level": 12,
+				"points": -12
 			},
 			"defaults": [
 				{
@@ -1466,7 +1768,7 @@
 				"Social"
 			],
 			"difficulty": "iq/a",
-			"points": 1,
+			"points": 4,
 			"defaulted_from": {
 				"type": "iq",
 				"modifier": -5,
@@ -1491,8 +1793,8 @@
 				}
 			],
 			"calc": {
-				"level": 13,
-				"rsl": "IQ-1"
+				"level": 15,
+				"rsl": "IQ+1"
 			}
 		},
 		{
@@ -1544,7 +1846,7 @@
 			"points": 1,
 			"defaulted_from": {
 				"type": "skill",
-				"name": "Politics",
+				"name": "Acting",
 				"modifier": -5,
 				"level": 10,
 				"adjusted_level": 10,
@@ -1691,7 +1993,7 @@
 			],
 			"specialization": "Shield",
 			"difficulty": "dx/e",
-			"points": 1,
+			"points": 8,
 			"defaulted_from": {
 				"type": "dx",
 				"modifier": -4,
@@ -1706,8 +2008,8 @@
 				}
 			],
 			"calc": {
-				"level": 11,
-				"rsl": "DX+0"
+				"level": 14,
+				"rsl": "DX+3"
 			}
 		},
 		{
@@ -2092,7 +2394,6 @@
 					"strength": "8",
 					"usage": "Swung",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -2145,9 +2446,8 @@
 					],
 					"calc": {
 						"level": 14,
-						"parry": "10",
-						"block": "No",
-						"damage": "1d+4 cut"
+						"damage": "1d+4 cut",
+						"parry": "10"
 					}
 				},
 				{
@@ -2161,7 +2461,6 @@
 					"strength": "8",
 					"usage": "Thrust",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -2214,9 +2513,8 @@
 					],
 					"calc": {
 						"level": 14,
-						"parry": "10",
-						"block": "No",
-						"damage": "1d+3 imp"
+						"damage": "1d+3 imp",
+						"parry": "10"
 					}
 				}
 			],
@@ -2314,9 +2612,8 @@
 					],
 					"calc": {
 						"level": 14,
-						"parry": "9",
-						"block": "No",
-						"damage": "1d-1 cut"
+						"damage": "1d-1 cut",
+						"parry": "9"
 					}
 				},
 				{
@@ -2362,9 +2659,8 @@
 					],
 					"calc": {
 						"level": 14,
-						"parry": "9",
-						"block": "No",
-						"damage": "1d-1 imp"
+						"damage": "1d-1 imp",
+						"parry": "9"
 					}
 				},
 				{
@@ -2412,9 +2708,8 @@
 					],
 					"calc": {
 						"level": 10,
-						"parry": "8F",
-						"block": "No",
-						"damage": "1d-1 cut"
+						"damage": "1d-1 cut",
+						"parry": "8F"
 					}
 				},
 				{
@@ -2461,9 +2756,8 @@
 					],
 					"calc": {
 						"level": 10,
-						"parry": "8F",
-						"block": "No",
-						"damage": "1d-1 imp"
+						"damage": "1d-1 imp",
+						"parry": "8F"
 					}
 				},
 				{
@@ -2475,10 +2769,9 @@
 					},
 					"strength": "6",
 					"usage": "Thrown",
-					"accuracy": "+0",
 					"range": "x0.8/x1.5",
 					"rate_of_fire": "1",
-					"shots": "T(1)",
+					"shots": "T",
 					"bulk": "-2",
 					"defaults": [
 						{
@@ -2493,8 +2786,8 @@
 					],
 					"calc": {
 						"level": 7,
-						"range": "8/15",
-						"damage": "1d-1 imp"
+						"damage": "1d-1 imp",
+						"range": "8/15"
 					}
 				}
 			],
@@ -2506,7 +2799,7 @@
 		}
 	],
 	"created_date": "2023-12-15T11:26:02+01:00",
-	"modified_date": "2023-12-15T15:29:59+01:00",
+	"modified_date": "2024-01-03T20:58:44+01:00",
 	"calc": {
 		"swing": "1d",
 		"thrust": "1d-2",
