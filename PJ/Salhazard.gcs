@@ -11,9 +11,7 @@
 		}
 	],
 	"profile": {
-		"player_name": "Cyril",
 		"name": "Salhazard",
-		"title": "Voleur en cavale",
 		"age": "21",
 		"birthday": "Feb 25",
 		"eyes": "Brown",
@@ -21,9 +19,12 @@
 		"skin": "Pale",
 		"handedness": "Right",
 		"gender": "Male",
-		"tech_level": "4",
 		"height": "5'3\"",
-		"weight": "149 lb"
+		"weight": "149 lb",
+		"player_name": "Cyril",
+		"title": "Voleur en cavale",
+		"tech_level": "4",
+		"portrait": "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"
 	},
 	"settings": {
 		"page": {
@@ -1086,318 +1087,6 @@
 			}
 		},
 		{
-			"id": "991f48ab-76a7-405c-b1e0-7b79ca8a671f",
-			"type": "trait_container",
-			"open": true,
-			"children": [
-				{
-					"id": "6022433d-eb55-4b71-a42e-77f6a46eaae1",
-					"type": "trait",
-					"name": "Language: Common",
-					"reference": "B24",
-					"tags": [
-						"Advantage",
-						"Language",
-						"Mental"
-					],
-					"modifiers": [
-						{
-							"id": "b9b40ed6-d0c9-47d9-8df2-d25809bf4b6d",
-							"type": "modifier",
-							"name": "Native",
-							"reference": "B23",
-							"cost": -6,
-							"cost_type": "points"
-						},
-						{
-							"id": "715678d0-71f1-47dd-91ba-34330eda7f3d",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "4633e118-0bdb-4259-bf44-6893b0a7c28c",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "0e96f00d-7c1a-4c8c-aa78-d47f168155e9",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "c2e36491-b8ee-443c-a63d-78712d17f56f",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points"
-						},
-						{
-							"id": "afa4cf9b-f9e5-4ff2-9d38-72520751c4b2",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "d843367e-dad1-4165-9179-3d80c678167c",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "52898e3b-c3f2-49b0-ad65-72dd0adc9600",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "a878d38b-bd13-4501-8069-57aaeea6ad28",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points"
-						}
-					],
-					"calc": {
-						"points": 0
-					}
-				},
-				{
-					"id": "3e0a5723-a4b1-40ac-b254-feedc41b8923",
-					"type": "trait",
-					"name": "Language: Lantan",
-					"reference": "B24",
-					"tags": [
-						"Advantage",
-						"Language",
-						"Mental"
-					],
-					"modifiers": [
-						{
-							"id": "b0c2d7ac-c837-46ba-9e5c-9cba74148ea2",
-							"type": "modifier",
-							"name": "Native",
-							"reference": "B23",
-							"cost": -6,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "336cc13a-cbe6-4c85-ab24-0649d90d30ae",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "5b460e49-1336-452a-b7ea-6308c5d4df7c",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "09996526-ecd7-4430-9995-ba2fc0ddf8b9",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points"
-						},
-						{
-							"id": "6c5c808a-6a30-4581-9d33-b23d4c8fa07c",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "803434dc-37f4-4eaf-89c8-bafa22923c3c",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points"
-						},
-						{
-							"id": "b7d4f116-23ec-44a8-ab75-d9d34fb7a8b1",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "65491e97-345e-4154-ae1e-399ef6f65ed7",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "32584dcd-2892-41d4-a17c-c2a36b06c86d",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points",
-							"disabled": true
-						}
-					],
-					"calc": {
-						"points": 2
-					}
-				},
-				{
-					"id": "48a2777c-7c67-4842-ab7f-e23bf96f9b30",
-					"type": "trait",
-					"name": "Language: Thorass (Amn)",
-					"reference": "B24",
-					"tags": [
-						"Advantage",
-						"Language",
-						"Mental"
-					],
-					"modifiers": [
-						{
-							"id": "46fe1b94-d0c0-411e-9d83-01c367f6e66a",
-							"type": "modifier",
-							"name": "Native",
-							"reference": "B23",
-							"cost": -6,
-							"cost_type": "points"
-						},
-						{
-							"id": "44abeee9-bd92-4b5b-be40-85bf11d9b7f4",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "d09f2e35-0c79-4218-a5f8-75e143450a6b",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "e11eb754-5c14-4bf7-9867-dabe6815b3a2",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "4a7b86c9-e7e2-49bd-8074-539b0ee7ccf3",
-							"type": "modifier",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points"
-						},
-						{
-							"id": "c523350c-f213-4a30-b1ac-edd32e43a243",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "e5f8b8c6-17b9-479e-b54c-45d26b488133",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "ece4442d-43cd-4dd9-9beb-4f20c2657fb1",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "2a4730b5-cc60-4ec7-a988-393e045d1169",
-							"type": "modifier",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points"
-						}
-					],
-					"calc": {
-						"points": 0
-					}
-				}
-			],
-			"name": "Langues",
-			"calc": {
-				"points": 2
-			}
-		},
-		{
 			"id": "0ee8cdd6-9fd2-4d5f-9ea7-d54e97613905",
 			"type": "trait_container",
 			"open": true,
@@ -1549,6 +1238,33 @@
 							"disabled": true
 						},
 						{
+							"id": "9da8bdd8-d38f-46ab-8e35-fb6c4499a746",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116,P107",
+							"notes": "Activation 14",
+							"cost": -10,
+							"disabled": true
+						},
+						{
+							"id": "2de9a8e5-b9fd-4e58-860d-36662c68c5ae",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116,P107",
+							"notes": "Activation 11",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "c59aef04-8c9a-4d74-b917-a37079abee0b",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116,P107",
+							"notes": "Activation 8",
+							"cost": -40,
+							"disabled": true
+						},
+						{
 							"id": "9fb50b62-fc04-486d-8f29-2dfc95ee4c14",
 							"type": "modifier",
 							"name": "Unreliable",
@@ -1562,7 +1278,8 @@
 							"name": "Uncontrollable",
 							"reference": "B116",
 							"notes": "Harmless",
-							"cost": -10
+							"cost": -10,
+							"disabled": true
 						}
 					],
 					"calc": {
@@ -1592,15 +1309,44 @@
 							"name": "Uncontrollable",
 							"reference": "B116",
 							"notes": "Harmless",
-							"cost": -10
+							"cost": -10,
+							"disabled": true
 						},
 						{
 							"id": "9ec9fb9a-437a-4356-934b-0b1771c84b18",
 							"type": "modifier",
 							"name": "Unreliable",
 							"reference": "B116",
+							"notes": "Activation 14",
+							"cost": -10,
+							"disabled": true
+						},
+						{
+							"id": "bd5e4b9a-4d21-4b31-a89f-7172dcbef07e",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116",
+							"notes": "Activation 11",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "5518e028-058e-4377-b83b-8454391a6203",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116",
+							"notes": "Activation 8",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "f28d8c87-8c2a-4903-a309-95f1b6f886ba",
+							"type": "modifier",
+							"name": "Unreliable",
+							"reference": "B116",
 							"notes": "Activation 5",
-							"cost": -80
+							"cost": -80,
+							"disabled": true
 						}
 					],
 					"base_points": 15,
@@ -1623,13 +1369,325 @@
 						]
 					},
 					"calc": {
-						"points": 3
+						"points": 15
 					}
 				}
 			],
 			"name": "Psi",
 			"calc": {
-				"points": 29
+				"points": 41
+			}
+		},
+		{
+			"id": "991f48ab-76a7-405c-b1e0-7b79ca8a671f",
+			"type": "trait_container",
+			"open": true,
+			"children": [
+				{
+					"id": "6022433d-eb55-4b71-a42e-77f6a46eaae1",
+					"type": "trait",
+					"name": "Language: Common",
+					"reference": "B24",
+					"tags": [
+						"Advantage",
+						"Language",
+						"Mental"
+					],
+					"modifiers": [
+						{
+							"id": "b9b40ed6-d0c9-47d9-8df2-d25809bf4b6d",
+							"type": "modifier",
+							"name": "Native",
+							"reference": "B23",
+							"cost": -6,
+							"cost_type": "points"
+						},
+						{
+							"id": "715678d0-71f1-47dd-91ba-34330eda7f3d",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "None",
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "4633e118-0bdb-4259-bf44-6893b0a7c28c",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Broken",
+							"cost": 1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "0e96f00d-7c1a-4c8c-aa78-d47f168155e9",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Accented",
+							"cost": 2,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "c2e36491-b8ee-443c-a63d-78712d17f56f",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Native",
+							"cost": 3,
+							"cost_type": "points"
+						},
+						{
+							"id": "afa4cf9b-f9e5-4ff2-9d38-72520751c4b2",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "None",
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "d843367e-dad1-4165-9179-3d80c678167c",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Broken",
+							"cost": 1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "52898e3b-c3f2-49b0-ad65-72dd0adc9600",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Accented",
+							"cost": 2,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "a878d38b-bd13-4501-8069-57aaeea6ad28",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Native",
+							"cost": 3,
+							"cost_type": "points"
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "48a2777c-7c67-4842-ab7f-e23bf96f9b30",
+					"type": "trait",
+					"name": "Language: Thorass (Amn)",
+					"reference": "B24",
+					"tags": [
+						"Advantage",
+						"Language",
+						"Mental"
+					],
+					"modifiers": [
+						{
+							"id": "46fe1b94-d0c0-411e-9d83-01c367f6e66a",
+							"type": "modifier",
+							"name": "Native",
+							"reference": "B23",
+							"cost": -6,
+							"cost_type": "points"
+						},
+						{
+							"id": "44abeee9-bd92-4b5b-be40-85bf11d9b7f4",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "None",
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "d09f2e35-0c79-4218-a5f8-75e143450a6b",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Broken",
+							"cost": 1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "e11eb754-5c14-4bf7-9867-dabe6815b3a2",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Accented",
+							"cost": 2,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "4a7b86c9-e7e2-49bd-8074-539b0ee7ccf3",
+							"type": "modifier",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Native",
+							"cost": 3,
+							"cost_type": "points"
+						},
+						{
+							"id": "c523350c-f213-4a30-b1ac-edd32e43a243",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "None",
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "e5f8b8c6-17b9-479e-b54c-45d26b488133",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Broken",
+							"cost": 1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "ece4442d-43cd-4dd9-9beb-4f20c2657fb1",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Accented",
+							"cost": 2,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "2a4730b5-cc60-4ec7-a988-393e045d1169",
+							"type": "modifier",
+							"name": "Written",
+							"reference": "B24",
+							"notes": "Native",
+							"cost": 3,
+							"cost_type": "points"
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"name": "Langues",
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "3e0a5723-a4b1-40ac-b254-feedc41b8923",
+			"type": "trait",
+			"name": "Language: Lantan",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"modifiers": [
+				{
+					"id": "b0c2d7ac-c837-46ba-9e5c-9cba74148ea2",
+					"type": "modifier",
+					"name": "Native",
+					"reference": "B23",
+					"cost": -6,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "336cc13a-cbe6-4c85-ab24-0649d90d30ae",
+					"type": "modifier",
+					"name": "Spoken",
+					"reference": "B24",
+					"notes": "None",
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "5b460e49-1336-452a-b7ea-6308c5d4df7c",
+					"type": "modifier",
+					"name": "Spoken",
+					"reference": "B24",
+					"notes": "Broken",
+					"cost": 1,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "09996526-ecd7-4430-9995-ba2fc0ddf8b9",
+					"type": "modifier",
+					"name": "Spoken",
+					"reference": "B24",
+					"notes": "Accented",
+					"cost": 2,
+					"cost_type": "points"
+				},
+				{
+					"id": "6c5c808a-6a30-4581-9d33-b23d4c8fa07c",
+					"type": "modifier",
+					"name": "Spoken",
+					"reference": "B24",
+					"notes": "Native",
+					"cost": 3,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "803434dc-37f4-4eaf-89c8-bafa22923c3c",
+					"type": "modifier",
+					"name": "Written",
+					"reference": "B24",
+					"notes": "None",
+					"cost_type": "points"
+				},
+				{
+					"id": "b7d4f116-23ec-44a8-ab75-d9d34fb7a8b1",
+					"type": "modifier",
+					"name": "Written",
+					"reference": "B24",
+					"notes": "Broken",
+					"cost": 1,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "65491e97-345e-4154-ae1e-399ef6f65ed7",
+					"type": "modifier",
+					"name": "Written",
+					"reference": "B24",
+					"notes": "Accented",
+					"cost": 2,
+					"cost_type": "points",
+					"disabled": true
+				},
+				{
+					"id": "32584dcd-2892-41d4-a17c-c2a36b06c86d",
+					"type": "modifier",
+					"name": "Written",
+					"reference": "B24",
+					"notes": "Native",
+					"cost": 3,
+					"cost_type": "points",
+					"disabled": true
+				}
+			],
+			"calc": {
+				"points": 2
 			}
 		},
 		{
@@ -1837,8 +1895,6 @@
 					],
 					"calc": {
 						"level": 15,
-						"parry": "No",
-						"block": "No",
 						"damage": "1d-1 cr"
 					}
 				},
@@ -1852,7 +1908,6 @@
 					},
 					"usage": "Punch",
 					"reach": "C",
-					"parry": "0",
 					"defaults": [
 						{
 							"type": "dx"
@@ -1872,8 +1927,9 @@
 					],
 					"calc": {
 						"level": 15,
+						"damage": "1d-1 cr",
 						"parry": "10",
-						"damage": "1d-1 cr"
+						"block": "10"
 					}
 				},
 				{
@@ -1904,8 +1960,8 @@
 					],
 					"calc": {
 						"level": 13,
-						"parry": "No",
-						"damage": "1d+1 cr"
+						"damage": "1d+1 cr",
+						"block": "9"
 					}
 				}
 			],
@@ -3050,7 +3106,6 @@
 					],
 					"calc": {
 						"level": 18,
-						"range": "280/350",
 						"damage": "1d+3 imp"
 					}
 				}
@@ -3095,8 +3150,6 @@
 					],
 					"calc": {
 						"level": 18,
-						"parry": "No",
-						"block": "No",
 						"damage": "see B405"
 					}
 				}
@@ -3336,7 +3389,6 @@
 					"strength": "8",
 					"usage": "Swung",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -3390,9 +3442,8 @@
 					],
 					"calc": {
 						"level": 20,
-						"parry": "13",
-						"block": "No",
-						"damage": "2d+4 cut"
+						"damage": "2d+4 cut",
+						"parry": "13"
 					}
 				},
 				{
@@ -3406,7 +3457,6 @@
 					"strength": "8",
 					"usage": "Thrust",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -3460,9 +3510,8 @@
 					],
 					"calc": {
 						"level": 20,
-						"parry": "13",
-						"block": "No",
-						"damage": "1d+2 imp"
+						"damage": "1d+2 imp",
+						"parry": "13"
 					}
 				}
 			],
@@ -3552,10 +3601,15 @@
 			"id": "b72f61b1-3bfc-4a8e-b0f8-7e97cbecb423",
 			"type": "note",
 			"text": "character points :\nrest 5pts avant épisode 12"
+		},
+		{
+			"id": "3f6c9c33-bc0d-4dc7-8c91-b58851b7d6a5",
+			"type": "note",
+			"text": "Enlever Uncontrolable pour combat teleport + autoteleport (2pts total)\u003cbr\u003e\nEnlever Unreliable pour combat teleport (12pts)"
 		}
 	],
 	"created_date": "2021-09-19T21:30:00+02:00",
-	"modified_date": "2023-04-19T08:56:06+02:00",
+	"modified_date": "2024-01-03T11:54:14+01:00",
 	"calc": {
 		"swing": "2d",
 		"thrust": "1d",

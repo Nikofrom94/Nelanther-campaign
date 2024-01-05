@@ -11,9 +11,7 @@
 		}
 	],
 	"profile": {
-		"player_name": "Riko",
 		"name": "Anderna",
-		"title": "Tatoueuse itinerant",
 		"age": "16",
 		"birthday": "October 29",
 		"eyes": "Brown",
@@ -21,9 +19,12 @@
 		"skin": "Tan",
 		"handedness": "Right",
 		"gender": "Female",
-		"tech_level": "4",
 		"height": "5'3.9972\"",
-		"weight": "163 lb"
+		"weight": "163 lb",
+		"player_name": "Riko",
+		"title": "Tatoueuse itinerant",
+		"tech_level": "4",
+		"portrait": "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"
 	},
 	"settings": {
 		"page": {
@@ -623,8 +624,6 @@
 					],
 					"calc": {
 						"level": 13,
-						"parry": "No",
-						"block": "No",
 						"damage": "1d-2 cr"
 					}
 				},
@@ -638,7 +637,6 @@
 					},
 					"usage": "Punch",
 					"reach": "C",
-					"parry": "0",
 					"defaults": [
 						{
 							"type": "dx"
@@ -658,8 +656,9 @@
 					],
 					"calc": {
 						"level": 13,
+						"damage": "1d-2 cr",
 						"parry": "9",
-						"damage": "1d-2 cr"
+						"block": "9"
 					}
 				},
 				{
@@ -694,8 +693,8 @@
 					],
 					"calc": {
 						"level": 11,
-						"parry": "No",
-						"damage": "1d-1 cr"
+						"damage": "1d-1 cr",
+						"block": "8"
 					}
 				}
 			],
@@ -2233,7 +2232,6 @@
 							],
 							"calc": {
 								"level": 14,
-								"range": "20/60",
 								"damage": "Special cr"
 							}
 						}
@@ -4747,8 +4745,8 @@
 					"strength": "7†",
 					"usage": "Swung",
 					"usage_notes": "Staff",
-					"reach": "1,2",
-					"parry": "+2",
+					"reach": "1-2",
+					"parry": "2",
 					"block": "No",
 					"defaults": [
 						{
@@ -4772,9 +4770,8 @@
 					],
 					"calc": {
 						"level": 16,
-						"parry": "13",
-						"block": "No",
-						"damage": "1d+3 cr"
+						"damage": "1d+3 cr",
+						"parry": "13"
 					}
 				},
 				{
@@ -4788,8 +4785,8 @@
 					"strength": "7†",
 					"usage": "Thrust",
 					"usage_notes": "Staff",
-					"reach": "1,2",
-					"parry": "+2",
+					"reach": "1-2",
+					"parry": "2",
 					"block": "No",
 					"defaults": [
 						{
@@ -4813,9 +4810,8 @@
 					],
 					"calc": {
 						"level": 16,
-						"parry": "13",
-						"block": "No",
-						"damage": "1d+1 cr"
+						"damage": "1d+1 cr",
+						"parry": "13"
 					}
 				},
 				{
@@ -4829,8 +4825,7 @@
 					"strength": "9†",
 					"usage": "Swung",
 					"usage_notes": "Two-Handed Sword",
-					"reach": "1,2",
-					"parry": "0",
+					"reach": "1-2",
 					"block": "No",
 					"defaults": [
 						{
@@ -4858,9 +4853,8 @@
 					],
 					"calc": {
 						"level": 8,
-						"parry": "7",
-						"block": "No",
-						"damage": "1d+3 cr"
+						"damage": "1d+3 cr",
+						"parry": "7"
 					}
 				},
 				{
@@ -4875,7 +4869,6 @@
 					"usage": "Thrust",
 					"usage_notes": "Two-Handed Sword",
 					"reach": "2",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -4903,9 +4896,8 @@
 					],
 					"calc": {
 						"level": 8,
-						"parry": "7",
-						"block": "No",
-						"damage": "1d cr"
+						"damage": "1d cr",
+						"parry": "7"
 					}
 				}
 			],
@@ -5007,9 +4999,8 @@
 					],
 					"calc": {
 						"level": 6,
-						"parry": "4",
-						"block": "No",
-						"damage": "1d-2 cut"
+						"damage": "1d-2 cut",
+						"parry": "4"
 					}
 				},
 				{
@@ -5073,9 +5064,8 @@
 					],
 					"calc": {
 						"level": 6,
-						"parry": "4",
-						"block": "No",
-						"damage": "1d-2 imp"
+						"damage": "1d-2 imp",
+						"parry": "4"
 					}
 				},
 				{
@@ -5091,8 +5081,7 @@
 					"accuracy": "1",
 					"range": "x0.8/x1.5",
 					"rate_of_fire": "1",
-					"shots": "T(1)",
-					"bulk": "0",
+					"shots": "T",
 					"defaults": [
 						{
 							"type": "dx",
@@ -5106,8 +5095,8 @@
 					],
 					"calc": {
 						"level": 14,
-						"range": "8/16",
-						"damage": "1d-2 imp"
+						"damage": "1d-2 imp",
+						"range": "8/16"
 					}
 				}
 			],
@@ -5131,7 +5120,7 @@
 		}
 	],
 	"created_date": "2022-10-27T16:42:00+02:00",
-	"modified_date": "2023-06-13T16:04:05+02:00",
+	"modified_date": "2024-01-03T11:49:03+01:00",
 	"calc": {
 		"swing": "1d+1",
 		"thrust": "1d-1",
