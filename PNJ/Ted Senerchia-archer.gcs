@@ -526,7 +526,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 12,
+				"value": 15,
 				"points": 0
 			}
 		},
@@ -619,8 +619,6 @@
 					],
 					"calc": {
 						"level": 14,
-						"parry": "No",
-						"block": "No",
 						"damage": "1d-1 cr"
 					}
 				},
@@ -634,7 +632,6 @@
 					},
 					"usage": "Punch",
 					"reach": "C",
-					"parry": "0",
 					"defaults": [
 						{
 							"type": "dx"
@@ -654,8 +651,9 @@
 					],
 					"calc": {
 						"level": 14,
+						"damage": "1d-1 cr",
 						"parry": "10",
-						"damage": "1d-1 cr"
+						"block": "10"
 					}
 				},
 				{
@@ -690,8 +688,8 @@
 					],
 					"calc": {
 						"level": 12,
-						"parry": "No",
-						"damage": "1d cr"
+						"damage": "1d cr",
+						"block": "9"
 					}
 				}
 			],
@@ -879,7 +877,7 @@
 										"Advantage",
 										"Physical"
 									],
-									"levels": 1,
+									"levels": 4,
 									"points_per_level": 2,
 									"features": [
 										{
@@ -891,7 +889,7 @@
 									],
 									"can_level": true,
 									"calc": {
-										"points": 2
+										"points": 8
 									}
 								},
 								{
@@ -930,13 +928,13 @@
 							],
 							"name": "25 Points Chosen From",
 							"calc": {
-								"points": 25
+								"points": 31
 							}
 						}
 					],
 					"name": "Class Advantage",
 					"calc": {
-						"points": 25
+						"points": 31
 					}
 				},
 				{
@@ -1148,7 +1146,7 @@
 			],
 			"name": "Archer",
 			"calc": {
-				"points": 75
+				"points": 81
 			}
 		},
 		{
@@ -1632,12 +1630,10 @@
 									}
 								}
 							],
-							"name": "Six of",
-							"calc": {}
+							"name": "Six of"
 						}
 					],
-					"name": "Background Skills",
-					"calc": {}
+					"name": "Background Skills"
 				},
 				{
 					"id": "124d83b2-eb8d-4c00-a225-0c83051bfdee",
@@ -1723,8 +1719,7 @@
 							}
 						}
 					],
-					"name": "Primary Skill",
-					"calc": {}
+					"name": "Primary Skill"
 				},
 				{
 					"id": "ada1243d-b4d2-4577-a505-b54321b8c36a",
@@ -2259,16 +2254,13 @@
 									}
 								}
 							],
-							"name": "5 of",
-							"calc": {}
+							"name": "5 of"
 						}
 					],
-					"name": "Secondary Skill",
-					"calc": {}
+					"name": "Secondary Skill"
 				}
 			],
-			"name": "Archer",
-			"calc": {}
+			"name": "Archer"
 		}
 	],
 	"equipment": [
@@ -2312,8 +2304,8 @@
 					],
 					"calc": {
 						"level": 17,
-						"range": "260/325",
-						"damage": "1d+3 imp"
+						"damage": "1d+3 imp",
+						"range": "260/325"
 					}
 				}
 			],
@@ -2345,7 +2337,6 @@
 					"strength": "8",
 					"usage": "Swung",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -2398,9 +2389,8 @@
 					],
 					"calc": {
 						"level": 15,
-						"parry": "10",
-						"block": "No",
-						"damage": "2d-1 cut"
+						"damage": "2d-1 cut",
+						"parry": "10"
 					}
 				},
 				{
@@ -2414,7 +2404,6 @@
 					"strength": "8",
 					"usage": "Thrust",
 					"reach": "1",
-					"parry": "0",
 					"block": "No",
 					"defaults": [
 						{
@@ -2467,9 +2456,8 @@
 					],
 					"calc": {
 						"level": 15,
-						"parry": "10",
-						"block": "No",
-						"damage": "1d+1 imp"
+						"damage": "1d+1 imp",
+						"parry": "10"
 					}
 				}
 			],
@@ -2832,8 +2820,9 @@
 					],
 					"calc": {
 						"level": 18,
+						"damage": "1d+4 imp",
 						"range": "260/325",
-						"damage": "1d+4 imp"
+						"strength": "13†"
 					}
 				}
 			],
@@ -2844,7 +2833,7 @@
 		}
 	],
 	"created_date": "2023-12-15T15:52:59+01:00",
-	"modified_date": "2023-12-15T16:33:04+01:00",
+	"modified_date": "2024-01-03T21:12:57+01:00",
 	"calc": {
 		"swing": "2d-1",
 		"thrust": "1d",

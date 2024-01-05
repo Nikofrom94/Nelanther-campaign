@@ -2,11 +2,11 @@
 	"type": "character",
 	"version": 4,
 	"id": "7adc7cc3-abef-403d-9160-43809e5c7741",
-	"total_points": 150,
+	"total_points": 350,
 	"points_record": [
 		{
 			"when": "2023-12-15T16:36:26+01:00",
-			"points": 150,
+			"points": 350,
 			"reason": "Initial points"
 		}
 	],
@@ -23,7 +23,8 @@
 		"weight": "280 lb",
 		"player_name": "niko",
 		"religion": "Tempus",
-		"tech_level": "3"
+		"tech_level": "3",
+		"portrait": "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"
 	},
 	"settings": {
 		"page": {
@@ -620,8 +621,6 @@
 					],
 					"calc": {
 						"level": 12,
-						"parry": "No",
-						"block": "No",
 						"damage": "1d-1 cr"
 					}
 				},
@@ -635,7 +634,6 @@
 					},
 					"usage": "Punch",
 					"reach": "C",
-					"parry": "0",
 					"defaults": [
 						{
 							"type": "dx"
@@ -655,8 +653,9 @@
 					],
 					"calc": {
 						"level": 12,
+						"damage": "1d cr",
 						"parry": "9",
-						"damage": "1d cr"
+						"block": "9"
 					}
 				},
 				{
@@ -691,8 +690,8 @@
 					],
 					"calc": {
 						"level": 10,
-						"parry": "No",
-						"damage": "1d+1 cr"
+						"damage": "1d+1 cr",
+						"block": "8"
 					}
 				}
 			],
@@ -1698,7 +1697,7 @@
 												"Weapon"
 											],
 											"difficulty": "dx/h",
-											"points": 8,
+											"points": 12,
 											"defaulted_from": {
 												"type": "dx",
 												"modifier": -6,
@@ -1723,8 +1722,8 @@
 												}
 											],
 											"calc": {
-												"level": 13,
-												"rsl": "DX+1"
+												"level": 14,
+												"rsl": "DX+2"
 											}
 										},
 										{
@@ -1739,7 +1738,7 @@
 											],
 											"specialization": "Shield",
 											"difficulty": "dx/e",
-											"points": 4,
+											"points": 12,
 											"defaulted_from": {
 												"type": "dx",
 												"modifier": -4,
@@ -1754,17 +1753,15 @@
 												}
 											],
 											"calc": {
-												"level": 14,
-												"rsl": "DX+2"
+												"level": 16,
+												"rsl": "DX+4"
 											}
 										}
 									],
-									"name": "Melee 2",
-									"calc": {}
+									"name": "Melee 2"
 								}
 							],
-							"name": "Choose One Melee Package",
-							"calc": {}
+							"name": "Choose One Melee Package"
 						},
 						{
 							"id": "69a04570-b8fb-42f1-8b5d-8ea43dd0f564",
@@ -1988,84 +1985,10 @@
 									}
 								}
 							],
-							"name": "Choose One of:",
-							"calc": {}
-						},
-						{
-							"id": "72d8fea0-798a-4263-807c-a4f67f35e155",
-							"type": "skill_container",
-							"open": true,
-							"children": [
-								{
-									"id": "832e8634-8826-46ee-a57a-d50663378c29",
-									"type": "skill",
-									"name": "Soldier",
-									"reference": "B221",
-									"tags": [
-										"Military"
-									],
-									"tech_level": "3",
-									"difficulty": "iq/a",
-									"points": 1,
-									"defaulted_from": {
-										"type": "iq",
-										"modifier": -5,
-										"level": 5,
-										"adjusted_level": 5,
-										"points": -5
-									},
-									"defaults": [
-										{
-											"type": "iq",
-											"modifier": -5
-										}
-									],
-									"calc": {
-										"level": 9,
-										"rsl": "IQ-1"
-									}
-								},
-								{
-									"id": "b83d47c9-0a6f-4cd6-b40f-f50c2e627a2e",
-									"type": "skill",
-									"name": "Tactics",
-									"reference": "B224",
-									"tags": [
-										"Military",
-										"Police"
-									],
-									"difficulty": "iq/h",
-									"points": 1,
-									"defaulted_from": {
-										"type": "iq",
-										"modifier": -6,
-										"level": 4,
-										"adjusted_level": 4,
-										"points": -4
-									},
-									"defaults": [
-										{
-											"type": "iq",
-											"modifier": -6
-										},
-										{
-											"type": "skill",
-											"name": "Strategy",
-											"modifier": -6
-										}
-									],
-									"calc": {
-										"level": 8,
-										"rsl": "IQ-2"
-									}
-								}
-							],
-							"name": "Spend 3 points on combat skills or:",
-							"calc": {}
+							"name": "Choose One of:"
 						}
 					],
-					"name": "Primary Skills",
-					"calc": {}
+					"name": "Primary Skills"
 				},
 				{
 					"id": "0631cdfd-1192-4264-8fa4-4762d0ef331c",
@@ -2127,7 +2050,7 @@
 							],
 							"tech_level": "3",
 							"difficulty": "iq/e",
-							"points": 1,
+							"points": 4,
 							"defaulted_from": {
 								"type": "skill",
 								"name": "Esoteric Medicine",
@@ -2155,8 +2078,8 @@
 								}
 							],
 							"calc": {
-								"level": 10,
-								"rsl": "IQ+0"
+								"level": 12,
+								"rsl": "IQ+2"
 							}
 						},
 						{
@@ -2331,9 +2254,7 @@
 							"defaulted_from": {
 								"type": "skill",
 								"name": "First Aid",
-								"modifier": -12,
-								"level": -2,
-								"adjusted_level": -2
+								"modifier": -12
 							},
 							"defaults": [
 								{
@@ -2385,35 +2306,6 @@
 							}
 						},
 						{
-							"id": "46a3cc20-4b35-40df-85fd-d6021edd4fcd",
-							"type": "skill",
-							"name": "Teaching",
-							"reference": "B224",
-							"tags": [
-								"Scholarly",
-								"Social"
-							],
-							"difficulty": "iq/a",
-							"points": 1,
-							"defaulted_from": {
-								"type": "iq",
-								"modifier": -5,
-								"level": 5,
-								"adjusted_level": 5,
-								"points": -5
-							},
-							"defaults": [
-								{
-									"type": "iq",
-									"modifier": -5
-								}
-							],
-							"calc": {
-								"level": 9,
-								"rsl": "IQ-1"
-							}
-						},
-						{
 							"id": "5e41ef25-c4bd-4ca2-8eb6-cc9f1fc7f189",
 							"type": "skill",
 							"name": "Theology",
@@ -2448,8 +2340,7 @@
 							}
 						}
 					],
-					"name": "Secondary Skills",
-					"calc": {}
+					"name": "Secondary Skills"
 				},
 				{
 					"id": "9cd9fdaf-e899-416f-9325-7661ee46d69f",
@@ -2704,86 +2595,6 @@
 									"calc": {
 										"level": 10,
 										"rsl": "IQ+0"
-									}
-								},
-								{
-									"id": "d093f055-f8cf-46cc-afff-47d7a9a4bf8c",
-									"type": "skill",
-									"name": "Research",
-									"reference": "B217",
-									"notes": "When below TL8",
-									"tags": [
-										"Scholarly",
-										"Spy"
-									],
-									"tech_level": "3",
-									"difficulty": "iq/a",
-									"points": 1,
-									"defaulted_from": {
-										"type": "skill",
-										"name": "Writing",
-										"modifier": -3,
-										"level": 6,
-										"adjusted_level": 6,
-										"points": -6
-									},
-									"defaults": [
-										{
-											"type": "iq",
-											"modifier": -5
-										},
-										{
-											"type": "skill",
-											"name": "Writing",
-											"modifier": -3
-										}
-									],
-									"prereqs": {
-										"type": "prereq_list",
-										"all": false,
-										"prereqs": [
-											{
-												"type": "trait_prereq",
-												"has": true,
-												"name": {
-													"compare": "starts_with",
-													"qualifier": "Language"
-												},
-												"notes": {
-													"compare": "contains",
-													"qualifier": "Written (Broken)"
-												}
-											},
-											{
-												"type": "trait_prereq",
-												"has": true,
-												"name": {
-													"compare": "starts_with",
-													"qualifier": "Language"
-												},
-												"notes": {
-													"compare": "contains",
-													"qualifier": "Written (Native)"
-												}
-											},
-											{
-												"type": "trait_prereq",
-												"has": true,
-												"name": {
-													"compare": "starts_with",
-													"qualifier": "Language"
-												},
-												"notes": {
-													"compare": "contains",
-													"qualifier": "Written (Accented)"
-												}
-											}
-										]
-									},
-									"calc": {
-										"level": 9,
-										"rsl": "IQ-1",
-										"unsatisfied_reason": "Prerequisites have not been met:\n● Requires at least one of:\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Broken)\", and level is anything\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Native)\", and level is anything\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Accented)\", and level is anything"
 									}
 								},
 								{
@@ -3060,16 +2871,13 @@
 									}
 								}
 							],
-							"name": "Five of:",
-							"calc": {}
+							"name": "Five of:"
 						}
 					],
-					"name": "Background Skills",
-					"calc": {}
+					"name": "Background Skills"
 				}
 			],
-			"name": "War Cleric",
-			"calc": {}
+			"name": "War Cleric"
 		}
 	],
 	"spells": [
@@ -3086,6 +2894,7 @@
 						{
 							"id": "69950ede-95f0-4b76-a99f-ecf842c9efab",
 							"type": "spell_container",
+							"open": true,
 							"children": [
 								{
 									"id": "7f0a3580-aaf6-4085-a3d0-3442a2318e21",
@@ -8626,7 +8435,6 @@
 													],
 													"calc": {
 														"level": 14,
-														"range": "20/40",
 														"damage": "1d cr ex/2 points"
 													}
 												}
@@ -9088,10 +8896,9 @@
 						}
 					],
 					"calc": {
-						"level": 13,
-						"parry": "9U",
-						"block": "No",
-						"damage": "2d+3 cr"
+						"level": 14,
+						"damage": "2d+3 cr",
+						"parry": "10U"
 					}
 				}
 			],
@@ -9122,11 +8929,9 @@
 						"st": "thr",
 						"base": "1"
 					},
-					"strength": "0",
 					"usage": "Shield Bash",
 					"reach": "1",
 					"parry": "No",
-					"block": "+0",
 					"defaults": [
 						{
 							"type": "dx",
@@ -9151,10 +8956,9 @@
 						}
 					],
 					"calc": {
-						"level": 14,
-						"parry": "No",
-						"block": "10",
-						"damage": "1d+1 cr"
+						"level": 16,
+						"damage": "1d+1 cr",
+						"block": "11"
 					}
 				}
 			],
@@ -9473,7 +9277,7 @@
 		}
 	],
 	"created_date": "2023-12-15T16:36:26+01:00",
-	"modified_date": "2023-12-15T16:53:23+01:00",
+	"modified_date": "2024-01-03T21:01:56+01:00",
 	"calc": {
 		"swing": "2d",
 		"thrust": "1d",
