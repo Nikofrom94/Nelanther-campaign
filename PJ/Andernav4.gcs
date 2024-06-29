@@ -575,9 +575,10 @@
 		{
 			"attr_id": "fp",
 			"adj": 0,
+			"damage": 5,
 			"calc": {
 				"value": 10,
-				"current": 10,
+				"current": 5,
 				"points": 0
 			}
 		},
@@ -611,8 +612,6 @@
 					},
 					"usage": "Bite",
 					"reach": "C",
-					"parry": "No",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx"
@@ -656,9 +655,7 @@
 					],
 					"calc": {
 						"level": 13,
-						"damage": "1d-2 cr",
-						"parry": "9",
-						"block": "9"
+						"damage": "1d-2 cr"
 					}
 				},
 				{
@@ -670,7 +667,6 @@
 					},
 					"usage": "Kick",
 					"reach": "C,1",
-					"parry": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -693,8 +689,7 @@
 					],
 					"calc": {
 						"level": 11,
-						"damage": "1d-1 cr",
-						"block": "8"
+						"damage": "1d-1 cr"
 					}
 				}
 			],
@@ -805,7 +800,7 @@
 				}
 			],
 			"base_points": 5,
-			"levels": 3,
+			"levels": 4,
 			"points_per_level": 10,
 			"features": [
 				{
@@ -827,7 +822,7 @@
 			],
 			"can_level": true,
 			"calc": {
-				"points": 35
+				"points": 45
 			}
 		},
 		{
@@ -1893,8 +1888,8 @@
 				}
 			],
 			"calc": {
-				"level": 14,
-				"rsl": "IQ+0"
+				"level": 15,
+				"rsl": "IQ+1"
 			}
 		},
 		{
@@ -2033,8 +2028,8 @@
 					"duration": "Varies",
 					"points": 1,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -2086,8 +2081,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2167,8 +2162,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2237,8 +2232,8 @@
 						}
 					],
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2327,8 +2322,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2351,8 +2346,8 @@
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2394,8 +2389,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2438,8 +2433,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2506,8 +2501,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2549,8 +2544,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2618,8 +2613,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2718,8 +2713,8 @@
 						]
 					},
 					"calc": {
-						"level": 17,
-						"rsl": "IQ+3"
+						"level": 18,
+						"rsl": "IQ+4"
 					}
 				},
 				{
@@ -2799,8 +2794,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2899,8 +2894,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -2944,8 +2939,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -3034,8 +3029,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3074,8 +3069,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3126,8 +3121,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3195,8 +3190,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -3265,8 +3260,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3343,8 +3338,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3396,8 +3391,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3474,8 +3469,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3531,8 +3526,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3594,8 +3589,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -3658,8 +3653,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3682,8 +3677,8 @@
 					"duration": "1 min",
 					"points": 1,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3725,8 +3720,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3768,8 +3763,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -3819,8 +3814,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -3881,8 +3876,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -3936,8 +3931,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4017,8 +4012,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4060,8 +4055,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4103,8 +4098,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4147,8 +4142,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4203,8 +4198,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -4292,8 +4287,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4368,8 +4363,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -4400,8 +4395,8 @@
 					"duration": "Instant",
 					"points": 1,
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4443,8 +4438,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -4494,8 +4489,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4545,8 +4540,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4607,8 +4602,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4650,8 +4645,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				},
 				{
@@ -4712,8 +4707,8 @@
 						]
 					},
 					"calc": {
-						"level": 15,
-						"rsl": "IQ+1"
+						"level": 16,
+						"rsl": "IQ+2"
 					}
 				}
 			],
@@ -4747,7 +4742,6 @@
 					"usage_notes": "Staff",
 					"reach": "1-2",
 					"parry": "2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -4787,7 +4781,6 @@
 					"usage_notes": "Staff",
 					"reach": "1-2",
 					"parry": "2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -4826,7 +4819,6 @@
 					"usage": "Swung",
 					"usage_notes": "Two-Handed Sword",
 					"reach": "1-2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -4853,8 +4845,7 @@
 					],
 					"calc": {
 						"level": 8,
-						"damage": "1d+3 cr",
-						"parry": "7"
+						"damage": "1d+3 cr"
 					}
 				},
 				{
@@ -4869,7 +4860,6 @@
 					"usage": "Thrust",
 					"usage_notes": "Two-Handed Sword",
 					"reach": "2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -4896,8 +4886,7 @@
 					],
 					"calc": {
 						"level": 8,
-						"damage": "1d cr",
-						"parry": "7"
+						"damage": "1d cr"
 					}
 				}
 			],
@@ -4950,7 +4939,6 @@
 					"usage": "Swung",
 					"reach": "C,1",
 					"parry": "-2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -5015,7 +5003,6 @@
 					"usage": "Thrust",
 					"reach": "C",
 					"parry": "-2",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -5120,7 +5107,7 @@
 		}
 	],
 	"created_date": "2022-10-27T16:42:00+02:00",
-	"modified_date": "2024-01-03T11:49:03+01:00",
+	"modified_date": "2024-02-02T23:58:13+01:00",
 	"calc": {
 		"swing": "1d+1",
 		"thrust": "1d-1",

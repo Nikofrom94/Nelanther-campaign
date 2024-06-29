@@ -472,7 +472,7 @@
 			"attr_id": "st",
 			"adj": 1,
 			"calc": {
-				"value": 14,
+				"value": 19,
 				"points": 10
 			}
 		},
@@ -585,8 +585,8 @@
 			"attr_id": "hp",
 			"adj": 0,
 			"calc": {
-				"value": 14,
-				"current": 14,
+				"value": 19,
+				"current": 19,
 				"points": 0
 			}
 		}
@@ -1882,8 +1882,6 @@
 					},
 					"usage": "Bite",
 					"reach": "C",
-					"parry": "No",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx"
@@ -1895,7 +1893,7 @@
 					],
 					"calc": {
 						"level": 15,
-						"damage": "1d-1 cr"
+						"damage": "2d-2 cr"
 					}
 				},
 				{
@@ -1927,9 +1925,7 @@
 					],
 					"calc": {
 						"level": 15,
-						"damage": "1d-1 cr",
-						"parry": "10",
-						"block": "10"
+						"damage": "2d-2 cr"
 					}
 				},
 				{
@@ -1941,7 +1937,6 @@
 					},
 					"usage": "Kick",
 					"reach": "C,1",
-					"parry": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -1960,8 +1955,7 @@
 					],
 					"calc": {
 						"level": 13,
-						"damage": "1d+1 cr",
-						"block": "9"
+						"damage": "2d cr"
 					}
 				}
 			],
@@ -2002,6 +1996,59 @@
 			"can_level": true,
 			"calc": {
 				"points": 20
+			}
+		},
+		{
+			"id": "61a97cf5-78be-4516-b55e-39ffb2d94228",
+			"type": "trait",
+			"name": "Increased Strength",
+			"reference": "B14",
+			"notes": "potion",
+			"tags": [
+				"Advantage",
+				"Attribute",
+				"Physical"
+			],
+			"modifiers": [
+				{
+					"id": "fc2b398f-467b-4c36-857b-98087975f0c4",
+					"type": "modifier",
+					"name": "No Fine Manipulators",
+					"reference": "B15",
+					"cost": -40,
+					"disabled": true
+				},
+				{
+					"id": "89e24b12-233b-4ad9-a77a-934e7bc640f7",
+					"type": "modifier",
+					"name": "Size",
+					"reference": "B15",
+					"cost": -10,
+					"levels": 1,
+					"disabled": true
+				},
+				{
+					"id": "4f3a7bdb-ed81-4735-87e8-d9eaeb4856c7",
+					"type": "modifier",
+					"name": "Super-Effort",
+					"reference": "SU24",
+					"cost": 300,
+					"disabled": true
+				}
+			],
+			"levels": 5,
+			"points_per_level": 10,
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"attribute": "st",
+					"amount": 1,
+					"per_level": true
+				}
+			],
+			"can_level": true,
+			"calc": {
+				"points": 50
 			}
 		}
 	],
@@ -3136,8 +3183,6 @@
 						"type": "see B405"
 					},
 					"reach": "C",
-					"parry": "No",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "skill",
@@ -3389,7 +3434,6 @@
 					"strength": "8",
 					"usage": "Swung",
 					"reach": "1",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -3442,8 +3486,7 @@
 					],
 					"calc": {
 						"level": 20,
-						"damage": "2d+4 cut",
-						"parry": "13"
+						"damage": "3d+7 cut"
 					}
 				},
 				{
@@ -3457,7 +3500,6 @@
 					"strength": "8",
 					"usage": "Thrust",
 					"reach": "1",
-					"block": "No",
 					"defaults": [
 						{
 							"type": "dx",
@@ -3510,8 +3552,7 @@
 					],
 					"calc": {
 						"level": 20,
-						"damage": "1d+2 imp",
-						"parry": "13"
+						"damage": "2d+3 imp"
 					}
 				}
 			],
@@ -3609,11 +3650,11 @@
 		}
 	],
 	"created_date": "2021-09-19T21:30:00+02:00",
-	"modified_date": "2024-01-03T11:54:14+01:00",
+	"modified_date": "2024-05-24T23:12:05+02:00",
 	"calc": {
-		"swing": "2d",
-		"thrust": "1d",
-		"basic_lift": "39 lb",
+		"swing": "3d+1",
+		"thrust": "2d-1",
+		"basic_lift": "72 lb",
 		"move": [
 			6,
 			4,

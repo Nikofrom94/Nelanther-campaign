@@ -1,0 +1,6578 @@
+{
+	"type": "character",
+	"version": 4,
+	"id": "0f67c3e7-eb2d-4a0a-a1ca-bd499ca53ebe",
+	"total_points": 150,
+	"points_record": [
+		{
+			"when": "2024-02-02T17:42:08+01:00",
+			"points": 150,
+			"reason": "Initial points"
+		}
+	],
+	"profile": {
+		"name": "Thiefling-Garde esclavagiste",
+		"age": "20",
+		"birthday": "May 18",
+		"eyes": "Brown",
+		"hair": "Bald",
+		"skin": "Light Brown",
+		"handedness": "Right",
+		"gender": "Male",
+		"height": "5'3\"",
+		"weight": "153 lb",
+		"player_name": "niko",
+		"title": "Chef",
+		"tech_level": "3"
+	},
+	"settings": {
+		"page": {
+			"paper_size": "a4",
+			"orientation": "portrait",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"traits skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"attribute_base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"attribute_base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"attribute_base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"attribute_base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"attribute_base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"attribute_base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"attribute_base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"attribute_base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste \u0026 Smell",
+				"attribute_base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"attribute_base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"attribute_base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"expression": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"expression": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"expression": "round($fp/3)",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"expression": "$fp-1"
+					},
+					{
+						"state": "Rested",
+						"expression": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"expression": "round(-$hp*5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"expression": "round(-$hp*4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"expression": "round(-$hp*3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"expression": "round(-$hp*2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"expression": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"expression": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"expression": "round($hp/3)",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"expression": "$hp-1"
+					},
+					{
+						"state": "Healthy",
+						"expression": "$hp"
+					}
+				]
+			}
+		],
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"description": "An attack that misses by 1 hits the torso instead. Only\nimpaling (imp), piercing (pi-, pi, pi+, pi++), and\ntight-beam burning (burn) attacks can target the eye – and\nonly from the front or sides. Injury over HP÷10 blinds the\neye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding\nmodifier is x4. Knockdown rolls are at -10. Critical hits\nuse the Critical Head Blow Table (B556). Exception: These\nspecial effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 2,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw,\ncheeks, nose, ears, etc. If the target has an open-faced\nhelmet, ignore its DR. Knockdown rolls are at -5. Critical\nhits use the Critical Head Blow Table (B556). Corrosion\n(cor) damage gets a x1½ wounding modifier, and if it\ninflicts a major wound, it also blinds one eye (both eyes on\ndamage over full HP). Random attacks from behind hit the\nskull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost. If holding a shield,\ndouble the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 2,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"description": "An attack that misses by 1 hits the torso instead. Human\nmales and the males of similar species suffer double shock\nfrom crushing (cr) damage, and get -5 to knockdown rolls.\nOtherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 2,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost. If holding a shield,\ndouble the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"description": "If holding a shield, double the penalty to hit: -8 for\nshield hand instead of -4. Reduce the wounding multiplier of\nlarge piercing (pi+), huge piercing (pi++), and impaling\n(imp) damage to x1. Any major wound (loss of over ⅓ HP\nfrom one blow) cripples the extremity. Damage beyond that\nthreshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ⅓ HP from one blow) cripples the\nextremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and\nthroat. Increase the wounding multiplier of crushing (cr)\nand corrosion (cor) attacks to x1½, and that of cutting\n(cut) damage to x2. At the GM’s option, anyone killed by a\ncutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 0,
+							"fire": 3
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"description": "An attack that misses by 1 hits the torso instead. Heart,\nlungs, kidneys, etc. Increase the wounding modifier for an\nimpaling (imp) or any piercing (pi-, pi, pi+, pi++) attack\nto x3. Increase the wounding modifier for a tight-beam\nburning (burn) attack to x2. Other attacks cannot target the\nvitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 2,
+							"fire": 3
+						}
+					}
+				}
+			]
+		},
+		"damage_progression": "basic_set",
+		"default_length_units": "m",
+		"default_weight_units": "kg",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"show_spell_adj": true,
+		"exclude_unspent_points_from_total": false
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 40
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 4,
+			"calc": {
+				"value": 14,
+				"points": 80
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 5.5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0,
+			"calc": {
+				"value": 16,
+				"current": 16,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"current": 12,
+				"points": 0
+			}
+		}
+	],
+	"traits": [
+		{
+			"id": "6e7e8699-a66a-431a-afd6-3e047468cefd",
+			"type": "trait",
+			"name": "Natural Attacks",
+			"reference": "B271",
+			"weapons": [
+				{
+					"id": "95b56364-75d9-4f7c-a5aa-20e6afa76ad0",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-2 cr"
+					}
+				},
+				{
+					"id": "8ebe6a4c-90e3-4001-af3d-2f8d4b72e423",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-2 cr",
+						"parry": "9"
+					}
+				},
+				{
+					"id": "b8edb510-2c48-4467-b71e-67cfbd9fc85d",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 10,
+						"damage": "1d-1 cr"
+					}
+				}
+			],
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "561e5a93-f465-4a5d-9ffd-3149290e0f88",
+			"type": "trait",
+			"name": "Magery",
+			"reference": "B66",
+			"tags": [
+				"Advantage",
+				"Mental",
+				"Supernatural"
+			],
+			"modifiers": [
+				{
+					"id": "10b7c609-d742-473c-a229-fd39e10a948f",
+					"type": "modifier",
+					"name": "Dance",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "8cffcc39-a19c-4aa2-8a65-f270534b6ad7",
+					"type": "modifier",
+					"name": "Dark-Aspected",
+					"cost": -50,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "9a43b6eb-5fca-4b3b-9475-9c8922652001",
+					"type": "modifier",
+					"name": "Day-Aspected",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "1db3c1d2-12b8-4d9f-aaec-8a1f58f99922",
+					"type": "modifier",
+					"name": "Musical",
+					"cost": -50,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "7ef63d35-934c-4046-8b55-22208f7a99b6",
+					"type": "modifier",
+					"name": "Night-Aspected",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "0f92e868-30bd-4a88-8dd7-d1929eb47c0e",
+					"type": "modifier",
+					"name": "One College",
+					"notes": "@College@",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "7a67c4c3-2454-43a0-acd4-aac1265bd79a",
+					"type": "modifier",
+					"name": "Solitary",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "162576be-563f-43f2-9bd3-91db2defc569",
+					"type": "modifier",
+					"name": "Song",
+					"cost": -40,
+					"affects": "levels_only",
+					"disabled": true
+				}
+			],
+			"base_points": 5,
+			"levels": 2,
+			"points_per_level": 10,
+			"features": [
+				{
+					"type": "spell_bonus",
+					"match": "all_colleges",
+					"amount": 1,
+					"per_level": true
+				},
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "thaumatology"
+					},
+					"amount": 1,
+					"per_level": true
+				}
+			],
+			"can_level": true,
+			"calc": {
+				"points": 25
+			}
+		},
+		{
+			"id": "a6dcfbf1-55a0-4c42-931a-9167dbce3089",
+			"type": "trait_container",
+			"children": [
+				{
+					"id": "65333fef-617b-4a59-b24a-750f6b8be422",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "a232f284-7736-4c31-84dc-d47c0eee8f15",
+							"type": "trait",
+							"name": "Infravision",
+							"reference": "B60,P87",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "3e2a555d-c6fe-44a5-ad72-d83e881f28fc",
+									"type": "modifier",
+									"name": "No normal vision",
+									"reference": "B60",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 10,
+							"calc": {
+								"points": 10
+							}
+						}
+					],
+					"name": "Choose one of",
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "6d34e634-788d-4b7c-a5e6-e9d59a484536",
+					"type": "trait",
+					"name": "Charisma",
+					"reference": "B41",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"levels": 1,
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fortune-telling"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "leadership"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "panhandling"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "public speaking"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from sapient being with whom you actively interact (converse, lecture, etc.)",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "to Influence rolls",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "7a864971-b8c7-4540-9b94-47903f24a981",
+					"type": "trait",
+					"name": "Hellish Resistance",
+					"reference": "B47,P45,MA43,PSI14",
+					"notes": "Damage resistance to Fire",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "71e0ea7a-bb0e-409d-b01d-aa247b4e66f6",
+							"type": "modifier",
+							"name": "Force Field",
+							"reference": "B47",
+							"cost": 20,
+							"disabled": true
+						},
+						{
+							"id": "a5e89aca-0b61-483e-8ae3-d6086856cf9a",
+							"type": "modifier",
+							"name": "Hardened",
+							"reference": "B47",
+							"cost": 20,
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "0377b71f-5bfe-44a7-b1a0-db38c7952845",
+							"type": "modifier",
+							"name": "Absorption",
+							"reference": "B46",
+							"notes": "Enhances @Trait@",
+							"cost": 80,
+							"disabled": true
+						},
+						{
+							"id": "db27da09-5815-4776-9af9-6d9741d8e52a",
+							"type": "modifier",
+							"name": "Absorption",
+							"reference": "B46",
+							"notes": "Healing only",
+							"cost": 80,
+							"disabled": true
+						},
+						{
+							"id": "0e4c391b-1076-40f2-92b6-c5d3c60b78fd",
+							"type": "modifier",
+							"name": "Absorption",
+							"reference": "B46",
+							"notes": "Enhances any trait",
+							"cost": 100,
+							"disabled": true
+						},
+						{
+							"id": "8b422514-296a-4b7c-b350-6b7e7d2be0e9",
+							"type": "modifier",
+							"name": "Reflection",
+							"reference": "B47",
+							"cost": 100,
+							"disabled": true
+						},
+						{
+							"id": "419ab96d-ea87-4894-b6d8-a6ee32a5d416",
+							"type": "modifier",
+							"name": "Bane",
+							"reference": "H14",
+							"notes": "@Rare@",
+							"cost": -1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "a8c6d43d-430e-4773-a64c-200f75009e65",
+							"type": "modifier",
+							"name": "Bane",
+							"reference": "H14",
+							"notes": "@Occasional@",
+							"cost": -5,
+							"disabled": true
+						},
+						{
+							"id": "e9503abd-7621-42c4-8ced-3981ec7c6d9a",
+							"type": "modifier",
+							"name": "Bane",
+							"reference": "H14",
+							"notes": "@Common@",
+							"cost": -10,
+							"disabled": true
+						},
+						{
+							"id": "1585a884-94e2-4152-b7b7-d3b6cc253c58",
+							"type": "modifier",
+							"name": "Bane",
+							"reference": "H14",
+							"notes": "@Very Common@",
+							"cost": -15,
+							"disabled": true
+						},
+						{
+							"id": "131c5627-2f5a-4f3f-8a52-08417003bc95",
+							"type": "modifier",
+							"name": "Directional",
+							"reference": "B47",
+							"notes": "Front",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "132e7d43-7920-45f5-bcde-036029aa49f2",
+							"type": "modifier",
+							"name": "Flexible",
+							"reference": "B47",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "d9e01c00-3ac2-4f4d-ae5f-45b34441df13",
+							"type": "modifier",
+							"name": "Limited",
+							"reference": "B46",
+							"notes": "@Very Common Attack Form@",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "72f08aac-bc4a-43fe-875b-8747b7397bec",
+							"type": "modifier",
+							"name": "Semi-Ablative",
+							"reference": "B47",
+							"cost": -20,
+							"disabled": true
+						},
+						{
+							"id": "13410164-cee1-4956-832c-47bcf41fdab8",
+							"type": "modifier",
+							"name": "Can't wear armor",
+							"reference": "B47",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "9ad2a005-947f-4ef9-ba99-ed88a4adaa49",
+							"type": "modifier",
+							"name": "Directional",
+							"reference": "B47",
+							"notes": "@Direction: Back, Right, Left, Top or Underside@",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "34ffce90-cba0-4d1a-a8ce-b3e6b12a51e3",
+							"type": "modifier",
+							"name": "Fire",
+							"reference": "B46",
+							"cost": -30
+						},
+						{
+							"id": "10940926-bf24-4984-a984-d974384f0874",
+							"type": "modifier",
+							"name": "Tough Skin",
+							"notes": "Effects that just require skin contact or a scratch ignore this DR",
+							"cost": -40
+						},
+						{
+							"id": "db046fce-bac2-4fae-98d4-ee66925c0e9e",
+							"type": "modifier",
+							"name": "Limited",
+							"reference": "B46",
+							"notes": "@Occasional Attack Form@",
+							"cost": -60,
+							"disabled": true
+						},
+						{
+							"id": "b112e7ab-adac-40ef-a544-598ae0f7436f",
+							"type": "modifier",
+							"name": "Ablative",
+							"reference": "B47",
+							"cost": -80,
+							"disabled": true
+						},
+						{
+							"id": "3b761122-5da1-46dd-992c-2f9df40890cb",
+							"type": "modifier",
+							"name": "Limited",
+							"reference": "B46",
+							"notes": "@Rare Attack Form@",
+							"cost": -80,
+							"disabled": true
+						},
+						{
+							"id": "0ed89045-94df-4ab0-ac26-53103a2ad43f",
+							"type": "modifier",
+							"name": "Laminate",
+							"reference": "RSWL18",
+							"cost": 10,
+							"disabled": true
+						},
+						{
+							"id": "a1baddab-14e3-402e-a209-1eee48ba98ec",
+							"type": "modifier",
+							"name": "Malediction-Proof",
+							"reference": "PSI14",
+							"cost": 50,
+							"disabled": true
+						},
+						{
+							"id": "b1b407f3-24ca-4beb-8f3a-d362891e5af9",
+							"type": "modifier",
+							"name": "Maledictions Only",
+							"reference": "PSI14",
+							"disabled": true
+						},
+						{
+							"id": "a48b115e-bf63-41f8-84cd-3b6d1e41653e",
+							"type": "modifier",
+							"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+							"reference": "B47",
+							"cost": -10,
+							"disabled": true
+						}
+					],
+					"levels": 3,
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"location": "all",
+							"specialization": "Fire",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "2c33331b-2120-43a2-b7f1-967d852cfa04",
+					"type": "trait",
+					"name": "Bad Reputation : Infernal Bloodline",
+					"reference": "B26,MA54",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"modifiers": [
+						{
+							"id": "4ab6e069-8e13-4a45-82bd-e07fbebf17a7",
+							"type": "modifier",
+							"name": "People Affected",
+							"reference": "B27",
+							"notes": "Almost everyone",
+							"cost": 1,
+							"cost_type": "multiplier",
+							"disabled": true
+						},
+						{
+							"id": "cd068eef-48af-4246-b1f4-c634f7c24a85",
+							"type": "modifier",
+							"name": "People Affected",
+							"reference": "B27",
+							"notes": "Almost everyone except other Tieflings",
+							"cost": 0.67,
+							"cost_type": "multiplier"
+						},
+						{
+							"id": "d65bc4bc-7b2c-448f-bac1-09f70431fb57",
+							"type": "modifier",
+							"name": "People Affected",
+							"reference": "B27",
+							"notes": "@Large class of people@",
+							"cost": 0.5,
+							"cost_type": "multiplier",
+							"disabled": true
+						},
+						{
+							"id": "8ecfba87-4088-4469-baa7-9c83d0be8f02",
+							"type": "modifier",
+							"name": "People Affected",
+							"reference": "B27",
+							"notes": "@Small class of people@",
+							"cost": 0.33,
+							"cost_type": "multiplier",
+							"disabled": true
+						},
+						{
+							"id": "cea05dc0-0766-4fd4-a469-9a45972f922c",
+							"type": "modifier",
+							"name": "Recognized all the time",
+							"reference": "B28",
+							"cost": 1,
+							"cost_type": "multiplier",
+							"disabled": true
+						},
+						{
+							"id": "2d07e305-cee0-4c7f-90de-5977987209cf",
+							"type": "modifier",
+							"name": "Recognized sometimes",
+							"reference": "B28",
+							"notes": "10-",
+							"cost": 0.5,
+							"cost_type": "multiplier",
+							"disabled": true
+						},
+						{
+							"id": "9c247890-4512-431a-8f0e-3a033bc21284",
+							"type": "modifier",
+							"name": "Recognized occasionally",
+							"reference": "B28",
+							"notes": "7-",
+							"cost": 0.33,
+							"cost_type": "multiplier",
+							"disabled": true
+						}
+					],
+					"levels": 1,
+					"points_per_level": -5,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from others aware of your reputation",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"calc": {
+						"points": -3
+					}
+				},
+				{
+					"id": "66369aef-2a87-4334-9dd1-609570a01601",
+					"type": "trait",
+					"name": "Horns",
+					"reference": "B164",
+					"tags": [
+						"Physical",
+						"Quirk"
+					],
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"id": "0208c212-1ee5-4e06-bea0-3621509cecd7",
+					"type": "trait",
+					"name": "Pointed cannine teeth",
+					"reference": "B164",
+					"tags": [
+						"Perk",
+						"Physical"
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "86e88d5e-ff81-43ba-b915-a5c0c7314255",
+					"type": "trait",
+					"name": "Tail",
+					"reference": "B53",
+					"notes": "Thick tail, four to tive feet long",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "a4a4b3db-88eb-412b-8bee-74150d9f3040",
+							"type": "modifier",
+							"name": "Extra-Flexible",
+							"reference": "B53",
+							"cost": 50,
+							"disabled": true
+						},
+						{
+							"id": "942fdfcb-f239-4c40-9224-2e1507a43e60",
+							"type": "modifier",
+							"name": "Long",
+							"reference": "B53",
+							"cost": 100,
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "3b1fbbca-405f-4592-b831-3ae68f98ee38",
+							"type": "modifier",
+							"name": "Foot Manipulators",
+							"reference": "B53",
+							"cost": -30,
+							"disabled": true
+						},
+						{
+							"id": "82659421-f2c1-4300-9119-c2406b9403fc",
+							"type": "modifier",
+							"name": "No Physical Attack",
+							"reference": "B53",
+							"cost": -50
+						},
+						{
+							"id": "c6ffffa4-1d92-4c7d-9aac-2097aa9a944e",
+							"type": "modifier",
+							"name": "Short",
+							"reference": "B53",
+							"cost": -50,
+							"disabled": true
+						},
+						{
+							"id": "3d074340-af06-4b70-aa84-22da87bb081d",
+							"type": "modifier",
+							"name": "Weak",
+							"reference": "B53",
+							"notes": "Half body ST",
+							"cost": -25,
+							"disabled": true
+						},
+						{
+							"id": "b2cccad5-b178-43ec-afc4-eae1c478a0cc",
+							"type": "modifier",
+							"name": "Weak",
+							"reference": "B53",
+							"notes": "Quarter body ST",
+							"cost": -50
+						},
+						{
+							"id": "9c654aa3-228f-4f8b-9f0f-58672c44ea9a",
+							"type": "modifier",
+							"name": "Weapon Mount",
+							"reference": "B53",
+							"cost": -80,
+							"disabled": true
+						},
+						{
+							"id": "e6cb0172-3f80-40db-a521-1c88f00105f6",
+							"type": "modifier",
+							"name": "No Grasping Hand",
+							"reference": "MATG28",
+							"cost": -40
+						}
+					],
+					"levels": 1,
+					"points_per_level": 10,
+					"can_level": true,
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "479563d7-ddab-4269-81ed-3cb74a6b8a9f",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "0497f2f8-0ce8-409c-aa8a-eac8e4e8c2a8",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "1618cb9c-8f6a-4370-ad24-29dc317b2058",
+									"type": "trait",
+									"name": "Obscure (Vision)",
+									"reference": "B72,P64,PSI16",
+									"notes": "Create a sphere of partial darkness of 1m radius. You can spend 2FP per m to extend the radius.",
+									"tags": [
+										"Advantage",
+										"Exotic",
+										"Physical"
+									],
+									"modifiers": [
+										{
+											"id": "6bcd1d67-4bec-45c5-8e53-afcf2af34415",
+											"type": "modifier",
+											"name": "Defensive",
+											"reference": "B72",
+											"cost": 50,
+											"disabled": true
+										},
+										{
+											"id": "2cc1e79d-54bb-4e39-9b05-a6ec10b60b94",
+											"type": "modifier",
+											"name": "Extended",
+											"reference": "B72",
+											"notes": "@Sense@",
+											"cost": 20,
+											"disabled": true
+										},
+										{
+											"id": "d1ae6617-1d6b-47e6-a392-826bd1eeea0d",
+											"type": "modifier",
+											"name": "Ranged",
+											"reference": "B72",
+											"cost": 50,
+											"disabled": true
+										},
+										{
+											"id": "a7936ef4-b7e5-4d81-9efb-37d49050530c",
+											"type": "modifier",
+											"name": "Stealthy",
+											"reference": "B72",
+											"cost": 100,
+											"disabled": true
+										},
+										{
+											"id": "2fa9a36c-0cb6-4e3c-ba52-47f404f91cb1",
+											"type": "modifier",
+											"name": "Always On",
+											"reference": "B72",
+											"cost": -50,
+											"disabled": true
+										},
+										{
+											"id": "7779354f-7658-4c57-8861-eb03382a92f7",
+											"type": "modifier",
+											"name": "Limited",
+											"reference": "P65",
+											"notes": "@Source@",
+											"cost": -20,
+											"disabled": true
+										},
+										{
+											"id": "e2eea33e-e7d3-46af-b926-5f6dd0e066f5",
+											"type": "modifier",
+											"name": "Limited",
+											"reference": "P65",
+											"notes": "@Power@",
+											"cost": -40,
+											"disabled": true
+										},
+										{
+											"id": "a367fc81-3857-46e0-ae56-eaf3d4769c97",
+											"type": "modifier",
+											"name": "Anti-Targeting",
+											"reference": "PSI16",
+											"cost": -20,
+											"disabled": true
+										},
+										{
+											"id": "6155880a-c5a6-46d0-bc45-a2c69e993a40",
+											"type": "modifier",
+											"name": "Magical",
+											"notes": "Not available if no mana source",
+											"cost": -10
+										},
+										{
+											"id": "8880923f-8cc5-4a09-a029-f2bc19f347ec",
+											"type": "modifier",
+											"name": "Limited Use",
+											"reference": "B112,P103",
+											"notes": "Once per day",
+											"cost": -40
+										},
+										{
+											"id": "51781d58-c3a1-451d-9292-db674705ea42",
+											"type": "modifier",
+											"name": "Area Effect",
+											"reference": "B102,P100",
+											"notes": "2^level radius",
+											"cost": 50,
+											"levels": 1,
+											"disabled": true
+										}
+									],
+									"levels": 3,
+									"points_per_level": 2,
+									"can_level": true,
+									"calc": {
+										"points": 3
+									}
+								}
+							],
+							"name": "Darkness - choose level",
+							"calc": {
+								"points": 3
+							}
+						},
+						{
+							"id": "5b038058-3802-49bb-b4eb-7e719064db0e",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "7412df12-e984-4f5f-875d-11d274acd569",
+									"type": "trait",
+									"name": "Innate Attack (Burn)",
+									"reference": "B61,P53,MA45",
+									"notes": "Requires a Will roll to control it. With a 14+ you cannot control).",
+									"tags": [
+										"Advantage",
+										"Exotic",
+										"Physical"
+									],
+									"modifiers": [
+										{
+											"id": "43590304-7133-40ce-949e-deff1c1b93c2",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 sec",
+											"cost": 100,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "18dbeeb5-e68c-4ab5-9303-1384370dfef7",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "10 sec",
+											"cost": 50,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "c46b9811-1c50-4cf2-b580-4aec5333d604",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 min",
+											"cost": 40,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "57d3d5e1-95b1-448c-a6bd-c60743f4f180",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 hr",
+											"cost": 20,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "3d66a8c0-76e0-403f-8bd2-7dc19fc231af",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 day",
+											"cost": 10,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "1e31e06e-21ac-4f9b-9f53-426ea447a68c",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 sec; Resistible",
+											"cost": 50,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "5328014e-acb3-478a-b2e1-1523dcffdffb",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "10 sec; Resistible",
+											"cost": 25,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "31df85fe-1e9a-4618-bd81-e33d77621215",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 min; Resistible",
+											"cost": 20,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "f1638ba4-5f91-4e17-af60-e12a9654e1a3",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 hr; Resistible",
+											"cost": 10,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "381c286a-9e3e-4164-93d6-781e1b4d63dc",
+											"type": "modifier",
+											"name": "Cyclic",
+											"reference": "B103",
+											"notes": "1 day; Resistible",
+											"cost": 5,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "e8312ca8-1d6f-41be-bb51-0f76456a7c62",
+											"type": "modifier",
+											"name": "Contagious",
+											"reference": "B103",
+											"notes": "Mildly",
+											"cost": 20,
+											"disabled": true
+										},
+										{
+											"id": "f0179fb0-adfc-49f6-92d0-995f94ae4fef",
+											"type": "modifier",
+											"name": "Contagious",
+											"reference": "B103",
+											"notes": "Highly",
+											"cost": 50,
+											"disabled": true
+										},
+										{
+											"id": "90caed7d-c665-4b56-9e99-28736cb070f5",
+											"type": "modifier",
+											"name": "Double Blunt Trauma",
+											"reference": "B104",
+											"notes": "1HP per 10 dmg",
+											"cost": 20,
+											"disabled": true
+										},
+										{
+											"id": "6aacb4ba-74f8-43a5-b9e1-a11b10eecdfa",
+											"type": "modifier",
+											"name": "Explosion",
+											"reference": "B104",
+											"cost": 50,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "7372eaee-5713-4055-a571-fdf9b34dbc46",
+											"type": "modifier",
+											"name": "Fragmentation",
+											"reference": "B104",
+											"cost": 15,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "c7f3a30e-b7d8-4d01-8f29-6782d0f2977f",
+											"type": "modifier",
+											"name": "Fragmentation",
+											"reference": "B104",
+											"notes": "Hot",
+											"cost": 15,
+											"levels": 1,
+											"disabled": true
+										},
+										{
+											"id": "df1d1580-1841-4417-b143-bf070ee5f251",
+											"type": "modifier",
+											"name": "Radiation",
+											"reference": "B104",
+											"cost": 100,
+											"disabled": true
+										},
+										{
+											"id": "b15ffc01-d8b9-48da-b405-98b88cbca061",
+											"type": "modifier",
+											"name": "Surge",
+											"reference": "B104",
+											"cost": 20,
+											"disabled": true
+										},
+										{
+											"id": "2648b152-6bcc-4e36-8533-9cb8f26a6bc1",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B102",
+											"notes": "2",
+											"cost": 50,
+											"disabled": true
+										},
+										{
+											"id": "cf3d7f8c-8b75-429c-b5e1-210395c1ddee",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B102",
+											"notes": "3",
+											"cost": 100,
+											"disabled": true
+										},
+										{
+											"id": "21d302aa-0f56-4746-a9ed-58e4cb618cf3",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B102",
+											"notes": "5",
+											"cost": 150,
+											"disabled": true
+										},
+										{
+											"id": "763facd6-8f3d-42ce-95bc-f19a674a0139",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B102",
+											"notes": "10",
+											"cost": 200,
+											"disabled": true
+										},
+										{
+											"id": "0452127e-ec5a-4c5d-9ee8-31a62996a2df",
+											"type": "modifier",
+											"name": "Side Effect",
+											"reference": "B109",
+											"notes": "@Effect@",
+											"disabled": true
+										},
+										{
+											"id": "c2b11993-794f-4e80-b41a-f20a571ca811",
+											"type": "modifier",
+											"name": "Symptoms",
+											"reference": "B109",
+											"notes": "@Effect@",
+											"disabled": true
+										},
+										{
+											"id": "13e4f7c7-d467-4d62-9129-2b6fe19b2fee",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B110",
+											"notes": "0.5",
+											"cost": -30,
+											"disabled": true
+										},
+										{
+											"id": "b839ff68-70fc-40d4-b406-dd8ebae35a5b",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B110",
+											"notes": "0.2",
+											"cost": -50,
+											"disabled": true
+										},
+										{
+											"id": "0346821e-b3b2-4d47-a99b-31af86f6e25e",
+											"type": "modifier",
+											"name": "Armor Divisor",
+											"reference": "B110",
+											"notes": "0.1",
+											"cost": -70,
+											"disabled": true
+										},
+										{
+											"id": "1f7d191c-83fd-4cef-8f4b-a0bdcfa0c0b7",
+											"type": "modifier",
+											"name": "No Wounding",
+											"reference": "B111",
+											"cost": -50,
+											"disabled": true
+										},
+										{
+											"id": "a4343d58-ea1b-4cf3-9d39-215e0f8c7af6",
+											"type": "modifier",
+											"name": "Surge, Arcing",
+											"reference": "PSI20",
+											"cost": 100,
+											"disabled": true
+										},
+										{
+											"id": "974de770-805c-4bc6-a82f-202e8eda9bca",
+											"type": "modifier",
+											"name": "Only if hurt and only against the person who hurt you.",
+											"reference": "B116,P106",
+											"cost": -20
+										}
+									],
+									"levels": 1,
+									"points_per_level": 5,
+									"weapons": [
+										{
+											"id": "e0cd7330-a694-442e-9bca-e7ead83585aa",
+											"type": "ranged_weapon",
+											"damage": {
+												"type": "burn",
+												"base": "1d"
+											},
+											"accuracy": "3",
+											"range": "10/100",
+											"rate_of_fire": "1",
+											"recoil": "1",
+											"defaults": [
+												{
+													"type": "skill",
+													"name": "Innate Attack",
+													"specialization": "Hellish rebuke"
+												},
+												{
+													"type": "skill",
+													"name": "Innate Attack",
+													"modifier": -2
+												},
+												{
+													"type": "dx",
+													"modifier": -4
+												}
+											],
+											"calc": {
+												"level": 15,
+												"damage": "1d burn"
+											}
+										}
+									],
+									"can_level": true,
+									"calc": {
+										"points": 4
+									}
+								}
+							],
+							"name": "Hellish rebuke",
+							"calc": {
+								"points": 4
+							}
+						}
+					],
+					"name": "Infernal Legacy - Optional",
+					"calc": {
+						"points": 7
+					}
+				}
+			],
+			"name": "Tiefling",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"calc": {
+				"points": 25
+			}
+		},
+		{
+			"id": "76000325-9328-4a73-bb3d-9dc7c45482fd",
+			"type": "trait_container",
+			"open": true,
+			"children": [
+				{
+					"id": "b71a9226-7db8-4635-849e-59895bbc602f",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "470688fa-c257-4229-be04-1bef34ec94c8",
+							"type": "trait",
+							"name": "Increased Strength",
+							"reference": "B14",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "88053618-8655-45ad-8aca-2bbf1b82baa3",
+									"type": "modifier",
+									"name": "No Fine Manipulators",
+									"reference": "B15",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "493548c0-04a2-4f28-98d4-b6e37d11635f",
+									"type": "modifier",
+									"name": "Size",
+									"reference": "B15",
+									"cost": -10,
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "1928baa2-c5db-4b1e-8d72-7e844af161e4",
+									"type": "modifier",
+									"name": "Super-Effort",
+									"reference": "SU24",
+									"cost": 300,
+									"disabled": true
+								}
+							],
+							"levels": 2,
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "st",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 20
+							}
+						}
+					],
+					"name": "Attributes",
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "d265d794-675a-4ac4-b562-e0eb6aa02f2c",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "cd9e7806-4eeb-418f-b268-7ec4cf09737f",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "3cf2cd5b-eae7-4c3e-a26b-66ca3a45b7ad",
+									"type": "trait",
+									"name": "Extra Fatigue Points",
+									"reference": "B16",
+									"tags": [
+										"Advantage",
+										"Attribute",
+										"Physical"
+									],
+									"levels": 6,
+									"points_per_level": 3,
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "fp",
+											"amount": 1,
+											"per_level": true
+										}
+									],
+									"can_level": true,
+									"calc": {
+										"points": 18
+									}
+								}
+							],
+							"name": "20 Points Chosen From:",
+							"notes": "or from additional holy Abilities",
+							"calc": {
+								"points": 18
+							}
+						},
+						{
+							"id": "fb1b0997-e843-493e-8470-7dce1774fa8c",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "9dbff30e-e330-4fe8-851d-88181dc9aaba",
+									"type": "trait_container",
+									"open": true,
+									"children": [
+										{
+											"id": "135f7820-bf94-4dca-aa92-efe2125d4d77",
+											"type": "trait",
+											"name": "Hellfire Touch",
+											"reference": "B61",
+											"tags": [
+												"Advantage",
+												"Exotic",
+												"Physical"
+											],
+											"modifiers": [
+												{
+													"id": "e4ddc236-60ec-4cd3-a32f-a1676efc01bf",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 sec",
+													"cost": 100,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "e7adbb60-e6da-4faf-af31-a867e156b4b6",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "10 sec",
+													"cost": 50,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "f5e7877d-26ae-4da6-9e5a-aaa5a4b0c244",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 min",
+													"cost": 40,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "7349bf8c-8960-467d-b659-82db1525b406",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 hr",
+													"cost": 20,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "d7cf850f-8aba-4b39-8dc0-4cdf9b0e4f51",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 day",
+													"cost": 10,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "425c3ff6-8b72-4be5-b7eb-410593aeaac1",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 sec; Resistible",
+													"cost": 50,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "d7eb6571-ea04-4a2e-bee9-9976aa4c068e",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "10 sec; Resistible",
+													"cost": 25,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "8a5d11e5-71fd-4483-812c-21e71d1d40f0",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 min; Resistible",
+													"cost": 20,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "a841daca-8abd-4015-b128-9f32e67dee88",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 hr; Resistible",
+													"cost": 10,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "6e853593-f5e3-4d58-948b-b30708b8d816",
+													"type": "modifier",
+													"name": "Cyclic",
+													"reference": "B103",
+													"notes": "1 day; Resistible",
+													"cost": 5,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "ca82b132-2fd8-4d28-b410-0df953cfe2d6",
+													"type": "modifier",
+													"name": "Contagious",
+													"reference": "B103",
+													"notes": "Mildly",
+													"cost": 20,
+													"disabled": true
+												},
+												{
+													"id": "3ff80271-4429-4f86-b2fb-5fb167e15f9d",
+													"type": "modifier",
+													"name": "Contagious",
+													"reference": "B103",
+													"notes": "Highly",
+													"cost": 50,
+													"disabled": true
+												},
+												{
+													"id": "683e7c32-36f1-418e-a62b-c291c7e9ec18",
+													"type": "modifier",
+													"name": "Double Blunt Trauma",
+													"reference": "B104",
+													"notes": "1HP per 10 dmg",
+													"cost": 20,
+													"disabled": true
+												},
+												{
+													"id": "02b4c6fc-a00e-48a0-b52b-399d1ae31fc7",
+													"type": "modifier",
+													"name": "Explosion",
+													"reference": "B104",
+													"cost": 50,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "47a5805e-56c1-45bc-a835-db03dd4b93e5",
+													"type": "modifier",
+													"name": "Fragmentation",
+													"reference": "B104",
+													"cost": 15,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "190677ae-36af-4850-abe2-f5922a451197",
+													"type": "modifier",
+													"name": "Fragmentation",
+													"reference": "B104",
+													"notes": "Hot",
+													"cost": 15,
+													"levels": 1,
+													"disabled": true
+												},
+												{
+													"id": "c9139ef7-ad6f-4f47-8c75-5afc7dbbe263",
+													"type": "modifier",
+													"name": "Radiation",
+													"reference": "B104",
+													"cost": 100,
+													"disabled": true
+												},
+												{
+													"id": "9c0ea7d6-cb00-4755-ba75-6ad72fe92018",
+													"type": "modifier",
+													"name": "Surge",
+													"reference": "B104",
+													"cost": 20,
+													"disabled": true
+												},
+												{
+													"id": "c81ab985-8b71-458d-acd9-7d816c8cfbc8",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B102",
+													"notes": "2",
+													"cost": 50,
+													"disabled": true
+												},
+												{
+													"id": "f6fe52a6-737c-4f82-bde6-8182ab6187f8",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B102",
+													"notes": "3",
+													"cost": 100,
+													"disabled": true
+												},
+												{
+													"id": "9f93f626-6120-4ee8-a742-84e7f2dc48d6",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B102",
+													"notes": "5",
+													"cost": 150,
+													"disabled": true
+												},
+												{
+													"id": "49f49ef9-9798-4169-96bd-a97a42e040ec",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B102",
+													"notes": "10",
+													"cost": 200,
+													"disabled": true
+												},
+												{
+													"id": "33b2b518-469d-46cd-87e2-f0233bd2c791",
+													"type": "modifier",
+													"name": "Side Effect",
+													"reference": "B109",
+													"notes": "@Effect@",
+													"disabled": true
+												},
+												{
+													"id": "1068bf4f-ccef-4953-9121-a8006ac5bd4f",
+													"type": "modifier",
+													"name": "Symptoms",
+													"reference": "B109",
+													"notes": "@Effect@",
+													"disabled": true
+												},
+												{
+													"id": "22b83443-e242-4af1-b4fb-b6dca0009f2c",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B110",
+													"notes": "0.5",
+													"cost": -30,
+													"disabled": true
+												},
+												{
+													"id": "c39a3d96-1e23-4f46-8982-0c7fec8dc924",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B110",
+													"notes": "0.2",
+													"cost": -50,
+													"disabled": true
+												},
+												{
+													"id": "701dd186-732c-4f91-b873-f52eeb7036cd",
+													"type": "modifier",
+													"name": "Armor Divisor",
+													"reference": "B110",
+													"notes": "0.1",
+													"cost": -70,
+													"disabled": true
+												},
+												{
+													"id": "254315e1-49e5-4fcb-9582-b226c2235a72",
+													"type": "modifier",
+													"name": "No Wounding",
+													"reference": "B111",
+													"cost": -50,
+													"disabled": true
+												},
+												{
+													"id": "2b87ab74-af4e-44ab-934c-128edb52b20c",
+													"type": "modifier",
+													"name": "Affects Insubstantial",
+													"cost": 20
+												},
+												{
+													"id": "dc333eda-1363-4a65-8022-d9b08d853bae",
+													"type": "modifier",
+													"name": "Armor Divisor (2)",
+													"cost": 50
+												},
+												{
+													"id": "dcd2a375-19b7-4fd0-a783-6c7003d02e3a",
+													"type": "modifier",
+													"name": "Costs Fatigue",
+													"cost": -5,
+													"levels": 1
+												},
+												{
+													"id": "f2643559-68bd-4aea-bf64-dc3245eac650",
+													"type": "modifier",
+													"name": "Melee Attack, Reach C, Cannot Parry",
+													"cost": -35
+												}
+											],
+											"levels": 2,
+											"points_per_level": 5,
+											"weapons": [
+												{
+													"id": "337d9048-ec9e-4b20-ad01-584be7760ec4",
+													"type": "melee_weapon",
+													"damage": {
+														"type": "brn",
+														"base": "1d"
+													},
+													"usage": "Hellfire Touch",
+													"reach": "C",
+													"defaults": [
+														{
+															"type": "dx"
+														},
+														{
+															"type": "skill",
+															"name": "Brawling"
+														},
+														{
+															"type": "skill",
+															"name": "Karate"
+														}
+													],
+													"calc": {
+														"level": 12,
+														"damage": "2d brn"
+													}
+												}
+											],
+											"can_level": true,
+											"calc": {
+												"points": 12
+											}
+										},
+										{
+											"id": "d5d09a2a-0fe8-4a63-aefd-1788dbf61a98",
+											"type": "trait",
+											"name": "True Faith",
+											"reference": "B94",
+											"tags": [
+												"Advantage",
+												"Mental",
+												"Supernatural"
+											],
+											"modifiers": [
+												{
+													"id": "a33c07cb-de28-451f-a767-58c5f9e23aed",
+													"type": "modifier",
+													"name": "Chosen",
+													"reference": "P84",
+													"notes": "@Deity@",
+													"disabled": true
+												},
+												{
+													"id": "42714181-c372-489c-b983-8fcab6701cd4",
+													"type": "modifier",
+													"name": "Turning",
+													"reference": "P84",
+													"cost": 65,
+													"disabled": true
+												}
+											],
+											"base_points": 15,
+											"calc": {
+												"points": 14
+											}
+										}
+									],
+									"name": "Holy Might",
+									"reference": "DF1:22",
+									"tags": [
+										"Advantage"
+									],
+									"modifiers": [
+										{
+											"id": "7ea0180d-c8c5-4923-94d6-d0415969ef73",
+											"type": "modifier",
+											"name": "Power Modifier",
+											"reference": "DF1:22",
+											"notes": "Holy",
+											"cost": -10
+										}
+									],
+									"calc": {
+										"points": 26
+									}
+								}
+							],
+							"name": "25 Points in holy abilities",
+							"notes": "put leftovers into spells",
+							"calc": {
+								"points": 26
+							}
+						},
+						{
+							"id": "f61cab1d-8563-438d-8423-0766b11750bd",
+							"type": "trait",
+							"name": "Clerical Investment",
+							"reference": "B43",
+							"tags": [
+								"Advantage",
+								"Social"
+							],
+							"base_points": 5,
+							"calc": {
+								"points": 5
+							}
+						},
+						{
+							"id": "1842d838-cce9-45b0-83e1-6e1f21ca6192",
+							"type": "trait",
+							"name": "Power Investiture",
+							"reference": "B77",
+							"tags": [
+								"Advantage",
+								"Mental",
+								"Supernatural"
+							],
+							"levels": 3,
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "spell_bonus",
+									"match": "college_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Clerical"
+									},
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 30
+							}
+						}
+					],
+					"name": "Class Advantages",
+					"calc": {
+						"points": 79
+					}
+				},
+				{
+					"id": "00de86c7-1135-429e-96bd-972b08619171",
+					"type": "trait_container",
+					"open": true,
+					"children": [
+						{
+							"id": "15ae8e3e-9aaf-46cc-a62f-b826c56a9b78",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "e76a4d21-34b4-4d1b-b157-6d82f0cc45b4",
+									"type": "trait",
+									"name": "Overconfidence",
+									"reference": "B148",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"cr": 12,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "0e3048a1-696e-40bd-8df0-1bd0220634a6",
+									"type": "trait",
+									"name": "Pyromania",
+									"reference": "B150",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"cr": 12,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "8ecea343-af0d-47cb-a99f-3994c43e86fc",
+									"type": "trait",
+									"name": "Sense of Duty",
+									"reference": "B153",
+									"notes": "Adventuring companions",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "189cdae9-fba2-4387-9975-523b722b87ac",
+									"type": "trait",
+									"name": "Stubbornness",
+									"reference": "B157",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "e240080c-1381-4aa6-9d75-238f65b6fa95",
+									"type": "trait",
+									"name": "Truthfulness",
+									"reference": "B159",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"features": [
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "fast talk"
+											},
+											"amount": -5
+										}
+									],
+									"cr": 12,
+									"calc": {
+										"points": -5
+									}
+								}
+							],
+							"name": "A further -25 Points chosen from:",
+							"notes": "or any of the above lists",
+							"calc": {
+								"points": -25
+							}
+						},
+						{
+							"id": "f822ce6a-11da-4091-8444-fc29f0ebb40f",
+							"type": "trait_container",
+							"open": true,
+							"children": [
+								{
+									"id": "1067ac9f-bc7c-4604-92d3-edfd26bc4d62",
+									"type": "trait",
+									"name": "Disciplines of Faith (Ritualism)",
+									"reference": "B132",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "dc35c03e-841d-4e07-8d6c-715fb525153a",
+									"type": "trait",
+									"name": "Intolerance (All other religions)",
+									"reference": "B140",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"modifiers": [
+										{
+											"id": "40641abd-6009-4eda-bfe0-e7a9dc2de2cb",
+											"type": "modifier",
+											"name": "Scope: Common",
+											"reference": "B140",
+											"cost": -5,
+											"cost_type": "points",
+											"disabled": true
+										},
+										{
+											"id": "06af5945-d0f1-40eb-9f4c-c8471b02b8b4",
+											"type": "modifier",
+											"name": "Scope: Occasional",
+											"reference": "B140",
+											"cost": -2,
+											"cost_type": "points",
+											"disabled": true
+										},
+										{
+											"id": "036e5acb-0623-4bf9-a1a0-517bebc5c49f",
+											"type": "modifier",
+											"name": "Scope: Rare",
+											"reference": "B140",
+											"cost": -1,
+											"cost_type": "points",
+											"disabled": true
+										},
+										{
+											"id": "5f70cf2e-9f2c-41c6-9c92-83d8e0b9c974",
+											"type": "modifier",
+											"name": "Scope: Anyone unlike you",
+											"reference": "B140",
+											"cost": -10,
+											"cost_type": "points"
+										}
+									],
+									"calc": {
+										"points": -10
+									}
+								}
+							],
+							"name": "Another -15 Points chosen from:",
+							"notes": "or those above",
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "0189dabd-d64c-46ed-8c5e-354feb54c93f",
+							"type": "trait_container",
+							"open": true,
+							"name": "Choose One of:",
+							"calc": {
+								"points": 0
+							}
+						}
+					],
+					"name": "Class Disadvantages",
+					"calc": {
+						"points": -40
+					}
+				}
+			],
+			"name": "Fire Cleric",
+			"reference": "DF1:4",
+			"calc": {
+				"points": 59
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "2aa9b2f8-8170-48a4-9448-6554b906f072",
+			"type": "skill_container",
+			"open": true,
+			"children": [
+				{
+					"id": "6d79f91f-c1f0-4ce2-acef-4df7013ac963",
+					"type": "skill",
+					"name": "Innate Attack",
+					"reference": "B201",
+					"tags": [
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
+					],
+					"specialization": "Hellish rebuke",
+					"difficulty": "dx/e",
+					"points": 8,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Innate Attack",
+						"specialization": "Projectile",
+						"modifier": -2,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": 1
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Innate Attack",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 15,
+						"rsl": "DX+3"
+					}
+				}
+			],
+			"name": "Tiefling"
+		},
+		{
+			"id": "e4353c2c-8623-4360-9e05-41fed53a6634",
+			"type": "skill",
+			"name": "Whip",
+			"reference": "B209",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Force Whip",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Kusari",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Monowire Whip",
+					"modifier": -3
+				}
+			],
+			"calc": {
+				"level": 11,
+				"rsl": "DX-1"
+			}
+		},
+		{
+			"id": "ad449850-aef6-425e-a077-f178eb3cd8d6",
+			"type": "skill_container",
+			"open": true,
+			"children": [
+				{
+					"id": "e03505e5-c2a1-4c09-9e3f-95a994b3a8a0",
+					"type": "skill_container",
+					"open": true,
+					"children": [
+						{
+							"id": "d3cf647e-e271-4661-b4ae-4631268bbd45",
+							"type": "skill",
+							"name": "Exorcism",
+							"reference": "B193",
+							"tags": [
+								"Magical",
+								"Occult"
+							],
+							"difficulty": "will/h",
+							"points": 4,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Religious Ritual",
+								"modifier": -3,
+								"level": 9,
+								"adjusted_level": 9,
+								"points": -9
+							},
+							"defaults": [
+								{
+									"type": "will",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Religious Ritual",
+									"modifier": -3
+								},
+								{
+									"type": "skill",
+									"name": "Ritual Magic",
+									"modifier": -3
+								},
+								{
+									"type": "skill",
+									"name": "Theology",
+									"modifier": -3
+								}
+							],
+							"calc": {
+								"level": 14,
+								"rsl": "Will+0"
+							}
+						},
+						{
+							"id": "585c2e74-a449-488a-bebb-b4a463581e4e",
+							"type": "skill_container",
+							"open": true,
+							"children": [
+								{
+									"id": "b1165c23-1ad8-4dfd-a7b2-47f9327b997d",
+									"type": "skill",
+									"name": "Throwing",
+									"reference": "B226",
+									"tags": [
+										"Athletic",
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"difficulty": "dx/a",
+									"points": 4,
+									"defaulted_from": {
+										"type": "dx",
+										"modifier": -3,
+										"level": 9,
+										"adjusted_level": 9,
+										"points": -9
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -3
+										},
+										{
+											"type": "skill",
+											"name": "Dropping",
+											"modifier": -4
+										}
+									],
+									"calc": {
+										"level": 13,
+										"rsl": "DX+1"
+									}
+								},
+								{
+									"id": "c420601f-9565-4d3c-8624-e39003b41df8",
+									"type": "skill",
+									"name": "Sling",
+									"reference": "B221",
+									"tags": [
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"difficulty": "dx/h",
+									"points": 4,
+									"defaulted_from": {
+										"type": "dx",
+										"modifier": -6,
+										"level": 6,
+										"adjusted_level": 6,
+										"points": -6
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -6
+										}
+									],
+									"calc": {
+										"level": 12,
+										"rsl": "DX+0"
+									}
+								},
+								{
+									"id": "69c7d28b-81a2-4557-8f52-0de90ee14d19",
+									"type": "skill",
+									"name": "Innate Attack",
+									"reference": "B201",
+									"tags": [
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"specialization": "Projectile",
+									"difficulty": "dx/e",
+									"points": 4,
+									"defaulted_from": {
+										"type": "skill",
+										"name": "Innate Attack",
+										"specialization": "Gaze",
+										"modifier": -2,
+										"level": 12,
+										"adjusted_level": 12,
+										"points": 1
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Innate Attack",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "DX+2"
+									}
+								},
+								{
+									"id": "3067f3a8-33f1-4242-b3da-7059792b3299",
+									"type": "skill",
+									"name": "Innate Attack",
+									"reference": "B201",
+									"tags": [
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"specialization": "Gaze",
+									"difficulty": "dx/e",
+									"points": 4,
+									"defaulted_from": {
+										"type": "skill",
+										"name": "Innate Attack",
+										"specialization": "Breath",
+										"modifier": -2,
+										"level": 12,
+										"adjusted_level": 12,
+										"points": 1
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Innate Attack",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "DX+2"
+									}
+								},
+								{
+									"id": "764153cc-3ab2-48fd-99be-3c333b0c3230",
+									"type": "skill",
+									"name": "Innate Attack",
+									"reference": "B201",
+									"tags": [
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"specialization": "Breath",
+									"difficulty": "dx/e",
+									"points": 4,
+									"defaulted_from": {
+										"type": "skill",
+										"name": "Innate Attack",
+										"specialization": "Beam",
+										"modifier": -2,
+										"level": 12,
+										"adjusted_level": 12,
+										"points": 1
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Innate Attack",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "DX+2"
+									}
+								},
+								{
+									"id": "7d2b167c-4343-4431-a8de-49ca957dfb39",
+									"type": "skill",
+									"name": "Innate Attack",
+									"reference": "B201",
+									"tags": [
+										"Combat",
+										"Ranged Combat",
+										"Weapon"
+									],
+									"specialization": "Beam",
+									"difficulty": "dx/e",
+									"points": 4,
+									"defaulted_from": {
+										"type": "dx",
+										"modifier": -4,
+										"level": 8,
+										"adjusted_level": 8,
+										"points": -8
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Innate Attack",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "DX+2"
+									}
+								}
+							],
+							"name": "Choose Two of:"
+						},
+						{
+							"id": "fced5542-5e74-4aa4-8ff0-6bdfe8a648f8",
+							"type": "skill_container",
+							"open": true,
+							"children": [
+								{
+									"id": "f681beea-fe5a-4a4e-9189-13326c87b3f5",
+									"type": "skill_container",
+									"children": [
+										{
+											"id": "c6afcc44-aae5-4a46-a0b7-7bc833352831",
+											"type": "skill",
+											"name": "Staff",
+											"reference": "B208",
+											"tags": [
+												"Combat",
+												"Melee Combat",
+												"Weapon"
+											],
+											"difficulty": "dx/a",
+											"points": 12,
+											"defaulted_from": {
+												"type": "dx",
+												"modifier": -5,
+												"level": 7,
+												"adjusted_level": 7,
+												"points": -7
+											},
+											"defaults": [
+												{
+													"type": "dx",
+													"modifier": -5
+												},
+												{
+													"type": "skill",
+													"name": "Polearm",
+													"modifier": -4
+												},
+												{
+													"type": "skill",
+													"name": "Spear",
+													"modifier": -2
+												}
+											],
+											"calc": {
+												"level": 15,
+												"rsl": "DX+3"
+											}
+										}
+									],
+									"name": "Melee 3"
+								},
+								{
+									"id": "e4df4158-14a5-4124-ad9c-8ad99e846bb2",
+									"type": "skill_container",
+									"children": [
+										{
+											"id": "8d364057-20f2-42d7-9c5c-4d780cd5422c",
+											"type": "skill",
+											"name": "Shield",
+											"reference": "B220",
+											"tags": [
+												"Combat",
+												"Melee Combat",
+												"Weapon"
+											],
+											"specialization": "Shield",
+											"difficulty": "dx/e",
+											"points": 4,
+											"defaulted_from": {
+												"type": "dx",
+												"modifier": -4,
+												"level": 8,
+												"adjusted_level": 8,
+												"points": -8
+											},
+											"defaults": [
+												{
+													"type": "dx",
+													"modifier": -4
+												}
+											],
+											"calc": {
+												"level": 14,
+												"rsl": "DX+2"
+											}
+										},
+										{
+											"id": "02c02ad3-91f4-4f5d-a5de-1139fded73a8",
+											"type": "skill",
+											"name": "Flail",
+											"reference": "B208",
+											"tags": [
+												"Combat",
+												"Melee Combat",
+												"Weapon"
+											],
+											"difficulty": "dx/h",
+											"points": 8,
+											"defaulted_from": {
+												"type": "skill",
+												"name": "Axe/Mace",
+												"modifier": -4,
+												"level": 10,
+												"adjusted_level": 10,
+												"points": 1
+											},
+											"defaults": [
+												{
+													"type": "dx",
+													"modifier": -6
+												},
+												{
+													"type": "skill",
+													"name": "Axe/Mace",
+													"modifier": -4
+												},
+												{
+													"type": "skill",
+													"name": "Two-Handed Flail",
+													"modifier": -3
+												}
+											],
+											"calc": {
+												"level": 13,
+												"rsl": "DX+1"
+											}
+										}
+									],
+									"name": "Melee 2"
+								},
+								{
+									"id": "adc6bfc7-3119-49c4-94a7-e2320a5d7363",
+									"type": "skill_container",
+									"children": [
+										{
+											"id": "2362eb88-a4c9-4c2e-88e7-a8e9f1b3f31a",
+											"type": "skill",
+											"name": "Shield",
+											"reference": "B220",
+											"tags": [
+												"Combat",
+												"Melee Combat",
+												"Weapon"
+											],
+											"specialization": "Shield",
+											"difficulty": "dx/e",
+											"points": 1,
+											"defaulted_from": {
+												"type": "dx",
+												"modifier": -4,
+												"level": 8,
+												"adjusted_level": 8,
+												"points": -8
+											},
+											"defaults": [
+												{
+													"type": "dx",
+													"modifier": -4
+												}
+											],
+											"calc": {
+												"level": 12,
+												"rsl": "DX+0"
+											}
+										},
+										{
+											"id": "ab5d1ae9-975f-46ca-9d8d-0a10baff40a3",
+											"type": "skill_container",
+											"open": true,
+											"children": [
+												{
+													"id": "d716b590-a4f4-4d13-b399-26c4d6aca449",
+													"type": "skill",
+													"name": "Broadsword",
+													"reference": "B208",
+													"tags": [
+														"Combat",
+														"Melee Combat",
+														"Weapon"
+													],
+													"difficulty": "dx/a",
+													"points": 8,
+													"defaulted_from": {
+														"type": "dx",
+														"modifier": -5,
+														"level": 7,
+														"adjusted_level": 7,
+														"points": -7
+													},
+													"defaults": [
+														{
+															"type": "skill",
+															"name": "Force Sword",
+															"modifier": -4
+														},
+														{
+															"type": "skill",
+															"name": "Rapier",
+															"modifier": -4
+														},
+														{
+															"type": "skill",
+															"name": "Saber",
+															"modifier": -4
+														},
+														{
+															"type": "skill",
+															"name": "Shortsword",
+															"modifier": -2
+														},
+														{
+															"type": "skill",
+															"name": "Two-Handed Sword",
+															"modifier": -4
+														},
+														{
+															"type": "dx",
+															"modifier": -5
+														}
+													],
+													"calc": {
+														"level": 14,
+														"rsl": "DX+2"
+													}
+												},
+												{
+													"id": "569a81f9-3472-48db-84c9-321ca2f4274c",
+													"type": "skill",
+													"name": "Axe/Mace",
+													"reference": "B208",
+													"tags": [
+														"Combat",
+														"Melee Combat",
+														"Weapon"
+													],
+													"difficulty": "dx/a",
+													"points": 8,
+													"defaulted_from": {
+														"type": "dx",
+														"modifier": -5,
+														"level": 7,
+														"adjusted_level": 7,
+														"points": -7
+													},
+													"defaults": [
+														{
+															"type": "dx",
+															"modifier": -5
+														},
+														{
+															"type": "skill",
+															"name": "Two-Handed Axe/Mace",
+															"modifier": -3
+														},
+														{
+															"type": "skill",
+															"name": "Flail",
+															"modifier": -4
+														}
+													],
+													"calc": {
+														"level": 14,
+														"rsl": "DX+2"
+													}
+												}
+											],
+											"name": "One of:"
+										}
+									],
+									"name": "Melee 1"
+								}
+							],
+							"name": "Choose One Melee Package"
+						}
+					],
+					"name": "Primary Skills"
+				},
+				{
+					"id": "9803ad4b-58f5-46c5-aa3a-849030121cce",
+					"type": "skill_container",
+					"children": [
+						{
+							"id": "3d61c53c-4851-4f60-825b-c390826c37bd",
+							"type": "skill",
+							"name": "Theology",
+							"reference": "B226",
+							"tags": [
+								"Humanities",
+								"Social Sciences"
+							],
+							"difficulty": "iq/h",
+							"points": 1,
+							"defaulted_from": {
+								"type": "iq",
+								"modifier": -6,
+								"level": 8,
+								"adjusted_level": 8,
+								"points": -8
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Religious Ritual",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"level": 12,
+								"rsl": "IQ-2"
+							}
+						},
+						{
+							"id": "91651b3f-add1-4688-8aba-e25ac52c17a6",
+							"type": "skill",
+							"name": "Teaching",
+							"reference": "B224",
+							"tags": [
+								"Scholarly",
+								"Social"
+							],
+							"difficulty": "iq/a",
+							"points": 1,
+							"defaulted_from": {
+								"type": "iq",
+								"modifier": -5,
+								"level": 9,
+								"adjusted_level": 9,
+								"points": -9
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -5
+								}
+							],
+							"calc": {
+								"level": 13,
+								"rsl": "IQ-1"
+							}
+						},
+						{
+							"id": "256a3dcb-6ada-4425-a4c0-c85b90d83536",
+							"type": "skill",
+							"name": "Surgery",
+							"reference": "B223",
+							"tags": [
+								"Medical"
+							],
+							"tech_level": "3",
+							"difficulty": "iq/vh",
+							"points": 2,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "First Aid",
+								"modifier": -12,
+								"level": 2,
+								"adjusted_level": 2,
+								"points": -2
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "First Aid",
+									"modifier": -12
+								},
+								{
+									"type": "skill",
+									"name": "Physician",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Physiology",
+									"modifier": -8
+								},
+								{
+									"type": "skill",
+									"name": "Veterinary",
+									"modifier": -5
+								}
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "first aid"
+										}
+									},
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "physician"
+										}
+									}
+								]
+							},
+							"calc": {
+								"level": 12,
+								"rsl": "IQ-2"
+							}
+						},
+						{
+							"id": "49465536-f0aa-4bc6-b2cc-7da6e221aa61",
+							"type": "skill",
+							"name": "Religious Ritual",
+							"reference": "B217",
+							"tags": [
+								"Magical",
+								"Occult"
+							],
+							"difficulty": "iq/h",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Theology",
+								"modifier": -4,
+								"level": 8,
+								"adjusted_level": 8,
+								"points": -8
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Ritual Magic",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Theology",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"level": 12,
+								"rsl": "IQ-2"
+							}
+						},
+						{
+							"id": "2789f1b6-f065-418f-bc78-341db0ae12ff",
+							"type": "skill",
+							"name": "Public Speaking",
+							"reference": "B216",
+							"tags": [
+								"Business",
+								"Scholarly",
+								"Social"
+							],
+							"difficulty": "iq/a",
+							"points": 1,
+							"defaulted_from": {
+								"type": "iq",
+								"modifier": -5,
+								"level": 9,
+								"adjusted_level": 9,
+								"points": -9
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Acting",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Performance",
+									"modifier": -5
+								},
+								{
+									"type": "skill",
+									"name": "Politics",
+									"modifier": -5
+								}
+							],
+							"calc": {
+								"level": 14,
+								"rsl": "IQ+0"
+							}
+						},
+						{
+							"id": "e1bffdd6-23b0-4b43-97f5-81a9073049c5",
+							"type": "skill",
+							"name": "Occultism",
+							"reference": "B212",
+							"tags": [
+								"Magical",
+								"Occult"
+							],
+							"difficulty": "iq/a",
+							"points": 1,
+							"defaulted_from": {
+								"type": "iq",
+								"modifier": -5,
+								"level": 9,
+								"adjusted_level": 9,
+								"points": -9
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -5
+								}
+							],
+							"calc": {
+								"level": 13,
+								"rsl": "IQ-1"
+							}
+						},
+						{
+							"id": "a9fc16d2-84c4-449b-a9e4-c11cb01d2c57",
+							"type": "skill",
+							"name": "Meditation",
+							"reference": "B207",
+							"tags": [
+								"Esoteric"
+							],
+							"difficulty": "will/h",
+							"points": 1,
+							"defaulted_from": {
+								"type": "will",
+								"modifier": -6,
+								"level": 8,
+								"adjusted_level": 8,
+								"points": -8
+							},
+							"defaults": [
+								{
+									"type": "will",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "Autohypnosis",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"level": 12,
+								"rsl": "Will-2"
+							}
+						},
+						{
+							"id": "11970190-7bee-411b-b840-0c3dded1d880",
+							"type": "skill",
+							"name": "Hidden Lore",
+							"reference": "B199",
+							"tags": [
+								"Knowledge"
+							],
+							"difficulty": "iq/a",
+							"points": 1,
+							"calc": {
+								"level": 13,
+								"rsl": "IQ-1"
+							}
+						},
+						{
+							"id": "6b3aeedb-b991-45ef-b1f8-4257808c5bec",
+							"type": "skill",
+							"name": "First Aid",
+							"reference": "B195",
+							"tags": [
+								"Everyman",
+								"Medical"
+							],
+							"tech_level": "3",
+							"difficulty": "iq/e",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Esoteric Medicine",
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Esoteric Medicine"
+								},
+								{
+									"type": "skill",
+									"name": "Physician"
+								},
+								{
+									"type": "skill",
+									"name": "Veterinary",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"level": 14,
+								"rsl": "IQ+0"
+							}
+						},
+						{
+							"id": "8b645e9d-a092-4f7c-87a5-f44b4f832087",
+							"type": "skill",
+							"name": "Diagnosis",
+							"reference": "B187",
+							"tags": [
+								"Medical"
+							],
+							"tech_level": "3",
+							"difficulty": "iq/h",
+							"points": 1,
+							"defaulted_from": {
+								"type": "iq",
+								"modifier": -6,
+								"level": 8,
+								"adjusted_level": 8,
+								"points": -8
+							},
+							"defaults": [
+								{
+									"type": "iq",
+									"modifier": -6
+								},
+								{
+									"type": "skill",
+									"name": "First Aid",
+									"modifier": -8
+								},
+								{
+									"type": "skill",
+									"name": "Physician",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Veterinary",
+									"modifier": -5
+								}
+							],
+							"calc": {
+								"level": 12,
+								"rsl": "IQ-2"
+							}
+						}
+					],
+					"name": "Secondary Skills"
+				},
+				{
+					"id": "d921b26c-bd5b-4178-808d-b5b8b9223917",
+					"type": "skill_container",
+					"open": true,
+					"children": [
+						{
+							"id": "a84532e4-765f-4d99-bf09-807819927c73",
+							"type": "skill_container",
+							"children": [
+								{
+									"id": "8e0e0a2b-16ef-4f4d-bd6e-0ca855e14d11",
+									"type": "skill",
+									"name": "Esoteric Medicine",
+									"reference": "B192",
+									"tags": [
+										"Esoteric",
+										"Medical"
+									],
+									"difficulty": "per/h",
+									"points": 1,
+									"defaulted_from": {
+										"type": "per",
+										"modifier": -6,
+										"level": 8,
+										"adjusted_level": 8,
+										"points": -8
+									},
+									"defaults": [
+										{
+											"type": "per",
+											"modifier": -6
+										}
+									],
+									"calc": {
+										"level": 12,
+										"rsl": "Per-2"
+									}
+								},
+								{
+									"id": "52393300-a174-497a-bf5b-f1ca9e9f29eb",
+									"type": "skill",
+									"name": "Writing",
+									"reference": "B228",
+									"tags": [
+										"Arts",
+										"Entertainment",
+										"Scholarly"
+									],
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaulted_from": {
+										"type": "iq",
+										"modifier": -5,
+										"level": 9,
+										"adjusted_level": 9,
+										"points": -9
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 13,
+										"rsl": "IQ-1"
+									}
+								},
+								{
+									"id": "e8732198-7337-4477-b1cc-174cb586c07b",
+									"type": "skill",
+									"name": "Stealth",
+									"reference": "B222",
+									"tags": [
+										"Criminal",
+										"Police",
+										"Spy",
+										"Street"
+									],
+									"difficulty": "dx/a",
+									"points": 1,
+									"encumbrance_penalty_multiplier": 1,
+									"defaulted_from": {
+										"type": "iq",
+										"modifier": -5,
+										"level": 9,
+										"adjusted_level": 9,
+										"points": -9
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "dx",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 11,
+										"rsl": "DX-1"
+									}
+								},
+								{
+									"id": "1a73b27b-4f4d-49c2-b995-e4b7e6cc533b",
+									"type": "skill",
+									"name": "Search",
+									"reference": "B219",
+									"tags": [
+										"Police",
+										"Spy"
+									],
+									"difficulty": "per/a",
+									"points": 1,
+									"defaulted_from": {
+										"type": "per",
+										"modifier": -5,
+										"level": 9,
+										"adjusted_level": 9,
+										"points": -9
+									},
+									"defaults": [
+										{
+											"type": "per",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Criminology",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 13,
+										"rsl": "Per-1"
+									}
+								},
+								{
+									"id": "80ba5b74-f2fa-4968-9054-c01a3a775bfb",
+									"type": "skill",
+									"name": "Scrounging",
+									"reference": "B218",
+									"tags": [
+										"Criminal",
+										"Street"
+									],
+									"difficulty": "per/e",
+									"points": 1,
+									"defaulted_from": {
+										"type": "per",
+										"modifier": -4,
+										"level": 10,
+										"adjusted_level": 10,
+										"points": -10
+									},
+									"defaults": [
+										{
+											"type": "per",
+											"modifier": -4
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "Per+0"
+									}
+								},
+								{
+									"id": "0fee47d0-141a-437f-a07a-03375a51e301",
+									"type": "skill",
+									"name": "Savoir-Faire",
+									"reference": "B218",
+									"tags": [
+										"Business",
+										"Knowledge",
+										"Social"
+									],
+									"specialization": "High Society",
+									"difficulty": "iq/e",
+									"points": 1,
+									"defaulted_from": {
+										"type": "iq",
+										"modifier": -4,
+										"level": 10,
+										"adjusted_level": 10,
+										"points": -10
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Savoir-Faire",
+											"specialization": "Servant",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "IQ+0"
+									}
+								},
+								{
+									"id": "2710f3b2-3aad-4382-93be-f5458ee9dea1",
+									"type": "skill",
+									"name": "Research",
+									"reference": "B217",
+									"notes": "When below TL8",
+									"tags": [
+										"Scholarly",
+										"Spy"
+									],
+									"tech_level": "3",
+									"difficulty": "iq/a",
+									"points": 1,
+									"defaulted_from": {
+										"type": "skill",
+										"name": "Writing",
+										"modifier": -3,
+										"level": 10,
+										"adjusted_level": 10,
+										"points": -10
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Writing",
+											"modifier": -3
+										}
+									],
+									"prereqs": {
+										"type": "prereq_list",
+										"all": false,
+										"prereqs": [
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "starts_with",
+													"qualifier": "Language"
+												},
+												"notes": {
+													"compare": "contains",
+													"qualifier": "Written (Broken)"
+												}
+											},
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "starts_with",
+													"qualifier": "Language"
+												},
+												"notes": {
+													"compare": "contains",
+													"qualifier": "Written (Native)"
+												}
+											},
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "starts_with",
+													"qualifier": "Language"
+												},
+												"notes": {
+													"compare": "contains",
+													"qualifier": "Written (Accented)"
+												}
+											}
+										]
+									},
+									"calc": {
+										"level": 13,
+										"rsl": "IQ-1",
+										"unsatisfied_reason": "Prerequisites have not been met:\n● Requires at least one of:\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Broken)\", and level is anything\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Native)\", and level is anything\n  ● Has a trait whose name starts with \"Language\", notes contains \"Written (Accented)\", and level is anything"
+									}
+								},
+								{
+									"id": "afb94113-21c2-4339-a99e-f7cc86fce835",
+									"type": "skill",
+									"name": "Panhandling",
+									"reference": "B212",
+									"tags": [
+										"Criminal",
+										"Social",
+										"Street"
+									],
+									"difficulty": "iq/e",
+									"points": 1,
+									"defaulted_from": {
+										"type": "iq",
+										"modifier": -4,
+										"level": 10,
+										"adjusted_level": 10,
+										"points": -10
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -4
+										},
+										{
+											"type": "skill",
+											"name": "Fast Talk",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Public Speaking",
+											"modifier": -3
+										}
+									],
+									"calc": {
+										"level": 15,
+										"rsl": "IQ+1"
+									}
+								},
+								{
+									"id": "1e2703fa-e14f-47c9-97e2-0ada98189343",
+									"type": "skill",
+									"name": "Observation",
+									"reference": "B211",
+									"tags": [
+										"Criminal",
+										"Military",
+										"Police",
+										"Spy",
+										"Street"
+									],
+									"difficulty": "per/a",
+									"points": 1,
+									"defaulted_from": {
+										"type": "per",
+										"modifier": -5,
+										"level": 9,
+										"adjusted_level": 9,
+										"points": -9
+									},
+									"defaults": [
+										{
+											"type": "per",
+											"modifier": -5
+										},
+										{
+											"type": "skill",
+											"name": "Shadowing",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 13,
+										"rsl": "Per-1"
+									}
+								},
+								{
+									"id": "4c026a82-63f1-4681-b526-d685068ea0f3",
+									"type": "skill",
+									"name": "Hiking",
+									"reference": "B200",
+									"tags": [
+										"Athletic",
+										"Exploration",
+										"Outdoor"
+									],
+									"difficulty": "ht/a",
+									"points": 1,
+									"defaulted_from": {
+										"type": "ht",
+										"modifier": -5,
+										"level": 5,
+										"adjusted_level": 5,
+										"points": -5
+									},
+									"defaults": [
+										{
+											"type": "ht",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 9,
+										"rsl": "HT-1"
+									}
+								},
+								{
+									"id": "2aecdb7c-008f-4417-a6f4-29a340dd8881",
+									"type": "skill",
+									"name": "Gesture",
+									"reference": "B198",
+									"tags": [
+										"Social"
+									],
+									"difficulty": "iq/e",
+									"points": 1,
+									"defaulted_from": {
+										"type": "iq",
+										"modifier": -4,
+										"level": 10,
+										"adjusted_level": 10,
+										"points": -10
+									},
+									"defaults": [
+										{
+											"type": "iq",
+											"modifier": -4
+										}
+									],
+									"calc": {
+										"level": 14,
+										"rsl": "IQ+0"
+									}
+								},
+								{
+									"id": "f76422f0-ec31-4821-abef-abb19e4f241d",
+									"type": "skill",
+									"name": "Climbing",
+									"reference": "B183",
+									"tags": [
+										"Athletic",
+										"Criminal",
+										"Exploration",
+										"Outdoor",
+										"Street"
+									],
+									"difficulty": "dx/a",
+									"points": 1,
+									"encumbrance_penalty_multiplier": 1,
+									"defaulted_from": {
+										"type": "dx",
+										"modifier": -5,
+										"level": 7,
+										"adjusted_level": 7,
+										"points": -7
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -5
+										}
+									],
+									"calc": {
+										"level": 11,
+										"rsl": "DX-1"
+									}
+								}
+							],
+							"name": "Five of:"
+						}
+					],
+					"name": "Background Skills"
+				}
+			],
+			"name": "Fire Cleric"
+		}
+	],
+	"spells": [
+		{
+			"id": "93be2bb0-25f7-4bbf-89f9-737bb851ef27",
+			"type": "spell_container",
+			"open": true,
+			"children": [
+				{
+					"id": "99a89503-1e15-4266-bb14-02d0a8feee2e",
+					"type": "spell_container",
+					"open": true,
+					"children": [
+						{
+							"id": "24e8f3d4-e207-4b60-b46a-363fe9f0c07b",
+							"type": "spell_container",
+							"children": [
+								{
+									"id": "48f4a97a-dc3f-45d5-8433-3ee5f49705fe",
+									"type": "spell",
+									"name": "Ignite Fire",
+									"reference": "M72",
+									"tags": [
+										"Fire"
+									],
+									"difficulty": "iq/h",
+									"college": [
+										"Clerical"
+									],
+									"power_source": "Arcane",
+									"spell_class": "Regular",
+									"casting_cost": "1-4",
+									"maintenance_cost": "Same",
+									"casting_time": "1 sec",
+									"duration": "1 sec",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"prereqs": [
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "Power Investiture"
+												},
+												"level": {
+													"compare": "at_least",
+													"qualifier": 1
+												}
+											}
+										]
+									},
+									"calc": {
+										"level": 17,
+										"rsl": "IQ+3"
+									}
+								},
+								{
+									"id": "e821d85b-0d0d-4ea3-aae2-349dfc958dec",
+									"type": "spell_container",
+									"open": true,
+									"children": [
+										{
+											"id": "01a459a7-7756-4e8c-b1d6-92f0abf293df",
+											"type": "spell",
+											"name": "Bravery",
+											"reference": "M134",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "2",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "9ab46eef-d272-4bbd-aa58-386e91940146",
+											"type": "spell",
+											"name": "Cleansing",
+											"reference": "M94",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2/4/6",
+											"maintenance_cost": "-",
+											"casting_time": "2 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "2d1e5726-0d6c-402b-a05a-5c161cd94d97",
+											"type": "spell",
+											"name": "Detect Magic",
+											"reference": "M101",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "-",
+											"casting_time": "5 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "65311529-26a3-4cf6-9005-6035910788d2",
+											"type": "spell",
+											"name": "Flaming Weapon",
+											"reference": "M75",
+											"notes": "+2 points burn damage from attacks with melee weapon",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4",
+											"maintenance_cost": "1",
+											"casting_time": "2 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "e5402082-79d8-4532-b29c-485ecaa86726",
+											"type": "spell",
+											"name": "Final Rest",
+											"reference": "M89",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "20",
+											"maintenance_cost": "-",
+											"casting_time": "10 min",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "841bf079-4a28-425a-ad6a-e774cc47678b",
+											"type": "spell",
+											"name": "Lend Energy",
+											"reference": "M89",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1/pt",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "9c629c68-d234-4f64-bf7e-b7304af3cc2e",
+											"type": "spell",
+											"name": "Lend Vitality",
+											"reference": "M89",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1/pt",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "1 Hour",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "07433170-c0cf-4e45-aab5-13252d50581b",
+											"type": "spell",
+											"name": "Light",
+											"reference": "M110",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1",
+											"maintenance_cost": "1",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "5f14ba02-add4-4c6b-a606-9c108703b1dc",
+											"type": "spell",
+											"name": "Recover Energy",
+											"reference": "M89",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Special",
+											"casting_cost": "0",
+											"maintenance_cost": "0",
+											"casting_time": "1 sec",
+											"duration": "Special",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "3d95b223-217a-4a19-a426-c98ca5ad5f2b",
+											"type": "spell",
+											"name": "Resist Cold",
+											"reference": "M74",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "a574b58a-b010-4d4e-bf9b-be7c2181fbac",
+											"type": "spell",
+											"name": "Resist Fire",
+											"reference": "M74",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2#",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "eecc6805-78c3-4369-9930-b3faa366db60",
+											"type": "spell",
+											"name": "Seek Fire",
+											"reference": "M72",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Info",
+											"casting_cost": "1",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "4cfbec98-09e3-4660-bb98-ae9f5d016cda",
+											"type": "spell",
+											"name": "Sense Spirit",
+											"reference": "M149",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Info/Area",
+											"casting_cost": "1/2 (min 1)",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "a1145245-b490-4319-8d88-abb808bf2b5d",
+											"type": "spell",
+											"name": "Shape Fire",
+											"reference": "M72",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Fire"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "2",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "spell_prereq",
+														"sub_type": "name",
+														"has": true,
+														"qualifier": {
+															"compare": "is",
+															"qualifier": "ignite fire"
+														},
+														"quantity": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 14,
+												"rsl": "IQ+0"
+											}
+										},
+										{
+											"id": "36bc8090-d1e4-49ed-bf7e-d2869572295b",
+											"type": "spell",
+											"name": "Share Vitality",
+											"reference": "M90",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "None",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec/HP",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 1
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										}
+									],
+									"name": "And chosen from:"
+								}
+							],
+							"name": "Power Investiture",
+							"notes": "1",
+							"tags": [
+								"Clerical"
+							]
+						},
+						{
+							"id": "42d5bdbe-6b2b-4249-80fd-77f09f03adde",
+							"type": "spell_container",
+							"children": [
+								{
+									"id": "2555669b-ec03-4999-ab2b-4e5ef0e21081",
+									"type": "spell",
+									"name": "Fast Fire",
+									"reference": "M73",
+									"tags": [
+										"Fire"
+									],
+									"difficulty": "iq/h",
+									"college": [
+										"Clerical"
+									],
+									"power_source": "Arcane",
+									"spell_class": "Regular",
+									"casting_cost": "Varies",
+									"maintenance_cost": "Varies",
+									"casting_time": "1 sec",
+									"duration": "1 min",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": true,
+										"prereqs": [
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "Power Investiture"
+												},
+												"level": {
+													"compare": "at_least",
+													"qualifier": 2
+												}
+											}
+										]
+									},
+									"calc": {
+										"level": 17,
+										"rsl": "IQ+3"
+									}
+								},
+								{
+									"id": "e7d3e935-2a8c-4449-9dc2-f5513e5c2cf7",
+									"type": "spell_container",
+									"open": true,
+									"children": [
+										{
+											"id": "3dd6ecb0-71c5-490a-a765-7a871c284d10",
+											"type": "spell",
+											"name": "Armor",
+											"reference": "M167",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2 per DR",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "7c0f5c24-ee36-4fd8-ae0c-02dc5d900489",
+											"type": "spell",
+											"name": "Aura",
+											"reference": "M101",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Info",
+											"casting_cost": "3",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "d42b0823-ee24-4f80-996e-0f3a5930d902",
+											"type": "spell",
+											"name": "Continual Light",
+											"reference": "M110",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2 moon, 4 torch, 6 day",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "2d days",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "73e9d994-921d-4567-b569-e783b82ca5c8",
+											"type": "spell",
+											"name": "Deflect Energy",
+											"reference": "M73",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Blocking",
+											"casting_cost": "1",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "d93cf7bb-b26f-4d64-b96d-32a9f19eceae",
+											"type": "spell",
+											"name": "Extinguish Fire",
+											"reference": "M72",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "3",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "6029aea0-3780-44f9-9a08-4635c548ef0c",
+											"type": "spell",
+											"name": "Glow",
+											"reference": "M112",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "Varies",
+											"maintenance_cost": "-",
+											"casting_time": "Varies",
+											"duration": "2d days",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "09431357-476a-432a-a3fe-343347152b66",
+											"type": "spell",
+											"name": "Melt Ice",
+											"reference": "M186",
+											"tags": [
+												"Water"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "2#",
+											"maintenance_cost": "-",
+											"casting_time": "10 sec",
+											"duration": "Perm #",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "9b54474e-e27f-4421-98b7-499f4e964128",
+											"type": "spell",
+											"name": "Minor healing",
+											"reference": "M91",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1-3",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "d55cce25-65ee-44bd-b025-1ca934eb44ff",
+											"type": "spell",
+											"name": "Purify Air",
+											"reference": "M23",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "1",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Instant",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "cb5f836a-1d0c-4153-a059-1457aaeb898c",
+											"type": "spell",
+											"name": "Summon Spirit",
+											"reference": "M150",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Info",
+											"casting_cost": "20",
+											"maintenance_cost": "10",
+											"casting_time": "5 min",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "e15bcaa9-a2e8-4925-8e64-42e3fcde93f7",
+											"type": "spell",
+											"name": "Turn Spirit",
+											"reference": "M151",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4",
+											"maintenance_cost": "2",
+											"casting_time": "1 sec",
+											"duration": "10 sec",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "621f8805-7eb5-4e2e-ae19-29b79376f867",
+											"type": "spell",
+											"name": "Vigor",
+											"reference": "M37",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2/+HT",
+											"maintenance_cost": "Same",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "37a629e9-12a3-4f54-a087-8f71db428546",
+											"type": "spell",
+											"name": "Wall of Light",
+											"reference": "M113",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "1-3",
+											"maintenance_cost": "Same",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "53aefe59-286f-4338-a28f-4ad3a03e1116",
+											"type": "spell",
+											"name": "Warm",
+											"reference": "M195",
+											"tags": [
+												"Air",
+												"Weather"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "1/10",
+											"maintenance_cost": "Same",
+											"casting_time": "1 min",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "e9c45fc8-cbfb-4057-b8cc-ae620a714c2b",
+											"type": "spell",
+											"name": "Warmth",
+											"reference": "M74",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "1",
+											"casting_time": "10 sec",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 2
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										}
+									],
+									"name": "And chosen from:"
+								}
+							],
+							"name": "Power Investiture",
+							"notes": "2",
+							"tags": [
+								"Clerical"
+							]
+						},
+						{
+							"id": "1a113ef0-c957-4824-b3c5-ffcfe9b36718",
+							"type": "spell_container",
+							"open": true,
+							"children": [
+								{
+									"id": "1f678164-184a-4699-a6c2-edccc2d88f40",
+									"type": "spell",
+									"name": "Create Fire",
+									"reference": "M72",
+									"tags": [
+										"Fire"
+									],
+									"difficulty": "iq/h",
+									"college": [
+										"Clerical"
+									],
+									"power_source": "Arcane",
+									"spell_class": "Area",
+									"casting_cost": "2",
+									"maintenance_cost": "Half",
+									"casting_time": "1 sec",
+									"duration": "1 min",
+									"points": 1,
+									"prereqs": {
+										"type": "prereq_list",
+										"all": false,
+										"prereqs": [
+											{
+												"type": "trait_prereq",
+												"has": true,
+												"name": {
+													"compare": "is",
+													"qualifier": "Power Investiture"
+												},
+												"level": {
+													"compare": "at_least",
+													"qualifier": 3
+												}
+											}
+										]
+									},
+									"weapons": [
+										{
+											"id": "e5507a44-15a2-4be4-84a5-f3d756f07144",
+											"type": "melee_weapon",
+											"damage": {
+												"type": "burn",
+												"base": "1d-1"
+											},
+											"usage": "Area",
+											"calc": {
+												"damage": "1d-1 burn"
+											}
+										}
+									],
+									"calc": {
+										"level": 17,
+										"rsl": "IQ+3"
+									}
+								},
+								{
+									"id": "3dae8277-5404-4978-93b7-45be0cbd11a3",
+									"type": "spell_container",
+									"open": true,
+									"children": [
+										{
+											"id": "521b37eb-5bc3-4dbf-bd20-166116ca47ad",
+											"type": "spell",
+											"name": "Affect Spirits",
+											"reference": "M151",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4",
+											"maintenance_cost": "2",
+											"casting_time": "2 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "4848ddb7-ccc6-45bd-bb26-da116f22c9bf",
+											"type": "spell",
+											"name": "Clean",
+											"reference": "M116",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "2",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "e9274146-9937-4d81-a4b4-dc372b6b2934",
+											"type": "spell",
+											"name": "Coolness",
+											"reference": "M187",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "1",
+											"casting_time": "10 sec",
+											"duration": "1 hour",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "ec659cd1-363e-4002-9961-7e7bae597c62",
+											"type": "spell",
+											"name": "Flaming Missiles",
+											"reference": "M75",
+											"notes": "+2 points burn damage with missiles fired from weapon",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4#",
+											"maintenance_cost": "Half",
+											"casting_time": "3 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "8b9c3136-62bf-42f9-9419-2766b95c01e2",
+											"type": "spell",
+											"name": "Magic Resistance",
+											"reference": "M123",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1-5",
+											"maintenance_cost": "Same",
+											"casting_time": "3 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "12058d74-6fc1-493d-9fb3-0b86078e8618",
+											"type": "spell",
+											"name": "Purify Food",
+											"reference": "M78",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1/lb",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "3482e34f-a908-4d3c-8db2-d8f931899980",
+											"type": "spell",
+											"name": "Relieve Sickness",
+											"reference": "M90",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "-",
+											"casting_time": "10 sec",
+											"duration": "10 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "f76e8e35-f563-4877-8985-6d2891c69412",
+											"type": "spell",
+											"name": "Remove Contagion",
+											"reference": "M90",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "3",
+											"maintenance_cost": "-",
+											"casting_time": "2 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "dcdfc396-e419-41da-801c-b7b6eb20debb",
+											"type": "spell",
+											"name": "Repel Spirits",
+											"reference": "M158",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "4",
+											"maintenance_cost": "Half",
+											"casting_time": "10 sec",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "b9da5bb5-9df6-4b29-ba2d-afde66d6c50a",
+											"type": "spell",
+											"name": "Resist Disease",
+											"reference": "M90",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4",
+											"maintenance_cost": "3",
+											"casting_time": "10 sec",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "85f933f7-1ab7-4220-b715-4a43e9b7915e",
+											"type": "spell",
+											"name": "Resist Lightning",
+											"reference": "M196",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2",
+											"maintenance_cost": "1",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "78c18348-752f-43c4-b18d-c7a7cfa0869a",
+											"type": "spell",
+											"name": "Resist Poison",
+											"reference": "M91",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "4",
+											"maintenance_cost": "3",
+											"casting_time": "10 sec",
+											"duration": "1 Hour",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "4fffd749-07c4-4651-9fd5-d1b6e411f189",
+											"type": "spell",
+											"name": "Shield",
+											"reference": "M167",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "2 per DB",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "1 min",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "2e921ce6-765a-41b1-9c3b-1ff51d28ac44",
+											"type": "spell",
+											"name": "Smoke",
+											"reference": "M73",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "1",
+											"maintenance_cost": "Half",
+											"casting_time": "1 sec",
+											"duration": "5 min #",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"weapons": [
+												{
+													"id": "a9fc9705-ab69-4b20-861e-0f763ecfce41",
+													"type": "melee_weapon",
+													"damage": {
+														"type": "Cough/Weep"
+													},
+													"usage": "Area",
+													"calc": {
+														"damage": "Cough/Weep"
+													}
+												}
+											],
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "04570719-8a76-4371-9dcb-692da68b7b63",
+											"type": "spell",
+											"name": "Stop Bleeding",
+											"reference": "M91",
+											"tags": [
+												"Clerical"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Regular",
+											"casting_cost": "1 or 10",
+											"maintenance_cost": "-",
+											"casting_time": "1 sec",
+											"duration": "Permanent",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": false,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										},
+										{
+											"id": "7895b1b9-f657-485f-90fa-e3cade8175dc",
+											"type": "spell",
+											"name": "Summon Fire Elemental",
+											"reference": "M27",
+											"tags": [
+												"Fire"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Fire"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Special",
+											"casting_cost": "4#",
+											"maintenance_cost": "-",
+											"casting_time": "30 sec",
+											"duration": "1 hr",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 14,
+												"rsl": "IQ+0"
+											}
+										},
+										{
+											"id": "93e69d87-4fcf-432a-95dc-85c73143badb",
+											"type": "spell",
+											"name": "Turn Zombie",
+											"reference": "M152",
+											"tags": [
+												"Necromancy"
+											],
+											"difficulty": "iq/h",
+											"college": [
+												"Clerical"
+											],
+											"power_source": "Arcane",
+											"spell_class": "Area",
+											"casting_cost": "2",
+											"maintenance_cost": "-",
+											"casting_time": "4 sec",
+											"duration": "Turned undead will avoid caster for 1 day",
+											"points": 1,
+											"prereqs": {
+												"type": "prereq_list",
+												"all": true,
+												"prereqs": [
+													{
+														"type": "trait_prereq",
+														"has": true,
+														"name": {
+															"compare": "is",
+															"qualifier": "Power Investiture"
+														},
+														"level": {
+															"compare": "at_least",
+															"qualifier": 3
+														}
+													}
+												]
+											},
+											"calc": {
+												"level": 17,
+												"rsl": "IQ+3"
+											}
+										}
+									],
+									"name": "And chosen from:"
+								}
+							],
+							"name": "Power Investiture",
+							"notes": "3",
+							"tags": [
+								"Clerical"
+							]
+						}
+					],
+					"name": "Choose 20 of:"
+				}
+			],
+			"name": "Fire Cleric"
+		}
+	],
+	"equipment": [
+		{
+			"id": "97e3e45d-5adb-4076-a191-fbb7b9f9faea",
+			"type": "equipment",
+			"description": "Cavalry Saber",
+			"reference": "B271",
+			"tech_level": "4",
+			"tags": [
+				"Melee Weapon"
+			],
+			"quantity": 1,
+			"value": 500,
+			"weight": "3 lb",
+			"weapons": [
+				{
+					"id": "31069284-bc09-4701-abe8-8f8697e8bac1",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "1"
+					},
+					"strength": "10",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword"
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"level": 14,
+						"damage": "1d+3 cut",
+						"parry": "10"
+					}
+				},
+				{
+					"id": "7a70ac81-2c10-439a-a98c-f621b5e057e5",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "10",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword"
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"level": 14,
+						"damage": "1d imp",
+						"parry": "10"
+					}
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 500,
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "c0e696e6-bee9-4ec4-a08e-1fd0953c4197",
+			"type": "equipment",
+			"description": "Small Shield",
+			"reference": "B287",
+			"notes": "DR 6, HP 30",
+			"tech_level": "1",
+			"tags": [
+				"Shield"
+			],
+			"quantity": 1,
+			"value": 40,
+			"weight": "8 lb",
+			"weapons": [
+				{
+					"id": "82c5c20d-d30e-4a8a-a018-f70472ad56fc",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Shield Bash",
+					"reach": "1",
+					"block": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Buckler",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Force Shield",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Shield",
+							"specialization": "Shield"
+						}
+					],
+					"calc": {
+						"level": 14,
+						"damage": "1d-1 cr",
+						"block": "10"
+					}
+				}
+			],
+			"features": [
+				{
+					"type": "conditional_modifier",
+					"situation": "to Dodge, Parry \u0026 Block against attacks from the front or shield side",
+					"amount": 1
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 40,
+				"extended_weight": "8 lb"
+			}
+		},
+		{
+			"id": "3a2efb04-195c-471f-b32b-0d916e75a3cd",
+			"type": "equipment",
+			"description": "Leather Armor",
+			"reference": "B283",
+			"tech_level": "1",
+			"tags": [
+				"Body Armor"
+			],
+			"quantity": 1,
+			"value": 100,
+			"weight": "10 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 2
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 2
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 100,
+				"extended_weight": "10 lb"
+			}
+		}
+	],
+	"created_date": "2024-02-02T17:42:08+01:00",
+	"modified_date": "2024-02-02T17:56:44+01:00",
+	"calc": {
+		"swing": "1d+2",
+		"thrust": "1d-1",
+		"basic_lift": "29 lb",
+		"move": [
+			5,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			8,
+			7,
+			6,
+			5,
+			4
+		]
+	}
+}
